@@ -31,18 +31,31 @@ _ALIASES = {
     "release": "",
 }
 
-# `.`, `-` and `_` separate; a digit run and a letter run are separate tokens.
+# `.` and `_` separate tokens inside a group; a digit run and a letter run are
+# separate tokens. `-` is handled a level up, in `_groups`.
 _TOKEN_RE = re.compile(r"\d+|[^\d.\-_]+")
 
 Token = int | str
 
 
-def _tokenize(version: str) -> list[Token]:
+def _tokenize(group: str) -> list[Token]:
+    return [int(t) if t.isdigit() else t for t in (m.group() for m in _TOKEN_RE.finditer(group))]
+
+
+def _groups(version: str) -> list[list[Token]]:
+    """Split on `-`, which Maven treats as the start of a nested sub-list.
+
+    Minecraft mods version themselves `<mc>-<mod>`, so flattening the two would
+    compare a Minecraft version against a mod version: `1.21.1-3.3.2` reads as
+    older than `1.21-2.29.19` once `1` meets `2` in the third slot, which is how
+    Moonlight Lib ended up "not satisfying" what Amendments asks for. Comparing
+    group by group keeps `1.21.1` against `1.21` and `3.3.2` against `2.29.19`.
+    """
     v = version.strip().lower()
     v = v.split("+", 1)[0]  # semver build metadata carries no precedence
     if v[:1] == "v" and v[1:2].isdigit():
         v = v[1:]
-    return [int(t) if t.isdigit() else t for t in (m.group() for m in _TOKEN_RE.finditer(v))]
+    return [_tokenize(part) for part in v.split("-")]
 
 
 def _qualifier_key(q: str) -> str:
@@ -69,13 +82,23 @@ def _cmp_token(a: Token, b: Token) -> int:
     return (ka > kb) - (ka < kb)
 
 
+def _cmp_group(ga: list[Token], gb: list[Token]) -> int:
+    for i in range(max(len(ga), len(gb))):
+        x = ga[i] if i < len(ga) else _null_like(gb[i])
+        y = gb[i] if i < len(gb) else _null_like(ga[i])
+        c = _cmp_token(x, y)
+        if c:
+            return c
+    return 0
+
+
 def compare(a: str, b: str) -> int:
     """Return -1/0/1 for a<b / a==b / a>b under Maven ComparableVersion rules."""
-    ta, tb = _tokenize(a), _tokenize(b)
-    for i in range(max(len(ta), len(tb))):
-        x = ta[i] if i < len(ta) else _null_like(tb[i])
-        y = tb[i] if i < len(tb) else _null_like(ta[i])
-        c = _cmp_token(x, y)
+    ga, gb = _groups(a), _groups(b)
+    for i in range(max(len(ga), len(gb))):
+        # A group the other side does not have compares as empty, so `1.0` sits
+        # below `1.0-1` and above `1.0-beta`, exactly as Maven orders them.
+        c = _cmp_group(ga[i] if i < len(ga) else [], gb[i] if i < len(gb) else [])
         if c:
             return c
     return 0

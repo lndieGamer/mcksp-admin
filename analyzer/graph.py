@@ -235,6 +235,12 @@ def _add_edges(g: Graph, metas: dict[str, JarMeta]) -> None:
                             }
                         )
                     continue
+                if target is None and not dep.required:
+                    # An optional dependency the pack does not have is a non-event:
+                    # the mod runs fine without it. Keeping the edge only fills the
+                    # dependency panel with modIds nobody intends to add. Optional
+                    # deps that ARE in the pack stay, version range and all.
+                    continue
                 target_version = g.nodes[target].version if target else None
                 satisfied = bool(target) and parse_range(dep.version_range).contains(target_version)
                 g.edges.append(

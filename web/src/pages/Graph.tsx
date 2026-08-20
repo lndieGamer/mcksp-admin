@@ -1,5 +1,4 @@
 import cytoscape from "cytoscape";
-import dagre from "cytoscape-dagre";
 import fcose from "cytoscape-fcose";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
@@ -24,7 +23,6 @@ import { indexOf, usePrivate, usePublic, useSession } from "../lib/data";
 import type { ModStatus, Role, Side } from "../lib/types";
 
 cytoscape.use(fcose);
-cytoscape.use(dagre);
 
 /** Role is carried by the outline, so every shape gets a size that still reads
  *  as that shape at 100%: a diamond needs square room, a library pill does not. */
@@ -54,7 +52,6 @@ export default function Graph() {
   const setParamsRef = useRef(setParams);
   setParamsRef.current = setParams;
 
-  const [layout, setLayout] = useState<"fcose" | "dagre">("fcose");
   const [side, setSide] = useState("");
   const [flavor, setFlavor] = useState("");
   const [requiredOnly, setRequiredOnly] = useState(false);
@@ -197,36 +194,22 @@ export default function Graph() {
           },
         },
       ],
-      layout:
-        layout === "fcose"
-          ? ({
-              name: "fcose",
-              quality: "proof",
-              randomize: true,
-              numIter: 6000,
-              nodeSeparation: 120,
-              idealEdgeLength: 110,
-              // Push unrelated nodes far apart and let edges stay short: long
-              // edges over a crowded field are what tangles.
-              nodeRepulsion: 12000,
-              edgeElasticity: 0.25,
-              gravityRange: 2.5,
-              nodeDimensionsIncludeLabels: true,
-              packComponents: true,
-              tile: true,
-            } as never)
-          : ({
-              name: "dagre",
-              rankDir: "BT",
-              nodeSep: 34,
-              edgeSep: 14,
-              rankSep: 90,
-              // network-simplex spends longer ordering ranks than the cheaper
-              // rankers, and ordering is exactly what decides crossings.
-              ranker: "network-simplex",
-              acyclicer: "greedy",
-              nodeDimensionsIncludeLabels: true,
-            } as never),
+      layout: {
+        name: "fcose",
+        quality: "proof",
+        randomize: true,
+        numIter: 6000,
+        nodeSeparation: 120,
+        idealEdgeLength: 110,
+        // Push unrelated nodes far apart and let edges stay short: long
+        // edges over a crowded field are what tangles.
+        nodeRepulsion: 12000,
+        edgeElasticity: 0.25,
+        gravityRange: 2.5,
+        nodeDimensionsIncludeLabels: true,
+        packComponents: true,
+        tile: true,
+      } as never,
     });
     instance.on("tap", "node", (event) => setParamsRef.current({ focus: event.target.id() }));
     instance.on("tap", (event) => {
@@ -237,7 +220,7 @@ export default function Graph() {
       instance.destroy();
       cy.current = null;
     };
-  }, [elements, layout]);
+  }, [elements]);
 
   // The canvas lives in a flex row, so a window resize changes its box without
   // changing the window's own layout the renderer watches.
@@ -276,10 +259,6 @@ export default function Graph() {
       <div className="grid min-h-0 flex-1 gap-4 lg:grid-cols-[minmax(0,1fr)_310px]">
         <section className="flex min-h-0 flex-col gap-2">
           <div className="flex flex-wrap items-center gap-2">
-            <Select value={layout} onChange={(e) => setLayout(e.target.value as "fcose" | "dagre")}>
-              <option value="fcose">кластеры (fcose)</option>
-              <option value="dagre">дерево (dagre)</option>
-            </Select>
             <Select value={side} onChange={(e) => setSide(e.target.value)}>
               <option value="">side: любой</option>
               <option value="both">both</option>
@@ -396,7 +375,12 @@ export default function Graph() {
                 title={`зависит от (${outgoing.length})`}
                 items={outgoing.map((edge) => ({
                   key: edge.to ?? edge.to_mod_id,
-                  label: edge.to ?? `${edge.to_mod_id} (нет в паке)`,
+                  // Packwiz names a metafile after the project slug of the day, so
+                  // Moonlight Lib still lives in `selene.pw.toml`. Showing the slug
+                  // here made its dependents look like they wanted a foreign lib.
+                  label: edge.to
+                    ? (index.bySlug.get(edge.to)?.name ?? edge.to)
+                    : `${edge.to_mod_id} (нет в паке)`,
                   meta: `${edge.type} ${edge.version_range}`,
                   broken: !edge.satisfied,
                   go: edge.to ? () => setParams({ focus: edge.to as string }) : undefined,
@@ -407,7 +391,7 @@ export default function Graph() {
                 title={`нужен для (${incoming.length})`}
                 items={incoming.map((edge) => ({
                   key: edge.from,
-                  label: edge.from,
+                  label: index.bySlug.get(edge.from)?.name ?? edge.from,
                   meta: `${edge.type} ${edge.version_range}`,
                   broken: false,
                   go: () => setParams({ focus: edge.from }),

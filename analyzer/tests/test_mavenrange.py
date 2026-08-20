@@ -26,9 +26,20 @@ class TestCompare(unittest.TestCase):
         self.assertSame("1.0.0", "1.0")
         self.assertSame("1.0.0", "1")
 
-    def test_separators_are_equivalent(self):
-        self.assertSame("1.0-1", "1.0.1")
+    def test_dash_starts_a_sub_list(self):
+        # Maven's own comment on IntegerItem.compareTo(ListItem) is "1.1 > 1-1":
+        # a `-` group ranks below a plain number in the same slot.
+        self.assertOrder("1.0-1", "1.0.1")
         self.assertSame("1_0", "1.0")
+
+    def test_mc_prefixed_version_beats_shorter_mc_prefix(self):
+        # Amendments asks for moonlight [1.21-2.29.19,); the pack ships
+        # 1.21.1-3.3.2. Flattening the two groups compared 1 against 2 and
+        # called the newer library too old.
+        self.assertOrder("1.21-2.29.19", "1.21.1-3.3.2")
+        self.assertTrue(satisfies("1.21.1-3.3.2", "[1.21-2.29.19,)"))
+        self.assertTrue(satisfies("1.21.1-3.3.2", "[1.21-3.2.3,)"))
+        self.assertFalse(satisfies("1.21.1-3.1.0", "[1.21.1-3.2.3,)"))
 
     def test_qualifier_ordering(self):
         self.assertOrder("1.0-alpha", "1.0-beta")
