@@ -2,7 +2,18 @@ import { useQuery } from "@tanstack/react-query";
 import { Fragment, useState } from "react";
 
 import { useRunner } from "../components/OpRunner";
-import { Button, Empty, ErrorBox, Input, Loading, Panel, bytes, stamp } from "../components/ui";
+import {
+  Band,
+  Button,
+  Empty,
+  ErrorBox,
+  Input,
+  Loading,
+  Page,
+  PageTitle,
+  bytes,
+  stamp,
+} from "../components/ui";
 import { github, githubVoid } from "../lib/api";
 import { usePublic, useSession } from "../lib/data";
 
@@ -42,16 +53,18 @@ export default function Settings() {
   const sizes = publicData.data?.build_sizes;
 
   return (
-    <div className="grid gap-3 lg:grid-cols-2">
-      <Panel title="вес сборок">
+    <Page>
+      <PageTitle>настройки</PageTitle>
+      <div className="grid gap-x-10 gap-y-7 lg:grid-cols-2">
+      <Band title="вес сборок">
         {!sizes ? (
           <Empty>нет данных</Empty>
         ) : (
           <>
-            <p className="mb-2 text-2xs text-faint">
+            <p className="mb-2 text-xs text-faint">
               Считается из размеров jar. Для аудитории на TLauncher это существенно.
             </p>
-            <dl className="grid grid-cols-[1fr_auto] gap-y-1 text-xs">
+            <dl className="grid max-w-[440px] grid-cols-[minmax(0,1fr)_auto] gap-x-6 gap-y-1 text-sm">
               <dt className="text-muted">полная</dt>
               <dd className="text-right font-mono text-ink">{bytes(sizes.full)}</dd>
               <dt className="text-muted">минимальная (все галочки сняты)</dt>
@@ -68,12 +81,12 @@ export default function Settings() {
             </dl>
           </>
         )}
-      </Panel>
+      </Band>
 
-      <Panel title="версия пака">
+      <Band title="версия пака">
         <div className="flex items-end gap-2">
           <div>
-            <p className="mb-1 text-2xs text-faint">
+            <p className="mb-1 text-xs text-faint">
               сейчас: <span className="font-mono">{publicData.data?.pack.version}</span>
             </p>
             <Input
@@ -98,9 +111,9 @@ export default function Settings() {
             изменить
           </Button>
         </div>
-      </Panel>
+      </Band>
 
-      <Panel
+      <Band
         title="анализ"
         actions={
           <Button
@@ -121,15 +134,18 @@ export default function Settings() {
           </Button>
         }
       >
-        <p className="text-xs text-faint">
+        <p className="text-sm text-faint">
           последний прогон: {stamp(publicData.data?.generated_at ?? null)}
         </p>
-        {analyzeState && <p className="mt-1 text-xs text-accent">{analyzeState}</p>}
-      </Panel>
+        {analyzeState && <p className="mt-1 text-sm text-accent">{analyzeState}</p>}
+      </Band>
 
-      <Panel title="запуски панели">
+      <Band title="запуски панели">
         {adminRuns.isError && <ErrorBox error={adminRuns.error} />}
-        <ul className="space-y-1 text-xs">
+        {adminRuns.data && adminRuns.data.workflow_runs.length === 0 && (
+          <p className="text-sm text-faint">панель ещё ничего не запускала</p>
+        )}
+        <ul className="space-y-1 text-sm">
           {(adminRuns.data?.workflow_runs ?? []).map((run) => (
             <li key={run.id} className="flex items-center gap-2">
               <span
@@ -150,11 +166,14 @@ export default function Settings() {
             </li>
           ))}
         </ul>
-      </Panel>
+      </Band>
 
-      <Panel title="последние коммиты в паке" className="lg:col-span-2">
+      <Band title="последние коммиты в паке" className="lg:col-span-2">
         {packCommits.isError && <ErrorBox error={packCommits.error} />}
-        <ul className="space-y-1 text-xs">
+        {packCommits.data?.length === 0 && (
+          <p className="text-sm text-faint">GitHub не отдал историю пака</p>
+        )}
+        <ul className="max-w-[1180px] space-y-1 text-sm">
           {(packCommits.data ?? []).map((commit) => (
             <li key={commit.sha} className="flex gap-2">
               <a
@@ -172,7 +191,8 @@ export default function Settings() {
             </li>
           ))}
         </ul>
-      </Panel>
-    </div>
+      </Band>
+      </div>
+    </Page>
   );
 }

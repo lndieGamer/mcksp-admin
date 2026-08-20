@@ -1,5 +1,5 @@
 import { useRunner } from "../components/OpRunner";
-import { Button, Empty, Loading, Panel, Tag, stamp } from "../components/ui";
+import { Button, Empty, Loading, Page, PageTitle, Tag, Th, stamp } from "../components/ui";
 import { usePrivate, useSession } from "../lib/data";
 
 export default function History() {
@@ -14,39 +14,43 @@ export default function History() {
   const { history } = privateData.data;
 
   return (
-    <Panel title={`журнал операций · ${history.length}`}>
+    <Page scroll={false}>
+      <PageTitle count={history.length}>журнал операций</PageTitle>
+
       {history.length === 0 ? (
         <Empty>
           пока пусто — журнал строится из коммитов с трейлером <code>Op-Id</code>
         </Empty>
       ) : (
-        <div className="overflow-x-auto">
-          <table className="w-full min-w-[800px] text-xs">
-            <thead className="border-b border-edge text-muted">
-              <tr>
-                <th className="px-2 py-1.5 text-left font-medium">когда</th>
-                <th className="px-2 py-1.5 text-left font-medium">операция</th>
-                <th className="px-2 py-1.5 text-left font-medium">что сделано</th>
-                <th className="px-2 py-1.5 text-left font-medium">коммит</th>
-                <th className="w-px px-2 py-1.5" />
+        <div className="min-h-0 flex-1 overflow-auto">
+          <table className="w-full min-w-[840px] border-separate border-spacing-0 text-sm">
+            <thead>
+              <tr className="[&>th]:sticky [&>th]:top-0 [&>th]:z-10 [&>th]:border-b [&>th]:border-edge-strong [&>th]:bg-canvas [&>th]:pt-1">
+                <Th className="w-[168px]">когда</Th>
+                <Th className="w-[104px]">операция</Th>
+                <Th>что сделано</Th>
+                <Th className="w-[88px]">коммит</Th>
+                <Th className="w-[110px]" />
               </tr>
             </thead>
             <tbody>
               {history.map((entry) => (
-                <tr key={entry.sha} className="border-b border-edge/50">
-                  <td className="whitespace-nowrap px-2 py-1.5 text-faint">
+                <tr key={entry.sha} className="h-9 hover:bg-raised/45 [&>td]:rule">
+                  <td className="px-2 font-mono text-xs whitespace-nowrap text-faint">
                     {stamp(entry.date)}
                   </td>
-                  <td className="px-2 py-1.5">
+                  <td className="px-2">
                     <Tag tone={entry.op === "revert" ? "warn" : "neutral"}>{entry.op}</Tag>
                   </td>
-                  <td className="px-2 py-1.5 text-muted">
-                    {entry.title}
-                    {entry.reverted && <span className="ml-2 text-warn">(откачено)</span>}
+                  <td className="px-2 text-ink">
+                    <span className={entry.reverted ? "text-faint line-through" : undefined}>
+                      {entry.title}
+                    </span>
+                    {entry.reverted && <span className="ml-2 text-xs text-warn">откачено</span>}
                   </td>
-                  <td className="px-2 py-1.5 font-mono text-faint">
+                  <td className="px-2 font-mono text-xs">
                     <a
-                      className="hover:text-accent"
+                      className="text-faint underline decoration-transparent underline-offset-2 transition-colors duration-[--dur-fast] hover:text-accent hover:decoration-accent-dim"
                       target="_blank"
                       rel="noreferrer"
                       href={`https://github.com/lndieGamer/MCKSP-Seventh-Season/commit/${entry.sha}`}
@@ -54,7 +58,7 @@ export default function History() {
                       {entry.sha.slice(0, 7)}
                     </a>
                   </td>
-                  <td className="px-2 py-1.5">
+                  <td className="px-2 text-right">
                     <Button
                       disabled={entry.reverted}
                       onClick={() =>
@@ -77,6 +81,6 @@ export default function History() {
           </table>
         </div>
       )}
-    </Panel>
+    </Page>
   );
 }

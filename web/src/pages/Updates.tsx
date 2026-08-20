@@ -1,5 +1,16 @@
 import { useRunner } from "../components/OpRunner";
-import { Button, Empty, Loading, Panel, Tag, day } from "../components/ui";
+import {
+  Band,
+  Button,
+  Empty,
+  Loading,
+  Page,
+  PageTitle,
+  Tag,
+  Th,
+  day,
+  plural,
+} from "../components/ui";
 import { usePrivate, usePublic, useSession } from "../lib/data";
 
 export default function Updates() {
@@ -18,16 +29,25 @@ export default function Updates() {
   const loose = updates.filter((u) => !inSets.has(u.slug));
 
   return (
-    <div className="space-y-3">
+    <Page>
+      <PageTitle count={
+          updates.length
+            ? `${updates.length} ${plural(updates.length, "кандидат", "кандидата", "кандидатов")}`
+            : "нечего обновлять"
+        }>
+        обновления
+      </PageTitle>
+
       {sets.map((set) => {
         const members = updates.filter((u) => set.members.includes(u.slug));
         const ready = set.status === "available";
         return (
-          <Panel
+          <Band
             key={set.id}
+            count={`${set.members.length} ${plural(set.members.length, "мод", "мода", "модов")}`}
             title={
-              <span className="flex items-center gap-2">
-                набор «{set.id}» · {set.members.length} модов
+              <span className="flex flex-wrap items-baseline gap-2">
+                набор «{set.id}»
                 <Tag tone={ready ? "accent" : "warn"}>
                   {ready ? "можно обновить целиком" : "набор неполный"}
                 </Tag>
@@ -37,11 +57,7 @@ export default function Updates() {
               <Button
                 tone="primary"
                 disabled={!ready}
-                title={
-                  ready
-                    ? undefined
-                    : `ещё не вышли под новую версию: ${set.missing.join(", ")}`
-                }
+                title={ready ? undefined : `ещё не вышли под новую версию: ${set.missing.join(", ")}`}
                 onClick={() =>
                   runner.propose(
                     { op: "update-set", set_id: set.id },
@@ -57,19 +73,19 @@ export default function Updates() {
             }
           >
             {set.missing.length > 0 && (
-              <p className="mb-2 text-xs text-warn">
+              <p className="text-xs text-warn">
                 ждём релиза: {set.missing.map((s) => names.get(s) ?? s).join(", ")}
               </p>
             )}
             <UpdateTable rows={members} names={names} />
-          </Panel>
+          </Band>
         );
       })}
 
-      <Panel title={`одиночные обновления · ${loose.length}`}>
+      <Band title="одиночные обновления" count={loose.length}>
         {loose.length === 0 ? <Empty>нет</Empty> : <UpdateTable rows={loose} names={names} />}
-      </Panel>
-    </div>
+      </Band>
+    </Page>
   );
 }
 
@@ -83,30 +99,28 @@ function UpdateTable({
   const runner = useRunner();
   return (
     <div className="overflow-x-auto">
-      <table className="w-full min-w-[760px] text-xs">
-        <thead className="border-b border-edge text-muted">
-          <tr>
-            <th className="px-2 py-1.5 text-left font-medium">мод</th>
-            <th className="px-2 py-1.5 text-left font-medium">сейчас</th>
-            <th className="px-2 py-1.5 text-left font-medium">кандидат</th>
-            <th className="px-2 py-1.5 text-left font-medium">вышел</th>
-            <th className="px-2 py-1.5 text-left font-medium">почему нельзя</th>
-            <th className="w-px px-2 py-1.5" />
+      <table className="w-full min-w-[880px] border-separate border-spacing-0 text-sm">
+        <thead>
+          <tr className="[&>th]:border-b [&>th]:border-edge-strong">
+            <Th className="w-[320px]">мод</Th>
+            <Th className="w-[132px]">сейчас</Th>
+            <Th className="w-[148px]">кандидат</Th>
+            <Th className="w-[108px]">вышел</Th>
+            <Th className="w-[112px]" />
+            <Th>почему нельзя</Th>
           </tr>
         </thead>
         <tbody>
           {rows.map((update) => (
-            <tr key={update.slug} className="border-b border-edge/50">
-              <td className="px-2 py-1.5 text-ink">{names.get(update.slug) ?? update.slug}</td>
-              <td className="px-2 py-1.5 font-mono text-faint">{update.current_version ?? "—"}</td>
-              <td className="px-2 py-1.5 font-mono text-accent">{update.candidate_version}</td>
-              <td className="px-2 py-1.5 text-faint">{day(update.published_at)}</td>
-              <td className="px-2 py-1.5 text-warn">
-                {update.blocked_by
-                  .map((b) => `${b.slug} требует ${b.version_range}`)
-                  .join("; ") || "—"}
+            <tr key={update.slug} className="h-9 hover:bg-raised/45 [&>td]:rule">
+              <td className="px-2 text-base text-ink">{names.get(update.slug) ?? update.slug}</td>
+              <td className="px-2 font-mono text-faint">{update.current_version ?? "—"}</td>
+              <td className="px-2 font-mono text-accent">
+                <span aria-hidden>▲ </span>
+                {update.candidate_version}
               </td>
-              <td className="px-2 py-1.5">
+              <td className="px-2 font-mono text-faint">{day(update.published_at)}</td>
+              <td className="px-2">
                 <Button
                   disabled={update.status === "blocked"}
                   onClick={() =>
@@ -121,6 +135,10 @@ function UpdateTable({
                 >
                   обновить
                 </Button>
+              </td>
+              <td className="px-2 text-xs text-warn">
+                {update.blocked_by.map((b) => `${b.slug} требует ${b.version_range}`).join("; ") ||
+                  "—"}
               </td>
             </tr>
           ))}

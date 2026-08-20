@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 
 import { OpRunnerProvider } from "./components/OpRunner";
-import { ErrorBox, Kbd, ago } from "./components/ui";
+import { ErrorBox, ago } from "./components/ui";
 import { loginUrl, logout, workerConfigured } from "./lib/api";
 import { usePrivate, usePublic, useSession } from "./lib/data";
 
@@ -52,6 +52,43 @@ function useGotoKeys(map: Record<string, string>) {
   return armed;
 }
 
+function Rail({
+  to,
+  label,
+  hotkey,
+  badge,
+  armed,
+}: {
+  to: string;
+  label: string;
+  hotkey: string;
+  badge?: number;
+  armed: boolean;
+}) {
+  return (
+    <NavLink
+      to={to}
+      end={to === "/"}
+      className={({ isActive }) =>
+        `group flex items-center gap-2 rounded-sm px-2 py-1.5 text-base transition-colors duration-[--dur-fast] ${
+          isActive ? "bg-raised text-ink" : "text-muted hover:bg-raised/50 hover:text-ink"
+        }`
+      }
+    >
+      <span className="min-w-0 flex-1 truncate">{label}</span>
+      {badge ? <span className="font-mono text-2xs text-danger">{badge}</span> : null}
+      <kbd
+        aria-hidden
+        className={`font-mono text-2xs transition-colors duration-[--dur-fast] ${
+          armed ? "text-accent" : "text-faint/70 group-hover:text-faint"
+        }`}
+      >
+        {hotkey}
+      </kbd>
+    </NavLink>
+  );
+}
+
 export default function App() {
   const session = useSession();
   const publicData = usePublic();
@@ -65,89 +102,93 @@ export default function App() {
 
   return (
     <OpRunnerProvider>
-      <div className="min-h-screen">
-        <header className="sticky top-0 z-20 border-b border-edge bg-surface/95 backdrop-blur">
-          <div className="mx-auto flex max-w-[1600px] flex-wrap items-center gap-x-5 gap-y-2 px-4 py-2">
-            <div className="mr-1">
-              <h1 className="text-base font-semibold text-ink">MCKSP Seventh Season</h1>
-              <p className="font-mono text-2xs text-faint">
-                {pack
-                  ? `${pack.version} · ${pack.mc} · ${pack.loader} ${pack.loader_version}`
-                  : "модпак"}
-              </p>
-            </div>
-
-            <nav className="flex flex-wrap items-center gap-0.5">
-              {tabs.map(([to, label, key], i) => (
-                <span key={to} className="flex items-center">
-                  {i === PUBLIC_TABS.length && (
-                    <span aria-hidden className="mx-2 h-4 w-px bg-edge" />
-                  )}
-                  <NavLink
-                    to={to}
-                    end={to === "/"}
-                    title={`g ${key}`}
-                    className={({ isActive }) =>
-                      `rounded-sm px-2.5 py-1.5 text-xs transition-colors duration-[--dur-fast] ${
-                        isActive
-                          ? "bg-raised text-ink"
-                          : "text-muted hover:bg-raised/60 hover:text-ink"
-                      }`
-                    }
-                  >
-                    {label}
-                    {to === "/lint" && problems > 0 && (
-                      <span className="ml-1.5 font-mono text-2xs text-danger">{problems}</span>
-                    )}
-                  </NavLink>
-                </span>
-              ))}
-            </nav>
-
-            <div className="ml-auto flex items-center gap-3 text-2xs text-faint">
-              {armed && (
-                <span className="text-accent">
-                  <Kbd>g</Kbd> …
-                </span>
-              )}
-              {publicData.data && <span>анализ {ago(publicData.data.generated_at)}</span>}
-              {admin ? (
+      <div className="grid h-screen grid-cols-[13rem_minmax(0,1fr)] overflow-hidden">
+        <aside className="flex min-h-0 flex-col border-r border-edge bg-surface">
+          <div className="px-3 py-4">
+            <p className="text-md leading-tight font-semibold tracking-[-0.01em] text-ink">MCKSP</p>
+            <p className="text-xs text-muted">Seventh Season</p>
+            <p className="mt-1.5 font-mono text-2xs leading-relaxed text-faint">
+              {pack ? (
                 <>
-                  <span className="text-muted">{session.data?.login}</span>
-                  <button
-                    className="text-faint underline decoration-edge-strong underline-offset-2 transition-colors duration-[--dur-fast] hover:text-ink"
-                    onClick={() => void logout().then(() => window.location.reload())}
-                  >
-                    выйти
-                  </button>
+                  {pack.version}
+                  <br />
+                  {pack.mc} · {pack.loader} {pack.loader_version}
                 </>
-              ) : workerConfigured() ? (
-                <a
-                  className="text-accent underline decoration-accent-dim underline-offset-2 transition-colors duration-[--dur-fast] hover:text-accent-strong"
-                  href={loginUrl()}
-                >
-                  войти через GitHub
-                </a>
               ) : (
-                <span title="VITE_WORKER_URL не задан при сборке">публичный режим</span>
+                "модпак"
               )}
+            </p>
+          </div>
+
+          <nav className="min-h-0 flex-1 space-y-0.5 overflow-y-auto px-2 pb-3">
+            {PUBLIC_TABS.map(([to, label, key]) => (
+              <Rail key={to} to={to} label={label} hotkey={key} armed={armed} />
+            ))}
+            {admin && (
+              <>
+                <hr className="mx-2 my-2 border-edge" />
+                {ADMIN_TABS.map(([to, label, key]) => (
+                  <Rail
+                    key={to}
+                    to={to}
+                    label={label}
+                    hotkey={key}
+                    armed={armed}
+                    badge={to === "/lint" ? problems : undefined}
+                  />
+                ))}
+              </>
+            )}
+          </nav>
+
+          <div className="space-y-1.5 border-t border-edge px-3 py-3 text-2xs text-faint">
+            {armed && (
+              <p className="text-accent">
+                <span className="font-mono">g</span> — куда?
+              </p>
+            )}
+            {publicData.data && <p>анализ {ago(publicData.data.generated_at)}</p>}
+            {admin ? (
+              <p className="flex items-baseline gap-2">
+                <span className="min-w-0 truncate text-muted">{session.data?.login}</span>
+                <button
+                  className="ml-auto shrink-0 underline decoration-edge-strong underline-offset-2 transition-colors duration-[--dur-fast] hover:text-ink"
+                  onClick={() => void logout().then(() => window.location.reload())}
+                >
+                  выйти
+                </button>
+              </p>
+            ) : workerConfigured() ? (
+              <a
+                className="text-accent underline decoration-accent-dim underline-offset-2 transition-colors duration-[--dur-fast] hover:text-accent-strong"
+                href={loginUrl()}
+              >
+                войти через GitHub
+              </a>
+            ) : (
+              <p title="VITE_WORKER_URL не задан при сборке">публичный режим</p>
+            )}
+          </div>
+        </aside>
+
+        <div className="flex min-h-0 min-w-0 flex-col">
+          {(publicData.data?.notices ?? []).map((notice) => (
+            <p
+              key={notice}
+              className="shrink-0 border-b border-warn-dim bg-warn/10 px-6 py-1.5 text-xs text-warn"
+            >
+              {notice}
+            </p>
+          ))}
+          {publicData.isError && (
+            <div className="shrink-0 px-6 pt-4">
+              <ErrorBox error={publicData.error} />
             </div>
-          </div>
-        </header>
-
-        {(publicData.data?.notices ?? []).map((notice) => (
-          <div
-            key={notice}
-            className="border-b border-warn-dim bg-warn/10 px-4 py-1.5 text-center text-xs text-warn"
-          >
-            {notice}
-          </div>
-        ))}
-
-        <main className="mx-auto max-w-[1600px] p-4">
-          {publicData.isError && <ErrorBox error={publicData.error} />}
-          <Outlet />
-        </main>
+          )}
+          <main className="min-h-0 flex-1 overflow-hidden">
+            <Outlet />
+          </main>
+        </div>
       </div>
     </OpRunnerProvider>
   );

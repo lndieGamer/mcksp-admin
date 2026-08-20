@@ -46,6 +46,18 @@ export const STATUS_HEX: Record<ModStatus, string> = {
   unknown: "#7b8282",
 };
 
+/** Node fill on /graph: the status hue mixed 16% into the canvas. Cytoscape
+ *  compositing a saturated hex at low opacity turns the same colours to mud,
+ *  so the blend is resolved here instead. */
+export const STATUS_FILL: Record<ModStatus, string> = {
+  current: "#222827",
+  update_safe: "#172826",
+  update_blocked: "#2c2617",
+  broken: "#291918",
+  frozen: "#1a2020",
+  unknown: "#1a2020",
+};
+
 export const PALETTE_HEX = {
   canvas: "#080d0d",
   surface: "#111817",
@@ -93,37 +105,10 @@ export function Tag({
 }) {
   return (
     <span
-      className={`inline-block rounded-xs px-1.5 py-px text-2xs leading-4 ring-1 ring-inset ${TAG_TONES[tone]}`}
+      className={`inline-block rounded-xs px-1.5 py-0.5 text-xs leading-4 ring-1 ring-inset ${TAG_TONES[tone]}`}
     >
       {children}
     </span>
-  );
-}
-
-export function Panel({
-  title,
-  actions,
-  children,
-  className = "",
-  flush = false,
-}: {
-  title?: ReactNode;
-  actions?: ReactNode;
-  children: ReactNode;
-  className?: string;
-  /** Table-shaped content owns its own padding. */
-  flush?: boolean;
-}) {
-  return (
-    <section className={`rounded-md border border-edge bg-surface ${className}`}>
-      {(title || actions) && (
-        <header className="flex items-center justify-between gap-3 border-b border-edge px-4 py-2.5">
-          <h2 className="text-lg font-medium text-ink">{title}</h2>
-          <div className="flex items-center gap-2">{actions}</div>
-        </header>
-      )}
-      <div className={flush ? "" : "p-4"}>{children}</div>
-    </section>
   );
 }
 
@@ -132,6 +117,101 @@ export function Panel({
 export function SectionLabel({ children }: { children: ReactNode }) {
   return (
     <h2 className="mb-2 text-2xs font-medium tracking-[0.12em] text-faint uppercase">{children}</h2>
+  );
+}
+
+/** Every screen sits inside one of these. `scroll` false hands the page the full
+ *  viewport height so it can pin its own toolbar and let only the rows move --
+ *  which is what makes a sticky table head work without a hard-coded offset. */
+export function Page({ children, scroll = true }: { children: ReactNode; scroll?: boolean }) {
+  return (
+    <div className={`h-full ${scroll ? "overflow-y-auto" : "overflow-hidden"}`}>
+      <div
+        className={`mx-auto flex max-w-[1600px] flex-col gap-4 px-6 py-5 ${
+          scroll ? "" : "h-full min-h-0"
+        }`}
+      >
+        {children}
+      </div>
+    </div>
+  );
+}
+
+/** The heading band of a screen. Tables sit straight on the canvas now, so the
+ *  title, the count and the rule under them are what says "this is one block" --
+ *  a bordered box around every table was the reason eight screens looked alike. */
+export function PageTitle({
+  children,
+  count,
+  actions,
+}: {
+  children: ReactNode;
+  count?: ReactNode;
+  actions?: ReactNode;
+}) {
+  return (
+    <div className="flex flex-wrap items-baseline gap-x-3 gap-y-2 border-b border-edge pb-2">
+      <h1 className="text-xl font-medium tracking-[-0.01em] text-ink">{children}</h1>
+      {count != null && <span className="font-mono text-sm text-faint">{count}</span>}
+      {actions && <div className="ml-auto flex items-center gap-2">{actions}</div>}
+    </div>
+  );
+}
+
+/** Sub-band inside a screen that carries more than one table. */
+export function Band({
+  title,
+  count,
+  actions,
+  children,
+  className = "",
+}: {
+  title: ReactNode;
+  count?: ReactNode;
+  actions?: ReactNode;
+  children: ReactNode;
+  className?: string;
+}) {
+  return (
+    <section className={`space-y-2 ${className}`}>
+      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+        <h2 className="text-md font-medium text-ink">{title}</h2>
+        {count != null && <span className="font-mono text-sm text-faint">{count}</span>}
+        {actions && <div className="ml-auto flex items-center gap-2">{actions}</div>}
+      </div>
+      {children}
+    </section>
+  );
+}
+
+/** Column heading. Lower case on purpose: caps-with-tracking is reserved for the
+ *  overview's section dividers and nowhere else. */
+export function Th({
+  children,
+  align = "left",
+  className = "",
+  onClick,
+  sorted,
+}: {
+  children?: ReactNode;
+  align?: "left" | "right" | "center";
+  className?: string;
+  onClick?: () => void;
+  sorted?: "asc" | "desc" | false;
+}) {
+  const ALIGN = { left: "text-left", right: "text-right", center: "text-center" } as const;
+  return (
+    <th
+      scope="col"
+      aria-sort={sorted ? (sorted === "asc" ? "ascending" : "descending") : undefined}
+      onClick={onClick}
+      className={`px-2 pb-1.5 text-xs font-medium text-faint ${ALIGN[align]} ${
+        onClick ? "cursor-pointer select-none hover:text-ink" : ""
+      } ${className}`}
+    >
+      {children}
+      {sorted && <span className="ml-1 text-accent">{sorted === "desc" ? "▾" : "▴"}</span>}
+    </th>
   );
 }
 
@@ -200,7 +280,7 @@ export function Kbd({ children }: { children: ReactNode }) {
 }
 
 export function Empty({ children }: { children: ReactNode }) {
-  return <p className="px-4 py-8 text-center text-xs text-faint">{children}</p>;
+  return <p className="px-4 py-8 text-center text-sm text-faint">{children}</p>;
 }
 
 /** Skeletons take the shape of what is coming, so the page does not jump. */
@@ -233,6 +313,17 @@ export function ErrorBox({ error }: { error: unknown }) {
       {error instanceof Error ? error.message : String(error)}
     </div>
   );
+}
+
+/** Russian counts need three forms, and "4 ошибок" is the tell that a UI was
+ *  translated rather than written. */
+export function plural(n: number, one: string, few: string, many: string): string {
+  const mod100 = n % 100;
+  if (mod100 >= 11 && mod100 <= 14) return many;
+  const mod10 = n % 10;
+  if (mod10 === 1) return one;
+  if (mod10 >= 2 && mod10 <= 4) return few;
+  return many;
 }
 
 export function bytes(value: number): string {

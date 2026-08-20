@@ -7,18 +7,29 @@ import {
   Empty,
   Input,
   Loading,
-  Panel,
+  Page,
+  PageTitle,
   STATUS_CLASS,
   STATUS_GLYPH,
   STATUS_LABEL,
   Select,
+  Th,
   bytes,
   day,
 } from "../components/ui";
 import { usePrivate, usePublic, useSession } from "../lib/data";
 import type { Mod, Side } from "../lib/types";
 
-type SortKey = "name" | "slug" | "source" | "side" | "version" | "date_added" | "date_updated" | "status" | "size_bytes";
+type SortKey =
+  | "name"
+  | "slug"
+  | "source"
+  | "side"
+  | "version"
+  | "date_added"
+  | "date_updated"
+  | "status"
+  | "size_bytes";
 
 const SOURCE_LABEL: Record<Mod["source"], string> = {
   modrinth: "Modrinth",
@@ -71,7 +82,10 @@ export default function Mods() {
   const rows = useMemo(() => {
     const needle = query.trim().toLowerCase();
     const filtered = mods.filter((mod) => {
-      if (needle && !`${mod.name} ${mod.slug} ${mod.mod_ids.join(" ")}`.toLowerCase().includes(needle))
+      if (
+        needle &&
+        !`${mod.name} ${mod.slug} ${mod.mod_ids.join(" ")}`.toLowerCase().includes(needle)
+      )
         return false;
       if (source && mod.source !== source) return false;
       if (side && mod.side !== side) return false;
@@ -101,21 +115,14 @@ export default function Mods() {
       return next;
     });
 
-  const header = (key: SortKey, label: string, className = "") => (
-    <th
-      className={`cursor-pointer px-2 py-2 text-left text-xs font-medium text-muted select-none hover:text-ink ${className}`}
-      onClick={() => {
-        if (sort === key) setDescending((d) => !d);
-        else {
-          setSort(key);
-          setDescending(false);
-        }
-      }}
-    >
-      {label}
-      {sort === key && <span className="ml-1 text-faint">{descending ? "▼" : "▲"}</span>}
-    </th>
-  );
+  const sortBy = (key: SortKey) => () => {
+    if (sort === key) setDescending((d) => !d);
+    else {
+      setSort(key);
+      setDescending(false);
+    }
+  };
+  const dir = (key: SortKey) => (sort === key ? (descending ? "desc" : "asc") : false);
 
   const bulkSide = (value: Side) => {
     const targets = [...selected];
@@ -140,13 +147,19 @@ export default function Mods() {
   if (publicData.isLoading) return <Loading what="список модов" />;
   if (!publicData.data) return <Empty>данные ещё не опубликованы</Empty>;
 
+  const filtered = rows.length !== mods.length;
+
   return (
-    <div className="space-y-3">
-      <Panel>
-        <div className="flex flex-wrap items-center gap-2 p-3">
+    <Page scroll={false}>
+      <div className="space-y-3">
+        <PageTitle count={filtered ? `${rows.length} из ${mods.length}` : mods.length}>
+          моды
+        </PageTitle>
+
+        <div className="flex flex-wrap items-center gap-2">
           <Input
             ref={search}
-            placeholder="поиск по имени, slug, modId    /"
+            placeholder="имя, slug, modId"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             className="w-64"
@@ -188,13 +201,25 @@ export default function Mods() {
             />
             без [update]
           </label>
-          <span className="ml-auto text-xs text-faint">
-            {rows.length} из {mods.length}
-          </span>
+          {filtered && (
+            <button
+              className="text-xs text-faint underline decoration-edge-strong underline-offset-2 transition-colors duration-[--dur-fast] hover:text-ink"
+              onClick={() => {
+                setQuery("");
+                setSource("");
+                setSide("");
+                setFlavor("");
+                setStatus("");
+                setFrozenOnly(false);
+              }}
+            >
+              сбросить
+            </button>
+          )}
         </div>
 
         {admin && selected.size > 0 && (
-          <div className="flex flex-wrap items-center gap-2 border-t border-edge bg-canvas px-3 py-2">
+          <div className="flex flex-wrap items-center gap-2 rounded-sm border border-accent-dim bg-accent/5 px-3 py-2">
             <span className="text-xs text-muted">выбрано {selected.size}:</span>
             <Button onClick={() => bulkSide("both")}>side → both</Button>
             <Button onClick={() => bulkSide("client")}>side → client</Button>
@@ -212,83 +237,137 @@ export default function Mods() {
             >
               удалить
             </Button>
-            <Button onClick={() => setSelected(new Set())}>снять выделение</Button>
+            <Button className="ml-auto" onClick={() => setSelected(new Set())}>
+              снять выделение
+            </Button>
           </div>
         )}
+      </div>
 
-        <div className="overflow-x-auto">
-          <table className="w-full min-w-[1040px] text-sm">
-            <thead className="sticky top-[49px] z-10 border-y border-edge bg-surface">
-              <tr>
-                {admin && <th className="w-8 px-2 py-2" />}
-                {header("status", "", "w-7 text-center")}
-                {header("name", "мод")}
-                {header("slug", "slug")}
-                {header("source", "источник")}
-                {header("side", "side")}
-                <th className="px-2 py-1.5 text-left font-medium text-muted">флейворы</th>
-                {header("version", "версия")}
-                {header("size_bytes", "размер", "text-right")}
-                {header("date_added", "добавлен")}
-                {header("date_updated", "изменён")}
-              </tr>
-            </thead>
-            <tbody>
-              {rows.map((mod) => {
-                const update = updates.get(mod.slug);
-                return (
-                  <tr
-                    key={mod.slug}
-                    className={`h-8 border-b border-edge/60 transition-colors duration-[--dur-fast] ${
-                      selected.has(mod.slug) ? "bg-raised" : "hover:bg-raised/40"
-                    }`}
-                  >
-                    {admin && (
-                      <td className="px-2">
-                        <input
-                          type="checkbox"
-                          checked={selected.has(mod.slug)}
-                          onChange={() => toggle(mod.slug)}
-                        />
-                      </td>
-                    )}
-                    <td
-                      className={`text-center ${STATUS_CLASS[mod.status]}`}
-                      title={STATUS_LABEL[mod.status]}
-                    >
-                      <span aria-hidden className="text-2xs">
-                        {STATUS_GLYPH[mod.status]}
-                      </span>
-                      <span className="sr-only">{STATUS_LABEL[mod.status]}</span>
-                    </td>
+      {/* The table owns the remaining height, so only the rows move and the head
+          pins to the top of this scroller -- there is no offset to keep in step
+          with the chrome above it. */}
+      <div className="min-h-0 flex-1 overflow-auto">
+        {/* Fixed layout with one flexible column: the name is what the eye scans,
+            so it takes the slack and everything else keeps a stable rhythm. The
+            minimum leaves the name ~300px before the scroller takes over. */}
+        <table className="w-full min-w-[1280px] table-fixed border-separate border-spacing-0 text-sm">
+          <colgroup>
+            {admin && <col className="w-8" />}
+            <col className="w-7" />
+            <col />
+            <col className="w-[160px]" />
+            <col className="w-[100px]" />
+            <col className="w-[64px]" />
+            <col className="w-[152px]" />
+            <col className="w-[196px]" />
+            <col className="w-[84px]" />
+            <col className="w-[92px]" />
+            <col className="w-[92px]" />
+          </colgroup>
+          <thead>
+            <tr className="[&>th]:sticky [&>th]:top-0 [&>th]:z-10 [&>th]:border-b [&>th]:border-edge-strong [&>th]:bg-canvas [&>th]:pt-1">
+              {admin && <Th />}
+              <Th align="center" onClick={sortBy("status")} sorted={dir("status")} />
+              <Th onClick={sortBy("name")} sorted={dir("name")}>
+                мод
+              </Th>
+              <Th onClick={sortBy("slug")} sorted={dir("slug")}>
+                slug
+              </Th>
+              <Th onClick={sortBy("source")} sorted={dir("source")}>
+                источник
+              </Th>
+              <Th onClick={sortBy("side")} sorted={dir("side")}>
+                side
+              </Th>
+              <Th>флейворы</Th>
+              <Th onClick={sortBy("version")} sorted={dir("version")}>
+                версия
+              </Th>
+              <Th align="right" onClick={sortBy("size_bytes")} sorted={dir("size_bytes")}>
+                размер
+              </Th>
+              <Th onClick={sortBy("date_added")} sorted={dir("date_added")}>
+                добавлен
+              </Th>
+              <Th onClick={sortBy("date_updated")} sorted={dir("date_updated")}>
+                изменён
+              </Th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((mod) => {
+              const update = updates.get(mod.slug);
+              const picked = selected.has(mod.slug);
+              return (
+                <tr
+                  key={mod.slug}
+                  className={`h-8 leading-[1.25] transition-colors duration-[--dur-fast] [&>td]:rule ${
+                    picked ? "bg-raised" : "hover:bg-raised/45"
+                  }`}
+                >
+                  {admin && (
                     <td className="px-2">
-                      <Link className="text-ink hover:text-accent" to={`/graph?focus=${mod.slug}`}>
-                        {mod.name}
-                      </Link>
+                      <input
+                        type="checkbox"
+                        aria-label={`выбрать ${mod.name}`}
+                        checked={picked}
+                        onChange={() => toggle(mod.slug)}
+                      />
                     </td>
-                    <td className="px-2 font-mono text-xs text-faint">{mod.slug}</td>
-                    <td className="px-2 text-muted">{SOURCE_LABEL[mod.source]}</td>
-                    <td className="px-2 font-mono text-xs text-muted">{mod.side}</td>
-                    <td className="max-w-[200px] truncate px-2 text-xs text-faint" title={mod.flavors.join(", ")}>
-                      {mod.flavors.join(", ") || "—"}
-                    </td>
-                    <td className="px-2 font-mono text-xs text-muted">
-                      {mod.version ?? "—"}
-                      {update && (
-                        <span className="ml-1.5 text-accent">▲ {update.candidate_version}</span>
-                      )}
-                    </td>
-                    <td className="px-2 text-right font-mono text-xs text-faint">{bytes(mod.size_bytes)}</td>
-                    <td className="px-2 font-mono text-xs text-faint">{day(mod.date_added)}</td>
-                    <td className="px-2 font-mono text-xs text-faint">{day(mod.date_updated)}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-          {rows.length === 0 && <Empty>ничего не подошло под фильтры</Empty>}
-        </div>
-      </Panel>
-    </div>
+                  )}
+                  <td
+                    className={`text-center ${STATUS_CLASS[mod.status]}`}
+                    title={STATUS_LABEL[mod.status]}
+                  >
+                    {/* The status marks are not in IBM Plex Sans; without an
+                        explicit line-height the fallback symbol font's metrics
+                        push every row five pixels taller than the 32px grid. */}
+                    <span aria-hidden className="inline-block leading-none">
+                      {STATUS_GLYPH[mod.status]}
+                    </span>
+                    <span className="sr-only">{STATUS_LABEL[mod.status]}</span>
+                  </td>
+                  <td className="truncate px-2">
+                    <Link
+                      className="text-base text-ink decoration-accent-dim underline-offset-2 hover:text-accent hover:underline"
+                      to={`/graph?focus=${mod.slug}`}
+                      title={mod.name}
+                    >
+                      {mod.name}
+                    </Link>
+                  </td>
+                  <td className="truncate px-2 font-mono text-muted" title={mod.slug}>
+                    {mod.slug}
+                  </td>
+                  <td className="px-2 text-muted">{SOURCE_LABEL[mod.source]}</td>
+                  <td className="px-2 font-mono text-muted">{mod.side}</td>
+                  <td
+                    className="truncate px-2 text-faint"
+                    title={mod.flavors.join(", ") || undefined}
+                  >
+                    {mod.flavors.join(", ") || "—"}
+                  </td>
+                  <td className="truncate px-2 font-mono text-muted">
+                    {mod.version ?? "—"}
+                    {update && (
+                      <span className="ml-2 text-accent">
+                        <span aria-hidden>▲ </span>
+                        {update.candidate_version}
+                      </span>
+                    )}
+                  </td>
+                  <td className="px-2 text-right font-mono text-faint">{bytes(mod.size_bytes)}</td>
+                  <td className="px-2 font-mono text-faint">{day(mod.date_added)}</td>
+                  <td className="px-2 font-mono text-faint">{day(mod.date_updated)}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+        {rows.length === 0 && <Empty>ничего не подошло под фильтры — попробуйте сбросить их</Empty>}
+      </div>
+    </Page>
   );
 }

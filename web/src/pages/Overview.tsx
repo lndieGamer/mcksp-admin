@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
 
-import { Loading, SectionLabel, bytes, stamp } from "../components/ui";
+import {
+  Loading,
+  Page,
+  PageTitle,
+  SectionLabel,
+  ago,
+  bytes,
+  plural,
+  stamp,
+} from "../components/ui";
 import { loginUrl, workerConfigured } from "../lib/api";
 import { usePrivate, usePublic, useSession } from "../lib/data";
 
@@ -78,7 +87,7 @@ export default function Overview() {
       items.push({
         glyph: "⊘",
         tone: "text-danger",
-        text: `${priv.platform.length} требований к платформе не выполнено`,
+        text: `${priv.platform.length} ${plural(priv.platform.length, "требование к платформе не выполнено", "требования к платформе не выполнены", "требований к платформе не выполнено")}`,
         to: "/lint",
         cta: "посмотреть",
       });
@@ -88,7 +97,9 @@ export default function Overview() {
   for (const edge of data.edges) if (edge.to) linked.add(edge.from).add(edge.to);
 
   return (
-    <div className="mx-auto max-w-[900px] space-y-8 py-4">
+    <Page>
+      <div className="w-full max-w-[900px] space-y-8">
+        <PageTitle count={`анализ ${ago(data.generated_at)}`}>сводка</PageTitle>
       <section>
         <SectionLabel>требует внимания</SectionLabel>
         {!admin ? (
@@ -121,12 +132,12 @@ export default function Overview() {
                   to={item.to}
                   className="group flex items-center gap-3 py-2.5 transition-colors duration-[--dur-fast] hover:bg-raised/40"
                 >
-                  <span aria-hidden className={`w-4 text-center text-xs ${item.tone}`}>
+                  <span aria-hidden className={`w-4 text-center text-sm ${item.tone}`}>
                     {item.glyph}
                   </span>
-                  <span className="text-sm text-ink">{item.text}</span>
-                  <span className="ml-auto pr-2 text-xs text-faint transition-colors duration-[--dur-fast] group-hover:text-accent">
-                    {item.cta} →
+                  <span className="text-base text-ink">{item.text}</span>
+                  <span className="ml-auto pr-2 text-sm text-faint transition-colors duration-[--dur-fast] group-hover:text-accent">
+                    {item.cta} <span aria-hidden>→</span>
                   </span>
                 </Link>
               </li>
@@ -144,9 +155,7 @@ export default function Overview() {
           <div>
             <dt className="sr-only">вес полной сборки</dt>
             <dd className="font-mono text-ink">{bytes(data.build_sizes.full)}</dd>
-            <span className="text-2xs text-faint">
-              минимум {bytes(data.build_sizes.minimal)}
-            </span>
+            <span className="text-xs text-faint">минимум {bytes(data.build_sizes.minimal)}</span>
           </div>
         </dl>
       </section>
@@ -156,24 +165,29 @@ export default function Overview() {
           <SectionLabel>последнее</SectionLabel>
           <ul className="divide-y divide-edge border-y border-edge">
             {priv.history.slice(0, 5).map((entry) => (
-              <li key={entry.sha} className="flex items-baseline gap-3 py-2 text-xs">
-                <span className="font-mono text-faint">{entry.op}</span>
+              <li key={entry.sha} className="flex items-baseline gap-3 py-2 text-sm">
+                <span className="font-mono text-xs text-faint">{entry.op}</span>
                 <span className={entry.reverted ? "text-faint line-through" : "text-muted"}>
                   {entry.title}
                 </span>
-                <span className="ml-auto font-mono text-2xs text-faint">{stamp(entry.date)}</span>
+                <span className="ml-auto font-mono text-xs whitespace-nowrap text-faint">
+                  {stamp(entry.date)}
+                </span>
               </li>
             ))}
           </ul>
-          <p className="mt-2 text-2xs text-faint">
-            анализ посчитан {stamp(data.generated_at)} ·{" "}
-            <Link className="hover:text-accent" to="/history">
+          <p className="mt-2 text-xs text-faint">
+            <Link
+              className="underline decoration-edge-strong underline-offset-2 transition-colors duration-[--dur-fast] hover:text-accent"
+              to="/history"
+            >
               весь журнал
             </Link>
           </p>
         </section>
       )}
-    </div>
+      </div>
+    </Page>
   );
 }
 
@@ -184,16 +198,7 @@ function Fact({ value, unit, hint }: { value: number; unit: string; hint?: strin
       <dd className="font-mono text-ink">
         {value} <span className="font-sans text-muted">{unit}</span>
       </dd>
-      {hint && <span className="text-2xs text-faint">{hint}</span>}
+      {hint && <span className="text-xs text-faint">{hint}</span>}
     </div>
   );
-}
-
-function plural(n: number, one: string, few: string, many: string): string {
-  const mod100 = n % 100;
-  if (mod100 >= 11 && mod100 <= 14) return many;
-  const mod10 = n % 10;
-  if (mod10 === 1) return one;
-  if (mod10 >= 2 && mod10 <= 4) return few;
-  return many;
 }

@@ -9,9 +9,11 @@ import {
   Button,
   Empty,
   Loading,
-  Panel,
+  Page,
+  PageTitle,
   Pill,
   PALETTE_HEX,
+  STATUS_FILL,
   STATUS_GLYPH,
   STATUS_HEX,
   STATUS_LABEL,
@@ -24,12 +26,14 @@ import type { ModStatus, Role, Side } from "../lib/types";
 cytoscape.use(fcose);
 cytoscape.use(dagre);
 
-const SHAPE: Record<Role, string> = {
-  core: "hexagon",
-  addon: "round-rectangle",
-  library: "ellipse",
-  standalone: "diamond",
-  mod: "round-rectangle",
+/** Role is carried by the outline, so every shape gets a size that still reads
+ *  as that shape at 100%: a diamond needs square room, a library pill does not. */
+const ROLE: Record<Role, { shape: string; w: number; h: number }> = {
+  core: { shape: "hexagon", w: 40, h: 36 },
+  addon: { shape: "round-rectangle", w: 42, h: 26 },
+  library: { shape: "ellipse", w: 32, h: 24 },
+  standalone: { shape: "diamond", w: 36, h: 36 },
+  mod: { shape: "round-rectangle", w: 42, h: 26 },
 };
 
 export default function Graph() {
@@ -54,10 +58,16 @@ export default function Graph() {
   const [side, setSide] = useState("");
   const [flavor, setFlavor] = useState("");
   const [requiredOnly, setRequiredOnly] = useState(false);
-  const [hideIsolated, setHideIsolated] = useState(false);
+  // On by default: 160 of the 200 mods depend on nothing, and fcose tiles them
+  // into a grid that swallows the ~40 nodes with arrows -- and pushes the fit
+  // zoom so far out that no label survives. The checkbox brings them back.
+  const [hideIsolated, setHideIsolated] = useState(true);
   const [hideLibraries, setHideLibraries] = useState(false);
 
-  const index = useMemo(() => (publicData.data ? indexOf(publicData.data) : null), [publicData.data]);
+  const index = useMemo(
+    () => (publicData.data ? indexOf(publicData.data) : null),
+    [publicData.data],
+  );
   const selected = focus && index ? (index.bySlug.get(focus) ?? null) : null;
 
   const flavorIds = useMemo(() => {
@@ -76,15 +86,21 @@ export default function Graph() {
     );
     const nodes = publicData.data.mods
       .filter((mod) => visible.has(mod.slug))
-      .map((mod) => ({
-        data: {
-          id: mod.slug,
-          label: `${STATUS_GLYPH[mod.status]} ${mod.name}`,
-          color: STATUS_HEX[mod.status],
-          shape: SHAPE[mod.role] ?? "round-rectangle",
-          border: mod.embedded ? "dashed" : "solid",
-        },
-      }));
+      .map((mod) => {
+        const role = ROLE[mod.role] ?? ROLE.mod;
+        return {
+          data: {
+            id: mod.slug,
+            label: `${STATUS_GLYPH[mod.status]} ${mod.name}`,
+            color: STATUS_HEX[mod.status],
+            fill: STATUS_FILL[mod.status],
+            shape: role.shape,
+            w: role.w,
+            h: role.h,
+            border: mod.embedded ? "dashed" : "solid",
+          },
+        };
+      });
     const edges = publicData.data.edges
       .filter((edge) => edge.to && visible.has(edge.from) && visible.has(edge.to))
       .filter((edge) => !requiredOnly || edge.type === "required")
@@ -113,39 +129,70 @@ export default function Graph() {
       // Twice the default. Cytoscape warns about any value but 1; the graph
       // spans ~200 nodes, and the calibrated step makes crossing it a chore.
       wheelSensitivity: 2,
+      minZoom: 0.15,
+      maxZoom: 3,
       style: [
         {
           selector: "node",
           style: {
-            "background-color": "data(color)",
-            "background-opacity": 0.22,
+            // A solid blend beats `background-opacity` on a saturated hex: the
+            // alpha composite muddies every status into the same brown-grey.
+            "background-color": "data(fill)",
             "border-color": "data(color)",
-            "border-width": 1.5,
+            // Whole pixels only. 1.5 lands on a half-pixel of the canvas and
+            // renders as a soft two-pixel smear, which is what reads as "thick".
+            "border-width": 1,
             "border-style": "data(border)" as unknown as cytoscape.Css.LineStyle,
             shape: "data(shape)" as unknown as cytoscape.Css.NodeShape,
+            width: "data(w)",
+            height: "data(h)",
             label: "data(label)",
-            color: PALETTE_HEX.ink,
-            "font-size": 8,
-            "text-valign": "center",
-            "text-max-width": "90px",
+            color: PALETTE_HEX.muted,
+            // The label sits under the node instead of inside it. Inside, any
+            // name longer than the shape spilled across its own outline.
+            "text-valign": "bottom",
+            "text-halign": "center",
+            "text-margin-y": 5,
+            "font-family": "IBM Plex Sans, sans-serif",
+            "font-size": 12,
+            "text-max-width": "150px",
             "text-wrap": "ellipsis",
-            width: 78,
-            height: 26,
+            // Cytoscape bakes node and label into one bitmap per zoom level, so
+            // an 11px label at 0.5x is rendered at 5px and then smeared. Below
+            // the threshold the name is dropped instead of turned to mush.
+            "min-zoomed-font-size": 8,
+            // Names overlap edges and each other once the layout is dense; the
+            // canvas-coloured outline keeps each one legible without a plate.
+            "text-outline-color": PALETTE_HEX.canvas,
+            "text-outline-width": 2,
+            "text-outline-opacity": 1,
           },
         },
         {
           selector: "node:selected",
-          style: { "border-width": 3, "background-opacity": 0.45, color: "#fff" },
+          style: {
+            "border-color": PALETTE_HEX.accent,
+            "border-width": 2,
+            "background-color": PALETTE_HEX.raised,
+            color: PALETTE_HEX.ink,
+            "font-weight": 500,
+            "z-index": 10,
+          },
+        },
+        {
+          selector: "node:active",
+          style: { "overlay-color": PALETTE_HEX.accent, "overlay-opacity": 0.12 },
         },
         {
           selector: "edge",
           style: {
             width: 1,
+            opacity: 0.8,
             "line-color": "data(color)",
             "line-style": "data(style)" as unknown as cytoscape.Css.LineStyle,
             "target-arrow-color": "data(color)",
             "target-arrow-shape": "triangle",
-            "arrow-scale": 0.6,
+            "arrow-scale": 0.7,
             "curve-style": "bezier",
           },
         },
@@ -192,6 +239,16 @@ export default function Graph() {
     };
   }, [elements, layout]);
 
+  // The canvas lives in a flex row, so a window resize changes its box without
+  // changing the window's own layout the renderer watches.
+  useEffect(() => {
+    const box = container.current;
+    if (!box) return;
+    const observer = new ResizeObserver(() => cy.current?.resize());
+    observer.observe(box);
+    return () => observer.disconnect();
+  }, []);
+
   useEffect(() => {
     const instance = cy.current;
     if (!instance || !focus) return;
@@ -209,179 +266,244 @@ export default function Graph() {
   const update = privateData.data?.updates.find((u) => u.slug === focus);
   const incoming = focus ? (index.incoming.get(focus) ?? []) : [];
   const outgoing = focus ? (index.outgoing.get(focus) ?? []) : [];
+  const nodeCount = elements.filter((e) => !("source" in e.data)).length;
+  const edgeCount = elements.length - nodeCount;
 
   return (
-    <div className="grid gap-3 lg:grid-cols-[1fr_320px]">
-      <Panel className="overflow-hidden">
-        <div className="flex flex-wrap items-center gap-2 border-b border-edge p-3">
-          <Select value={layout} onChange={(e) => setLayout(e.target.value as "fcose" | "dagre")}>
-            <option value="fcose">кластеры (fcose)</option>
-            <option value="dagre">дерево (dagre)</option>
-          </Select>
-          <Select value={side} onChange={(e) => setSide(e.target.value)}>
-            <option value="">side: любой</option>
-            <option value="both">both</option>
-            <option value="client">client</option>
-            <option value="server">server</option>
-          </Select>
-          <Select value={flavor} onChange={(e) => setFlavor(e.target.value)}>
-            <option value="">флейвор: любой</option>
-            {flavorIds.map((id) => (
-              <option key={id} value={id}>
-                {id}
-              </option>
-            ))}
-          </Select>
-          <label className="flex items-center gap-1.5 text-xs text-muted">
-            <input
-              type="checkbox"
-              checked={requiredOnly}
-              onChange={(e) => setRequiredOnly(e.target.checked)}
-            />
-            только обязательные рёбра
-          </label>
-          <label className="flex items-center gap-1.5 text-xs text-muted">
-            <input
-              type="checkbox"
-              checked={hideIsolated}
-              onChange={(e) => setHideIsolated(e.target.checked)}
-            />
-            только связанные
-          </label>
-          <label className="flex items-center gap-1.5 text-xs text-muted">
-            <input
-              type="checkbox"
-              checked={hideLibraries}
-              onChange={(e) => setHideLibraries(e.target.checked)}
-            />
-            скрыть библиотеки
-          </label>
-        </div>
+    <Page scroll={false}>
+      <PageTitle count={`${nodeCount} узлов · ${edgeCount} связей`}>граф</PageTitle>
 
-        <div ref={container} className="h-[calc(100vh-210px)] min-h-[480px] w-full bg-canvas" />
-
-        <div className="flex flex-wrap gap-x-4 gap-y-1 border-t border-edge px-3 py-2 text-2xs text-faint">
-          {(Object.keys(STATUS_HEX) as ModStatus[]).map((status) => (
-            <span key={status} className="flex items-center gap-1.5">
-              <span aria-hidden style={{ color: STATUS_HEX[status] }}>
-                {STATUS_GLYPH[status]}
-              </span>
-              {STATUS_LABEL[status]}
-            </span>
-          ))}
-          <span>форма — роль · пунктирная рамка — вшит через jarjar · пунктирное ребро — optional</span>
-        </div>
-      </Panel>
-
-      <Panel title={selected ? selected.name : "Узел"}>
-        {!selected ? (
-          <p className="text-xs text-faint">Кликните по узлу, чтобы увидеть детали.</p>
-        ) : (
-          <div className="space-y-3 text-xs">
-            <Pill status={selected.status} />
-            <dl className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-muted">
-              <dt>slug</dt>
-              <dd className="font-mono text-muted">{selected.slug}</dd>
-              <dt>modId</dt>
-              <dd className="font-mono text-muted">{selected.mod_ids.join(", ") || "—"}</dd>
-              <dt>версия</dt>
-              <dd className="font-mono text-muted">{selected.version ?? "—"}</dd>
-              <dt>роль</dt>
-              <dd className="text-muted">{selected.role}</dd>
-              <dt>кластер</dt>
-              <dd className="text-muted">{selected.cluster ?? "—"}</dd>
-              <dt>side</dt>
-              <dd className="text-muted">{selected.side}</dd>
-              <dt>размер</dt>
-              <dd className="text-muted">{bytes(selected.size_bytes)}</dd>
-              {selected.embedded && (
-                <>
-                  <dt>вшит в</dt>
-                  <dd className="font-mono text-muted">{selected.owner}</dd>
-                </>
-              )}
-            </dl>
-
-            {update?.status === "blocked" && (
-              <div className="rounded border border-warn-dim bg-warn/10 p-2">
-                <p className="text-warn">
-                  Обновление до {update.candidate_version} блокируют:
-                </p>
-                <ul className="mt-1 space-y-0.5 text-warn">
-                  {update.blocked_by.map((blocker) => (
-                    <li key={blocker.slug} className="font-mono text-2xs">
-                      {blocker.slug} требует {blocker.version_range}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            <div>
-              <p className="mb-1 text-faint">зависит от ({outgoing.length})</p>
-              <ul className="space-y-0.5">
-                {outgoing.map((edge, i) => (
-                  <li key={i} className={edge.satisfied ? "text-muted" : "text-danger"}>
-                    <button
-                      className="font-mono hover:text-accent"
-                      onClick={() => edge.to && setParams({ focus: edge.to })}
-                    >
-                      {edge.to ?? `${edge.to_mod_id} (нет в паке)`}
-                    </button>{" "}
-                    <span className="text-faint">
-                      {edge.type} {edge.version_range}
-                    </span>
-                  </li>
-                ))}
-                {outgoing.length === 0 && <li className="text-faint">—</li>}
-              </ul>
-            </div>
-
-            <div>
-              <p className="mb-1 text-faint">нужен для ({incoming.length})</p>
-              <ul className="space-y-0.5">
-                {incoming.map((edge, i) => (
-                  <li key={i} className="text-muted">
-                    <button
-                      className="font-mono hover:text-accent"
-                      onClick={() => setParams({ focus: edge.from })}
-                    >
-                      {edge.from}
-                    </button>{" "}
-                    <span className="text-faint">
-                      {edge.type} {edge.version_range}
-                    </span>
-                  </li>
-                ))}
-                {incoming.length === 0 && <li className="text-faint">—</li>}
-              </ul>
-            </div>
-
-            {admin && !selected.embedded && (
-              <div className="flex flex-wrap gap-1.5 border-t border-edge pt-3">
-                {(["both", "client", "server"] as Side[])
-                  .filter((value) => value !== selected.side)
-                  .map((value) => (
-                    <Button
-                      key={value}
-                      onClick={() =>
-                        runner.propose(
-                          { op: "set-side", targets: [selected.slug], value },
-                          <p className="text-muted">
-                            mods/{selected.slug}.pw.toml: <code>side</code> {selected.side} →{" "}
-                            {value}
-                          </p>,
-                        )
-                      }
-                    >
-                      side → {value}
-                    </Button>
-                  ))}
-              </div>
-            )}
+      <div className="grid min-h-0 flex-1 gap-4 lg:grid-cols-[minmax(0,1fr)_310px]">
+        <section className="flex min-h-0 flex-col gap-2">
+          <div className="flex flex-wrap items-center gap-2">
+            <Select value={layout} onChange={(e) => setLayout(e.target.value as "fcose" | "dagre")}>
+              <option value="fcose">кластеры (fcose)</option>
+              <option value="dagre">дерево (dagre)</option>
+            </Select>
+            <Select value={side} onChange={(e) => setSide(e.target.value)}>
+              <option value="">side: любой</option>
+              <option value="both">both</option>
+              <option value="client">client</option>
+              <option value="server">server</option>
+            </Select>
+            <Select value={flavor} onChange={(e) => setFlavor(e.target.value)}>
+              <option value="">флейвор: любой</option>
+              {flavorIds.map((id) => (
+                <option key={id} value={id}>
+                  {id}
+                </option>
+              ))}
+            </Select>
+            <label className="flex items-center gap-1.5 text-xs text-muted">
+              <input
+                type="checkbox"
+                checked={requiredOnly}
+                onChange={(e) => setRequiredOnly(e.target.checked)}
+              />
+              только обязательные рёбра
+            </label>
+            <label className="flex items-center gap-1.5 text-xs text-muted">
+              <input
+                type="checkbox"
+                checked={hideIsolated}
+                onChange={(e) => setHideIsolated(e.target.checked)}
+              />
+              только связанные
+            </label>
+            <label className="flex items-center gap-1.5 text-xs text-muted">
+              <input
+                type="checkbox"
+                checked={hideLibraries}
+                onChange={(e) => setHideLibraries(e.target.checked)}
+              />
+              скрыть библиотеки
+            </label>
           </div>
-        )}
-      </Panel>
+
+          <div
+            ref={container}
+            className="min-h-[320px] flex-1 rounded-md border border-edge bg-canvas"
+          />
+
+          <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-faint">
+            {(Object.keys(STATUS_HEX) as ModStatus[]).map((status) => (
+              <span key={status} className="flex items-center gap-1.5">
+                <span aria-hidden style={{ color: STATUS_HEX[status] }}>
+                  {STATUS_GLYPH[status]}
+                </span>
+                {STATUS_LABEL[status]}
+              </span>
+            ))}
+            <span className="text-faint">
+              форма — роль · пунктирная рамка — вшит через jarjar · пунктирное ребро — optional
+            </span>
+          </div>
+        </section>
+
+        <aside className="min-h-0 overflow-y-auto border-l border-edge pl-4">
+          {!selected ? (
+            <p className="text-sm text-faint">
+              Кликните по узлу, чтобы увидеть зависимости в обе стороны.
+            </p>
+          ) : (
+            <div className="space-y-4 text-sm">
+              <div className="space-y-1.5 border-b border-edge pb-3">
+                <h2 className="text-lg font-medium text-ink">{selected.name}</h2>
+                <Pill status={selected.status} />
+              </div>
+
+              <dl className="grid grid-cols-[auto_minmax(0,1fr)] gap-x-3 gap-y-1">
+                <Fact label="slug" mono>
+                  {selected.slug}
+                </Fact>
+                <Fact label="modId" mono>
+                  {selected.mod_ids.join(", ") || "—"}
+                </Fact>
+                <Fact label="версия" mono>
+                  {selected.version ?? "—"}
+                </Fact>
+                <Fact label="роль">{selected.role}</Fact>
+                <Fact label="кластер">{selected.cluster ?? "—"}</Fact>
+                <Fact label="side" mono>
+                  {selected.side}
+                </Fact>
+                <Fact label="размер" mono>
+                  {bytes(selected.size_bytes)}
+                </Fact>
+                {selected.embedded && (
+                  <Fact label="вшит в" mono>
+                    {selected.owner}
+                  </Fact>
+                )}
+              </dl>
+
+              {update?.status === "blocked" && (
+                <div className="rounded-sm border border-warn-dim bg-warn/10 p-2.5">
+                  <p className="text-xs text-warn">
+                    Обновление до {update.candidate_version} блокируют:
+                  </p>
+                  <ul className="mt-1 space-y-0.5">
+                    {update.blocked_by.map((blocker) => (
+                      <li key={blocker.slug} className="font-mono text-xs text-warn">
+                        {blocker.slug} требует {blocker.version_range}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              <Links
+                title={`зависит от (${outgoing.length})`}
+                items={outgoing.map((edge) => ({
+                  key: edge.to ?? edge.to_mod_id,
+                  label: edge.to ?? `${edge.to_mod_id} (нет в паке)`,
+                  meta: `${edge.type} ${edge.version_range}`,
+                  broken: !edge.satisfied,
+                  go: edge.to ? () => setParams({ focus: edge.to as string }) : undefined,
+                }))}
+              />
+
+              <Links
+                title={`нужен для (${incoming.length})`}
+                items={incoming.map((edge) => ({
+                  key: edge.from,
+                  label: edge.from,
+                  meta: `${edge.type} ${edge.version_range}`,
+                  broken: false,
+                  go: () => setParams({ focus: edge.from }),
+                }))}
+              />
+
+              {admin && !selected.embedded && (
+                <div className="flex flex-wrap gap-1.5 border-t border-edge pt-3">
+                  {(["both", "client", "server"] as Side[])
+                    .filter((value) => value !== selected.side)
+                    .map((value) => (
+                      <Button
+                        key={value}
+                        onClick={() =>
+                          runner.propose(
+                            { op: "set-side", targets: [selected.slug], value },
+                            <p className="text-muted">
+                              mods/{selected.slug}.pw.toml: <code>side</code> {selected.side} →{" "}
+                              {value}
+                            </p>,
+                          )
+                        }
+                      >
+                        side → {value}
+                      </Button>
+                    ))}
+                </div>
+              )}
+            </div>
+          )}
+        </aside>
+      </div>
+    </Page>
+  );
+}
+
+function Fact({
+  label,
+  mono = false,
+  children,
+}: {
+  label: string;
+  mono?: boolean;
+  children: React.ReactNode;
+}) {
+  return (
+    <>
+      <dt className="text-faint">{label}</dt>
+      <dd className={`min-w-0 break-words text-muted ${mono ? "font-mono text-xs" : ""}`}>
+        {children}
+      </dd>
+    </>
+  );
+}
+
+function Links({
+  title,
+  items,
+}: {
+  title: string;
+  items: {
+    key: string;
+    label: string;
+    meta: string;
+    broken: boolean;
+    go?: () => void;
+  }[];
+}) {
+  return (
+    <div>
+      <p className="mb-1 text-xs text-faint">{title}</p>
+      {items.length === 0 ? (
+        <p className="text-xs text-faint">—</p>
+      ) : (
+        <ul className="space-y-0.5">
+          {items.map((item, i) => (
+            <li key={`${item.key}-${i}`} className="flex flex-wrap items-baseline gap-x-2">
+              {item.go ? (
+                <button
+                  className={`text-left font-mono text-xs underline decoration-transparent underline-offset-2 transition-colors duration-[--dur-fast] hover:decoration-accent-dim ${
+                    item.broken ? "text-danger" : "text-muted hover:text-accent"
+                  }`}
+                  onClick={item.go}
+                >
+                  {item.label}
+                </button>
+              ) : (
+                <span className={`font-mono text-xs ${item.broken ? "text-danger" : "text-muted"}`}>
+                  {item.label}
+                </span>
+              )}
+              <span className="font-mono text-2xs text-faint">{item.meta}</span>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 }

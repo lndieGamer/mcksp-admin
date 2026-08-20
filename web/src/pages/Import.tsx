@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import { useRunner } from "../components/OpRunner";
-import { Button, Empty, ErrorBox, Input, Panel, Tag, day } from "../components/ui";
+import { Band, Button, Empty, ErrorBox, Input, Page, PageTitle, Tag, day } from "../components/ui";
 import { api, curseforge, modrinth } from "../lib/api";
 import { usePublic, useSession } from "../lib/data";
 import type { Side } from "../lib/types";
@@ -52,30 +52,38 @@ export default function Import() {
   if (!session.data) return <Empty>раздел доступен только администратору</Empty>;
 
   return (
-    <div className="space-y-3">
-      <div className="flex gap-1">
-        {(
-          [
-            ["modrinth", "Modrinth"],
-            ["curseforge", "CurseForge"],
-            ["jar", "Локальный jar"],
-          ] as const
-        ).map(([id, label]) => (
-          <button
-            key={id}
-            onClick={() => setTab(id)}
-            className={`rounded px-3 py-1.5 text-xs ${
-              tab === id ? "bg-raised text-ink" : "text-muted hover:bg-surface"
-            }`}
-          >
-            {label}
-          </button>
-        ))}
-      </div>
+    <Page>
+      <PageTitle
+        actions={
+          <div role="tablist" className="flex gap-1">
+            {(
+              [
+                ["modrinth", "Modrinth"],
+                ["curseforge", "CurseForge"],
+                ["jar", "Локальный jar"],
+              ] as const
+            ).map(([id, label]) => (
+              <button
+                key={id}
+                role="tab"
+                aria-selected={tab === id}
+                onClick={() => setTab(id)}
+                className={`rounded-sm px-3 py-1.5 text-sm transition-colors duration-[--dur-fast] ${
+                  tab === id ? "bg-raised text-ink" : "text-muted hover:bg-raised/50 hover:text-ink"
+                }`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        }
+      >
+        импорт
+      </PageTitle>
       {tab === "modrinth" && <ModrinthTab />}
       {tab === "curseforge" && <CurseForgeTab />}
       {tab === "jar" && <JarTab />}
-    </div>
+    </Page>
   );
 }
 
@@ -122,7 +130,7 @@ function ModrinthTab() {
     hit.server_side === "unsupported" ? "client" : hit.client_side === "unsupported" ? "server" : "both";
 
   return (
-    <Panel
+    <Band
       title="поиск по Modrinth"
       actions={
         <>
@@ -138,7 +146,15 @@ function ModrinthTab() {
       }
     >
       {error != null ? <ErrorBox error={error} /> : null}
-      {!hits && <Empty>фасеты: project_type:mod, categories:{LOADER}, versions:{MC}</Empty>}
+      {!hits && (
+        <p className="max-w-[70ch] text-sm text-faint">
+          Введите название и нажмите «искать». Ищутся только моды под{" "}
+          <span className="font-mono text-xs">
+            {LOADER} {MC}
+          </span>
+          , остальное Modrinth не вернёт.
+        </p>
+      )}
 
       <div className="grid gap-3 lg:grid-cols-2">
         <ul className="space-y-1">
@@ -146,7 +162,7 @@ function ModrinthTab() {
             <li key={hit.project_id}>
               <button
                 onClick={() => open(hit)}
-                className="w-full rounded border border-edge px-3 py-2 text-left text-xs hover:border-accent"
+                className="w-full rounded border border-edge px-3 py-2 text-left text-sm transition-colors duration-[--dur-fast] hover:border-accent"
               >
                 <span className="text-ink">{hit.title}</span>
                 {installed.projects.has(hit.project_id) && (
@@ -161,7 +177,7 @@ function ModrinthTab() {
 
         {versions && (
           <div className="space-y-1">
-            <p className="text-xs text-muted">
+            <p className="text-sm text-muted">
               версии «{versions.hit.title}» · side по Modrinth: {sideFor(versions.hit)}
             </p>
             {versions.list.slice(0, 15).map((version) => {
@@ -171,7 +187,7 @@ function ModrinthTab() {
               return (
                 <div
                   key={version.id}
-                  className="rounded border border-edge px-3 py-2 text-xs"
+                  className="rounded-sm border border-edge px-3 py-2 text-sm"
                 >
                   <div className="flex items-baseline gap-2">
                     <span className="font-mono text-ink">{version.version_number}</span>
@@ -214,7 +230,7 @@ function ModrinthTab() {
           </div>
         )}
       </div>
-    </Panel>
+    </Band>
   );
 }
 
@@ -245,7 +261,7 @@ function CurseForgeTab() {
   };
 
   return (
-    <Panel
+    <Band
       title="поиск по CurseForge"
       actions={
         <>
@@ -267,7 +283,7 @@ function CurseForgeTab() {
             <li key={hit.id}>
               <button
                 onClick={() => open(hit)}
-                className="w-full rounded border border-edge px-3 py-2 text-left text-xs hover:border-accent"
+                className="w-full rounded border border-edge px-3 py-2 text-left text-sm transition-colors duration-[--dur-fast] hover:border-accent"
               >
                 <span className="text-ink">{hit.name}</span>
                 <span className="ml-2 text-faint">
@@ -281,9 +297,9 @@ function CurseForgeTab() {
 
         {files && (
           <div className="space-y-1">
-            <p className="text-xs text-muted">файлы «{files.hit.name}»</p>
+            <p className="text-sm text-muted">файлы «{files.hit.name}»</p>
             {files.list.slice(0, 15).map((file) => (
-              <div key={file.id} className="flex items-baseline gap-2 rounded border border-edge px-3 py-2 text-xs">
+              <div key={file.id} className="flex items-baseline gap-2 rounded-sm border border-edge px-3 py-2 text-sm">
                 <span className="truncate font-mono text-ink">{file.displayName}</span>
                 <span className="text-faint">{day(file.fileDate)}</span>
                 <span className="ml-auto">
@@ -307,7 +323,7 @@ function CurseForgeTab() {
           </div>
         )}
       </div>
-    </Panel>
+    </Band>
   );
 }
 
@@ -355,10 +371,10 @@ function JarTab() {
   };
 
   return (
-    <div className="space-y-3">
-      <Panel title="опознание по SHA-1">
+    <div className="space-y-7">
+      <Band title="опознание по SHA-1">
         <label
-          className="flex cursor-pointer flex-col items-center gap-1 rounded border border-dashed border-edge px-4 py-8 text-xs text-faint hover:border-accent"
+          className="flex cursor-pointer flex-col items-center gap-1 rounded-md border border-dashed border-edge px-4 py-10 text-sm text-faint transition-colors duration-[--dur-fast] hover:border-accent hover:text-muted"
           onDragOver={(e) => e.preventDefault()}
           onDrop={(e) => {
             e.preventDefault();
@@ -379,7 +395,7 @@ function JarTab() {
         </label>
         {error != null ? <ErrorBox error={error} /> : null}
         {rows.length > 0 && (
-          <ul className="mt-3 space-y-1 text-xs">
+          <ul className="mt-3 space-y-1 text-sm">
             {rows.map((row) => (
               <li key={row.sha1} className="flex flex-wrap items-center gap-2">
                 <span className="font-mono text-muted">{row.file}</span>
@@ -413,10 +429,10 @@ function JarTab() {
             ))}
           </ul>
         )}
-      </Panel>
+      </Band>
 
-      <Panel title="добавить по прямой ссылке">
-        <p className="mb-2 text-2xs text-faint">
+      <Band title="добавить по прямой ссылке">
+        <p className="max-w-[70ch] text-xs text-faint">
           Для неопознанных jar: залейте файл в GitHub Release руками и вставьте прямую ссылку —
           ровно так в паке живут kiriieshki, steampunk-armory и voxy.
         </p>
@@ -431,7 +447,7 @@ function JarTab() {
           <select
             value={side}
             onChange={(e) => setSide(e.target.value as Side)}
-            className="rounded border border-edge bg-canvas px-2 py-1.5 text-xs text-ink"
+            className="h-[30px] rounded-sm border border-edge bg-canvas px-2 text-xs text-ink"
           >
             <option value="both">both</option>
             <option value="client">client</option>
@@ -453,7 +469,7 @@ function JarTab() {
             добавить
           </Button>
         </div>
-      </Panel>
+      </Band>
     </div>
   );
 }
