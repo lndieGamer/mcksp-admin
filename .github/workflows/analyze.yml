@@ -69,3 +69,14 @@ jobs:
           for f in errors[:20]:
               print(f"  - `{f['slug']}` {f['code']}: {f['message']}")
           PY
+
+  # The commit above was pushed with GITHUB_TOKEN, which never triggers a
+  # workflow -- pages would otherwise sit on stale data until someone
+  # remembered to press the button.
+  pages:
+    needs: analyze
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/pages.yml

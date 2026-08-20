@@ -76,5 +76,11 @@ jobs:
   # not start a new run at all.
   analyze:
     needs: mutate
+    # analyze chains into pages; a nested workflow cannot hold more rights
+    # than the job that called it, so they have to be granted here too.
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     uses: ./.github/workflows/analyze.yml
     secrets: inherit

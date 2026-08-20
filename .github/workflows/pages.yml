@@ -8,6 +8,10 @@ on:
       - "admin-data/public.json"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
+  # analyze.yml calls this after committing admin-data: a push made with
+  # GITHUB_TOKEN never triggers a workflow, so the paths filter above cannot
+  # see the bot's commit.
+  workflow_call:
 
 permissions:
   contents: read
@@ -22,7 +26,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # ref: main, not the calling run's sha -- when analyze calls us the
+      # caller's sha predates the admin-data commit we are here to publish.
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
