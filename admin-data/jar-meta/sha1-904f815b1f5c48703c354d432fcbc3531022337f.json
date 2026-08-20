@@ -1,0 +1,46 @@
+{
+ "size_bytes": 260876,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "*",
+  "mods": [
+   {
+    "mod_id": "reeses_sodium_options",
+    "version": "2.2.3+mc1.21.1",
+    "display_name": "Reese's Sodium Options",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "1.21.1",
+      "side": "CLIENT",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "sodium",
+      "type": "required",
+      "version_range": "[0.8.12,)",
+      "side": "CLIENT",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "controlify",
+      "type": "optional",
+      "version_range": "[3.0.0,)",
+      "side": "CLIENT",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "sodiumoptionsapi",
+      "type": "incompatible",
+      "version_range": "[0,)",
+      "side": "CLIENT",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

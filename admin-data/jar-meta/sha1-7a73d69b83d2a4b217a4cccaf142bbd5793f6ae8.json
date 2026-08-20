@@ -1,0 +1,32 @@
+{
+ "size_bytes": 1815476,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[4,)",
+  "mods": [
+   {
+    "mod_id": "s_a_b",
+    "version": "1.4.3",
+    "display_name": "Steel armor blocks",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.190,)",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1]",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     }
+    ]
+   }
+  ]
+ }
+}

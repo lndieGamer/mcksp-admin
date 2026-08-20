@@ -1,0 +1,39 @@
+{
+ "size_bytes": 630584,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[4,)",
+  "mods": [
+   {
+    "mod_id": "geckolib",
+    "version": "4.9.2",
+    "display_name": "GeckoLib 4",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.150,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "geckoanimfix",
+      "type": "incompatible",
+      "version_range": "",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "size_bytes": 2417424,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[4,)",
+  "mods": [
+   {
+    "mod_id": "another_furniture",
+    "version": "4.0.2",
+    "display_name": "Another Furniture",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.0,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

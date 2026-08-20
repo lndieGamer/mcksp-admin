@@ -1,0 +1,47 @@
+{
+ "size_bytes": 954028,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[1,)",
+  "mods": [
+   {
+    "mod_id": "lithostitched",
+    "version": "1.8.0+beta4",
+    "display_name": "Lithostitched",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21, 1.21.1]",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "apollib",
+      "type": "required",
+      "version_range": "[1.2.0,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   },
+   {
+    "mod_id": "apollib",
+    "version": "1.2.0",
+    "display_name": "Apollib",
+    "embedded": true,
+    "dependencies": [
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21, 1.21.1]",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

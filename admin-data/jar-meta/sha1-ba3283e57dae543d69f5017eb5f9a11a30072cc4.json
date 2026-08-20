@@ -1,0 +1,163 @@
+{
+ "size_bytes": 3895550,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "*",
+  "mods": [
+   {
+    "mod_id": "snowrealmagic",
+    "version": "12.2.2+neoforge",
+    "display_name": "Snow! Real Magic!",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "kiwi",
+      "type": "required",
+      "version_range": "[15.5.2, )",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   },
+   {
+    "mod_id": "fabric_block_view_api_v2",
+    "version": "1.0.10+9afaaf8c19",
+    "display_name": "Forgified Fabric BlockView API (v2)",
+    "embedded": true,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.115,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1,1.22)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   },
+   {
+    "mod_id": "fabric_game_rule_api_v1",
+    "version": "1.0.53+36d727be19",
+    "display_name": "Forgified Fabric Game Rule API (v1)",
+    "embedded": true,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.219,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1,1.22)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   },
+   {
+    "mod_id": "fabric_model_loading_api_v1",
+    "version": "2.0.0+986ae77219",
+    "display_name": "Forgified Fabric Model Loading API (v1)",
+    "embedded": true,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.169,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1,1.22)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "fabric_api_base",
+      "type": "required",
+      "version_range": "*",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   },
+   {
+    "mod_id": "fabric_renderer_api_v1",
+    "version": "3.4.0+9c40919e19",
+    "display_name": "Forgified Fabric Renderer API (v1)",
+    "embedded": true,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.169,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1,1.22)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "fabric_api_base",
+      "type": "required",
+      "version_range": "*",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   },
+   {
+    "mod_id": "fabric_renderer_indigo",
+    "version": "1.7.0+acb05a3919",
+    "display_name": "Forgified Fabric Renderer - Indigo",
+    "embedded": true,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.115,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1,1.22)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "fabric_api_base",
+      "type": "required",
+      "version_range": "*",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "fabric_renderer_api_v1",
+      "type": "required",
+      "version_range": "*",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

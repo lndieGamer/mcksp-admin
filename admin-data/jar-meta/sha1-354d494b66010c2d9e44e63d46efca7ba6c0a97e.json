@@ -1,0 +1,47 @@
+{
+ "size_bytes": 215558,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[1,)",
+  "mods": [
+   {
+    "mod_id": "struts",
+    "version": "1.3.0",
+    "display_name": "Strut Your Stuff",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   },
+   {
+    "mod_id": "sablecompanion",
+    "version": "1.5.0",
+    "display_name": "Sable Companion",
+    "embedded": true,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.80,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

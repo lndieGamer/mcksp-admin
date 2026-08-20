@@ -1,0 +1,32 @@
+{
+ "size_bytes": 605458,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[2,)",
+  "mods": [
+   {
+    "mod_id": "particlerain",
+    "version": "4.0.0-beta.10",
+    "display_name": "Particle Rain",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "",
+      "side": "CLIENT",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1]",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

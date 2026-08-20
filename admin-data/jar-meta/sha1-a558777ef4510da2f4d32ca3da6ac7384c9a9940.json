@@ -1,0 +1,25 @@
+{
+ "size_bytes": 486912,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[1,)",
+  "mods": [
+   {
+    "mod_id": "interiors",
+    "version": "0.6.1",
+    "display_name": "Create: Interiors",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "create",
+      "type": "required",
+      "version_range": "[6,)",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     }
+    ]
+   }
+  ]
+ }
+}

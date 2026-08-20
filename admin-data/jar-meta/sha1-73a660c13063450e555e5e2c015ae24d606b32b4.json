@@ -1,0 +1,39 @@
+{
+ "size_bytes": 782160,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[4,)",
+  "mods": [
+   {
+    "mod_id": "betterdungeons",
+    "version": "1.21.1-NeoForge-5.1.4",
+    "display_name": "YUNG's Better Dungeons",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21, 1.22)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.0.0,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "yungsapi",
+      "type": "required",
+      "version_range": "[1.21.1-NeoForge-5.1.3,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

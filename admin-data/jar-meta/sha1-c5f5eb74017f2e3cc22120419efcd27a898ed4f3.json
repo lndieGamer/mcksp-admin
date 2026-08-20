@@ -1,0 +1,39 @@
+{
+ "size_bytes": 7759926,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[4,)",
+  "mods": [
+   {
+    "mod_id": "beachparty",
+    "version": "2.1.4",
+    "display_name": "[Let's Do] Beachparty",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.0,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "architectury",
+      "type": "required",
+      "version_range": "[13.0.0,)",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     }
+    ]
+   }
+  ]
+ }
+}

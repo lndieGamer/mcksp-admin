@@ -1,0 +1,53 @@
+{
+ "size_bytes": 983177,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[1,)",
+  "mods": [
+   {
+    "mod_id": "rechiseledcreate",
+    "version": "1.1.1",
+    "display_name": "Rechiseled: Create",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.0.78-beta,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "1.21.1",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "supermartijn642corelib",
+      "type": "required",
+      "version_range": ">=1.1.20 <1.2.0",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "rechiseled",
+      "type": "required",
+      "version_range": ">=1.2.0",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "create",
+      "type": "required",
+      "version_range": ">=6.0.4",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

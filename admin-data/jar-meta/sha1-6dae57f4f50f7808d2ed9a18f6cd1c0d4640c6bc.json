@@ -1,0 +1,17 @@
+{
+ "size_bytes": 73938,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[4,)",
+  "mods": [
+   {
+    "mod_id": "mousetweaks",
+    "version": "2.26.1",
+    "display_name": "Mouse Tweaks",
+    "embedded": false,
+    "dependencies": []
+   }
+  ]
+ }
+}

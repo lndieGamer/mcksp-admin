@@ -1,8 +1,6 @@
 {
- "generated_at": "2026-08-20T10:44:17Z",
- "notices": [
-  "CF_API_KEY не задан: 144 модов с CurseForge не разобраны, граф и вес сборки неполные"
- ],
+ "generated_at": "2026-08-20T14:09:45Z",
+ "notices": [],
  "pack": {
   "version": "1.0.0",
   "mc": "1.21.1",
@@ -63,20 +61,22 @@
    "side": "client",
    "source": "curseforge",
    "project_id": "499826",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.6.8",
+   "mod_ids": [
+    "advancementplaques"
+   ],
+   "size_bytes": 195730,
    "flavors": [
     "advancement-plaques_on"
    ],
-   "role": "standalone",
+   "role": "mod",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T20:44:37+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "aeronautics-hot-air-fix",
@@ -85,9 +85,11 @@
    "side": "client",
    "source": "curseforge",
    "project_id": "1633376",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.1.0",
+   "mod_ids": [
+    "aeronauticshotairfix"
+   ],
+   "size_bytes": 342762,
    "flavors": [
     "aeronautics-hot-air-fix_on"
    ],
@@ -97,8 +99,8 @@
    "owner": null,
    "date_added": "2026-08-15T22:43:15+02:00",
    "date_updated": "2026-08-19T20:44:37+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "alexs-caves-unofficial-port",
@@ -107,18 +109,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "1420348",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "2.0.10",
+   "mod_ids": [
+    "alexscaves"
+   ],
+   "size_bytes": 74900204,
    "flavors": [],
-   "role": "standalone",
+   "role": "mod",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "ambientsounds",
@@ -127,20 +131,22 @@
    "side": "client",
    "source": "curseforge",
    "project_id": "254284",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "6.3.8",
+   "mod_ids": [
+    "ambientsounds"
+   ],
+   "size_bytes": 84811632,
    "flavors": [
     "ambientsounds_on"
    ],
-   "role": "standalone",
+   "role": "mod",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T20:44:37+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "amendments",
@@ -149,18 +155,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "896746",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.21-2.1.7",
+   "mod_ids": [
+    "amendments"
+   ],
+   "size_bytes": 1154863,
    "flavors": [],
-   "role": "standalone",
+   "role": "mod",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "broken"
   },
   {
    "slug": "another-furniture",
@@ -169,9 +177,11 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "610492",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "4.0.2",
+   "mod_ids": [
+    "another_furniture"
+   ],
+   "size_bytes": 2417424,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -179,8 +189,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "appleskin",
@@ -189,9 +199,11 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "248787",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "3.0.9+mc1.21",
+   "mod_ids": [
+    "appleskin"
+   ],
+   "size_bytes": 75804,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -199,8 +211,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "architectury-api",
@@ -209,18 +221,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "419699",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "13.0.11",
+   "mod_ids": [
+    "architectury"
+   ],
+   "size_bytes": 584734,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "core",
+   "cluster": "architectury-api",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "attributefix",
@@ -229,18 +243,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "280510",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "21.1.3",
+   "mod_ids": [
+    "attributefix"
+   ],
+   "size_bytes": 19809,
    "flavors": [],
-   "role": "standalone",
+   "role": "mod",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "axiom",
@@ -269,18 +285,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "1466331",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.4.7",
+   "mod_ids": [
+    "azimuth"
+   ],
+   "size_bytes": 142951,
    "flavors": [],
-   "role": "standalone",
+   "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T09:15:56+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "balm",
@@ -333,18 +351,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "905040",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "0.4.7-1.21.1",
+   "mod_ids": [
+    "bellsandwhistles"
+   ],
+   "size_bytes": 193619,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "better-advancements",
@@ -353,9 +373,11 @@
    "side": "client",
    "source": "curseforge",
    "project_id": "272515",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "0.4.3.21",
+   "mod_ids": [
+    "betteradvancements"
+   ],
+   "size_bytes": 98641,
    "flavors": [
     "better-advancements_on"
    ],
@@ -365,8 +387,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T20:44:37+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "better-compatibility-checker",
@@ -375,9 +397,11 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "551894",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "21.1.8",
+   "mod_ids": [
+    "bcc"
+   ],
+   "size_bytes": 25085,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -385,8 +409,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "better-ping-display",
@@ -395,9 +419,11 @@
    "side": "client",
    "source": "curseforge",
    "project_id": "292038",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.1",
+   "mod_ids": [
+    "betterpingdisplay"
+   ],
+   "size_bytes": 13871,
    "flavors": [
     "better-ping-display_on"
    ],
@@ -407,8 +433,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T20:44:37+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "better-safe-bed",
@@ -417,9 +443,11 @@
    "side": "server",
    "source": "curseforge",
    "project_id": "484804",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.21-16",
+   "mod_ids": [
+    "bettersafebed"
+   ],
+   "size_bytes": 4189,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -427,8 +455,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T13:24:08+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "better-than-mending",
@@ -437,9 +465,11 @@
    "side": "server",
    "source": "curseforge",
    "project_id": "264738",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "2.2.0",
+   "mod_ids": [
+    "betterthanmending"
+   ],
+   "size_bytes": 34787,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -447,8 +477,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T13:24:08+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "bookshelf",
@@ -457,18 +487,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "228525",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "21.1.81",
+   "mod_ids": [
+    "bookshelf"
+   ],
+   "size_bytes": 328813,
    "flavors": [],
-   "role": "standalone",
+   "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "burnt-basic",
@@ -483,14 +515,14 @@
    ],
    "size_bytes": 22105215,
    "flavors": [],
-   "role": "standalone",
+   "role": "mod",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
    "parse_status": "ok",
-   "status": "broken"
+   "status": "update_safe"
   },
   {
    "slug": "carbon-config",
@@ -500,8 +532,10 @@
    "source": "curseforge",
    "project_id": "898104",
    "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "mod_ids": [
+    "carbonconfig"
+   ],
+   "size_bytes": 1273384,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -509,8 +543,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "warning",
+   "status": "current"
   },
   {
    "slug": "carry-on",
@@ -541,18 +575,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "1489732",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.2.2",
+   "mod_ids": [
+    "cbc_enhanced_shells"
+   ],
+   "size_bytes": 2069241,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "update_safe"
   },
   {
    "slug": "cbc-firepower-components",
@@ -574,7 +610,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
    "parse_status": "ok",
-   "status": "broken"
+   "status": "current"
   },
   {
    "slug": "cbcenhanced-shell-armor-create-big-cannons",
@@ -589,14 +625,14 @@
    ],
    "size_bytes": 2317633,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
    "parse_status": "ok",
-   "status": "broken"
+   "status": "current"
   },
   {
    "slug": "cc-redstone-link-bridge",
@@ -649,18 +685,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "656214",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.7.3",
+   "mod_ids": [
+    "cccbridge"
+   ],
+   "size_bytes": 490733,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "cgs",
@@ -669,18 +707,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "1194036",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.4.9",
+   "mod_ids": [
+    "cgs"
+   ],
+   "size_bytes": 1819221,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "chunky-pregenerator-forge",
@@ -689,9 +729,11 @@
    "side": "server",
    "source": "curseforge",
    "project_id": "485681",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.4.23",
+   "mod_ids": [
+    "chunky"
+   ],
+   "size_bytes": 340572,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -699,8 +741,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "citadel-1-21-1-port",
@@ -709,18 +751,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "1415723",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "2.7.6",
+   "mod_ids": [
+    "citadel"
+   ],
+   "size_bytes": 3028943,
    "flavors": [],
-   "role": "standalone",
+   "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "cloth-config",
@@ -729,18 +773,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "348521",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "15.0.140",
+   "mod_ids": [
+    "cloth_config"
+   ],
+   "size_bytes": 1163890,
    "flavors": [],
-   "role": "standalone",
+   "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "clumps",
@@ -749,9 +795,11 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "256717",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "19.0.0.1",
+   "mod_ids": [
+    "clumps"
+   ],
+   "size_bytes": 18382,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -759,8 +807,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "coastal-waves",
@@ -769,9 +817,11 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "1155936",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.6",
+   "mod_ids": [
+    "waves"
+   ],
+   "size_bytes": 1322569,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -779,8 +829,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T13:24:08+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "update_safe"
   },
   {
    "slug": "copycats",
@@ -789,18 +839,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "968398",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "3.0.4+mc.1.21.1-neoforge",
+   "mod_ids": [
+    "copycats"
+   ],
+   "size_bytes": 1791747,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "coroutil",
@@ -809,9 +861,11 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "237749",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.21.0-1.3.9",
+   "mod_ids": [
+    "coroutil"
+   ],
+   "size_bytes": 65716,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -819,8 +873,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-08T14:19:59+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "corpse",
@@ -835,7 +889,7 @@
    ],
    "size_bytes": 253694,
    "flavors": [],
-   "role": "standalone",
+   "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
@@ -851,18 +905,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "1208436",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "4.0.1",
+   "mod_ids": [
+    "cosmeticcorpsecompat"
+   ],
+   "size_bytes": 8329,
    "flavors": [],
-   "role": "standalone",
+   "role": "mod",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "cosmetic-armor-reworked",
@@ -871,18 +927,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "237307",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.21.1-v1-neoforge",
+   "mod_ids": [
+    "cosmeticarmorreworked"
+   ],
+   "size_bytes": 92722,
    "flavors": [],
-   "role": "standalone",
+   "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "crafttweaker",
@@ -891,9 +949,11 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "239197",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "21.0.38",
+   "mod_ids": [
+    "crafttweaker"
+   ],
+   "size_bytes": 3465718,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -901,8 +961,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "create",
@@ -955,9 +1015,11 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "1524351",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.1.3",
+   "mod_ids": [
+    "aeronauticscompat"
+   ],
+   "size_bytes": 43764,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -965,8 +1027,8 @@
    "owner": null,
    "date_added": "2026-08-11T18:32:31+02:00",
    "date_updated": "2026-08-11T18:32:31+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "create-aeronautics-transmission-linkage",
@@ -975,18 +1037,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "1548056",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "0.2.5",
+   "mod_ids": [
+    "aeronautics_utility_objects"
+   ],
+   "size_bytes": 666943,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "create-aeronautics::aeronautics",
@@ -1045,7 +1109,7 @@
    ],
    "size_bytes": 0,
    "flavors": [],
-   "role": "addon",
+   "role": "core",
    "cluster": "create",
    "embedded": true,
    "owner": "create-aeronautics",
@@ -1083,20 +1147,22 @@
    "side": "client",
    "source": "curseforge",
    "project_id": "1217518",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.1.4",
+   "mod_ids": [
+    "createbetterfps"
+   ],
+   "size_bytes": 26547,
    "flavors": [
     "create-better-fps_on"
    ],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "sodium::sodium",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "create-better-frequency",
@@ -1127,18 +1193,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "646668",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "5.11.7",
+   "mod_ids": [
+    "createbigcannons"
+   ],
+   "size_bytes": 3771506,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "core",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "create-bits-n-bobs",
@@ -1147,18 +1215,42 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "1398383",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "2.2.5",
+   "mod_ids": [
+    "bits_n_bobs"
+   ],
+   "size_bytes": 2498623,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-19T09:15:56+02:00",
    "date_updated": "2026-08-19T09:15:56+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
+  },
+  {
+   "slug": "create-bits-n-bobs::sablecompanion",
+   "name": "Sable Companion",
+   "filename": "",
+   "side": "both",
+   "source": "curseforge",
+   "project_id": null,
+   "version": "1.4.2",
+   "mod_ids": [
+    "sablecompanion"
+   ],
+   "size_bytes": 0,
+   "flavors": [],
+   "role": "library",
+   "cluster": null,
+   "embedded": true,
+   "owner": "create-bits-n-bobs",
+   "date_added": null,
+   "date_updated": null,
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "create-bitterballen",
@@ -1167,18 +1259,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "918751",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.0.2C",
+   "mod_ids": [
+    "create_bic_bit"
+   ],
+   "size_bytes": 395943,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "create-ccbr",
@@ -1209,18 +1303,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "947914",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.3.2-mc1.21.1",
+   "mod_ids": [
+    "create_connected"
+   ],
+   "size_bytes": 6779410,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "create-deco",
@@ -1229,18 +1325,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "509285",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "2.1.3",
+   "mod_ids": [
+    "createdeco"
+   ],
+   "size_bytes": 3328498,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "create-design-n-decor",
@@ -1271,18 +1369,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "869316",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.21.1-1.3.15",
+   "mod_ids": [
+    "createdieselgenerators"
+   ],
+   "size_bytes": 3154746,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-08T14:19:59+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "create-dragons-plus",
@@ -1291,18 +1391,42 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "1216624",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.11.4",
+   "mod_ids": [
+    "create_dragons_plus"
+   ],
+   "size_bytes": 1029344,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-08T14:19:59+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "update_safe"
+  },
+  {
+   "slug": "create-dragons-plus::conditional_mixin",
+   "name": "conditional mixin",
+   "filename": "",
+   "side": "both",
+   "source": "curseforge",
+   "project_id": null,
+   "version": "0.6.4",
+   "mod_ids": [
+    "conditional_mixin"
+   ],
+   "size_bytes": 0,
+   "flavors": [],
+   "role": "standalone",
+   "cluster": null,
+   "embedded": true,
+   "owner": "create-dragons-plus",
+   "date_added": null,
+   "date_updated": null,
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "create-dreams-and-desires",
@@ -1333,18 +1457,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "829380",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.9.0-ht3",
+   "mod_ids": [
+    "createcasing"
+   ],
+   "size_bytes": 3110804,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "create-enchantment-industry",
@@ -1353,18 +1479,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "688768",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "2.5.1",
+   "mod_ids": [
+    "create_enchantment_industry"
+   ],
+   "size_bytes": 1573096,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-08T14:19:59+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "update_safe"
   },
   {
    "slug": "create-ender-transmission",
@@ -1373,18 +1501,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "737302",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "2.1.1-1.21.1",
+   "mod_ids": [
+    "createendertransmission"
+   ],
+   "size_bytes": 84366,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "create-metallurgy",
@@ -1393,18 +1523,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "1007404",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.0.3",
+   "mod_ids": [
+    "createmetallurgy"
+   ],
+   "size_bytes": 2035560,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "create-power-loader",
@@ -1413,18 +1545,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "936020",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "2.0.5-mc1.21.1",
+   "mod_ids": [
+    "create_power_loader"
+   ],
+   "size_bytes": 442369,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "create-propulsion-simulated",
@@ -1433,18 +1567,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "1522736",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.1.5",
+   "mod_ids": [
+    "createpropulsion"
+   ],
+   "size_bytes": 1707765,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "create-radars",
@@ -1453,18 +1589,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "1152836",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "0.4.9.4-1.21.1",
+   "mod_ids": [
+    "create_radar"
+   ],
+   "size_bytes": 2990812,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "create-sophisticated-backpacks-compat",
@@ -1495,18 +1633,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "1196142",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "0.8.2+1.21.1",
+   "mod_ids": [
+    "pipeorgans"
+   ],
+   "size_bytes": 6593821,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "create-trimmed",
@@ -1603,18 +1743,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "439890",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.6.0",
+   "mod_ids": [
+    "createaddition"
+   ],
+   "size_bytes": 1661802,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "update_safe"
   },
   {
    "slug": "createnuclear",
@@ -1623,18 +1765,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "989797",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.3.2-beta.3",
+   "mod_ids": [
+    "createnuclear"
+   ],
+   "size_bytes": 1842160,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "creativecore",
@@ -1643,18 +1787,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "257814",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "2.13.42",
+   "mod_ids": [
+    "creativecore"
+   ],
+   "size_bytes": 1221603,
    "flavors": [],
-   "role": "standalone",
+   "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-08T14:19:59+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "update_safe"
   },
   {
    "slug": "cubes-without-borders",
@@ -1663,9 +1809,11 @@
    "side": "client",
    "source": "curseforge",
    "project_id": "975120",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "3.0.0+mc1.21",
+   "mod_ids": [
+    "cubes_without_borders"
+   ],
+   "size_bytes": 81843,
    "flavors": [
     "cubes-without-borders_on"
    ],
@@ -1675,8 +1823,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T20:44:37+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "curios",
@@ -1685,9 +1833,11 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "309927",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "9.5.1+1.21.1",
+   "mod_ids": [
+    "curios"
+   ],
+   "size_bytes": 410690,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -1695,8 +1845,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "display-delight",
@@ -1705,9 +1855,11 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "1144296",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.7.0",
+   "mod_ids": [
+    "displaydelight"
+   ],
+   "size_bytes": 1144367,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -1715,8 +1867,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-08T14:19:59+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "doggy-talents-next",
@@ -1725,9 +1877,11 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "694492",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.19.0",
+   "mod_ids": [
+    "doggytalents"
+   ],
+   "size_bytes": 11255751,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -1735,8 +1889,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "dynamiclights-reforged",
@@ -1745,9 +1899,11 @@
    "side": "client",
    "source": "curseforge",
    "project_id": "551736",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.0.9",
+   "mod_ids": [
+    "sodiumdynamiclights"
+   ],
+   "size_bytes": 299353,
    "flavors": [
     "dynamiclights-reforged_on"
    ],
@@ -1757,8 +1913,8 @@
    "owner": null,
    "date_added": "2026-08-08T16:34:48+02:00",
    "date_updated": "2026-08-19T13:24:08+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "enchantment-descriptions",
@@ -1767,20 +1923,22 @@
    "side": "client",
    "source": "curseforge",
    "project_id": "250419",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "21.1.10",
+   "mod_ids": [
+    "enchdesc"
+   ],
+   "size_bytes": 82629,
    "flavors": [
     "enchantment-descriptions_on"
    ],
-   "role": "standalone",
+   "role": "mod",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T20:44:37+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "enders-delight",
@@ -1789,18 +1947,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "827163",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.3.1",
+   "mod_ids": [
+    "endersdelight"
+   ],
+   "size_bytes": 152797,
    "flavors": [],
-   "role": "standalone",
+   "role": "mod",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-08T14:19:59+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "entity-model-features",
@@ -1809,20 +1969,22 @@
    "side": "client",
    "source": "curseforge",
    "project_id": "844662",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "3.2.4",
+   "mod_ids": [
+    "entity_model_features"
+   ],
+   "size_bytes": 567827,
    "flavors": [
     "entity-model-features_on"
    ],
-   "role": "standalone",
+   "role": "mod",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T20:44:37+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "entity-texture-features-fabric",
@@ -1831,21 +1993,23 @@
    "side": "client",
    "source": "curseforge",
    "project_id": "568563",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "7.1",
+   "mod_ids": [
+    "entity_texture_features"
+   ],
+   "size_bytes": 752334,
    "flavors": [
     "entity-texture-features-fabric_on",
     "entity-model-features_on"
    ],
-   "role": "standalone",
+   "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "entityculling",
@@ -1878,18 +2042,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "1296203",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "0.2.3.0-neoforge",
+   "mod_ids": [
+    "explosionoverhaul"
+   ],
+   "size_bytes": 100092594,
    "flavors": [],
-   "role": "standalone",
+   "role": "mod",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-15T22:43:15+02:00",
    "date_updated": "2026-08-15T22:43:15+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "fancymenu",
@@ -1922,18 +2088,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "398521",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.3.2",
+   "mod_ids": [
+    "farmersdelight"
+   ],
+   "size_bytes": 3163042,
    "flavors": [],
-   "role": "standalone",
+   "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "update_safe"
   },
   {
    "slug": "fastsuite",
@@ -1942,18 +2110,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "475117",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "6.0.7",
+   "mod_ids": [
+    "fastsuite"
+   ],
+   "size_bytes": 28193,
    "flavors": [],
-   "role": "standalone",
+   "role": "mod",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "ferritecore",
@@ -1962,9 +2132,11 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "429235",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "7.0.3",
+   "mod_ids": [
+    "ferritecore"
+   ],
+   "size_bytes": 121559,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -1972,8 +2144,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "forgified-fabric-api",
@@ -1982,9 +2154,12 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "889079",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "0.116.15+2.3.1+1.21.1",
+   "mod_ids": [
+    "fabric_api",
+    "forgified_fabric_api"
+   ],
+   "size_bytes": 5590613,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -1992,8 +2167,8 @@
    "owner": null,
    "date_added": "2026-08-08T15:49:27+02:00",
    "date_updated": "2026-08-08T15:49:27+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "formicapi",
@@ -2024,9 +2199,11 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "441647",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "10.6.1",
+   "mod_ids": [
+    "framedblocks"
+   ],
+   "size_bytes": 4306703,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -2034,8 +2211,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "framework",
@@ -2044,18 +2221,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "549225",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "0.13.11",
+   "mod_ids": [
+    "framework"
+   ],
+   "size_bytes": 387334,
    "flavors": [],
-   "role": "standalone",
+   "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "fusion-connected-textures",
@@ -2064,18 +2243,20 @@
    "side": "client",
    "source": "curseforge",
    "project_id": "854949",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.3.12",
+   "mod_ids": [
+    "fusion"
+   ],
+   "size_bytes": 923270,
    "flavors": [],
-   "role": "standalone",
+   "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T20:44:37+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "fzzy-config",
@@ -2084,18 +2265,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "1005914",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "0.7.6+1.21+neoforge",
+   "mod_ids": [
+    "fzzy_config"
+   ],
+   "size_bytes": 2369895,
    "flavors": [],
-   "role": "standalone",
+   "role": "mod",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "geckolib",
@@ -2104,18 +2287,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "388172",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "4.9.2",
+   "mod_ids": [
+    "geckolib"
+   ],
+   "size_bytes": 630584,
    "flavors": [],
-   "role": "standalone",
+   "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "glitchcore",
@@ -2146,21 +2331,23 @@
    "side": "client",
    "source": "curseforge",
    "project_id": "520110",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.3.2",
+   "mod_ids": [
+    "iceberg"
+   ],
+   "size_bytes": 213853,
    "flavors": [
     "advancement-plaques_on",
     "legendary-tooltips_on"
    ],
-   "role": "standalone",
+   "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "immersive-paintings",
@@ -2169,18 +2356,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "639584",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "0.7.8",
+   "mod_ids": [
+    "immersive_paintings"
+   ],
+   "size_bytes": 5500916,
    "flavors": [],
-   "role": "standalone",
+   "role": "mod",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "interiors",
@@ -2189,18 +2378,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "906239",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "0.6.1",
+   "mod_ids": [
+    "interiors"
+   ],
+   "size_bytes": 486912,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "irisshaders",
@@ -2209,9 +2400,11 @@
    "side": "client",
    "source": "curseforge",
    "project_id": "455508",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.8.14-beta.1+mc1.21.1",
+   "mod_ids": [
+    "iris"
+   ],
+   "size_bytes": 2540723,
    "flavors": [
     "irisshaders_on"
    ],
@@ -2221,8 +2414,104 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
+  },
+  {
+   "slug": "irisshaders::fabric_api_base",
+   "name": "Forgified Fabric API Base",
+   "filename": "",
+   "side": "client",
+   "source": "curseforge",
+   "project_id": null,
+   "version": "0.4.42+d1308ded19",
+   "mod_ids": [
+    "fabric_api_base"
+   ],
+   "size_bytes": 0,
+   "flavors": [
+    "irisshaders_on"
+   ],
+   "role": "core",
+   "cluster": "irisshaders::fabric_api_base",
+   "embedded": true,
+   "owner": "irisshaders",
+   "date_added": null,
+   "date_updated": null,
+   "parse_status": "ok",
+   "status": "current"
+  },
+  {
+   "slug": "irisshaders::fabric_block_view_api_v2",
+   "name": "Forgified Fabric BlockView API (v2)",
+   "filename": "",
+   "side": "client",
+   "source": "curseforge",
+   "project_id": null,
+   "version": "1.0.10+9afaaf8c19",
+   "mod_ids": [
+    "fabric_block_view_api_v2"
+   ],
+   "size_bytes": 0,
+   "flavors": [
+    "irisshaders_on"
+   ],
+   "role": "library",
+   "cluster": null,
+   "embedded": true,
+   "owner": "irisshaders",
+   "date_added": null,
+   "date_updated": null,
+   "parse_status": "ok",
+   "status": "current"
+  },
+  {
+   "slug": "irisshaders::fabric_renderer_api_v1",
+   "name": "Forgified Fabric Renderer API (v1)",
+   "filename": "",
+   "side": "client",
+   "source": "curseforge",
+   "project_id": null,
+   "version": "3.4.0+acb05a3919",
+   "mod_ids": [
+    "fabric_renderer_api_v1"
+   ],
+   "size_bytes": 0,
+   "flavors": [
+    "irisshaders_on"
+   ],
+   "role": "addon",
+   "cluster": "irisshaders::fabric_api_base",
+   "embedded": true,
+   "owner": "irisshaders",
+   "date_added": null,
+   "date_updated": null,
+   "parse_status": "ok",
+   "status": "current"
+  },
+  {
+   "slug": "irisshaders::fabric_rendering_data_attachment_v1",
+   "name": "Forgified Fabric Rendering Data Attachment (v1)",
+   "filename": "",
+   "side": "client",
+   "source": "curseforge",
+   "project_id": null,
+   "version": "0.3.48+73761d2e19",
+   "mod_ids": [
+    "fabric_rendering_data_attachment_v1"
+   ],
+   "size_bytes": 0,
+   "flavors": [
+    "irisshaders_on"
+   ],
+   "role": "mod",
+   "cluster": null,
+   "embedded": true,
+   "owner": "irisshaders",
+   "date_added": null,
+   "date_updated": null,
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "jade",
@@ -2231,18 +2520,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "324717",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "15.10.6+neoforge",
+   "mod_ids": [
+    "jade"
+   ],
+   "size_bytes": 726853,
    "flavors": [],
-   "role": "standalone",
+   "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-08T14:19:59+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "jade-addons",
@@ -2251,20 +2542,22 @@
    "side": "client",
    "source": "curseforge",
    "project_id": "583345",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "6.1.0+neoforge",
+   "mod_ids": [
+    "jadeaddons"
+   ],
+   "size_bytes": 74419,
    "flavors": [
     "jade-addons_on"
    ],
-   "role": "standalone",
+   "role": "mod",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "jade-sable-compat",
@@ -2273,20 +2566,22 @@
    "side": "client",
    "source": "curseforge",
    "project_id": "1530988",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.2.1",
+   "mod_ids": [
+    "sablejade"
+   ],
+   "size_bytes": 299390,
    "flavors": [
     "jade-sable-compat_on"
    ],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "sable",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "update_safe"
   },
   {
    "slug": "jamlib",
@@ -2295,18 +2590,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "623764",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.3.6+1.21.1",
+   "mod_ids": [
+    "jamlib"
+   ],
+   "size_bytes": 188553,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "architectury-api",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "jei",
@@ -2315,9 +2612,11 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "238222",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "19.43.0.393",
+   "mod_ids": [
+    "jei"
+   ],
+   "size_bytes": 1685121,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -2325,8 +2624,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-08T14:19:59+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "update_safe"
   },
   {
    "slug": "just-zoom",
@@ -2335,20 +2634,22 @@
    "side": "client",
    "source": "curseforge",
    "project_id": "561885",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "2.1.0",
+   "mod_ids": [
+    "justzoom"
+   ],
+   "size_bytes": 43798,
    "flavors": [
     "just-zoom_on"
    ],
-   "role": "standalone",
+   "role": "mod",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T20:44:37+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "kiriieshki",
@@ -2379,18 +2680,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "303657",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "15.8.7+neoforge",
+   "mod_ids": [
+    "kiwi"
+   ],
+   "size_bytes": 1539578,
    "flavors": [],
-   "role": "standalone",
+   "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "konkrete",
@@ -2450,7 +2753,7 @@
    ],
    "size_bytes": 0,
    "flavors": [],
-   "role": "standalone",
+   "role": "library",
    "cluster": null,
    "embedded": true,
    "owner": "kotlin-for-forge",
@@ -2466,9 +2769,11 @@
    "side": "server",
    "source": "curseforge",
    "project_id": "537533",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.4.3",
+   "mod_ids": [
+    "ksyxis"
+   ],
+   "size_bytes": 26968,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -2476,8 +2781,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T13:24:08+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "legendary-tooltips",
@@ -2486,20 +2791,22 @@
    "side": "client",
    "source": "curseforge",
    "project_id": "532127",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.5.5",
+   "mod_ids": [
+    "legendarytooltips"
+   ],
+   "size_bytes": 81808,
    "flavors": [
     "legendary-tooltips_on"
    ],
-   "role": "standalone",
+   "role": "mod",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T20:44:37+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "lets-do-beachparty",
@@ -2508,18 +2815,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "858691",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "2.1.4",
+   "mod_ids": [
+    "beachparty"
+   ],
+   "size_bytes": 7759926,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "architectury-api",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "lets-do-brewery-farm-charm-compat",
@@ -2528,18 +2837,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "1038106",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "2.1.9",
+   "mod_ids": [
+    "brewery"
+   ],
+   "size_bytes": 1656054,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "architectury-api",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "lets-do-farm-charm",
@@ -2548,18 +2859,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "1038103",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.1.23",
+   "mod_ids": [
+    "farm_and_charm"
+   ],
+   "size_bytes": 2586013,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "architectury-api",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-08T14:19:59+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "lets-do-herbal-brews",
@@ -2568,18 +2881,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "951221",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.1.3",
+   "mod_ids": [
+    "herbalbrews"
+   ],
+   "size_bytes": 757160,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "architectury-api",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "lets-do-vinery",
@@ -2588,18 +2903,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "704465",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.5.3",
+   "mod_ids": [
+    "vinery"
+   ],
+   "size_bytes": 2001616,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "architectury-api",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "lithium",
@@ -2608,9 +2925,11 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "360438",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "0.15.4+mc1.21.1",
+   "mod_ids": [
+    "lithium"
+   ],
+   "size_bytes": 774220,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -2618,8 +2937,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "lithostitched",
@@ -2628,9 +2947,11 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "936015",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.7.13",
+   "mod_ids": [
+    "lithostitched"
+   ],
+   "size_bytes": 852541,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -2638,8 +2959,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "update_safe"
   },
   {
    "slug": "lodestone",
@@ -2648,9 +2969,11 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "616457",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.8.2",
+   "mod_ids": [
+    "lodestone"
+   ],
+   "size_bytes": 818829,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -2658,8 +2981,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "lootr",
@@ -2668,9 +2991,11 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "361276",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.21.1-1.11.38.123",
+   "mod_ids": [
+    "lootr"
+   ],
+   "size_bytes": 994419,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -2678,8 +3003,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-08T14:19:59+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "melody",
@@ -2712,18 +3037,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "225738",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.21-2.1.0",
+   "mod_ids": [
+    "dummmmmmy"
+   ],
+   "size_bytes": 214030,
    "flavors": [],
-   "role": "standalone",
+   "role": "mod",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-08T14:19:59+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "broken"
   },
   {
    "slug": "modernfix",
@@ -2732,9 +3059,11 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "790626",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "5.27.20+mc1.21.1",
+   "mod_ids": [
+    "modernfix"
+   ],
+   "size_bytes": 599474,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -2742,8 +3071,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "more-density-functions",
@@ -2798,9 +3127,11 @@
    "side": "client",
    "source": "curseforge",
    "project_id": "60089",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "2.26.1",
+   "mod_ids": [
+    "mousetweaks"
+   ],
+   "size_bytes": 73938,
    "flavors": [
     "mouse-tweaks_on"
    ],
@@ -2810,8 +3141,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T20:44:37+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "netherportalfix",
@@ -2842,9 +3173,11 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "634062",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.21.1-v2.9.1",
+   "mod_ids": [
+    "nochatreports"
+   ],
+   "size_bytes": 306668,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -2852,8 +3185,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "ntgl",
@@ -2868,14 +3201,14 @@
    ],
    "size_bytes": 3965533,
    "flavors": [],
-   "role": "standalone",
+   "role": "mod",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-08T14:19:59+02:00",
    "parse_status": "ok",
-   "status": "broken"
+   "status": "current"
   },
   {
    "slug": "oceans-delight",
@@ -2884,9 +3217,11 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "841262",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.0.4",
+   "mod_ids": [
+    "oceansdelight"
+   ],
+   "size_bytes": 117108,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -2894,8 +3229,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "particle-rain",
@@ -2904,9 +3239,11 @@
    "side": "client",
    "source": "curseforge",
    "project_id": "421897",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "4.0.0-beta.10",
+   "mod_ids": [
+    "particlerain"
+   ],
+   "size_bytes": 605458,
    "flavors": [
     "particle-rain_on"
    ],
@@ -2916,8 +3253,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T20:44:37+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "placebo",
@@ -2926,18 +3263,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "283644",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "9.9.2",
+   "mod_ids": [
+    "placebo"
+   ],
+   "size_bytes": 324058,
    "flavors": [],
-   "role": "standalone",
+   "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "polymorph",
@@ -2946,9 +3285,11 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "388800",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.1.0+1.21.1",
+   "mod_ids": [
+    "polymorph"
+   ],
+   "size_bytes": 174972,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -2956,8 +3297,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "power-grid",
@@ -2966,18 +3307,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "1321420",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "0.6.0.1",
+   "mod_ids": [
+    "powergrid"
+   ],
+   "size_bytes": 7905734,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T09:18:52+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "prickle",
@@ -2986,18 +3329,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "1023259",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "21.1.11",
+   "mod_ids": [
+    "prickle"
+   ],
+   "size_bytes": 84812,
    "flavors": [],
-   "role": "standalone",
+   "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "prism-lib",
@@ -3006,20 +3351,22 @@
    "side": "client",
    "source": "curseforge",
    "project_id": "638111",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.0.11",
+   "mod_ids": [
+    "prism"
+   ],
+   "size_bytes": 62031,
    "flavors": [
     "legendary-tooltips_on"
    ],
-   "role": "standalone",
+   "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "quark",
@@ -3028,18 +3375,42 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "243121",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "4.1-482",
+   "mod_ids": [
+    "quark"
+   ],
+   "size_bytes": 15576704,
    "flavors": [],
-   "role": "standalone",
+   "role": "mod",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
+  },
+  {
+   "slug": "quark::biolith",
+   "name": "Biolith",
+   "filename": "",
+   "side": "both",
+   "source": "curseforge",
+   "project_id": null,
+   "version": "3.0.10",
+   "mod_ids": [
+    "biolith"
+   ],
+   "size_bytes": 0,
+   "flavors": [],
+   "role": "library",
+   "cluster": null,
+   "embedded": true,
+   "owner": "quark",
+   "date_added": null,
+   "date_updated": null,
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "rechiseled",
@@ -3048,18 +3419,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "558998",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.2.5",
+   "mod_ids": [
+    "rechiseled"
+   ],
+   "size_bytes": 11498611,
    "flavors": [],
-   "role": "standalone",
+   "role": "mod",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "rechiseled-create",
@@ -3068,18 +3441,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "888624",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.1.1",
+   "mod_ids": [
+    "rechiseledcreate"
+   ],
+   "size_bytes": 983177,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "reeses-sodium-options",
@@ -3088,18 +3463,20 @@
    "side": "client",
    "source": "curseforge",
    "project_id": "511319",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "2.2.3+mc1.21.1",
+   "mod_ids": [
+    "reeses_sodium_options"
+   ],
+   "size_bytes": 260876,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "sodium::sodium",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-08T17:16:30+02:00",
    "date_updated": "2026-08-19T13:24:08+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "refurbished-furniture",
@@ -3108,18 +3485,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "897116",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.0.22",
+   "mod_ids": [
+    "refurbished_furniture"
+   ],
+   "size_bytes": 7133477,
    "flavors": [],
-   "role": "standalone",
+   "role": "mod",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "reworked-locator-bar",
@@ -3128,9 +3507,11 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "1523749",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.2.1",
+   "mod_ids": [
+    "locatorbar"
+   ],
+   "size_bytes": 164009,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -3138,8 +3519,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "update_safe"
   },
   {
    "slug": "rightclickharvest",
@@ -3148,18 +3529,20 @@
    "side": "server",
    "source": "curseforge",
    "project_id": "452834",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "4.6.1+1.21.1",
+   "mod_ids": [
+    "rightclickharvest"
+   ],
+   "size_bytes": 287634,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "architectury-api",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T13:24:08+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "ritchies-projectile-library",
@@ -3168,18 +3551,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "1279407",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "2.1.2",
+   "mod_ids": [
+    "ritchiesprojectilelib"
+   ],
+   "size_bytes": 76369,
    "flavors": [],
-   "role": "standalone",
+   "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "sable",
@@ -3202,28 +3587,6 @@
    "date_updated": "2026-08-05T09:52:14+02:00",
    "parse_status": "ok",
    "status": "update_safe"
-  },
-  {
-   "slug": "sable::sablecompanion",
-   "name": "Sable Companion",
-   "filename": "",
-   "side": "both",
-   "source": "modrinth",
-   "project_id": null,
-   "version": "1.6.0",
-   "mod_ids": [
-    "sablecompanion"
-   ],
-   "size_bytes": 0,
-   "flavors": [],
-   "role": "standalone",
-   "cluster": null,
-   "embedded": true,
-   "owner": "sable",
-   "date_added": null,
-   "date_updated": null,
-   "parse_status": "ok",
-   "status": "current"
   },
   {
    "slug": "sable::veil",
@@ -3254,9 +3617,11 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "670986",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "0.1.5",
+   "mod_ids": [
+    "saturn"
+   ],
+   "size_bytes": 84147,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -3264,8 +3629,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "seasonal-lets-do",
@@ -3296,18 +3661,42 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "499980",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.21.1-3.3.2",
+   "mod_ids": [
+    "moonlight"
+   ],
+   "size_bytes": 2143736,
    "flavors": [],
-   "role": "standalone",
+   "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-08T14:19:59+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "update_blocked"
+  },
+  {
+   "slug": "selene::codecui",
+   "name": "CodecUI",
+   "filename": "",
+   "side": "both",
+   "source": "curseforge",
+   "project_id": null,
+   "version": "1.21.1-1.3.6",
+   "mod_ids": [
+    "codecui"
+   ],
+   "size_bytes": 0,
+   "flavors": [],
+   "role": "standalone",
+   "cluster": null,
+   "embedded": true,
+   "owner": "selene",
+   "date_added": null,
+   "date_updated": null,
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "serene-seasons",
@@ -3360,9 +3749,11 @@
    "side": "client",
    "source": "curseforge",
    "project_id": "315811",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "5.1.9+1.21.1",
+   "mod_ids": [
+    "shulkerboxtooltip"
+   ],
+   "size_bytes": 381204,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -3370,8 +3761,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T13:24:08+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "sinytra-connector",
@@ -3382,7 +3773,7 @@
    "project_id": "890127",
    "version": null,
    "mod_ids": [],
-   "size_bytes": 0,
+   "size_bytes": 4533142,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -3390,6 +3781,28 @@
    "owner": null,
    "date_added": "2026-08-08T15:49:27+02:00",
    "date_updated": "2026-08-08T15:49:27+02:00",
+   "parse_status": "failed",
+   "status": "unknown"
+  },
+  {
+   "slug": "sinytra-connector::connector",
+   "name": "Sinytra Connector",
+   "filename": "",
+   "side": "both",
+   "source": "curseforge",
+   "project_id": null,
+   "version": "2.0.0-beta.16+1.21.1",
+   "mod_ids": [
+    "connector"
+   ],
+   "size_bytes": 0,
+   "flavors": [],
+   "role": "standalone",
+   "cluster": null,
+   "embedded": true,
+   "owner": "sinytra-connector",
+   "date_added": null,
+   "date_updated": null,
    "parse_status": "failed",
    "status": "unknown"
   },
@@ -3444,18 +3857,42 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "659674",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "4.3.3",
+   "mod_ids": [
+    "sliceanddice"
+   ],
+   "size_bytes": 1354014,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-08T14:19:59+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
+  },
+  {
+   "slug": "slice-and-dice::atmosphere",
+   "name": "Atmosphere",
+   "filename": "",
+   "side": "both",
+   "source": "curseforge",
+   "project_id": null,
+   "version": "1.0.17",
+   "mod_ids": [
+    "atmosphere"
+   ],
+   "size_bytes": 0,
+   "flavors": [],
+   "role": "library",
+   "cluster": null,
+   "embedded": true,
+   "owner": "slice-and-dice",
+   "date_added": null,
+   "date_updated": null,
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "snow-real-magic",
@@ -3464,18 +3901,86 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "308663",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "12.2.2+neoforge",
+   "mod_ids": [
+    "snowrealmagic"
+   ],
+   "size_bytes": 3895550,
    "flavors": [],
-   "role": "standalone",
+   "role": "mod",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
+  },
+  {
+   "slug": "snow-real-magic::fabric_game_rule_api_v1",
+   "name": "Forgified Fabric Game Rule API (v1)",
+   "filename": "",
+   "side": "both",
+   "source": "curseforge",
+   "project_id": null,
+   "version": "1.0.53+36d727be19",
+   "mod_ids": [
+    "fabric_game_rule_api_v1"
+   ],
+   "size_bytes": 0,
+   "flavors": [],
+   "role": "standalone",
+   "cluster": null,
+   "embedded": true,
+   "owner": "snow-real-magic",
+   "date_added": null,
+   "date_updated": null,
+   "parse_status": "ok",
+   "status": "current"
+  },
+  {
+   "slug": "snow-real-magic::fabric_model_loading_api_v1",
+   "name": "Forgified Fabric Model Loading API (v1)",
+   "filename": "",
+   "side": "both",
+   "source": "curseforge",
+   "project_id": null,
+   "version": "2.0.0+986ae77219",
+   "mod_ids": [
+    "fabric_model_loading_api_v1"
+   ],
+   "size_bytes": 0,
+   "flavors": [],
+   "role": "addon",
+   "cluster": "irisshaders::fabric_api_base",
+   "embedded": true,
+   "owner": "snow-real-magic",
+   "date_added": null,
+   "date_updated": null,
+   "parse_status": "ok",
+   "status": "current"
+  },
+  {
+   "slug": "snow-real-magic::fabric_renderer_indigo",
+   "name": "Forgified Fabric Renderer - Indigo",
+   "filename": "",
+   "side": "both",
+   "source": "curseforge",
+   "project_id": null,
+   "version": "1.7.0+acb05a3919",
+   "mod_ids": [
+    "fabric_renderer_indigo"
+   ],
+   "size_bytes": 0,
+   "flavors": [],
+   "role": "addon",
+   "cluster": "irisshaders::fabric_api_base",
+   "embedded": true,
+   "owner": "snow-real-magic",
+   "date_added": null,
+   "date_updated": null,
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "sodium",
@@ -3484,9 +3989,11 @@
    "side": "client",
    "source": "curseforge",
    "project_id": "394468",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "0.8.13-beta.2+mc1.21.1",
+   "mod_ids": [
+    "sodium"
+   ],
+   "size_bytes": 1292887,
    "flavors": [
     "sodium_on",
     "sodium-extra_on",
@@ -3498,8 +4005,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T20:44:37+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "sodium-extra",
@@ -3508,20 +4015,48 @@
    "side": "client",
    "source": "curseforge",
    "project_id": "447673",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "0.9.3+mc1.21.1",
+   "mod_ids": [
+    "sodium_extra"
+   ],
+   "size_bytes": 465013,
    "flavors": [
     "sodium-extra_on"
    ],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "sodium::sodium",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T20:44:37+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
+  },
+  {
+   "slug": "sodium::sodium",
+   "name": "Sodium",
+   "filename": "",
+   "side": "client",
+   "source": "curseforge",
+   "project_id": null,
+   "version": "0.8.13-beta.2+mc1.21.1",
+   "mod_ids": [
+    "sodium"
+   ],
+   "size_bytes": 0,
+   "flavors": [
+    "sodium_on",
+    "sodium-extra_on",
+    "ssrd_on"
+   ],
+   "role": "core",
+   "cluster": "sodium::sodium",
+   "embedded": true,
+   "owner": "sodium",
+   "date_added": null,
+   "date_updated": null,
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "sophisticated-backpacks",
@@ -3574,9 +4109,11 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "361579",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.10.124",
+   "mod_ids": [
+    "spark"
+   ],
+   "size_bytes": 3642581,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -3584,8 +4121,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "ssrd",
@@ -3609,7 +4146,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
    "parse_status": "ok",
-   "status": "broken"
+   "status": "current"
   },
   {
    "slug": "steam-n-rails-neoforge",
@@ -3618,18 +4155,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "1414670",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "0.3.0-beta.2+neoforge-mc1.21.1",
+   "mod_ids": [
+    "railways"
+   ],
+   "size_bytes": 18728584,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-08T14:19:59+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "steampunk-armory",
@@ -3660,9 +4199,11 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "907369",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.4.3",
+   "mod_ids": [
+    "s_a_b"
+   ],
+   "size_bytes": 1815476,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -3670,8 +4211,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "storagedrawers",
@@ -3702,18 +4243,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "1486746",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.3.0",
+   "mod_ids": [
+    "struts"
+   ],
+   "size_bytes": 215558,
    "flavors": [],
-   "role": "standalone",
+   "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-08T14:19:59+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "supermartijn642s-config-lib",
@@ -3722,18 +4265,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "438332",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.1.8",
+   "mod_ids": [
+    "supermartijn642configlib"
+   ],
+   "size_bytes": 207514,
    "flavors": [],
-   "role": "standalone",
+   "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "supermartijn642s-core-lib",
@@ -3742,18 +4287,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "454372",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.1.23+a",
+   "mod_ids": [
+    "supermartijn642corelib"
+   ],
+   "size_bytes": 559800,
    "flavors": [],
-   "role": "standalone",
+   "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-08T14:19:59+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "update_safe"
   },
   {
    "slug": "survival-island",
@@ -3762,9 +4309,11 @@
    "side": "server",
    "source": "curseforge",
    "project_id": "364426",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "0.3.1",
+   "mod_ids": [
+    "survivalisland"
+   ],
+   "size_bytes": 111811,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -3772,8 +4321,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "the-roads-more-travelled",
@@ -3782,9 +4331,11 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "1512955",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "0.5.1-1.21.1-neoforge",
+   "mod_ids": [
+    "trmt"
+   ],
+   "size_bytes": 130176,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
@@ -3792,8 +4343,8 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "trade-cycling",
@@ -3868,9 +4419,11 @@
    "side": "client",
    "source": "curseforge",
    "project_id": "263420",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "26.4.2",
+   "mod_ids": [
+    "xaerominimap"
+   ],
+   "size_bytes": 2185409,
    "flavors": [
     "xaeros-minimap_on"
    ],
@@ -3880,8 +4433,32 @@
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T20:44:37+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
+  },
+  {
+   "slug": "xaeros-minimap::xaerolib",
+   "name": "XaeroLib",
+   "filename": "",
+   "side": "client",
+   "source": "curseforge",
+   "project_id": null,
+   "version": "1.7.1",
+   "mod_ids": [
+    "xaerolib"
+   ],
+   "size_bytes": 0,
+   "flavors": [
+    "xaeros-minimap_on"
+   ],
+   "role": "library",
+   "cluster": null,
+   "embedded": true,
+   "owner": "xaeros-minimap",
+   "date_added": null,
+   "date_updated": null,
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "xaeros-world-map",
@@ -3890,20 +4467,22 @@
    "side": "client",
    "source": "curseforge",
    "project_id": "317780",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.44.2",
+   "mod_ids": [
+    "xaeroworldmap"
+   ],
+   "size_bytes": 1418918,
    "flavors": [
     "xaeros-world-map_on"
    ],
-   "role": "standalone",
+   "role": "mod",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T20:44:37+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "yungs-api-neoforge",
@@ -3912,18 +4491,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "1015100",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.21.1-NeoForge-5.1.6",
+   "mod_ids": [
+    "yungsapi"
+   ],
+   "size_bytes": 388678,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "core",
+   "cluster": "yungs-api-neoforge",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "update_safe"
   },
   {
    "slug": "yungs-better-caves",
@@ -3932,18 +4513,20 @@
    "side": "server",
    "source": "curseforge",
    "project_id": "340583",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.21.1-NeoForge-3.1.4",
+   "mod_ids": [
+    "bettercaves"
+   ],
+   "size_bytes": 392794,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "yungs-api-neoforge",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T13:24:08+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "update_safe"
   },
   {
    "slug": "yungs-better-desert-temples-neoforge",
@@ -3952,18 +4535,20 @@
    "side": "server",
    "source": "curseforge",
    "project_id": "1015114",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.21.1-NeoForge-4.1.5",
+   "mod_ids": [
+    "betterdeserttemples"
+   ],
+   "size_bytes": 905839,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "yungs-api-neoforge",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T13:24:08+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "yungs-better-dungeons-neoforge",
@@ -3972,18 +4557,20 @@
    "side": "server",
    "source": "curseforge",
    "project_id": "1015112",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.21.1-NeoForge-5.1.4",
+   "mod_ids": [
+    "betterdungeons"
+   ],
+   "size_bytes": 782160,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "yungs-api-neoforge",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T13:24:08+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "yungs-better-end-island-neoforge",
@@ -3992,18 +4579,20 @@
    "side": "server",
    "source": "curseforge",
    "project_id": "1015127",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.21.1-NeoForge-3.1.2",
+   "mod_ids": [
+    "betterendisland"
+   ],
+   "size_bytes": 398130,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "yungs-api-neoforge",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T13:24:08+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "yungs-better-jungle-temples-neoforge",
@@ -4012,18 +4601,20 @@
    "side": "server",
    "source": "curseforge",
    "project_id": "1015123",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.21.1-NeoForge-3.1.2",
+   "mod_ids": [
+    "betterjungletemples"
+   ],
+   "size_bytes": 795839,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "yungs-api-neoforge",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T13:24:08+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "yungs-better-mineshafts-neoforge",
@@ -4032,18 +4623,20 @@
    "side": "server",
    "source": "curseforge",
    "project_id": "1015096",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.21.1-NeoForge-5.1.1",
+   "mod_ids": [
+    "bettermineshafts"
+   ],
+   "size_bytes": 493967,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "yungs-api-neoforge",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T13:24:08+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "yungs-better-nether-fortresses-neoforge",
@@ -4052,18 +4645,20 @@
    "side": "server",
    "source": "curseforge",
    "project_id": "1015118",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.21.1-NeoForge-3.1.5",
+   "mod_ids": [
+    "betterfortresses"
+   ],
+   "size_bytes": 609639,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "yungs-api-neoforge",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T13:24:08+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "yungs-better-ocean-monuments-neoforge",
@@ -4072,18 +4667,20 @@
    "side": "server",
    "source": "curseforge",
    "project_id": "1015115",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.21.1-NeoForge-4.1.2",
+   "mod_ids": [
+    "betteroceanmonuments"
+   ],
+   "size_bytes": 1025571,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "yungs-api-neoforge",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T13:24:08+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "yungs-better-strongholds-neoforge",
@@ -4092,18 +4689,20 @@
    "side": "server",
    "source": "curseforge",
    "project_id": "1015105",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.21.1-NeoForge-5.1.3",
+   "mod_ids": [
+    "betterstrongholds"
+   ],
+   "size_bytes": 461244,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "yungs-api-neoforge",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T13:24:08+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "yungs-better-witch-huts-neoforge",
@@ -4112,18 +4711,20 @@
    "side": "server",
    "source": "curseforge",
    "project_id": "1015144",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.21.1-NeoForge-4.1.1",
+   "mod_ids": [
+    "betterwitchhuts"
+   ],
+   "size_bytes": 174789,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "yungs-api-neoforge",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T13:24:08+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "yungs-bridges-neoforge",
@@ -4132,18 +4733,20 @@
    "side": "server",
    "source": "curseforge",
    "project_id": "1015149",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.21.1-NeoForge-5.1.1",
+   "mod_ids": [
+    "yungsbridges"
+   ],
+   "size_bytes": 136820,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "yungs-api-neoforge",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T13:24:08+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "yungs-extras-neoforge",
@@ -4152,18 +4755,20 @@
    "side": "server",
    "source": "curseforge",
    "project_id": "1015146",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.21.1-NeoForge-5.1.1",
+   "mod_ids": [
+    "yungsextras"
+   ],
+   "size_bytes": 198183,
    "flavors": [],
-   "role": "standalone",
-   "cluster": null,
+   "role": "addon",
+   "cluster": "yungs-api-neoforge",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T13:24:08+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   },
   {
    "slug": "zeta",
@@ -4172,18 +4777,20 @@
    "side": "both",
    "source": "curseforge",
    "project_id": "968868",
-   "version": null,
-   "mod_ids": [],
-   "size_bytes": 0,
+   "version": "1.1-40",
+   "mod_ids": [
+    "zeta"
+   ],
+   "size_bytes": 763725,
    "flavors": [],
-   "role": "standalone",
+   "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
-   "parse_status": "failed",
-   "status": "unknown"
+   "parse_status": "ok",
+   "status": "current"
   }
  ],
  "edges": [
@@ -4228,12 +4835,84 @@
    "satisfied": false
   },
   {
-   "from": "burnt-basic",
+   "from": "advancement-plaques",
+   "to": "iceberg",
+   "to_mod_id": "iceberg",
+   "type": "required",
+   "version_range": "[1.2.2,)",
+   "satisfied": true
+  },
+  {
+   "from": "advancement-plaques",
+   "to": "prism-lib",
+   "to_mod_id": "prism",
+   "type": "optional",
+   "version_range": "[1.0.8,)",
+   "satisfied": true
+  },
+  {
+   "from": "advancement-plaques",
    "to": null,
+   "to_mod_id": "toastcontrol",
+   "type": "optional",
+   "version_range": "[9.0,)",
+   "satisfied": false
+  },
+  {
+   "from": "alexs-caves-unofficial-port",
+   "to": "citadel-1-21-1-port",
+   "to_mod_id": "citadel",
+   "type": "required",
+   "version_range": "[2.6.0,)",
+   "satisfied": true
+  },
+  {
+   "from": "ambientsounds",
+   "to": "creativecore",
+   "to_mod_id": "creativecore",
+   "type": "required",
+   "version_range": "[2.13.37,)",
+   "satisfied": true
+  },
+  {
+   "from": "amendments",
+   "to": "selene",
+   "to_mod_id": "moonlight",
+   "type": "required",
+   "version_range": "[1.21-2.29.19,)",
+   "satisfied": false
+  },
+  {
+   "from": "attributefix",
+   "to": "bookshelf",
+   "to_mod_id": "bookshelf",
+   "type": "required",
+   "version_range": "[21.1, 21.2)",
+   "satisfied": true
+  },
+  {
+   "from": "attributefix",
+   "to": "prickle",
+   "to_mod_id": "prickle",
+   "type": "required",
+   "version_range": "[21.1, 21.2)",
+   "satisfied": true
+  },
+  {
+   "from": "bellsandwhistles",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": "[6.0.2,6.1.0)",
+   "satisfied": true
+  },
+  {
+   "from": "burnt-basic",
+   "to": "cloth-config",
    "to_mod_id": "cloth_config",
    "type": "required",
    "version_range": "*",
-   "satisfied": false
+   "satisfied": true
   },
   {
    "from": "burnt-basic",
@@ -4241,6 +4920,22 @@
    "to_mod_id": "weather2",
    "type": "optional",
    "version_range": "*",
+   "satisfied": false
+  },
+  {
+   "from": "cbc-enchanced-shells-create-big-cannons",
+   "to": "create-big-cannons",
+   "to_mod_id": "createbigcannons",
+   "type": "required",
+   "version_range": "[5.11,)",
+   "satisfied": true
+  },
+  {
+   "from": "cbc-enchanced-shells-create-big-cannons",
+   "to": null,
+   "to_mod_id": "ftbchunks",
+   "type": "optional",
+   "version_range": "[2100,)",
    "satisfied": false
   },
   {
@@ -4253,19 +4948,19 @@
   },
   {
    "from": "cbc-firepower-components",
-   "to": null,
+   "to": "ritchies-projectile-library",
    "to_mod_id": "ritchiesprojectilelib",
    "type": "required",
    "version_range": "[2.1.2,)",
-   "satisfied": false
+   "satisfied": true
   },
   {
    "from": "cbc-firepower-components",
-   "to": null,
+   "to": "create-big-cannons",
    "to_mod_id": "createbigcannons",
    "type": "required",
    "version_range": "[5.11.6,5.12.0)",
-   "satisfied": false
+   "satisfied": true
   },
   {
    "from": "cbc-firepower-components",
@@ -4277,11 +4972,11 @@
   },
   {
    "from": "cbcenhanced-shell-armor-create-big-cannons",
-   "to": null,
+   "to": "create-big-cannons",
    "to_mod_id": "createbigcannons",
    "type": "required",
    "version_range": "[*,)",
-   "satisfied": false
+   "satisfied": true
   },
   {
    "from": "cbcenhanced-shell-armor-create-big-cannons",
@@ -4316,12 +5011,68 @@
    "satisfied": true
   },
   {
+   "from": "cccbridge",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": "[6.0.10,7.0.0)",
+   "satisfied": true
+  },
+  {
+   "from": "cccbridge",
+   "to": "cc-tweaked",
+   "to_mod_id": "computercraft",
+   "type": "required",
+   "version_range": "[1.119.0,)",
+   "satisfied": true
+  },
+  {
+   "from": "cgs",
+   "to": "ntgl",
+   "to_mod_id": "ntgl",
+   "type": "required",
+   "version_range": "[1.21.1-3.1.7,)",
+   "satisfied": true
+  },
+  {
+   "from": "cgs",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": "[0.5.1.f-26,)",
+   "satisfied": true
+  },
+  {
+   "from": "copycats",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": "[6.0.8,)",
+   "satisfied": true
+  },
+  {
+   "from": "corpse-x-cosmetic-armor-reworked-compat",
+   "to": "corpse",
+   "to_mod_id": "corpse",
+   "type": "required",
+   "version_range": "[1.1.2,)",
+   "satisfied": true
+  },
+  {
+   "from": "corpse-x-cosmetic-armor-reworked-compat",
+   "to": "cosmetic-armor-reworked",
+   "to_mod_id": "cosmeticarmorreworked",
+   "type": "required",
+   "version_range": "[1.0.0,)",
+   "satisfied": true
+  },
+  {
    "from": "corpse",
-   "to": null,
+   "to": "jade",
    "to_mod_id": "jade",
    "type": "optional",
    "version_range": "*",
-   "satisfied": false
+   "satisfied": true
   },
   {
    "from": "corpse",
@@ -4330,6 +5081,62 @@
    "type": "optional",
    "version_range": "[1.3.0,)",
    "satisfied": false
+  },
+  {
+   "from": "create-aeronautics-compatability",
+   "to": "sable",
+   "to_mod_id": "sable",
+   "type": "optional",
+   "version_range": "[2.0.3,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-aeronautics-compatability",
+   "to": null,
+   "to_mod_id": "etched",
+   "type": "optional",
+   "version_range": "[5.0.0,6.0.0)",
+   "satisfied": false
+  },
+  {
+   "from": "create-aeronautics-compatability",
+   "to": null,
+   "to_mod_id": "waterframes",
+   "type": "optional",
+   "version_range": "[2.1.0,3.0.0)",
+   "satisfied": false
+  },
+  {
+   "from": "create-aeronautics-compatability",
+   "to": "citadel-1-21-1-port",
+   "to_mod_id": "citadel",
+   "type": "optional",
+   "version_range": "[2.0.0,3.0.0)",
+   "satisfied": true
+  },
+  {
+   "from": "create-aeronautics-transmission-linkage",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": "[6.0.10,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-aeronautics-transmission-linkage",
+   "to": "sable",
+   "to_mod_id": "sable",
+   "type": "required",
+   "version_range": "[1.1.3,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-aeronautics-transmission-linkage",
+   "to": "create-aeronautics::simulated",
+   "to_mod_id": "simulated",
+   "type": "required",
+   "version_range": "[1.1.3,)",
+   "satisfied": true
   },
   {
    "from": "create-aeronautics::aeronautics",
@@ -4436,11 +5243,155 @@
    "satisfied": true
   },
   {
+   "from": "create-better-fps",
+   "to": "sodium::sodium",
+   "to_mod_id": "sodium",
+   "type": "required",
+   "version_range": "[0.6.9,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-better-fps",
+   "to": "irisshaders",
+   "to_mod_id": "iris",
+   "type": "optional",
+   "version_range": "[1.8.8,)",
+   "satisfied": true
+  },
+  {
    "from": "create-better-frequency",
    "to": "create",
    "to_mod_id": "create",
    "type": "required",
    "version_range": "[6.0.10,6.1.0)",
+   "satisfied": true
+  },
+  {
+   "from": "create-big-cannons",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": "[6.0.7,6.1.0)",
+   "satisfied": true
+  },
+  {
+   "from": "create-big-cannons",
+   "to": "ritchies-projectile-library",
+   "to_mod_id": "ritchiesprojectilelib",
+   "type": "required",
+   "version_range": "[2.1.2,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-big-cannons",
+   "to": "copycats",
+   "to_mod_id": "copycats",
+   "type": "optional",
+   "version_range": "[3.0.0,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-big-cannons",
+   "to": "framedblocks",
+   "to_mod_id": "framedblocks",
+   "type": "optional",
+   "version_range": "[10.0.0,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-big-cannons",
+   "to": "curios",
+   "to_mod_id": "curios",
+   "type": "optional",
+   "version_range": "[9.2.0,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-big-cannons",
+   "to": "sable",
+   "to_mod_id": "sable",
+   "type": "optional",
+   "version_range": "[2.0.0,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-big-cannons",
+   "to": "create-aeronautics::simulated",
+   "to_mod_id": "simulated",
+   "type": "optional",
+   "version_range": "[1.3.0,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-big-cannons",
+   "to": "create-aeronautics::aeronautics",
+   "to_mod_id": "aeronautics",
+   "type": "optional",
+   "version_range": "[1.3.0,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-big-cannons",
+   "to": "create-aeronautics::offroad",
+   "to_mod_id": "offroad",
+   "type": "optional",
+   "version_range": "[1.3.0,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-bits-n-bobs",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": "[6.0.10,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-bits-n-bobs",
+   "to": "azimuth-api",
+   "to_mod_id": "azimuth",
+   "type": "required",
+   "version_range": "[1.4.6,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-bits-n-bobs",
+   "to": "strut-your-stuff",
+   "to_mod_id": "struts",
+   "type": "required",
+   "version_range": "[1.0.0,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-bits-n-bobs",
+   "to": "create-encased",
+   "to_mod_id": "createcasing",
+   "type": "optional",
+   "version_range": "",
+   "satisfied": true
+  },
+  {
+   "from": "create-bits-n-bobs",
+   "to": "create-design-n-decor",
+   "to_mod_id": "dndecor",
+   "type": "optional",
+   "version_range": "",
+   "satisfied": true
+  },
+  {
+   "from": "create-bits-n-bobs",
+   "to": "create-connected",
+   "to_mod_id": "create_connected",
+   "type": "optional",
+   "version_range": "",
+   "satisfied": true
+  },
+  {
+   "from": "create-bitterballen",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": "[6.0.8,6.1.0)",
    "satisfied": true
   },
   {
@@ -4457,6 +5408,22 @@
    "to_mod_id": "computercraft",
    "type": "required",
    "version_range": "[0,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-connected",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": "[6.0.10,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-deco",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": "[6.0.7,6.1.0)",
    "satisfied": true
   },
   {
@@ -4484,11 +5451,323 @@
    "satisfied": true
   },
   {
+   "from": "create-diesel-generators",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": "[6.0.7,6.1.0)",
+   "satisfied": true
+  },
+  {
+   "from": "create-diesel-generators",
+   "to": "strut-your-stuff",
+   "to_mod_id": "struts",
+   "type": "optional",
+   "version_range": "[1.3.0,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-dragons-plus",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": "[6.0.10,)",
+   "satisfied": true
+  },
+  {
    "from": "create-dreams-and-desires",
    "to": "create",
    "to_mod_id": "create",
    "type": "required",
    "version_range": "[6.0.9,6.1.0)",
+   "satisfied": true
+  },
+  {
+   "from": "create-encased",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": "[6.0.10,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-encased",
+   "to": null,
+   "to_mod_id": "kubejs",
+   "type": "optional",
+   "version_range": "[2101,)",
+   "satisfied": false
+  },
+  {
+   "from": "create-encased",
+   "to": "slice-and-dice",
+   "to_mod_id": "sliceanddice",
+   "type": "optional",
+   "version_range": "[4.3.0,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-enchantment-industry",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": "[6.0.10,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-enchantment-industry",
+   "to": "create-dragons-plus",
+   "to_mod_id": "create_dragons_plus",
+   "type": "required",
+   "version_range": "[1.11.3,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-enchantment-industry",
+   "to": null,
+   "to_mod_id": "apothic_enchanting",
+   "type": "optional",
+   "version_range": "[1.6.0,)",
+   "satisfied": false
+  },
+  {
+   "from": "create-enchantment-industry",
+   "to": null,
+   "to_mod_id": "apotheosis",
+   "type": "optional",
+   "version_range": "[8.7.0,)",
+   "satisfied": false
+  },
+  {
+   "from": "create-enchantment-industry",
+   "to": null,
+   "to_mod_id": "apothic_spawners",
+   "type": "optional",
+   "version_range": "[1.4.0,)",
+   "satisfied": false
+  },
+  {
+   "from": "create-enchantment-industry",
+   "to": "sable",
+   "to_mod_id": "sable",
+   "type": "optional",
+   "version_range": "[2.0.3,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-enchantment-industry",
+   "to": null,
+   "to_mod_id": "touhou_little_maid",
+   "type": "optional",
+   "version_range": "[1.2.0,)",
+   "satisfied": false
+  },
+  {
+   "from": "create-ender-transmission",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": "[0.5.0.e,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-metallurgy",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": "[6.0.9,6.1.0)",
+   "satisfied": true
+  },
+  {
+   "from": "create-metallurgy",
+   "to": "jei",
+   "to_mod_id": "jei",
+   "type": "optional",
+   "version_range": "[19.27.0.336,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-metallurgy",
+   "to": "jade",
+   "to_mod_id": "jade",
+   "type": "optional",
+   "version_range": "[15.10.5+neoforge,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-metallurgy",
+   "to": null,
+   "to_mod_id": "kubejs",
+   "type": "optional",
+   "version_range": "[2101.7.2-build.363,)",
+   "satisfied": false
+  },
+  {
+   "from": "create-metallurgy",
+   "to": null,
+   "to_mod_id": "kubejs_create",
+   "type": "optional",
+   "version_range": "[2101.3.1-build.18,)",
+   "satisfied": false
+  },
+  {
+   "from": "create-power-loader",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": "[6.0.0,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-propulsion-simulated",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": "[6.0.6,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-propulsion-simulated",
+   "to": "create-diesel-generators",
+   "to_mod_id": "createdieselgenerators",
+   "type": "optional",
+   "version_range": "[1.2,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-propulsion-simulated",
+   "to": "create-big-cannons",
+   "to_mod_id": "createbigcannons",
+   "type": "optional",
+   "version_range": "*",
+   "satisfied": true
+  },
+  {
+   "from": "create-propulsion-simulated",
+   "to": null,
+   "to_mod_id": "tfmg",
+   "type": "optional",
+   "version_range": "*",
+   "satisfied": false
+  },
+  {
+   "from": "create-propulsion-simulated",
+   "to": null,
+   "to_mod_id": "immersiveengineering",
+   "type": "optional",
+   "version_range": "*",
+   "satisfied": false
+  },
+  {
+   "from": "create-propulsion-simulated",
+   "to": null,
+   "to_mod_id": "mekanism",
+   "type": "optional",
+   "version_range": "*",
+   "satisfied": false
+  },
+  {
+   "from": "create-propulsion-simulated",
+   "to": null,
+   "to_mod_id": "mekanismgenerators",
+   "type": "optional",
+   "version_range": "*",
+   "satisfied": false
+  },
+  {
+   "from": "create-propulsion-simulated",
+   "to": null,
+   "to_mod_id": "northstar",
+   "type": "optional",
+   "version_range": "*",
+   "satisfied": false
+  },
+  {
+   "from": "create-propulsion-simulated",
+   "to": null,
+   "to_mod_id": "stellaris",
+   "type": "optional",
+   "version_range": "*",
+   "satisfied": false
+  },
+  {
+   "from": "create-propulsion-simulated",
+   "to": "cc-tweaked",
+   "to_mod_id": "computercraft",
+   "type": "optional",
+   "version_range": "*",
+   "satisfied": true
+  },
+  {
+   "from": "create-propulsion-simulated",
+   "to": "jei",
+   "to_mod_id": "jei",
+   "type": "optional",
+   "version_range": "*",
+   "satisfied": true
+  },
+  {
+   "from": "create-propulsion-simulated",
+   "to": "sable",
+   "to_mod_id": "sable",
+   "type": "required",
+   "version_range": "[2.0.3,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-propulsion-simulated",
+   "to": "create-bits-n-bobs::sablecompanion",
+   "to_mod_id": "sablecompanion",
+   "type": "required",
+   "version_range": "*",
+   "satisfied": true
+  },
+  {
+   "from": "create-propulsion-simulated",
+   "to": null,
+   "to_mod_id": "rocketnautics",
+   "type": "optional",
+   "version_range": "*",
+   "satisfied": false
+  },
+  {
+   "from": "create-radars",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": "[6.0.10,6.1.0)",
+   "satisfied": true
+  },
+  {
+   "from": "create-radars",
+   "to": "create-big-cannons",
+   "to_mod_id": "createbigcannons",
+   "type": "required",
+   "version_range": "[5.11.2,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-radars",
+   "to": null,
+   "to_mod_id": "valkyrienskies",
+   "type": "optional",
+   "version_range": "[2.4.7,)",
+   "satisfied": false
+  },
+  {
+   "from": "create-radars",
+   "to": null,
+   "to_mod_id": "shupapium",
+   "type": "optional",
+   "version_range": "[1.0,2.0)",
+   "satisfied": false
+  },
+  {
+   "from": "create-radars",
+   "to": "cc-tweaked",
+   "to_mod_id": "computercraft",
+   "type": "optional",
+   "version_range": "[1.113.0,2.0)",
    "satisfied": true
   },
   {
@@ -4505,6 +5784,14 @@
    "to_mod_id": "create",
    "type": "required",
    "version_range": "[0.5.1,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-sound-of-steam",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": "[6.0.8,6.1.0)",
    "satisfied": true
   },
   {
@@ -4525,19 +5812,19 @@
   },
   {
    "from": "create",
-   "to": null,
+   "to": "sodium::sodium",
    "to_mod_id": "sodium",
    "type": "optional",
    "version_range": "[0.6.9,)",
-   "satisfied": false
+   "satisfied": true
   },
   {
    "from": "create",
-   "to": null,
+   "to": "lithium",
    "to_mod_id": "lithium",
    "type": "optional",
    "version_range": "[0.14.7,)",
-   "satisfied": false
+   "satisfied": true
   },
   {
    "from": "create",
@@ -4549,11 +5836,11 @@
   },
   {
    "from": "create",
-   "to": null,
+   "to": "xaeros-world-map",
    "to_mod_id": "xaeroworldmap",
    "type": "optional",
    "version_range": "[1.40.2,)",
-   "satisfied": false
+   "satisfied": true
   },
   {
    "from": "create::flywheel",
@@ -4565,11 +5852,11 @@
   },
   {
    "from": "create::flywheel",
-   "to": null,
+   "to": "sodium::sodium",
    "to_mod_id": "sodium",
    "type": "optional",
    "version_range": "[0.6.0-beta.2,)",
-   "satisfied": false
+   "satisfied": true
   },
   {
    "from": "create::ponder",
@@ -4585,6 +5872,94 @@
    "to_mod_id": "create",
    "type": "required",
    "version_range": "[6.0.0,)",
+   "satisfied": true
+  },
+  {
+   "from": "createaddition",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": "[6.0.7,6.1.0)",
+   "satisfied": true
+  },
+  {
+   "from": "createaddition",
+   "to": "jei",
+   "to_mod_id": "jei",
+   "type": "optional",
+   "version_range": "[15.0.0.0,)",
+   "satisfied": true
+  },
+  {
+   "from": "createaddition",
+   "to": "cc-tweaked",
+   "to_mod_id": "computercraft",
+   "type": "optional",
+   "version_range": "[0,)",
+   "satisfied": true
+  },
+  {
+   "from": "createaddition",
+   "to": "create-aeronautics::simulated",
+   "to_mod_id": "simulated",
+   "type": "optional",
+   "version_range": "",
+   "satisfied": true
+  },
+  {
+   "from": "createnuclear",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": "[6.0.8,)",
+   "satisfied": true
+  },
+  {
+   "from": "enchantment-descriptions",
+   "to": "bookshelf",
+   "to_mod_id": "bookshelf",
+   "type": "required",
+   "version_range": "[21.1, 21.2)",
+   "satisfied": true
+  },
+  {
+   "from": "enchantment-descriptions",
+   "to": "prickle",
+   "to_mod_id": "prickle",
+   "type": "required",
+   "version_range": "[21.1, 21.2)",
+   "satisfied": true
+  },
+  {
+   "from": "enders-delight",
+   "to": "farmers-delight",
+   "to_mod_id": "farmersdelight",
+   "type": "required",
+   "version_range": "1.21.1-1.2.10",
+   "satisfied": true
+  },
+  {
+   "from": "entity-model-features",
+   "to": "entity-texture-features-fabric",
+   "to_mod_id": "entity_texture_features",
+   "type": "required",
+   "version_range": "[7.0.0,)",
+   "satisfied": true
+  },
+  {
+   "from": "explosion-overhaul-a-new-level-of-destruction",
+   "to": "geckolib",
+   "to_mod_id": "geckolib",
+   "type": "required",
+   "version_range": "[4.9.1,)",
+   "satisfied": true
+  },
+  {
+   "from": "explosion-overhaul-a-new-level-of-destruction",
+   "to": "cloth-config",
+   "to_mod_id": "cloth_config",
+   "type": "required",
+   "version_range": "[15.0.130,)",
    "satisfied": true
   },
   {
@@ -4636,6 +6011,22 @@
    "satisfied": false
   },
   {
+   "from": "farmers-delight",
+   "to": "crafttweaker",
+   "to_mod_id": "crafttweaker",
+   "type": "optional",
+   "version_range": "[14.0.6,)",
+   "satisfied": true
+  },
+  {
+   "from": "fastsuite",
+   "to": "placebo",
+   "to_mod_id": "placebo",
+   "type": "required",
+   "version_range": "[9.9.0,)",
+   "satisfied": true
+  },
+  {
    "from": "formicapi",
    "to": "create",
    "to_mod_id": "create",
@@ -4644,12 +6035,324 @@
    "satisfied": true
   },
   {
-   "from": "more-overlays-updated",
+   "from": "framedblocks",
    "to": null,
+   "to_mod_id": "athena",
+   "type": "optional",
+   "version_range": "[4.0.0,)",
+   "satisfied": false
+  },
+  {
+   "from": "framedblocks",
+   "to": null,
+   "to_mod_id": "atlasviewer",
+   "type": "optional",
+   "version_range": "[9.1.0,)",
+   "satisfied": false
+  },
+  {
+   "from": "framedblocks",
+   "to": null,
+   "to_mod_id": "buildinggadgets",
+   "type": "optional",
+   "version_range": "[3.14.0,)",
+   "satisfied": false
+  },
+  {
+   "from": "framedblocks",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "optional",
+   "version_range": "[6.0.2,)",
+   "satisfied": true
+  },
+  {
+   "from": "framedblocks",
+   "to": null,
+   "to_mod_id": "diagonalblocks",
+   "type": "optional",
+   "version_range": "[21.1.0,)",
+   "satisfied": false
+  },
+  {
+   "from": "framedblocks",
+   "to": null,
+   "to_mod_id": "emi",
+   "type": "optional",
+   "version_range": "[1.1.22,)",
+   "satisfied": false
+  },
+  {
+   "from": "framedblocks",
+   "to": "jei",
+   "to_mod_id": "jei",
+   "type": "optional",
+   "version_range": "[19.21.0.247,)",
+   "satisfied": true
+  },
+  {
+   "from": "framedblocks",
+   "to": null,
+   "to_mod_id": "rei",
+   "type": "optional",
+   "version_range": "[16.0.744,)",
+   "satisfied": false
+  },
+  {
+   "from": "framedblocks",
+   "to": "amendments",
+   "to_mod_id": "amendments",
+   "type": "optional",
+   "version_range": "[1.21-1.2.24,)",
+   "satisfied": true
+  },
+  {
+   "from": "framedblocks",
+   "to": null,
+   "to_mod_id": "ae2",
+   "type": "optional",
+   "version_range": "[19.0.19-beta,)",
+   "satisfied": false
+  },
+  {
+   "from": "framedblocks",
+   "to": null,
+   "to_mod_id": "searchables",
+   "type": "optional",
+   "version_range": "[1.0.2,)",
+   "satisfied": false
+  },
+  {
+   "from": "framedblocks",
+   "to": null,
+   "to_mod_id": "additionalplacements",
+   "type": "optional",
+   "version_range": "[2.3.1,)",
+   "satisfied": false
+  },
+  {
+   "from": "fzzy-config",
+   "to": "kotlin-for-forge::kotlinforforge",
+   "to_mod_id": "kotlinforforge",
+   "type": "required",
+   "version_range": "[5.3.0,)",
+   "satisfied": true
+  },
+  {
+   "from": "iceberg",
+   "to": "advancement-plaques",
+   "to_mod_id": "advancementplaques",
+   "type": "optional",
+   "version_range": "[1.6.3,)",
+   "satisfied": true
+  },
+  {
+   "from": "iceberg",
+   "to": "legendary-tooltips",
+   "to_mod_id": "legendarytooltips",
+   "type": "optional",
+   "version_range": "[1.5.2,)",
+   "satisfied": true
+  },
+  {
+   "from": "iceberg",
+   "to": null,
+   "to_mod_id": "equipmentcompare",
+   "type": "optional",
+   "version_range": "[1.3.13,)",
+   "satisfied": false
+  },
+  {
+   "from": "iceberg",
+   "to": null,
+   "to_mod_id": "merchantmarkers",
+   "type": "optional",
+   "version_range": "[1.3.4,)",
+   "satisfied": false
+  },
+  {
+   "from": "iceberg",
+   "to": null,
+   "to_mod_id": "itemborders",
+   "type": "optional",
+   "version_range": "[1.2.4,)",
+   "satisfied": false
+  },
+  {
+   "from": "immersive-paintings",
+   "to": "fzzy-config",
+   "to_mod_id": "fzzy_config",
+   "type": "required",
+   "version_range": "[0.7.0+1.21,)",
+   "satisfied": true
+  },
+  {
+   "from": "interiors",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": "[6,)",
+   "satisfied": true
+  },
+  {
+   "from": "irisshaders::fabric_renderer_api_v1",
+   "to": "irisshaders::fabric_api_base",
+   "to_mod_id": "fabric_api_base",
+   "type": "required",
+   "version_range": "*",
+   "satisfied": true
+  },
+  {
+   "from": "irisshaders::fabric_rendering_data_attachment_v1",
+   "to": "irisshaders::fabric_block_view_api_v2",
+   "to_mod_id": "fabric_block_view_api_v2",
+   "type": "required",
+   "version_range": "*",
+   "satisfied": true
+  },
+  {
+   "from": "jade-addons",
+   "to": "jade",
+   "to_mod_id": "jade",
+   "type": "required",
+   "version_range": "[15.10, )",
+   "satisfied": true
+  },
+  {
+   "from": "jade-sable-compat",
+   "to": "sable",
+   "to_mod_id": "sable",
+   "type": "required",
+   "version_range": "[1.0.0,)",
+   "satisfied": true
+  },
+  {
+   "from": "jade-sable-compat",
+   "to": "jade",
+   "to_mod_id": "jade",
+   "type": "optional",
+   "version_range": "[15.10.0,)",
+   "satisfied": true
+  },
+  {
+   "from": "jade-sable-compat",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "optional",
+   "version_range": "[6.0.10,)",
+   "satisfied": true
+  },
+  {
+   "from": "jamlib",
+   "to": "architectury-api",
+   "to_mod_id": "architectury",
+   "type": "required",
+   "version_range": "[13.0.6,)",
+   "satisfied": true
+  },
+  {
+   "from": "just-zoom",
+   "to": "konkrete",
+   "to_mod_id": "konkrete",
+   "type": "required",
+   "version_range": "[1.9.0,)",
+   "satisfied": true
+  },
+  {
+   "from": "legendary-tooltips",
+   "to": "iceberg",
+   "to_mod_id": "iceberg",
+   "type": "required",
+   "version_range": "[1.3.0,)",
+   "satisfied": true
+  },
+  {
+   "from": "legendary-tooltips",
+   "to": "prism-lib",
+   "to_mod_id": "prism",
+   "type": "required",
+   "version_range": "[1.0.11,)",
+   "satisfied": true
+  },
+  {
+   "from": "legendary-tooltips",
+   "to": null,
+   "to_mod_id": "equipmentcompare",
+   "type": "optional",
+   "version_range": "[1.3.13,)",
+   "satisfied": false
+  },
+  {
+   "from": "lets-do-beachparty",
+   "to": "architectury-api",
+   "to_mod_id": "architectury",
+   "type": "required",
+   "version_range": "[13.0.0,)",
+   "satisfied": true
+  },
+  {
+   "from": "lets-do-brewery-farm-charm-compat",
+   "to": "architectury-api",
+   "to_mod_id": "architectury",
+   "type": "required",
+   "version_range": "[9.0.8,)",
+   "satisfied": true
+  },
+  {
+   "from": "lets-do-brewery-farm-charm-compat",
+   "to": "lets-do-farm-charm",
+   "to_mod_id": "farm_and_charm",
+   "type": "required",
+   "version_range": "[1.1.0,)",
+   "satisfied": true
+  },
+  {
+   "from": "lets-do-farm-charm",
+   "to": "architectury-api",
+   "to_mod_id": "architectury",
+   "type": "required",
+   "version_range": "[9.0.8,)",
+   "satisfied": true
+  },
+  {
+   "from": "lets-do-herbal-brews",
+   "to": "architectury-api",
+   "to_mod_id": "architectury",
+   "type": "required",
+   "version_range": "[13.0.0,)",
+   "satisfied": true
+  },
+  {
+   "from": "lets-do-vinery",
+   "to": "architectury-api",
+   "to_mod_id": "architectury",
+   "type": "required",
+   "version_range": "[13.0.8,)",
+   "satisfied": true
+  },
+  {
+   "from": "mmmmmmmmmmmm",
+   "to": "selene",
+   "to_mod_id": "moonlight",
+   "type": "required",
+   "version_range": "[1.21-3.2.3,)",
+   "satisfied": false
+  },
+  {
+   "from": "modernfix",
+   "to": "jei",
+   "to_mod_id": "jei",
+   "type": "optional",
+   "version_range": "[15.8.0.11,)",
+   "satisfied": true
+  },
+  {
+   "from": "more-overlays-updated",
+   "to": "jei",
    "to_mod_id": "jei",
    "type": "optional",
    "version_range": "[6.0.0.25,)",
-   "satisfied": false
+   "satisfied": true
   },
   {
    "from": "netherportalfix",
@@ -4661,11 +6364,155 @@
   },
   {
    "from": "ntgl",
-   "to": null,
+   "to": "geckolib",
    "to_mod_id": "geckolib",
    "type": "required",
    "version_range": "[4.8.2,)",
+   "satisfied": true
+  },
+  {
+   "from": "power-grid",
+   "to": "architectury-api",
+   "to_mod_id": "architectury",
+   "type": "required",
+   "version_range": "[13.0.8,)",
+   "satisfied": true
+  },
+  {
+   "from": "power-grid",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": "[6.0.9,6.1.0)",
+   "satisfied": true
+  },
+  {
+   "from": "power-grid",
+   "to": null,
+   "to_mod_id": "tfmg",
+   "type": "optional",
+   "version_range": "[1.2.0,1.3.0)",
    "satisfied": false
+  },
+  {
+   "from": "power-grid",
+   "to": "sable",
+   "to_mod_id": "sable",
+   "type": "optional",
+   "version_range": "[2.0.3,)",
+   "satisfied": true
+  },
+  {
+   "from": "quark",
+   "to": "zeta",
+   "to_mod_id": "zeta",
+   "type": "required",
+   "version_range": "[1,1.2)",
+   "satisfied": true
+  },
+  {
+   "from": "quark",
+   "to": "quark::biolith",
+   "to_mod_id": "biolith",
+   "type": "required",
+   "version_range": "[3.0.0,3.1.0)",
+   "satisfied": true
+  },
+  {
+   "from": "quark",
+   "to": "lootr",
+   "to_mod_id": "lootr",
+   "type": "optional",
+   "version_range": "[1.10.34.86,)",
+   "satisfied": true
+  },
+  {
+   "from": "rechiseled-create",
+   "to": "supermartijn642s-core-lib",
+   "to_mod_id": "supermartijn642corelib",
+   "type": "required",
+   "version_range": ">=1.1.20 <1.2.0",
+   "satisfied": true
+  },
+  {
+   "from": "rechiseled-create",
+   "to": "rechiseled",
+   "to_mod_id": "rechiseled",
+   "type": "required",
+   "version_range": ">=1.2.0",
+   "satisfied": true
+  },
+  {
+   "from": "rechiseled-create",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": ">=6.0.4",
+   "satisfied": true
+  },
+  {
+   "from": "rechiseled",
+   "to": "supermartijn642s-core-lib",
+   "to_mod_id": "supermartijn642corelib",
+   "type": "required",
+   "version_range": "[1.1.20,1.2.0)",
+   "satisfied": true
+  },
+  {
+   "from": "rechiseled",
+   "to": "supermartijn642s-config-lib",
+   "to_mod_id": "supermartijn642configlib",
+   "type": "required",
+   "version_range": "[1.1.6,)",
+   "satisfied": true
+  },
+  {
+   "from": "rechiseled",
+   "to": "fusion-connected-textures",
+   "to_mod_id": "fusion",
+   "type": "required",
+   "version_range": "[1.2.12,)",
+   "satisfied": true
+  },
+  {
+   "from": "reeses-sodium-options",
+   "to": "sodium::sodium",
+   "to_mod_id": "sodium",
+   "type": "required",
+   "version_range": "[0.8.12,)",
+   "satisfied": true
+  },
+  {
+   "from": "reeses-sodium-options",
+   "to": null,
+   "to_mod_id": "controlify",
+   "type": "optional",
+   "version_range": "[3.0.0,)",
+   "satisfied": false
+  },
+  {
+   "from": "refurbished-furniture",
+   "to": "framework",
+   "to_mod_id": "framework",
+   "type": "required",
+   "version_range": "[0.13.10,)",
+   "satisfied": true
+  },
+  {
+   "from": "rightclickharvest",
+   "to": "architectury-api",
+   "to_mod_id": "architectury",
+   "type": "required",
+   "version_range": "[13.0.6,)",
+   "satisfied": true
+  },
+  {
+   "from": "rightclickharvest",
+   "to": "jamlib",
+   "to_mod_id": "jamlib",
+   "type": "required",
+   "version_range": "[1.2.2-build.2+1.21.1,)",
+   "satisfied": true
   },
   {
    "from": "sable",
@@ -4700,6 +6547,86 @@
    "satisfied": true
   },
   {
+   "from": "slice-and-dice",
+   "to": "kotlin-for-forge::kotlinforforge",
+   "to_mod_id": "kotlinforforge",
+   "type": "required",
+   "version_range": "[5.8,)",
+   "satisfied": true
+  },
+  {
+   "from": "slice-and-dice",
+   "to": "slice-and-dice::atmosphere",
+   "to_mod_id": "atmosphere",
+   "type": "required",
+   "version_range": "[1.0.7,)",
+   "satisfied": true
+  },
+  {
+   "from": "slice-and-dice",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": "[6.0.9,7.0.0)",
+   "satisfied": true
+  },
+  {
+   "from": "slice-and-dice",
+   "to": "create-enchantment-industry",
+   "to_mod_id": "create_enchantment_industry",
+   "type": "optional",
+   "version_range": "[1.3.0,)",
+   "satisfied": true
+  },
+  {
+   "from": "snow-real-magic",
+   "to": "kiwi",
+   "to_mod_id": "kiwi",
+   "type": "required",
+   "version_range": "[15.5.2, )",
+   "satisfied": true
+  },
+  {
+   "from": "snow-real-magic::fabric_model_loading_api_v1",
+   "to": "irisshaders::fabric_api_base",
+   "to_mod_id": "fabric_api_base",
+   "type": "required",
+   "version_range": "*",
+   "satisfied": true
+  },
+  {
+   "from": "snow-real-magic::fabric_renderer_indigo",
+   "to": "irisshaders::fabric_api_base",
+   "to_mod_id": "fabric_api_base",
+   "type": "required",
+   "version_range": "*",
+   "satisfied": true
+  },
+  {
+   "from": "snow-real-magic::fabric_renderer_indigo",
+   "to": "irisshaders::fabric_renderer_api_v1",
+   "to_mod_id": "fabric_renderer_api_v1",
+   "type": "required",
+   "version_range": "*",
+   "satisfied": true
+  },
+  {
+   "from": "sodium-extra",
+   "to": "sodium::sodium",
+   "to_mod_id": "sodium",
+   "type": "required",
+   "version_range": "[0.8.12+mc1.21.1,)",
+   "satisfied": true
+  },
+  {
+   "from": "sodium-extra",
+   "to": null,
+   "to_mod_id": "greenlight",
+   "type": "optional",
+   "version_range": "[0.1.0,)",
+   "satisfied": false
+  },
+  {
    "from": "sophisticated-backpacks",
    "to": "sophisticated-core",
    "to_mod_id": "sophisticatedcore",
@@ -4709,19 +6636,19 @@
   },
   {
    "from": "sophisticated-core",
-   "to": null,
+   "to": "jei",
    "to_mod_id": "jei",
    "type": "optional",
    "version_range": "[19.32.0.359,)",
-   "satisfied": false
+   "satisfied": true
   },
   {
    "from": "ssrd",
-   "to": null,
+   "to": "sodium::sodium",
    "to_mod_id": "sodium",
    "type": "required",
    "version_range": "[0,)",
-   "satisfied": false
+   "satisfied": true
   },
   {
    "from": "ssrd",
@@ -4740,6 +6667,30 @@
    "satisfied": true
   },
   {
+   "from": "steam-n-rails-neoforge",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": "[6.0.7,)",
+   "satisfied": true
+  },
+  {
+   "from": "steam-n-rails-neoforge",
+   "to": null,
+   "to_mod_id": "hexcasting",
+   "type": "optional",
+   "version_range": "[0,)",
+   "satisfied": false
+  },
+  {
+   "from": "steam-n-rails-neoforge",
+   "to": null,
+   "to_mod_id": "voicechat",
+   "type": "optional",
+   "version_range": "[0,)",
+   "satisfied": false
+  },
+  {
    "from": "steampunk-armory",
    "to": "create",
    "to_mod_id": "create",
@@ -4753,6 +6704,150 @@
    "to_mod_id": "balm",
    "type": "required",
    "version_range": "[21.0.39,)",
+   "satisfied": true
+  },
+  {
+   "from": "xaeros-minimap",
+   "to": null,
+   "to_mod_id": "openpartiesandclaims",
+   "type": "optional",
+   "version_range": "[0.27.0,)",
+   "satisfied": false
+  },
+  {
+   "from": "xaeros-minimap",
+   "to": "xaeros-world-map",
+   "to_mod_id": "xaeroworldmap",
+   "type": "optional",
+   "version_range": "[1.44.0,)",
+   "satisfied": true
+  },
+  {
+   "from": "xaeros-world-map",
+   "to": null,
+   "to_mod_id": "openpartiesandclaims",
+   "type": "optional",
+   "version_range": "[0.27.0,)",
+   "satisfied": false
+  },
+  {
+   "from": "xaeros-world-map",
+   "to": "xaeros-minimap",
+   "to_mod_id": "xaerominimap",
+   "type": "optional",
+   "version_range": "[26.4.0,)",
+   "satisfied": true
+  },
+  {
+   "from": "xaeros-world-map",
+   "to": null,
+   "to_mod_id": "xaerobetterpvp",
+   "type": "optional",
+   "version_range": "[26.4.0,)",
+   "satisfied": false
+  },
+  {
+   "from": "xaeros-world-map",
+   "to": "xaeros-minimap::xaerolib",
+   "to_mod_id": "xaerolib",
+   "type": "required",
+   "version_range": "[1.0,)",
+   "satisfied": true
+  },
+  {
+   "from": "yungs-better-caves",
+   "to": "yungs-api-neoforge",
+   "to_mod_id": "yungsapi",
+   "type": "required",
+   "version_range": "[1.21.1-NeoForge-5.1.5,)",
+   "satisfied": true
+  },
+  {
+   "from": "yungs-better-desert-temples-neoforge",
+   "to": "yungs-api-neoforge",
+   "to_mod_id": "yungsapi",
+   "type": "required",
+   "version_range": "[1.21.1-NeoForge-5.1.4,)",
+   "satisfied": true
+  },
+  {
+   "from": "yungs-better-dungeons-neoforge",
+   "to": "yungs-api-neoforge",
+   "to_mod_id": "yungsapi",
+   "type": "required",
+   "version_range": "[1.21.1-NeoForge-5.1.3,)",
+   "satisfied": true
+  },
+  {
+   "from": "yungs-better-end-island-neoforge",
+   "to": "yungs-api-neoforge",
+   "to_mod_id": "yungsapi",
+   "type": "required",
+   "version_range": "[1.21.1-NeoForge-5.1.4,)",
+   "satisfied": true
+  },
+  {
+   "from": "yungs-better-jungle-temples-neoforge",
+   "to": "yungs-api-neoforge",
+   "to_mod_id": "yungsapi",
+   "type": "required",
+   "version_range": "[1.21.1-NeoForge-5.1.3,)",
+   "satisfied": true
+  },
+  {
+   "from": "yungs-better-mineshafts-neoforge",
+   "to": "yungs-api-neoforge",
+   "to_mod_id": "yungsapi",
+   "type": "required",
+   "version_range": "[1.21.1-NeoForge-5.1.2,)",
+   "satisfied": true
+  },
+  {
+   "from": "yungs-better-nether-fortresses-neoforge",
+   "to": "yungs-api-neoforge",
+   "to_mod_id": "yungsapi",
+   "type": "required",
+   "version_range": "[1.21.1-NeoForge-5.1.4,)",
+   "satisfied": true
+  },
+  {
+   "from": "yungs-better-ocean-monuments-neoforge",
+   "to": "yungs-api-neoforge",
+   "to_mod_id": "yungsapi",
+   "type": "required",
+   "version_range": "[1.21.1-NeoForge-5.1.3,)",
+   "satisfied": true
+  },
+  {
+   "from": "yungs-better-strongholds-neoforge",
+   "to": "yungs-api-neoforge",
+   "to_mod_id": "yungsapi",
+   "type": "required",
+   "version_range": "[1.21.1-NeoForge-5.1.4,)",
+   "satisfied": true
+  },
+  {
+   "from": "yungs-better-witch-huts-neoforge",
+   "to": "yungs-api-neoforge",
+   "to_mod_id": "yungsapi",
+   "type": "required",
+   "version_range": "[1.21.1-NeoForge-5.1.2,)",
+   "satisfied": true
+  },
+  {
+   "from": "yungs-bridges-neoforge",
+   "to": "yungs-api-neoforge",
+   "to_mod_id": "yungsapi",
+   "type": "required",
+   "version_range": "[1.21.1-NeoForge-5.1.2,)",
+   "satisfied": true
+  },
+  {
+   "from": "yungs-extras-neoforge",
+   "to": "yungs-api-neoforge",
+   "to_mod_id": "yungsapi",
+   "type": "required",
+   "version_range": "[1.21.1-NeoForge-5.1.2,)",
    "satisfied": true
   }
  ],
@@ -5263,37 +7358,37 @@
   }
  ],
  "build_sizes": {
-  "full": 213560991,
-  "minimal": 170694483,
+  "full": 701929644,
+  "minimal": 562432322,
   "without": {
-   "3dskinlayers": 211581964,
-   "advancement-plaques": 213560991,
-   "aeronautics-hot-air-fix": 213560991,
-   "ambientsounds": 213560991,
-   "better-advancements": 213560991,
-   "better-ping-display": 213560991,
-   "create-better-fps": 213560991,
-   "cubes-without-borders": 213560991,
-   "dynamiclights-reforged": 213560991,
-   "enchantment-descriptions": 213560991,
-   "entity-model-features": 213560991,
-   "entity-texture-features-fabric": 213560991,
-   "entityculling": 211975704,
-   "fancymenu": 187000879,
-   "irisshaders": 213560991,
-   "jade-addons": 213560991,
-   "jade-sable-compat": 213560991,
-   "just-zoom": 212942149,
-   "legendary-tooltips": 213560991,
-   "more-overlays-updated": 213448007,
-   "mouse-tweaks": 213560991,
-   "particle-rain": 213560991,
-   "sodium": 213560991,
-   "sodium-extra": 213560991,
-   "ssrd": 213490035,
-   "voxy": 201002849,
-   "xaeros-minimap": 213560991,
-   "xaeros-world-map": 213560991
+   "3dskinlayers": 699950617,
+   "advancement-plaques": 701520061,
+   "aeronautics-hot-air-fix": 701586882,
+   "ambientsounds": 617118012,
+   "better-advancements": 701831003,
+   "better-ping-display": 701915773,
+   "create-better-fps": 701903097,
+   "cubes-without-borders": 701847801,
+   "dynamiclights-reforged": 701630291,
+   "enchantment-descriptions": 701847015,
+   "entity-model-features": 700609483,
+   "entity-texture-features-fabric": 701177310,
+   "entityculling": 700344357,
+   "fancymenu": 675369532,
+   "irisshaders": 699388921,
+   "jade-addons": 701855225,
+   "jade-sable-compat": 701630254,
+   "just-zoom": 701267004,
+   "legendary-tooltips": 701571952,
+   "more-overlays-updated": 701816660,
+   "mouse-tweaks": 701855706,
+   "particle-rain": 701324186,
+   "sodium": 700636757,
+   "sodium-extra": 700171744,
+   "ssrd": 700565801,
+   "voxy": 689371502,
+   "xaeros-minimap": 699744235,
+   "xaeros-world-map": 700510726
   }
  }
 }

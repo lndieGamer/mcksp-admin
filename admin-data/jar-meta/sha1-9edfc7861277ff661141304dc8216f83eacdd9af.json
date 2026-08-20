@@ -1,0 +1,32 @@
+{
+ "size_bytes": 306668,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[1,)",
+  "mods": [
+   {
+    "mod_id": "nochatreports",
+    "version": "1.21.1-v2.9.1",
+    "display_name": "No Chat Reports",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.0.0,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

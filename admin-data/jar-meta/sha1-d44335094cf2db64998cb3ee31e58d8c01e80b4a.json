@@ -1,0 +1,32 @@
+{
+ "size_bytes": 324058,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[2,)",
+  "mods": [
+   {
+    "mod_id": "placebo",
+    "version": "9.9.2",
+    "display_name": "Placebo",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.187,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "size_bytes": 1819221,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[1,)",
+  "mods": [
+   {
+    "mod_id": "cgs",
+    "version": "1.4.9",
+    "display_name": "Create: Gunsmithing",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.219,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1, 1.21.2)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "ntgl",
+      "type": "required",
+      "version_range": "[1.21.1-3.1.7,)",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "create",
+      "type": "required",
+      "version_range": "[0.5.1.f-26,)",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     }
+    ]
+   }
+  ]
+ }
+}
