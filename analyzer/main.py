@@ -483,8 +483,20 @@ def run(pack_root: Path, out_dir: Path, skip_updates: bool = False) -> int:
         findings = lint(pack, g, metas, flavors, client)
 
     generated_at = now_iso()
+
+    # Surfaced verbatim as a banner in the panel. Data, not markup, so the
+    # warning disappears on the next run once the key is in place.
+    notices: list[str] = []
+    cf_count = sum(1 for mf in pack.metafiles if mf.source == "curseforge")
+    if cf_count and not client.cf_api_key:
+        notices.append(
+            f"CF_API_KEY не задан: {cf_count} модов с CurseForge не разобраны, "
+            "граф и вес сборки неполные"
+        )
+
     public = {
         "generated_at": generated_at,
+        "notices": notices,
         "pack": {
             "version": pack.version,
             "mc": pack.minecraft,

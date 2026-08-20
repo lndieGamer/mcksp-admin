@@ -88,6 +88,15 @@ export default function App() {
           </div>
         </header>
 
+        {(publicData.data?.notices ?? []).map((notice) => (
+          <div
+            key={notice}
+            className="border-b border-amber-500/30 bg-amber-500/10 px-4 py-2 text-center text-xs text-amber-200"
+          >
+            {notice}
+          </div>
+        ))}
+
         <main className="mx-auto max-w-[1600px] p-4">
           {publicData.isError && <ErrorBox error={publicData.error} />}
           <Outlet />

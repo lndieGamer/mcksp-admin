@@ -54,6 +54,7 @@ export interface FlavorGroup {
 
 export interface PublicData {
   generated_at: string;
+  notices?: string[];
   pack: { version: string; mc: string; loader: string; loader_version: string };
   mods: Mod[];
   edges: Edge[];
