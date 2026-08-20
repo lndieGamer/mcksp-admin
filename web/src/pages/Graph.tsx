@@ -42,10 +42,17 @@ export default function Graph() {
   const [params, setParams] = useSearchParams();
   const focus = params.get("focus");
 
+  // useSearchParams hands back a new setter identity whenever the location
+  // changes, so listing it in the effect deps rebuilt cytoscape -- and relaid
+  // out the graph -- on every click. The ref keeps the handler stable.
+  const setParamsRef = useRef(setParams);
+  setParamsRef.current = setParams;
+
   const [layout, setLayout] = useState<"fcose" | "dagre">("fcose");
   const [side, setSide] = useState("");
   const [flavor, setFlavor] = useState("");
   const [requiredOnly, setRequiredOnly] = useState(false);
+  const [hideIsolated, setHideIsolated] = useState(false);
   const [hideLibraries, setHideLibraries] = useState(false);
 
   const index = useMemo(() => (publicData.data ? indexOf(publicData.data) : null), [publicData.data]);
@@ -88,8 +95,13 @@ export default function Graph() {
           color: edge.satisfied ? "#3f4652" : "#b91c1c",
         },
       }));
-    return [...nodes, ...edges];
-  }, [publicData.data, side, flavor, requiredOnly, hideLibraries]);
+    if (!hideIsolated) return [...nodes, ...edges];
+    // Most of the pack depends on nothing. Dropping those frees the layout to
+    // spread the ~30 nodes that actually have arrows, which is where crossings
+    // come from in the first place.
+    const linked = new Set(edges.flatMap((e) => [e.data.source, e.data.target]));
+    return [...nodes.filter((n) => linked.has(n.data.id)), ...edges];
+  }, [publicData.data, side, flavor, requiredOnly, hideLibraries, hideIsolated]);
 
   useEffect(() => {
     if (!container.current || elements.length === 0) return;
@@ -138,19 +150,45 @@ export default function Graph() {
       ],
       layout:
         layout === "fcose"
-          ? ({ name: "fcose", quality: "proof", nodeSeparation: 90, idealEdgeLength: 90 } as never)
-          : ({ name: "dagre", rankDir: "BT", nodeSep: 18, rankSep: 60 } as never),
+          ? ({
+              name: "fcose",
+              quality: "proof",
+              randomize: true,
+              numIter: 6000,
+              nodeSeparation: 120,
+              idealEdgeLength: 110,
+              // Push unrelated nodes far apart and let edges stay short: long
+              // edges over a crowded field are what tangles.
+              nodeRepulsion: 12000,
+              edgeElasticity: 0.25,
+              gravityRange: 2.5,
+              nodeDimensionsIncludeLabels: true,
+              packComponents: true,
+              tile: true,
+            } as never)
+          : ({
+              name: "dagre",
+              rankDir: "BT",
+              nodeSep: 34,
+              edgeSep: 14,
+              rankSep: 90,
+              // network-simplex spends longer ordering ranks than the cheaper
+              // rankers, and ordering is exactly what decides crossings.
+              ranker: "network-simplex",
+              acyclicer: "greedy",
+              nodeDimensionsIncludeLabels: true,
+            } as never),
     });
-    instance.on("tap", "node", (event) => setParams({ focus: event.target.id() }));
+    instance.on("tap", "node", (event) => setParamsRef.current({ focus: event.target.id() }));
     instance.on("tap", (event) => {
-      if (event.target === instance) setParams({});
+      if (event.target === instance) setParamsRef.current({});
     });
     cy.current = instance;
     return () => {
       instance.destroy();
       cy.current = null;
     };
-  }, [elements, layout, setParams]);
+  }, [elements, layout]);
 
   useEffect(() => {
     const instance = cy.current;
@@ -199,6 +237,14 @@ export default function Graph() {
               onChange={(e) => setRequiredOnly(e.target.checked)}
             />
             только обязательные рёбра
+          </label>
+          <label className="flex items-center gap-1.5 text-xs text-zinc-400">
+            <input
+              type="checkbox"
+              checked={hideIsolated}
+              onChange={(e) => setHideIsolated(e.target.checked)}
+            />
+            только связанные
           </label>
           <label className="flex items-center gap-1.5 text-xs text-zinc-400">
             <input
