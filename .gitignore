@@ -9,3 +9,8 @@ dist/
 # `npm run dev` serves web/public at the base path; drop a generated public.json
 # there to work on the SPA against real data.
 web/public/public.json
+
+# never: this repo is public
+github tokens.txt
+*.token
+.dev.vars.*
