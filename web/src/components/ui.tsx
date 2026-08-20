@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { forwardRef, type ReactNode } from "react";
 
 import type { ModStatus } from "../lib/types";
 
@@ -11,55 +11,89 @@ export const STATUS_LABEL: Record<ModStatus, string> = {
   unknown: "не разобран",
 };
 
+/* Status never rides on colour alone: the glyph carries the same information,
+   which is what makes the table readable in peripheral vision and to anyone
+   who cannot separate rust from patina. */
+export const STATUS_GLYPH: Record<ModStatus, string> = {
+  current: "●",
+  update_safe: "▲",
+  update_blocked: "⊘",
+  broken: "✕",
+  frozen: "◇",
+  unknown: "◻",
+};
+
 export const STATUS_CLASS: Record<ModStatus, string> = {
-  current: "bg-emerald-500/15 text-emerald-300 ring-emerald-500/30",
-  update_safe: "bg-sky-500/15 text-sky-300 ring-sky-500/30",
-  update_blocked: "bg-amber-500/15 text-amber-300 ring-amber-500/30",
-  broken: "bg-red-500/15 text-red-300 ring-red-500/30",
-  frozen: "bg-zinc-500/15 text-zinc-400 ring-zinc-500/30",
-  unknown: "bg-violet-500/15 text-violet-300 ring-violet-500/30",
+  current: "text-muted",
+  update_safe: "text-accent",
+  update_blocked: "text-warn",
+  broken: "text-danger",
+  frozen: "text-faint",
+  // 148 mods sit here whenever the CurseForge key is missing. Brass would paint
+  // the whole screen; an unresolved parse is a gap in our data, not a fault in
+  // the pack, and the banner already explains it.
+  unknown: "text-faint",
 };
 
-/** Node colours in /graph must match these, so the legend works for both views. */
+/** Cytoscape cannot read CSS variables, so /graph needs the resolved values.
+ *  Measured from the OKLCH tokens in index.css -- keep the two in step. */
 export const STATUS_HEX: Record<ModStatus, string> = {
-  current: "#34d399",
-  update_safe: "#38bdf8",
-  update_blocked: "#fbbf24",
-  broken: "#f87171",
-  frozen: "#71717a",
-  unknown: "#a78bfa",
+  current: "#acb3b2",
+  update_safe: "#63b6a7",
+  update_blocked: "#e8aa4e",
+  broken: "#d55753",
+  frozen: "#7b8282",
+  unknown: "#7b8282",
 };
 
-export function Pill({ status }: { status: ModStatus }) {
+export const PALETTE_HEX = {
+  canvas: "#080d0d",
+  surface: "#111817",
+  raised: "#1a2222",
+  edge: "#273030",
+  edgeStrong: "#3a4545",
+  ink: "#e8ecec",
+  muted: "#acb3b2",
+  faint: "#7b8282",
+  accent: "#63b6a7",
+  danger: "#d55753",
+  warn: "#e8aa4e",
+} as const;
+
+export function StatusMark({ status, label = true }: { status: ModStatus; label?: boolean }) {
   return (
-    <span
-      className={`inline-block rounded px-1.5 py-0.5 text-[11px] leading-4 ring-1 ring-inset ${STATUS_CLASS[status]}`}
-    >
-      {STATUS_LABEL[status]}
+    <span className={`inline-flex items-center gap-1.5 ${STATUS_CLASS[status]}`}>
+      <span aria-hidden className="text-2xs leading-none">
+        {STATUS_GLYPH[status]}
+      </span>
+      {label ? <span className="text-xs">{STATUS_LABEL[status]}</span> : null}
+      {label ? null : <span className="sr-only">{STATUS_LABEL[status]}</span>}
     </span>
   );
 }
 
-// Tailwind scans for literal class names, so tones are spelled out, not built
-// from a template string -- an interpolated `bg-${tone}-500` would be purged.
+/** Kept for call sites that want the status inline in a dense row. */
+export const Pill = StatusMark;
+
+// Tailwind scans for literal class names, so tones are spelled out rather than
+// built from a template -- an interpolated `bg-${tone}` would be purged.
 const TAG_TONES = {
-  zinc: "bg-zinc-500/10 text-zinc-300 ring-zinc-500/20",
-  sky: "bg-sky-500/10 text-sky-300 ring-sky-500/20",
-  amber: "bg-amber-500/10 text-amber-300 ring-amber-500/20",
-  red: "bg-red-500/10 text-red-300 ring-red-500/20",
-  emerald: "bg-emerald-500/10 text-emerald-300 ring-emerald-500/20",
+  neutral: "text-muted ring-edge",
+  accent: "text-accent ring-accent-dim",
+  warn: "text-warn ring-warn-dim",
+  danger: "text-danger ring-danger-dim",
 } as const;
 
 export function Tag({
   children,
-  tone = "zinc",
+  tone = "neutral",
 }: {
   children: ReactNode;
   tone?: keyof typeof TAG_TONES;
 }) {
   return (
     <span
-      className={`inline-block rounded px-1.5 py-0.5 text-[11px] leading-4 ring-1 ring-inset ${TAG_TONES[tone]}`}
+      className={`inline-block rounded-xs px-1.5 py-px text-2xs leading-4 ring-1 ring-inset ${TAG_TONES[tone]}`}
     >
       {children}
     </span>
@@ -71,87 +105,131 @@ export function Panel({
   actions,
   children,
   className = "",
+  flush = false,
 }: {
   title?: ReactNode;
   actions?: ReactNode;
   children: ReactNode;
   className?: string;
+  /** Table-shaped content owns its own padding. */
+  flush?: boolean;
 }) {
   return (
-    <section className={`rounded-lg border border-[--color-edge] bg-[--color-panel] ${className}`}>
+    <section className={`rounded-md border border-edge bg-surface ${className}`}>
       {(title || actions) && (
-        <header className="flex items-center justify-between gap-3 border-b border-[--color-edge] px-4 py-2.5">
-          <h2 className="text-sm font-medium text-zinc-100">{title}</h2>
+        <header className="flex items-center justify-between gap-3 border-b border-edge px-4 py-2.5">
+          <h2 className="text-lg font-medium text-ink">{title}</h2>
           <div className="flex items-center gap-2">{actions}</div>
         </header>
       )}
-      <div className={title ? "p-4" : ""}>{children}</div>
+      <div className={flush ? "" : "p-4"}>{children}</div>
     </section>
   );
 }
+
+/** Section heading inside the overview. The one place caps-with-tracking is
+ *  allowed, because it separates bands of a single scrolling page. */
+export function SectionLabel({ children }: { children: ReactNode }) {
+  return (
+    <h2 className="mb-2 text-2xs font-medium tracking-[0.12em] text-faint uppercase">{children}</h2>
+  );
+}
+
+const BUTTON_TONES = {
+  ghost: "border-edge bg-transparent text-ink hover:border-edge-strong hover:bg-raised",
+  primary:
+    "border-accent bg-accent text-on-accent hover:border-accent-strong hover:bg-accent-strong",
+  danger: "border-danger-dim bg-transparent text-danger hover:border-danger hover:bg-danger/10",
+} as const;
 
 export function Button({
   children,
   onClick,
   disabled,
-  tone = "default",
+  loading = false,
+  tone = "ghost",
   type = "button",
   title,
+  className = "",
 }: {
   children: ReactNode;
   onClick?: () => void;
   disabled?: boolean;
-  tone?: "default" | "primary" | "danger";
+  loading?: boolean;
+  tone?: keyof typeof BUTTON_TONES;
   type?: "button" | "submit";
   title?: string;
+  className?: string;
 }) {
-  const tones = {
-    default: "bg-zinc-800 hover:bg-zinc-700 text-zinc-200 ring-zinc-700",
-    primary: "bg-sky-600 hover:bg-sky-500 text-white ring-sky-500",
-    danger: "bg-red-700 hover:bg-red-600 text-white ring-red-600",
-  };
   return (
     <button
       type={type}
       title={title}
       onClick={onClick}
-      disabled={disabled}
-      className={`rounded px-2.5 py-1.5 text-xs font-medium ring-1 ring-inset transition disabled:cursor-not-allowed disabled:opacity-40 ${tones[tone]}`}
+      disabled={disabled || loading}
+      aria-busy={loading || undefined}
+      className={`inline-flex h-[30px] items-center gap-1.5 rounded-sm border px-3 text-xs font-medium transition-colors duration-[--dur-fast] ease-quint active:translate-y-px disabled:cursor-not-allowed disabled:opacity-40 disabled:active:translate-y-0 ${BUTTON_TONES[tone]} ${className}`}
     >
+      {loading ? (
+        <span aria-hidden className="size-1.5 animate-pulse rounded-full bg-current" />
+      ) : null}
       {children}
     </button>
   );
 }
 
-export function Input(props: React.InputHTMLAttributes<HTMLInputElement>) {
-  return (
-    <input
-      {...props}
-      className={`rounded border border-[--color-edge] bg-black/30 px-2 py-1.5 text-xs text-zinc-200 outline-none placeholder:text-zinc-600 focus:border-sky-600 ${props.className ?? ""}`}
-    />
-  );
-}
+const FIELD =
+  "h-[30px] rounded-sm border border-edge bg-canvas px-2 text-xs text-ink transition-colors duration-[--dur-fast] placeholder:text-faint hover:border-edge-strong focus:border-accent focus:outline-none";
+
+export const Input = forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>(
+  function Input(props, ref) {
+    return <input ref={ref} {...props} className={`${FIELD} ${props.className ?? ""}`} />;
+  },
+);
 
 export function Select(props: React.SelectHTMLAttributes<HTMLSelectElement>) {
+  return <select {...props} className={`${FIELD} ${props.className ?? ""}`} />;
+}
+
+export function Kbd({ children }: { children: ReactNode }) {
   return (
-    <select
-      {...props}
-      className={`rounded border border-[--color-edge] bg-black/30 px-2 py-1.5 text-xs text-zinc-200 outline-none focus:border-sky-600 ${props.className ?? ""}`}
-    />
+    <kbd className="rounded-xs border border-edge bg-raised px-1 py-px text-2xs text-muted">
+      {children}
+    </kbd>
   );
 }
 
 export function Empty({ children }: { children: ReactNode }) {
-  return <p className="px-4 py-8 text-center text-xs text-zinc-500">{children}</p>;
+  return <p className="px-4 py-8 text-center text-xs text-faint">{children}</p>;
 }
 
-export function Loading({ what }: { what: string }) {
-  return <Empty>загружаю {what}…</Empty>;
+/** Skeletons take the shape of what is coming, so the page does not jump. */
+export function Skeleton({ rows = 5, className = "" }: { rows?: number; className?: string }) {
+  return (
+    <div className={`space-y-1.5 p-3 ${className}`} aria-hidden>
+      {Array.from({ length: rows }, (_, i) => (
+        <div
+          key={i}
+          className="h-6 animate-pulse rounded-xs bg-raised"
+          style={{ animationDelay: `${i * 70}ms`, opacity: 1 - i * 0.08 }}
+        />
+      ))}
+    </div>
+  );
+}
+
+export function Loading({ what, rows = 6 }: { what: string; rows?: number }) {
+  return (
+    <div role="status" aria-live="polite">
+      <span className="sr-only">загружаю {what}</span>
+      <Skeleton rows={rows} />
+    </div>
+  );
 }
 
 export function ErrorBox({ error }: { error: unknown }) {
   return (
-    <div className="rounded border border-red-900/60 bg-red-950/40 px-4 py-3 text-xs text-red-300">
+    <div className="rounded-sm border border-danger-dim bg-danger/10 px-3 py-2 text-xs text-danger">
       {error instanceof Error ? error.message : String(error)}
     </div>
   );
@@ -179,4 +257,17 @@ export function stamp(iso: string | null): string {
   if (!iso) return "—";
   const date = new Date(iso);
   return Number.isNaN(date.getTime()) ? "—" : date.toLocaleString("ru-RU");
+}
+
+/** "12 минут назад" reads faster than a timestamp for the freshness line. */
+export function ago(iso: string | null): string {
+  if (!iso) return "—";
+  const date = new Date(iso);
+  if (Number.isNaN(date.getTime())) return "—";
+  const minutes = Math.round((Date.now() - date.getTime()) / 60000);
+  if (minutes < 1) return "только что";
+  if (minutes < 60) return `${minutes} мин назад`;
+  const hours = Math.round(minutes / 60);
+  if (hours < 24) return `${hours} ч назад`;
+  return `${Math.round(hours / 24)} дн назад`;
 }

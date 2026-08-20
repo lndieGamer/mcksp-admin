@@ -53,15 +53,15 @@ export default function Flavors() {
   const save = (mod: Mod) => {
     runner.propose(
       { op: "set-flavors", targets: [mod.slug], flavors: draft },
-      <div className="space-y-1 text-zinc-300">
+      <div className="space-y-1 text-muted">
         <p>
           unsup.toml, блок <code>[metafile.&quot;{mod.slug}&quot;]</code>:
         </p>
-        <pre className="rounded bg-black/40 p-2 font-mono text-[11px]">
+        <pre className="rounded bg-canvas p-2 font-mono text-2xs">
           -flavors = [{mod.flavors.map((f) => `"${f}"`).join(", ")}]{"\n"}+
           {draft.length ? `flavors = [${draft.map((f) => `"${f}"`).join(", ")}]` : "(запись удаляется)"}
         </pre>
-        <p className="text-zinc-500">Счётчики в названиях галочек пересчитаются автоматически.</p>
+        <p className="text-faint">Счётчики в названиях галочек пересчитаются автоматически.</p>
       </div>,
     );
     setEditing(null);
@@ -71,14 +71,14 @@ export default function Flavors() {
     <div className="space-y-3">
       {escapes.length > 0 && (
         <Panel title="зависимости уходят за пределы группы">
-          <p className="mb-2 text-[11px] text-zinc-500">
+          <p className="mb-2 text-2xs text-faint">
             У unsup нет зависимостей между группами: библиотека ставится, если включён хотя бы один
             её потребитель (семантика ИЛИ). Здесь потребитель и его обязательная зависимость не
             делят ни одной галочки — при отключении группы пак сломается.
           </p>
           <ul className="space-y-1 text-xs">
             {escapes.map(({ from, to }, index) => (
-              <li key={index} className="text-amber-300">
+              <li key={index} className="text-warn">
                 <span className="font-mono">{from.slug}</span> [{from.flavors.join(", ")}] требует{" "}
                 <span className="font-mono">{to.slug}</span> [{to.flavors.join(", ")}]
               </li>
@@ -90,17 +90,17 @@ export default function Flavors() {
       <Panel title={`группы · ${publicData.data.flavor_groups.length}`}>
         <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
           {publicData.data.flavor_groups.map((group) => (
-            <div key={group.id} className="rounded border border-[--color-edge] p-3">
-              <h3 className="text-xs font-medium text-zinc-100">{group.name}</h3>
-              <p className="mt-0.5 text-[11px] text-zinc-500">{group.description}</p>
+            <div key={group.id} className="rounded border border-edge p-3">
+              <h3 className="text-xs font-medium text-ink">{group.name}</h3>
+              <p className="mt-0.5 text-2xs text-faint">{group.description}</p>
               <div className="mt-2 flex flex-wrap gap-1.5">
                 {group.choices.map((choice) => (
-                  <Tag key={choice.id} tone={choice.mod_count > 0 ? "sky" : "zinc"}>
+                  <Tag key={choice.id} tone={choice.mod_count > 0 ? "accent" : "neutral"}>
                     {choice.name} · {choice.mod_count}
                   </Tag>
                 ))}
               </div>
-              <ul className="mt-2 space-y-0.5 text-[11px] text-zinc-500">
+              <ul className="mt-2 space-y-0.5 text-2xs text-faint">
                 {mods
                   .filter((m) => m.flavors.some((f) => group.choices.some((c) => c.id === f)))
                   .map((m) => (
@@ -117,7 +117,7 @@ export default function Flavors() {
       <Panel title={`матрица «мод × флейвор» · ${optional.length} необязательных`}>
         <div className="overflow-x-auto">
           <table className="w-full min-w-[720px] text-xs">
-            <thead className="border-b border-[--color-edge] text-zinc-400">
+            <thead className="border-b border-edge text-muted">
               <tr>
                 <th className="px-2 py-1.5 text-left font-medium">мод</th>
                 <th className="px-2 py-1.5 text-left font-medium">галочки (ИЛИ)</th>
@@ -127,17 +127,17 @@ export default function Flavors() {
             </thead>
             <tbody>
               {optional.map((mod) => (
-                <tr key={mod.slug} className="border-b border-[--color-edge]/50 align-top">
+                <tr key={mod.slug} className="border-b border-edge/50 align-top">
                   <td className="px-2 py-1.5">
-                    <span className="text-zinc-200">{mod.name}</span>
+                    <span className="text-ink">{mod.name}</span>
                     <br />
-                    <span className="font-mono text-[11px] text-zinc-600">{mod.slug}</span>
+                    <span className="font-mono text-2xs text-faint">{mod.slug}</span>
                   </td>
                   <td className="px-2 py-1.5">
                     {editing === mod.slug ? (
                       <div className="flex max-h-40 flex-wrap gap-x-3 gap-y-1 overflow-auto">
                         {allChoices.map((choice) => (
-                          <label key={choice} className="flex items-center gap-1 text-[11px]">
+                          <label key={choice} className="flex items-center gap-1 text-2xs">
                             <input
                               type="checkbox"
                               checked={draft.includes(choice)}
@@ -149,15 +149,15 @@ export default function Flavors() {
                                 )
                               }
                             />
-                            <span className="font-mono text-zinc-400">{choice}</span>
+                            <span className="font-mono text-muted">{choice}</span>
                           </label>
                         ))}
                       </div>
                     ) : (
-                      <span className="font-mono text-zinc-400">{mod.flavors.join(", ")}</span>
+                      <span className="font-mono text-muted">{mod.flavors.join(", ")}</span>
                     )}
                   </td>
-                  <td className="px-2 py-1.5 text-right text-zinc-500">{bytes(mod.size_bytes)}</td>
+                  <td className="px-2 py-1.5 text-right text-faint">{bytes(mod.size_bytes)}</td>
                   {admin && (
                     <td className="whitespace-nowrap px-2 py-1.5">
                       {editing === mod.slug ? (
@@ -180,9 +180,9 @@ export default function Flavors() {
       </Panel>
 
       <Panel title={`вне групп · ${ungrouped.length} — ставятся всегда`}>
-        <div className="flex flex-wrap gap-1.5 text-[11px]">
+        <div className="flex flex-wrap gap-1.5 text-2xs">
           {ungrouped.map((mod) => (
-            <span key={mod.slug} className="rounded bg-black/30 px-1.5 py-0.5 font-mono text-zinc-500">
+            <span key={mod.slug} className="rounded bg-canvas px-1.5 py-0.5 font-mono text-faint">
               {mod.slug}
             </span>
           ))}

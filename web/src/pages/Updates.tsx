@@ -28,7 +28,7 @@ export default function Updates() {
             title={
               <span className="flex items-center gap-2">
                 набор «{set.id}» · {set.members.length} модов
-                <Tag tone={ready ? "emerald" : "amber"}>
+                <Tag tone={ready ? "accent" : "warn"}>
                   {ready ? "можно обновить целиком" : "набор неполный"}
                 </Tag>
               </span>
@@ -45,7 +45,7 @@ export default function Updates() {
                 onClick={() =>
                   runner.propose(
                     { op: "update-set", set_id: set.id },
-                    <p className="text-zinc-300">
+                    <p className="text-muted">
                       Будут обновлены {set.members.length} мод(ов) одной операцией; side и флейворы
                       каждого сохраняются.
                     </p>,
@@ -57,7 +57,7 @@ export default function Updates() {
             }
           >
             {set.missing.length > 0 && (
-              <p className="mb-2 text-xs text-amber-300">
+              <p className="mb-2 text-xs text-warn">
                 ждём релиза: {set.missing.map((s) => names.get(s) ?? s).join(", ")}
               </p>
             )}
@@ -84,7 +84,7 @@ function UpdateTable({
   return (
     <div className="overflow-x-auto">
       <table className="w-full min-w-[760px] text-xs">
-        <thead className="border-b border-[--color-edge] text-zinc-400">
+        <thead className="border-b border-edge text-muted">
           <tr>
             <th className="px-2 py-1.5 text-left font-medium">мод</th>
             <th className="px-2 py-1.5 text-left font-medium">сейчас</th>
@@ -96,12 +96,12 @@ function UpdateTable({
         </thead>
         <tbody>
           {rows.map((update) => (
-            <tr key={update.slug} className="border-b border-[--color-edge]/50">
-              <td className="px-2 py-1.5 text-zinc-200">{names.get(update.slug) ?? update.slug}</td>
-              <td className="px-2 py-1.5 font-mono text-zinc-500">{update.current_version ?? "—"}</td>
-              <td className="px-2 py-1.5 font-mono text-sky-300">{update.candidate_version}</td>
-              <td className="px-2 py-1.5 text-zinc-500">{day(update.published_at)}</td>
-              <td className="px-2 py-1.5 text-amber-300">
+            <tr key={update.slug} className="border-b border-edge/50">
+              <td className="px-2 py-1.5 text-ink">{names.get(update.slug) ?? update.slug}</td>
+              <td className="px-2 py-1.5 font-mono text-faint">{update.current_version ?? "—"}</td>
+              <td className="px-2 py-1.5 font-mono text-accent">{update.candidate_version}</td>
+              <td className="px-2 py-1.5 text-faint">{day(update.published_at)}</td>
+              <td className="px-2 py-1.5 text-warn">
                 {update.blocked_by
                   .map((b) => `${b.slug} требует ${b.version_range}`)
                   .join("; ") || "—"}
@@ -112,7 +112,7 @@ function UpdateTable({
                   onClick={() =>
                     runner.propose(
                       { op: "update-mod", targets: [update.slug] },
-                      <p className="text-zinc-300">
+                      <p className="text-muted">
                         {update.slug}: {update.current_version} → {update.candidate_version}. side и
                         флейворы сохраняются.
                       </p>,

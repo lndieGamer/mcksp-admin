@@ -4,10 +4,10 @@ import { Empty, Loading, Panel, Select, Tag } from "../components/ui";
 import { usePrivate, useSession } from "../lib/data";
 import type { LintFinding } from "../lib/types";
 
-const TONE: Record<LintFinding["level"], "red" | "amber" | "zinc"> = {
-  error: "red",
-  warning: "amber",
-  info: "zinc",
+const TONE: Record<LintFinding["level"], "danger" | "warn" | "neutral"> = {
+  error: "danger",
+  warning: "warn",
+  info: "neutral",
 };
 
 export default function Lint() {
@@ -36,8 +36,8 @@ export default function Lint() {
         title={
           <span className="flex items-center gap-2">
             что не так с паком прямо сейчас
-            <Tag tone="red">{counts.error} ошибок</Tag>
-            <Tag tone="amber">{counts.warning} предупреждений</Tag>
+            <Tag tone="danger">{counts.error} ошибок</Tag>
+            <Tag tone="warn">{counts.warning} предупреждений</Tag>
             <Tag>{counts.info} заметок</Tag>
           </span>
         }
@@ -67,8 +67,8 @@ export default function Lint() {
             {rows.map((finding, index) => (
               <li key={index} className="flex flex-wrap items-baseline gap-2">
                 <Tag tone={TONE[finding.level]}>{finding.code}</Tag>
-                <span className="font-mono text-zinc-400">{finding.slug}</span>
-                <span className="text-zinc-300">{finding.message}</span>
+                <span className="font-mono text-muted">{finding.slug}</span>
+                <span className="text-muted">{finding.message}</span>
               </li>
             ))}
           </ul>
@@ -80,16 +80,16 @@ export default function Lint() {
           <Empty>всё разобралось</Empty>
         ) : (
           <>
-            <p className="mb-2 text-[11px] text-zinc-500">
+            <p className="mb-2 text-2xs text-faint">
               Спорное переносится в <code>analyzer/overrides.toml</code> — оттуда оно подмешивается
               в граф вручную.
             </p>
             <ul className="space-y-1 text-xs">
               {privateData.data.unparsed.map((entry) => (
                 <li key={entry.slug} className="flex flex-wrap items-baseline gap-2">
-                  <Tag tone={entry.level === "failed" ? "red" : "amber"}>{entry.level}</Tag>
-                  <span className="font-mono text-zinc-400">{entry.slug}</span>
-                  <span className="text-zinc-500">{entry.reason}</span>
+                  <Tag tone={entry.level === "failed" ? "danger" : "warn"}>{entry.level}</Tag>
+                  <span className="font-mono text-muted">{entry.slug}</span>
+                  <span className="text-faint">{entry.reason}</span>
                 </li>
               ))}
             </ul>
@@ -101,7 +101,7 @@ export default function Lint() {
         <Panel title="платформа не устраивает моды">
           <ul className="space-y-1 text-xs">
             {privateData.data.platform.map((entry, index) => (
-              <li key={index} className="text-red-300">
+              <li key={index} className="text-danger">
                 <span className="font-mono">{entry.slug}</span> требует {entry.mod_id}{" "}
                 {entry.version_range}
               </li>

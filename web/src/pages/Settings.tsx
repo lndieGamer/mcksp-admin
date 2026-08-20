@@ -48,21 +48,21 @@ export default function Settings() {
           <Empty>нет данных</Empty>
         ) : (
           <>
-            <p className="mb-2 text-[11px] text-zinc-500">
+            <p className="mb-2 text-2xs text-faint">
               Считается из размеров jar. Для аудитории на TLauncher это существенно.
             </p>
             <dl className="grid grid-cols-[1fr_auto] gap-y-1 text-xs">
-              <dt className="text-zinc-300">полная</dt>
-              <dd className="text-right font-mono text-zinc-200">{bytes(sizes.full)}</dd>
-              <dt className="text-zinc-400">минимальная (все галочки сняты)</dt>
-              <dd className="text-right font-mono text-zinc-300">{bytes(sizes.minimal)}</dd>
+              <dt className="text-muted">полная</dt>
+              <dd className="text-right font-mono text-ink">{bytes(sizes.full)}</dd>
+              <dt className="text-muted">минимальная (все галочки сняты)</dt>
+              <dd className="text-right font-mono text-muted">{bytes(sizes.minimal)}</dd>
               {Object.entries(sizes.without)
                 .sort((a, b) => a[1] - b[1])
                 .slice(0, 12)
                 .map(([group, size]) => (
                   <Fragment key={group}>
-                    <dt className="text-zinc-500">без «{group}»</dt>
-                    <dd className="text-right font-mono text-zinc-500">{bytes(size)}</dd>
+                    <dt className="text-faint">без «{group}»</dt>
+                    <dd className="text-right font-mono text-faint">{bytes(size)}</dd>
                   </Fragment>
                 ))}
             </dl>
@@ -73,7 +73,7 @@ export default function Settings() {
       <Panel title="версия пака">
         <div className="flex items-end gap-2">
           <div>
-            <p className="mb-1 text-[11px] text-zinc-500">
+            <p className="mb-1 text-2xs text-faint">
               сейчас: <span className="font-mono">{publicData.data?.pack.version}</span>
             </p>
             <Input
@@ -89,7 +89,7 @@ export default function Settings() {
             onClick={() =>
               runner.propose(
                 { op: "set-pack-version", version },
-                <p className="text-zinc-300">
+                <p className="text-muted">
                   pack.toml: <code>version</code> {publicData.data?.pack.version} → {version}
                 </p>,
               )
@@ -121,10 +121,10 @@ export default function Settings() {
           </Button>
         }
       >
-        <p className="text-xs text-zinc-500">
+        <p className="text-xs text-faint">
           последний прогон: {stamp(publicData.data?.generated_at ?? null)}
         </p>
-        {analyzeState && <p className="mt-1 text-xs text-sky-300">{analyzeState}</p>}
+        {analyzeState && <p className="mt-1 text-xs text-accent">{analyzeState}</p>}
       </Panel>
 
       <Panel title="запуски панели">
@@ -135,18 +135,18 @@ export default function Settings() {
               <span
                 className={
                   run.conclusion === "success"
-                    ? "text-emerald-400"
+                    ? "text-accent"
                     : run.conclusion === "failure"
-                      ? "text-red-400"
-                      : "text-sky-400"
+                      ? "text-danger"
+                      : "text-accent"
                 }
               >
                 ●
               </span>
-              <a className="text-zinc-300 hover:text-sky-300" href={run.html_url} target="_blank" rel="noreferrer">
+              <a className="text-muted hover:text-accent" href={run.html_url} target="_blank" rel="noreferrer">
                 {run.name}
               </a>
-              <span className="ml-auto text-zinc-600">{stamp(run.updated_at)}</span>
+              <span className="ml-auto text-faint">{stamp(run.updated_at)}</span>
             </li>
           ))}
         </ul>
@@ -158,15 +158,15 @@ export default function Settings() {
           {(packCommits.data ?? []).map((commit) => (
             <li key={commit.sha} className="flex gap-2">
               <a
-                className="font-mono text-zinc-600 hover:text-sky-300"
+                className="font-mono text-faint hover:text-accent"
                 href={commit.html_url}
                 target="_blank"
                 rel="noreferrer"
               >
                 {commit.sha.slice(0, 7)}
               </a>
-              <span className="text-zinc-300">{commit.commit.message.split("\n")[0]}</span>
-              <span className="ml-auto whitespace-nowrap text-zinc-600">
+              <span className="text-muted">{commit.commit.message.split("\n")[0]}</span>
+              <span className="ml-auto whitespace-nowrap text-faint">
                 {stamp(commit.commit.author.date)}
               </span>
             </li>

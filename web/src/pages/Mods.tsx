@@ -1,8 +1,20 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { useRunner } from "../components/OpRunner";
-import { Button, Empty, Input, Loading, Panel, Pill, Select, bytes, day } from "../components/ui";
+import {
+  Button,
+  Empty,
+  Input,
+  Loading,
+  Panel,
+  STATUS_CLASS,
+  STATUS_GLYPH,
+  STATUS_LABEL,
+  Select,
+  bytes,
+  day,
+} from "../components/ui";
 import { usePrivate, usePublic, useSession } from "../lib/data";
 import type { Mod, Side } from "../lib/types";
 
@@ -30,6 +42,20 @@ export default function Mods() {
   const [sort, setSort] = useState<SortKey>("name");
   const [descending, setDescending] = useState(false);
   const [selected, setSelected] = useState<Set<string>>(new Set());
+  const search = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    const onKey = (event: KeyboardEvent) => {
+      const target = event.target as HTMLElement | null;
+      if (target && /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName)) return;
+      if (event.key === "/") {
+        event.preventDefault();
+        search.current?.focus();
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
 
   const mods = useMemo(
     () => (publicData.data?.mods ?? []).filter((mod) => !mod.embedded),
@@ -77,7 +103,7 @@ export default function Mods() {
 
   const header = (key: SortKey, label: string, className = "") => (
     <th
-      className={`cursor-pointer select-none px-2 py-1.5 text-left font-medium text-zinc-400 hover:text-zinc-200 ${className}`}
+      className={`cursor-pointer px-2 py-2 text-left text-xs font-medium text-muted select-none hover:text-ink ${className}`}
       onClick={() => {
         if (sort === key) setDescending((d) => !d);
         else {
@@ -87,7 +113,7 @@ export default function Mods() {
       }}
     >
       {label}
-      {sort === key && <span className="ml-1 text-zinc-600">{descending ? "▼" : "▲"}</span>}
+      {sort === key && <span className="ml-1 text-faint">{descending ? "▼" : "▲"}</span>}
     </th>
   );
 
@@ -96,11 +122,11 @@ export default function Mods() {
     runner.propose(
       { op: "set-side", targets, value },
       <div className="space-y-2">
-        <p className="text-zinc-300">
+        <p className="text-muted">
           В {targets.length} метафайл(ах) строка <code>side</code> станет{" "}
           <code>side = &quot;{value}&quot;</code>:
         </p>
-        <ul className="max-h-52 space-y-0.5 overflow-auto font-mono text-[11px] text-zinc-400">
+        <ul className="max-h-52 space-y-0.5 overflow-auto font-mono text-2xs text-muted">
           {targets.map((slug) => (
             <li key={slug}>
               mods/{slug}.pw.toml — было {mods.find((m) => m.slug === slug)?.side} → {value}
@@ -119,7 +145,8 @@ export default function Mods() {
       <Panel>
         <div className="flex flex-wrap items-center gap-2 p-3">
           <Input
-            placeholder="поиск по имени, slug, modId"
+            ref={search}
+            placeholder="поиск по имени, slug, modId    /"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             className="w-64"
@@ -153,7 +180,7 @@ export default function Mods() {
             <option value="frozen">без обновлений</option>
             <option value="unknown">не разобран</option>
           </Select>
-          <label className="flex items-center gap-1.5 text-xs text-zinc-400">
+          <label className="flex items-center gap-1.5 text-xs text-muted">
             <input
               type="checkbox"
               checked={frozenOnly}
@@ -161,14 +188,14 @@ export default function Mods() {
             />
             без [update]
           </label>
-          <span className="ml-auto text-xs text-zinc-500">
+          <span className="ml-auto text-xs text-faint">
             {rows.length} из {mods.length}
           </span>
         </div>
 
         {admin && selected.size > 0 && (
-          <div className="flex flex-wrap items-center gap-2 border-t border-[--color-edge] bg-black/20 px-3 py-2">
-            <span className="text-xs text-zinc-400">выбрано {selected.size}:</span>
+          <div className="flex flex-wrap items-center gap-2 border-t border-edge bg-canvas px-3 py-2">
+            <span className="text-xs text-muted">выбрано {selected.size}:</span>
             <Button onClick={() => bulkSide("both")}>side → both</Button>
             <Button onClick={() => bulkSide("client")}>side → client</Button>
             <Button onClick={() => bulkSide("server")}>side → server</Button>
@@ -177,7 +204,7 @@ export default function Mods() {
               onClick={() =>
                 runner.propose(
                   { op: "remove-mod", targets: [...selected] },
-                  <p className="text-zinc-300">
+                  <p className="text-muted">
                     Будут удалены метафайлы и записи в unsup.toml: {[...selected].join(", ")}
                   </p>,
                 )
@@ -190,29 +217,34 @@ export default function Mods() {
         )}
 
         <div className="overflow-x-auto">
-          <table className="w-full min-w-[1100px] text-xs">
-            <thead className="border-y border-[--color-edge] bg-black/20">
+          <table className="w-full min-w-[1040px] text-sm">
+            <thead className="sticky top-[49px] z-10 border-y border-edge bg-surface">
               <tr>
-                {admin && <th className="w-8 px-2 py-1.5" />}
+                {admin && <th className="w-8 px-2 py-2" />}
+                {header("status", "", "w-7 text-center")}
                 {header("name", "мод")}
                 {header("slug", "slug")}
                 {header("source", "источник")}
                 {header("side", "side")}
-                <th className="px-2 py-1.5 text-left font-medium text-zinc-400">флейворы</th>
+                <th className="px-2 py-1.5 text-left font-medium text-muted">флейворы</th>
                 {header("version", "версия")}
                 {header("size_bytes", "размер", "text-right")}
                 {header("date_added", "добавлен")}
                 {header("date_updated", "изменён")}
-                {header("status", "статус")}
               </tr>
             </thead>
             <tbody>
               {rows.map((mod) => {
                 const update = updates.get(mod.slug);
                 return (
-                  <tr key={mod.slug} className="border-b border-[--color-edge]/50 hover:bg-white/[0.02]">
+                  <tr
+                    key={mod.slug}
+                    className={`h-8 border-b border-edge/60 transition-colors duration-[--dur-fast] ${
+                      selected.has(mod.slug) ? "bg-raised" : "hover:bg-raised/40"
+                    }`}
+                  >
                     {admin && (
-                      <td className="px-2 py-1.5">
+                      <td className="px-2">
                         <input
                           type="checkbox"
                           checked={selected.has(mod.slug)}
@@ -220,29 +252,35 @@ export default function Mods() {
                         />
                       </td>
                     )}
-                    <td className="px-2 py-1.5">
-                      <Link className="text-zinc-100 hover:text-sky-300" to={`/graph?focus=${mod.slug}`}>
+                    <td
+                      className={`text-center ${STATUS_CLASS[mod.status]}`}
+                      title={STATUS_LABEL[mod.status]}
+                    >
+                      <span aria-hidden className="text-2xs">
+                        {STATUS_GLYPH[mod.status]}
+                      </span>
+                      <span className="sr-only">{STATUS_LABEL[mod.status]}</span>
+                    </td>
+                    <td className="px-2">
+                      <Link className="text-ink hover:text-accent" to={`/graph?focus=${mod.slug}`}>
                         {mod.name}
                       </Link>
                     </td>
-                    <td className="px-2 py-1.5 font-mono text-zinc-500">{mod.slug}</td>
-                    <td className="px-2 py-1.5 text-zinc-400">{SOURCE_LABEL[mod.source]}</td>
-                    <td className="px-2 py-1.5 text-zinc-400">{mod.side}</td>
-                    <td className="max-w-[220px] truncate px-2 py-1.5 text-zinc-500" title={mod.flavors.join(", ")}>
+                    <td className="px-2 font-mono text-xs text-faint">{mod.slug}</td>
+                    <td className="px-2 text-muted">{SOURCE_LABEL[mod.source]}</td>
+                    <td className="px-2 font-mono text-xs text-muted">{mod.side}</td>
+                    <td className="max-w-[200px] truncate px-2 text-xs text-faint" title={mod.flavors.join(", ")}>
                       {mod.flavors.join(", ") || "—"}
                     </td>
-                    <td className="px-2 py-1.5 font-mono text-zinc-300">
+                    <td className="px-2 font-mono text-xs text-muted">
                       {mod.version ?? "—"}
                       {update && (
-                        <span className="ml-1.5 text-sky-400">→ {update.candidate_version}</span>
+                        <span className="ml-1.5 text-accent">▲ {update.candidate_version}</span>
                       )}
                     </td>
-                    <td className="px-2 py-1.5 text-right text-zinc-500">{bytes(mod.size_bytes)}</td>
-                    <td className="px-2 py-1.5 text-zinc-500">{day(mod.date_added)}</td>
-                    <td className="px-2 py-1.5 text-zinc-500">{day(mod.date_updated)}</td>
-                    <td className="px-2 py-1.5">
-                      <Pill status={mod.status} />
-                    </td>
+                    <td className="px-2 text-right font-mono text-xs text-faint">{bytes(mod.size_bytes)}</td>
+                    <td className="px-2 font-mono text-xs text-faint">{day(mod.date_added)}</td>
+                    <td className="px-2 font-mono text-xs text-faint">{day(mod.date_updated)}</td>
                   </tr>
                 );
               })}

@@ -1,4 +1,12 @@
-import { createContext, useCallback, useContext, useState, type ReactNode } from "react";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+  type ReactNode,
+} from "react";
 
 import { useInvalidateData } from "../lib/data";
 import { runOperation, type OpProgress } from "../lib/ops";
@@ -18,6 +26,9 @@ export function useRunner(): Runner {
   if (!runner) throw new Error("useRunner outside OpRunnerProvider");
   return runner;
 }
+
+/** These rewrite the pack or its history; the confirm button says so. */
+const DESTRUCTIVE = new Set(["remove-mod", "revert"]);
 
 const PHASE_LABEL: Record<OpProgress["phase"], string> = {
   dispatching: "отправляю запрос",
@@ -57,18 +68,41 @@ export function OpRunnerProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const busy = progress !== null && progress.phase !== "succeeded" && progress.phase !== "failed";
+  const confirmRef = useRef<HTMLDivElement>(null);
+
+  // Escape closes, but never mid-flight: the workflow keeps running either way
+  // and a vanished dialog would hide the outcome.
+  useEffect(() => {
+    if (!pending) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && !busy) close();
+    };
+    window.addEventListener("keydown", onKey);
+    const buttons = confirmRef.current?.querySelectorAll<HTMLButtonElement>("footer button");
+    buttons?.[buttons.length - 1]?.focus();
+    return () => window.removeEventListener("keydown", onKey);
+  }, [pending, busy, close]);
 
   return (
     <RunnerContext.Provider value={{ propose, busy }}>
       {children}
       {pending && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4">
-          <div className="max-h-[85vh] w-full max-w-2xl overflow-auto rounded-lg border border-[--color-edge] bg-[--color-panel] shadow-2xl">
-            <header className="border-b border-[--color-edge] px-4 py-3">
-              <h2 className="text-sm font-medium text-zinc-100">
-                {progress ? "Операция" : "Подтверждение"}
+        <div className="fixed inset-0 z-40 flex items-center justify-center bg-canvas/80 p-4">
+          <div
+            ref={confirmRef}
+            role="dialog"
+            aria-modal="true"
+            aria-label={progress ? "ход операции" : "подтверждение операции"}
+            className="max-h-[85vh] w-full max-w-2xl overflow-auto rounded-md border border-edge-strong bg-surface"
+          >
+            <header className="flex items-baseline gap-2 border-b border-edge px-4 py-3">
+              <h2 className="text-lg font-medium text-ink">
+                {progress ? "Операция" : "Что произойдёт"}
               </h2>
-              <p className="mt-0.5 font-mono text-[11px] text-zinc-500">{pending.operation.op}</p>
+              <code className="text-2xs text-faint">{pending.operation.op}</code>
+              {!progress && DESTRUCTIVE.has(pending.operation.op) && (
+                <span className="ml-auto text-2xs text-danger">необратимо</span>
+              )}
             </header>
 
             <div className="space-y-3 px-4 py-3 text-xs">
@@ -76,20 +110,30 @@ export function OpRunnerProvider({ children }: { children: ReactNode }) {
 
               {progress && (
                 <>
-                  <p className="text-zinc-300">{PHASE_LABEL[progress.phase]}</p>
+                  <p className="flex items-center gap-2 text-muted">
+                    {busy && (
+                      <span aria-hidden className="size-1.5 animate-pulse rounded-full bg-accent" />
+                    )}
+                    {PHASE_LABEL[progress.phase]}
+                  </p>
                   {progress.steps.length > 0 && (
                     <ol className="space-y-1">
                       {progress.steps.map((step, index) => (
-                        <li key={index} className="flex items-center gap-2">
+                        <li
+                          key={index}
+                          className={`flex items-center gap-2 transition-colors duration-[--dur] ${
+                            step.status === "in_progress" ? "text-ink" : ""
+                          }`}
+                        >
                           <span
                             className={
                               step.conclusion === "success"
-                                ? "text-emerald-400"
+                                ? "text-accent"
                                 : step.conclusion === "failure"
-                                  ? "text-red-400"
+                                  ? "text-danger"
                                   : step.status === "in_progress"
-                                    ? "text-sky-400"
-                                    : "text-zinc-600"
+                                    ? "text-accent"
+                                    : "text-faint"
                             }
                           >
                             {step.conclusion === "success"
@@ -100,14 +144,14 @@ export function OpRunnerProvider({ children }: { children: ReactNode }) {
                                   ? "•"
                                   : "·"}
                           </span>
-                          <span className="text-zinc-400">{step.name}</span>
+                          <span className="text-muted">{step.name}</span>
                         </li>
                       ))}
                     </ol>
                   )}
                   {progress.runUrl && (
                     <a
-                      className="inline-block text-sky-400 underline"
+                      className="inline-block text-accent underline"
                       href={progress.runUrl}
                       target="_blank"
                       rel="noreferrer"
@@ -118,24 +162,27 @@ export function OpRunnerProvider({ children }: { children: ReactNode }) {
                 </>
               )}
 
-              {error && <p className="text-red-400">{error}</p>}
+              {error && <p className="text-danger">{error}</p>}
 
-              <details className="text-zinc-500">
+              <details className="text-faint">
                 <summary className="cursor-pointer">payload</summary>
-                <pre className="mt-1 overflow-auto rounded bg-black/40 p-2 text-[11px]">
+                <pre className="mt-1 overflow-auto rounded bg-canvas p-2 text-2xs">
                   {JSON.stringify(pending.operation, null, 2)}
                 </pre>
               </details>
             </div>
 
-            <footer className="flex justify-end gap-2 border-t border-[--color-edge] px-4 py-3">
+            <footer className="flex justify-end gap-2 border-t border-edge px-4 py-3">
               <Button onClick={close} disabled={busy}>
                 {progress?.phase === "succeeded" || progress?.phase === "failed"
                   ? "закрыть"
                   : "отмена"}
               </Button>
               {!progress && (
-                <Button tone="primary" onClick={() => void confirm()}>
+                <Button
+                  tone={DESTRUCTIVE.has(pending.operation.op) ? "danger" : "primary"}
+                  onClick={() => void confirm()}
+                >
                   выполнить
                 </Button>
               )}

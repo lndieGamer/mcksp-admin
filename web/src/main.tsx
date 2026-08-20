@@ -10,6 +10,7 @@ import History from "./pages/History";
 import Import from "./pages/Import";
 import Lint from "./pages/Lint";
 import Mods from "./pages/Mods";
+import Overview from "./pages/Overview";
 import Settings from "./pages/Settings";
 import Updates from "./pages/Updates";
 import "./index.css";
@@ -22,7 +23,7 @@ captureSessionFromHash();
 const Graph = React.lazy(() => import("./pages/Graph"));
 
 const Lazy = ({ children }: { children: React.ReactNode }) => (
-  <React.Suspense fallback={<p className="p-8 text-center text-xs text-zinc-500">загружаю граф…</p>}>
+  <React.Suspense fallback={<p className="p-8 text-center text-xs text-faint">загружаю граф…</p>}>
     {children}
   </React.Suspense>
 );
@@ -32,7 +33,7 @@ const router = createHashRouter([
     path: "/",
     element: <App />,
     children: [
-      { index: true, element: <Mods /> },
+      { index: true, element: <Overview /> },
       { path: "mods", element: <Mods /> },
       {
         path: "graph",

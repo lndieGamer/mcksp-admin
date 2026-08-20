@@ -22,7 +22,7 @@ export default function History() {
       ) : (
         <div className="overflow-x-auto">
           <table className="w-full min-w-[800px] text-xs">
-            <thead className="border-b border-[--color-edge] text-zinc-400">
+            <thead className="border-b border-edge text-muted">
               <tr>
                 <th className="px-2 py-1.5 text-left font-medium">когда</th>
                 <th className="px-2 py-1.5 text-left font-medium">операция</th>
@@ -33,20 +33,20 @@ export default function History() {
             </thead>
             <tbody>
               {history.map((entry) => (
-                <tr key={entry.sha} className="border-b border-[--color-edge]/50">
-                  <td className="whitespace-nowrap px-2 py-1.5 text-zinc-500">
+                <tr key={entry.sha} className="border-b border-edge/50">
+                  <td className="whitespace-nowrap px-2 py-1.5 text-faint">
                     {stamp(entry.date)}
                   </td>
                   <td className="px-2 py-1.5">
-                    <Tag tone={entry.op === "revert" ? "amber" : "zinc"}>{entry.op}</Tag>
+                    <Tag tone={entry.op === "revert" ? "warn" : "neutral"}>{entry.op}</Tag>
                   </td>
-                  <td className="px-2 py-1.5 text-zinc-300">
+                  <td className="px-2 py-1.5 text-muted">
                     {entry.title}
-                    {entry.reverted && <span className="ml-2 text-amber-400">(откачено)</span>}
+                    {entry.reverted && <span className="ml-2 text-warn">(откачено)</span>}
                   </td>
-                  <td className="px-2 py-1.5 font-mono text-zinc-600">
+                  <td className="px-2 py-1.5 font-mono text-faint">
                     <a
-                      className="hover:text-sky-300"
+                      className="hover:text-accent"
                       target="_blank"
                       rel="noreferrer"
                       href={`https://github.com/lndieGamer/MCKSP-Seventh-Season/commit/${entry.sha}`}
@@ -60,7 +60,7 @@ export default function History() {
                       onClick={() =>
                         runner.propose(
                           { op: "revert", sha: entry.sha },
-                          <p className="text-zinc-300">
+                          <p className="text-muted">
                             <code>git revert</code> коммита {entry.sha.slice(0, 7)} («{entry.title}
                             »), затем <code>packwiz refresh</code>. Откат идёт через ту же очередь,
                             что и остальные операции.

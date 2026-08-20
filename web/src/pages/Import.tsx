@@ -65,7 +65,7 @@ export default function Import() {
             key={id}
             onClick={() => setTab(id)}
             className={`rounded px-3 py-1.5 text-xs ${
-              tab === id ? "bg-zinc-800 text-zinc-100" : "text-zinc-400 hover:bg-zinc-900"
+              tab === id ? "bg-raised text-ink" : "text-muted hover:bg-surface"
             }`}
           >
             {label}
@@ -146,14 +146,14 @@ function ModrinthTab() {
             <li key={hit.project_id}>
               <button
                 onClick={() => open(hit)}
-                className="w-full rounded border border-[--color-edge] px-3 py-2 text-left text-xs hover:border-sky-700"
+                className="w-full rounded border border-edge px-3 py-2 text-left text-xs hover:border-accent"
               >
-                <span className="text-zinc-100">{hit.title}</span>
+                <span className="text-ink">{hit.title}</span>
                 {installed.projects.has(hit.project_id) && (
-                  <span className="ml-2 text-emerald-400">уже в паке</span>
+                  <span className="ml-2 text-accent">уже в паке</span>
                 )}
-                <span className="ml-2 text-zinc-600">{hit.downloads.toLocaleString("ru-RU")} ↓</span>
-                <p className="mt-0.5 line-clamp-2 text-zinc-500">{hit.description}</p>
+                <span className="ml-2 text-faint">{hit.downloads.toLocaleString("ru-RU")} ↓</span>
+                <p className="mt-0.5 line-clamp-2 text-faint">{hit.description}</p>
               </button>
             </li>
           ))}
@@ -161,7 +161,7 @@ function ModrinthTab() {
 
         {versions && (
           <div className="space-y-1">
-            <p className="text-xs text-zinc-400">
+            <p className="text-xs text-muted">
               версии «{versions.hit.title}» · side по Modrinth: {sideFor(versions.hit)}
             </p>
             {versions.list.slice(0, 15).map((version) => {
@@ -171,11 +171,11 @@ function ModrinthTab() {
               return (
                 <div
                   key={version.id}
-                  className="rounded border border-[--color-edge] px-3 py-2 text-xs"
+                  className="rounded border border-edge px-3 py-2 text-xs"
                 >
                   <div className="flex items-baseline gap-2">
-                    <span className="font-mono text-zinc-200">{version.version_number}</span>
-                    <span className="text-zinc-600">{day(version.date_published)}</span>
+                    <span className="font-mono text-ink">{version.version_number}</span>
+                    <span className="text-faint">{day(version.date_published)}</span>
                     <span className="ml-auto">
                       <Button
                         tone="primary"
@@ -187,7 +187,7 @@ function ModrinthTab() {
                               slug: versions.hit.slug,
                               side: sideFor(versions.hit),
                             },
-                            <p className="text-zinc-300">
+                            <p className="text-muted">
                               Будет добавлен <b>{versions.hit.title}</b> версии{" "}
                               {version.version_number}, side <code>{sideFor(versions.hit)}</code>,
                               метафайл <code>mods/{versions.hit.slug}.pw.toml</code>. Точный дифф
@@ -200,10 +200,10 @@ function ModrinthTab() {
                       </Button>
                     </span>
                   </div>
-                  <p className="mt-1 text-zinc-500">
+                  <p className="mt-1 text-faint">
                     зависимостей: {version.dependencies.length}
                     {missing.length > 0 && (
-                      <span className="ml-2 text-amber-400">
+                      <span className="ml-2 text-warn">
                         {missing.length} обязательных нет в паке
                       </span>
                     )}
@@ -267,13 +267,13 @@ function CurseForgeTab() {
             <li key={hit.id}>
               <button
                 onClick={() => open(hit)}
-                className="w-full rounded border border-[--color-edge] px-3 py-2 text-left text-xs hover:border-sky-700"
+                className="w-full rounded border border-edge px-3 py-2 text-left text-xs hover:border-accent"
               >
-                <span className="text-zinc-100">{hit.name}</span>
-                <span className="ml-2 text-zinc-600">
+                <span className="text-ink">{hit.name}</span>
+                <span className="ml-2 text-faint">
                   {hit.downloadCount.toLocaleString("ru-RU")} ↓
                 </span>
-                <p className="mt-0.5 line-clamp-2 text-zinc-500">{hit.summary}</p>
+                <p className="mt-0.5 line-clamp-2 text-faint">{hit.summary}</p>
               </button>
             </li>
           ))}
@@ -281,18 +281,18 @@ function CurseForgeTab() {
 
         {files && (
           <div className="space-y-1">
-            <p className="text-xs text-zinc-400">файлы «{files.hit.name}»</p>
+            <p className="text-xs text-muted">файлы «{files.hit.name}»</p>
             {files.list.slice(0, 15).map((file) => (
-              <div key={file.id} className="flex items-baseline gap-2 rounded border border-[--color-edge] px-3 py-2 text-xs">
-                <span className="truncate font-mono text-zinc-200">{file.displayName}</span>
-                <span className="text-zinc-600">{day(file.fileDate)}</span>
+              <div key={file.id} className="flex items-baseline gap-2 rounded border border-edge px-3 py-2 text-xs">
+                <span className="truncate font-mono text-ink">{file.displayName}</span>
+                <span className="text-faint">{day(file.fileDate)}</span>
                 <span className="ml-auto">
                   <Button
                     tone="primary"
                     onClick={() =>
                       runner.propose(
                         { op: "add-curseforge", project_id: files.hit.id, file_id: file.id, side: "both" },
-                        <p className="text-zinc-300">
+                        <p className="text-muted">
                           Будет добавлен <b>{files.hit.name}</b>, файл {file.fileName}, side{" "}
                           <code>both</code>. Точный дифф покажет коммит.
                         </p>,
@@ -358,7 +358,7 @@ function JarTab() {
     <div className="space-y-3">
       <Panel title="опознание по SHA-1">
         <label
-          className="flex cursor-pointer flex-col items-center gap-1 rounded border border-dashed border-[--color-edge] px-4 py-8 text-xs text-zinc-500 hover:border-sky-700"
+          className="flex cursor-pointer flex-col items-center gap-1 rounded border border-dashed border-edge px-4 py-8 text-xs text-faint hover:border-accent"
           onDragOver={(e) => e.preventDefault()}
           onDrop={(e) => {
             e.preventDefault();
@@ -366,7 +366,7 @@ function JarTab() {
           }}
         >
           <span>перетащите jar сюда или выберите файлы</span>
-          <span className="text-zinc-600">
+          <span className="text-faint">
             хеш считается в браузере через crypto.subtle, сам файл никуда не уходит
           </span>
           <input
@@ -382,11 +382,11 @@ function JarTab() {
           <ul className="mt-3 space-y-1 text-xs">
             {rows.map((row) => (
               <li key={row.sha1} className="flex flex-wrap items-center gap-2">
-                <span className="font-mono text-zinc-300">{row.file}</span>
+                <span className="font-mono text-muted">{row.file}</span>
                 {row.version ? (
                   <>
-                    <Tag tone="emerald">опознан на Modrinth</Tag>
-                    <span className="font-mono text-zinc-500">{row.version.version_number}</span>
+                    <Tag tone="accent">опознан на Modrinth</Tag>
+                    <span className="font-mono text-faint">{row.version.version_number}</span>
                     {installed.projects.has(row.version.project_id) ? (
                       <Tag>уже в паке</Tag>
                     ) : (
@@ -395,7 +395,7 @@ function JarTab() {
                         onClick={() =>
                           runner.propose(
                             { op: "add-modrinth", version_id: row.version!.id },
-                            <p className="text-zinc-300">
+                            <p className="text-muted">
                               Будет добавлен мод из {row.file} (версия{" "}
                               {row.version!.version_number}); side определится по Modrinth.
                             </p>,
@@ -407,7 +407,7 @@ function JarTab() {
                     )}
                   </>
                 ) : (
-                  <Tag tone="amber">не опознан — нужна прямая ссылка</Tag>
+                  <Tag tone="warn">не опознан — нужна прямая ссылка</Tag>
                 )}
               </li>
             ))}
@@ -416,7 +416,7 @@ function JarTab() {
       </Panel>
 
       <Panel title="добавить по прямой ссылке">
-        <p className="mb-2 text-[11px] text-zinc-500">
+        <p className="mb-2 text-2xs text-faint">
           Для неопознанных jar: залейте файл в GitHub Release руками и вставьте прямую ссылку —
           ровно так в паке живут kiriieshki, steampunk-armory и voxy.
         </p>
@@ -431,7 +431,7 @@ function JarTab() {
           <select
             value={side}
             onChange={(e) => setSide(e.target.value as Side)}
-            className="rounded border border-[--color-edge] bg-black/30 px-2 py-1.5 text-xs text-zinc-200"
+            className="rounded border border-edge bg-canvas px-2 py-1.5 text-xs text-ink"
           >
             <option value="both">both</option>
             <option value="client">client</option>
@@ -443,7 +443,7 @@ function JarTab() {
             onClick={() =>
               runner.propose(
                 { op: "add-url", name, url, side },
-                <p className="text-zinc-300">
+                <p className="text-muted">
                   <code>packwiz url add {name} {url}</code>, затем side <code>{side}</code>. У такого
                   мода не будет блока <code>[update]</code> — обновлять его придётся вручную.
                 </p>,

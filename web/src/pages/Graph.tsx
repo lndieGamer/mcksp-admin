@@ -11,6 +11,8 @@ import {
   Loading,
   Panel,
   Pill,
+  PALETTE_HEX,
+  STATUS_GLYPH,
   STATUS_HEX,
   STATUS_LABEL,
   Select,
@@ -77,7 +79,7 @@ export default function Graph() {
       .map((mod) => ({
         data: {
           id: mod.slug,
-          label: mod.name,
+          label: `${STATUS_GLYPH[mod.status]} ${mod.name}`,
           color: STATUS_HEX[mod.status],
           shape: SHAPE[mod.role] ?? "round-rectangle",
           border: mod.embedded ? "dashed" : "solid",
@@ -92,7 +94,7 @@ export default function Graph() {
           source: edge.from,
           target: edge.to as string,
           style: edge.type === "required" ? "solid" : "dashed",
-          color: edge.satisfied ? "#3f4652" : "#b91c1c",
+          color: edge.satisfied ? PALETTE_HEX.edgeStrong : PALETTE_HEX.danger,
         },
       }));
     if (!hideIsolated) return [...nodes, ...edges];
@@ -122,7 +124,7 @@ export default function Graph() {
             "border-style": "data(border)" as unknown as cytoscape.Css.LineStyle,
             shape: "data(shape)" as unknown as cytoscape.Css.NodeShape,
             label: "data(label)",
-            color: "#d4d4d8",
+            color: PALETTE_HEX.ink,
             "font-size": 8,
             "text-valign": "center",
             "text-max-width": "90px",
@@ -211,7 +213,7 @@ export default function Graph() {
   return (
     <div className="grid gap-3 lg:grid-cols-[1fr_320px]">
       <Panel className="overflow-hidden">
-        <div className="flex flex-wrap items-center gap-2 border-b border-[--color-edge] p-3">
+        <div className="flex flex-wrap items-center gap-2 border-b border-edge p-3">
           <Select value={layout} onChange={(e) => setLayout(e.target.value as "fcose" | "dagre")}>
             <option value="fcose">кластеры (fcose)</option>
             <option value="dagre">дерево (dagre)</option>
@@ -230,7 +232,7 @@ export default function Graph() {
               </option>
             ))}
           </Select>
-          <label className="flex items-center gap-1.5 text-xs text-zinc-400">
+          <label className="flex items-center gap-1.5 text-xs text-muted">
             <input
               type="checkbox"
               checked={requiredOnly}
@@ -238,7 +240,7 @@ export default function Graph() {
             />
             только обязательные рёбра
           </label>
-          <label className="flex items-center gap-1.5 text-xs text-zinc-400">
+          <label className="flex items-center gap-1.5 text-xs text-muted">
             <input
               type="checkbox"
               checked={hideIsolated}
@@ -246,7 +248,7 @@ export default function Graph() {
             />
             только связанные
           </label>
-          <label className="flex items-center gap-1.5 text-xs text-zinc-400">
+          <label className="flex items-center gap-1.5 text-xs text-muted">
             <input
               type="checkbox"
               checked={hideLibraries}
@@ -256,15 +258,14 @@ export default function Graph() {
           </label>
         </div>
 
-        <div ref={container} className="h-[calc(100vh-230px)] min-h-[480px] w-full bg-black/20" />
+        <div ref={container} className="h-[calc(100vh-210px)] min-h-[480px] w-full bg-canvas" />
 
-        <div className="flex flex-wrap gap-x-4 gap-y-1 border-t border-[--color-edge] px-3 py-2 text-[11px] text-zinc-500">
+        <div className="flex flex-wrap gap-x-4 gap-y-1 border-t border-edge px-3 py-2 text-2xs text-faint">
           {(Object.keys(STATUS_HEX) as ModStatus[]).map((status) => (
             <span key={status} className="flex items-center gap-1.5">
-              <span
-                className="inline-block h-2.5 w-2.5 rounded-sm"
-                style={{ background: STATUS_HEX[status] }}
-              />
+              <span aria-hidden style={{ color: STATUS_HEX[status] }}>
+                {STATUS_GLYPH[status]}
+              </span>
               {STATUS_LABEL[status]}
             </span>
           ))}
@@ -274,41 +275,41 @@ export default function Graph() {
 
       <Panel title={selected ? selected.name : "Узел"}>
         {!selected ? (
-          <p className="text-xs text-zinc-500">Кликните по узлу, чтобы увидеть детали.</p>
+          <p className="text-xs text-faint">Кликните по узлу, чтобы увидеть детали.</p>
         ) : (
           <div className="space-y-3 text-xs">
             <Pill status={selected.status} />
-            <dl className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-zinc-400">
+            <dl className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-muted">
               <dt>slug</dt>
-              <dd className="font-mono text-zinc-300">{selected.slug}</dd>
+              <dd className="font-mono text-muted">{selected.slug}</dd>
               <dt>modId</dt>
-              <dd className="font-mono text-zinc-300">{selected.mod_ids.join(", ") || "—"}</dd>
+              <dd className="font-mono text-muted">{selected.mod_ids.join(", ") || "—"}</dd>
               <dt>версия</dt>
-              <dd className="font-mono text-zinc-300">{selected.version ?? "—"}</dd>
+              <dd className="font-mono text-muted">{selected.version ?? "—"}</dd>
               <dt>роль</dt>
-              <dd className="text-zinc-300">{selected.role}</dd>
+              <dd className="text-muted">{selected.role}</dd>
               <dt>кластер</dt>
-              <dd className="text-zinc-300">{selected.cluster ?? "—"}</dd>
+              <dd className="text-muted">{selected.cluster ?? "—"}</dd>
               <dt>side</dt>
-              <dd className="text-zinc-300">{selected.side}</dd>
+              <dd className="text-muted">{selected.side}</dd>
               <dt>размер</dt>
-              <dd className="text-zinc-300">{bytes(selected.size_bytes)}</dd>
+              <dd className="text-muted">{bytes(selected.size_bytes)}</dd>
               {selected.embedded && (
                 <>
                   <dt>вшит в</dt>
-                  <dd className="font-mono text-zinc-300">{selected.owner}</dd>
+                  <dd className="font-mono text-muted">{selected.owner}</dd>
                 </>
               )}
             </dl>
 
             {update?.status === "blocked" && (
-              <div className="rounded border border-amber-900/60 bg-amber-950/30 p-2">
-                <p className="text-amber-300">
+              <div className="rounded border border-warn-dim bg-warn/10 p-2">
+                <p className="text-warn">
                   Обновление до {update.candidate_version} блокируют:
                 </p>
-                <ul className="mt-1 space-y-0.5 text-amber-200/80">
+                <ul className="mt-1 space-y-0.5 text-warn">
                   {update.blocked_by.map((blocker) => (
-                    <li key={blocker.slug} className="font-mono text-[11px]">
+                    <li key={blocker.slug} className="font-mono text-2xs">
                       {blocker.slug} требует {blocker.version_range}
                     </li>
                   ))}
@@ -317,47 +318,47 @@ export default function Graph() {
             )}
 
             <div>
-              <p className="mb-1 text-zinc-500">зависит от ({outgoing.length})</p>
+              <p className="mb-1 text-faint">зависит от ({outgoing.length})</p>
               <ul className="space-y-0.5">
                 {outgoing.map((edge, i) => (
-                  <li key={i} className={edge.satisfied ? "text-zinc-400" : "text-red-400"}>
+                  <li key={i} className={edge.satisfied ? "text-muted" : "text-danger"}>
                     <button
-                      className="font-mono hover:text-sky-300"
+                      className="font-mono hover:text-accent"
                       onClick={() => edge.to && setParams({ focus: edge.to })}
                     >
                       {edge.to ?? `${edge.to_mod_id} (нет в паке)`}
                     </button>{" "}
-                    <span className="text-zinc-600">
+                    <span className="text-faint">
                       {edge.type} {edge.version_range}
                     </span>
                   </li>
                 ))}
-                {outgoing.length === 0 && <li className="text-zinc-600">—</li>}
+                {outgoing.length === 0 && <li className="text-faint">—</li>}
               </ul>
             </div>
 
             <div>
-              <p className="mb-1 text-zinc-500">нужен для ({incoming.length})</p>
+              <p className="mb-1 text-faint">нужен для ({incoming.length})</p>
               <ul className="space-y-0.5">
                 {incoming.map((edge, i) => (
-                  <li key={i} className="text-zinc-400">
+                  <li key={i} className="text-muted">
                     <button
-                      className="font-mono hover:text-sky-300"
+                      className="font-mono hover:text-accent"
                       onClick={() => setParams({ focus: edge.from })}
                     >
                       {edge.from}
                     </button>{" "}
-                    <span className="text-zinc-600">
+                    <span className="text-faint">
                       {edge.type} {edge.version_range}
                     </span>
                   </li>
                 ))}
-                {incoming.length === 0 && <li className="text-zinc-600">—</li>}
+                {incoming.length === 0 && <li className="text-faint">—</li>}
               </ul>
             </div>
 
             {admin && !selected.embedded && (
-              <div className="flex flex-wrap gap-1.5 border-t border-[--color-edge] pt-3">
+              <div className="flex flex-wrap gap-1.5 border-t border-edge pt-3">
                 {(["both", "client", "server"] as Side[])
                   .filter((value) => value !== selected.side)
                   .map((value) => (
@@ -366,7 +367,7 @@ export default function Graph() {
                       onClick={() =>
                         runner.propose(
                           { op: "set-side", targets: [selected.slug], value },
-                          <p className="text-zinc-300">
+                          <p className="text-muted">
                             mods/{selected.slug}.pw.toml: <code>side</code> {selected.side} →{" "}
                             {value}
                           </p>,
