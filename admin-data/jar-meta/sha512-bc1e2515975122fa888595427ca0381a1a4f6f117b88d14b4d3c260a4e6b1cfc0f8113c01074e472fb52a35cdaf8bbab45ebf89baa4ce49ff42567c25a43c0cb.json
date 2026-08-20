@@ -1,0 +1,17 @@
+{
+ "size_bytes": 505421,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[1,)",
+  "mods": [
+   {
+    "mod_id": "create_trimmed",
+    "version": "1.0.1",
+    "display_name": "Create: Trimmed",
+    "embedded": false,
+    "dependencies": []
+   }
+  ]
+ }
+}

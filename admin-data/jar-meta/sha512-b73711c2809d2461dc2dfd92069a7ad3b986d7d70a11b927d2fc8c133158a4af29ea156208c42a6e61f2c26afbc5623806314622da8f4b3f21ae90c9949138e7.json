@@ -1,0 +1,11 @@
+{
+ "size_bytes": 47067416,
+ "meta": {
+  "status": "failed",
+  "notes": [
+   "Axiom-5.4.2-for-MC1.21.1.jar: no META-INF/neoforge.mods.toml or META-INF/mods.toml"
+  ],
+  "loader_version": null,
+  "mods": []
+ }
+}

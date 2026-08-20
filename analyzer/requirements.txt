@@ -1,0 +1,2 @@
+# TOML reading uses stdlib tomllib (3.11+), so httpx is the only dependency.
+httpx==0.28.1

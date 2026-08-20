@@ -1,0 +1,32 @@
+{
+ "size_bytes": 1131420,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[4,)",
+  "mods": [
+   {
+    "mod_id": "storagedrawers",
+    "version": "13.11.4",
+    "display_name": "Storage Drawers",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21,1.21.1]",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.0.0,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

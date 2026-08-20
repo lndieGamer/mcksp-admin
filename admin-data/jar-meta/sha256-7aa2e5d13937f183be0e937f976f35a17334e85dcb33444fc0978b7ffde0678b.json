@@ -1,0 +1,39 @@
+{
+ "size_bytes": 66612,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[4,)",
+  "mods": [
+   {
+    "mod_id": "steampunk",
+    "version": "1.0.1",
+    "display_name": "Steampunk Armory",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1,1.22)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "create",
+      "type": "optional",
+      "version_range": "[0.5,)",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     }
+    ]
+   }
+  ]
+ }
+}

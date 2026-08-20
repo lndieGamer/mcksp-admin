@@ -1,0 +1,16 @@
+# Manual patches folded into the dependency graph.
+#
+# Fill this in from `admin-data/unparsed.json` after the first full run: jars
+# with no `neoforge.mods.toml` (resource packs, non-standard builds) and mods
+# whose version placeholder cannot be resolved. Keyed by metafile slug --
+# the name of `mods/<slug>.pw.toml` without the suffix.
+#
+# [overrides.some-weird-mod]
+# mod_ids = ["someweirdmod"]
+# version = "1.4.2"
+# role = "library"
+#
+# [[overrides.some-weird-mod.dependencies]]
+# mod_id = "create"
+# type = "required"          # required | optional
+# version_range = "[6.0,7.0)"

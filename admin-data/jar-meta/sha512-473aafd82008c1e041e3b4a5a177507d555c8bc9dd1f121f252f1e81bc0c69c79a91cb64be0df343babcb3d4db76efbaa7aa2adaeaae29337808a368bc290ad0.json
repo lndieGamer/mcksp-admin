@@ -1,0 +1,46 @@
+{
+ "size_bytes": 253694,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "*",
+  "mods": [
+   {
+    "mod_id": "corpse",
+    "version": "1.21.1-1.1.13",
+    "display_name": "Corpse",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.0.0-beta,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21,1.21.1]",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "jade",
+      "type": "optional",
+      "version_range": "*",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "openhud",
+      "type": "optional",
+      "version_range": "[1.3.0,)",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     }
+    ]
+   }
+  ]
+ }
+}

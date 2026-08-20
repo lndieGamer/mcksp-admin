@@ -1,0 +1,57 @@
+name: pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "web/**"
+      - "admin-data/public.json"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - run: npm install
+        working-directory: web
+
+      # VITE_WORKER_URL is a repository variable, not a secret: it is a public
+      # URL and ends up in the bundle either way. Without it the panel still
+      # builds and runs in public mode.
+      - run: npm run build
+        working-directory: web
+        env:
+          VITE_WORKER_URL: ${{ vars.WORKER_URL }}
+
+      # public.json ships with the SPA; private.json deliberately does not --
+      # it only ever reaches the browser through the Worker, behind a session.
+      - run: cp admin-data/public.json web/dist/public.json
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

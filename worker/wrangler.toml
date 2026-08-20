@@ -1,0 +1,32 @@
+name = "mcksp-admin"
+main = "src/index.ts"
+compatibility_date = "2025-08-01"
+
+# OAuth `state` values, 10 minute TTL. Create with:
+#   wrangler kv namespace create STATE
+# then paste the id below.
+[[kv_namespaces]]
+binding = "STATE"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
+
+[vars]
+PAGES_URL = "https://lndiegamer.github.io/mcksp-admin/"
+# DEV_ORIGIN is deliberately absent here: localhost must never be a permitted
+# CORS origin in production. It lives in [env.dev] only.
+
+[env.dev]
+[env.dev.vars]
+PAGES_URL = "http://localhost:5173/"
+DEV_ORIGIN = "http://localhost:5173"
+
+[[env.dev.kv_namespaces]]
+binding = "STATE"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"
+
+# Secrets -- set with `wrangler secret put <NAME>`, never committed:
+#   GH_CLIENT_ID       GitHub OAuth App client id
+#   GH_CLIENT_SECRET   GitHub OAuth App client secret
+#   GH_DISPATCH_TOKEN  fine-grained PAT: actions:write + contents:read on mcksp-admin
+#   CF_API_KEY         CurseForge API key
+#   SESSION_SECRET     32 random bytes, HMAC key for session signatures
+#   ALLOWED_LOGIN      lndieGamer  (comma-separated to add a co-admin, no redeploy)

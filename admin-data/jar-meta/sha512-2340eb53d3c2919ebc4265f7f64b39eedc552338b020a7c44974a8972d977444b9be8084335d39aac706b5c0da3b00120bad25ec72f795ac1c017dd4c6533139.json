@@ -1,0 +1,53 @@
+{
+ "size_bytes": 2317633,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[1,)",
+  "mods": [
+   {
+    "mod_id": "cannoncompressedarmor",
+    "version": "1.0.0",
+    "display_name": "CannonCompressedArmor",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.227,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1]",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "createbigcannons",
+      "type": "required",
+      "version_range": "[*,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "allthecompressed",
+      "type": "optional",
+      "version_range": "[*,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "create",
+      "type": "optional",
+      "version_range": "[*,)",
+      "side": "CLIENT",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+dist/
+.wrangler/
+.dev.vars
+/pack/
+# `npm run dev` serves web/public at the base path; drop a generated public.json
+# there to work on the SPA against real data.
+web/public/public.json

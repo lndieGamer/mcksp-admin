@@ -1,0 +1,32 @@
+{
+ "size_bytes": 85732,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "*",
+  "mods": [
+   {
+    "mod_id": "trade_cycling",
+    "version": "1.21.1-1.0.18",
+    "display_name": "Trade Cycling",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.0.0-beta,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21,1.21.1]",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

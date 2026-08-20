@@ -1,0 +1,39 @@
+{
+ "size_bytes": 1249099,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[0,)",
+  "mods": [
+   {
+    "mod_id": "dndesires",
+    "version": "2.3a-BETA",
+    "display_name": "Create: Dreams n' Desires",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.200,)",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1,1.22)",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "create",
+      "type": "required",
+      "version_range": "[6.0.9,6.1.0)",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     }
+    ]
+   }
+  ]
+ }
+}
