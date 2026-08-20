@@ -1,0 +1,74 @@
+{
+ "size_bytes": 25905546,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[2,)",
+  "mods": [
+   {
+    "mod_id": "fancymenu",
+    "version": "3.9.10",
+    "display_name": "FancyMenu",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "konkrete",
+      "type": "required",
+      "version_range": "[1.9.4,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "melody",
+      "type": "required",
+      "version_range": "[1.0.6,)",
+      "side": "CLIENT",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "findme",
+      "type": "optional",
+      "version_range": "[1.0.0,)",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "drippyloadingscreen",
+      "type": "optional",
+      "version_range": "[3.0.0,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "fancy_entity_renderer",
+      "type": "optional",
+      "version_range": "[0.4.1,)",
+      "side": "CLIENT",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "watermedia",
+      "type": "optional",
+      "version_range": "[3.0.0.22,)",
+      "side": "CLIENT",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.47,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

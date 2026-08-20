@@ -1,0 +1,67 @@
+{
+ "size_bytes": 1531925,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[4,)",
+  "mods": [
+   {
+    "mod_id": "advancedperipherals",
+    "version": "0.8.0a",
+    "display_name": "Advanced Peripherals",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.238,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "computercraft",
+      "type": "required",
+      "version_range": "[1.119.0,)",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "ae2",
+      "type": "optional",
+      "version_range": "[19.2.13,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecolonies",
+      "type": "optional",
+      "version_range": "[1.1.1300-1.21.1-snapshot,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "patchouli",
+      "type": "optional",
+      "version_range": "[1.21-88,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "mekanism",
+      "type": "optional",
+      "version_range": "[1.21.1-10.7.15.81,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}
