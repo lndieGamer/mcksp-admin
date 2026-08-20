@@ -29,7 +29,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: "22"
+          # 24, not 22: `node --test` on a .ts file needs type stripping on by
+          # default, and the tests are the only check the worker code gets.
+          node-version: "24"
       - run: npm install
       - run: npm test
       - run: npm run typecheck

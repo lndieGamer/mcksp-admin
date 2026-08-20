@@ -11,5 +11,8 @@
     "verbatimModuleSyntax": true,
     "skipLibCheck": true
   },
-  "include": ["src", "test"]
+  // Only src: it runs on the Workers runtime, whose globals "types" pins.
+  // test/ is Node-land and would need @types/node, which must never leak
+  // into the worker build -- node --test executes it either way.
+  "include": ["src"]
 }
