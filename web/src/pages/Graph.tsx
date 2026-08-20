@@ -96,6 +96,9 @@ export default function Graph() {
     const instance = cytoscape({
       container: container.current,
       elements,
+      // Twice the default. Cytoscape warns about any value but 1; the graph
+      // spans ~200 nodes, and the calibrated step makes crossing it a chore.
+      wheelSensitivity: 2,
       style: [
         {
           selector: "node",
