@@ -1,0 +1,53 @@
+{
+ "size_bytes": 3110804,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[2,)",
+  "mods": [
+   {
+    "mod_id": "createcasing",
+    "version": "1.9.0-ht3",
+    "display_name": "Create Encased",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "create",
+      "type": "required",
+      "version_range": "[6.0.10,)",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "kubejs",
+      "type": "optional",
+      "version_range": "[2101,)",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "sliceanddice",
+      "type": "optional",
+      "version_range": "[4.3.0,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

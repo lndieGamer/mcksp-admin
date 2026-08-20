@@ -1,0 +1,39 @@
+{
+ "size_bytes": 43798,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[2,)",
+  "mods": [
+   {
+    "mod_id": "justzoom",
+    "version": "2.1.0",
+    "display_name": "Just Zoom",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "konkrete",
+      "type": "required",
+      "version_range": "[1.9.0,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.47,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

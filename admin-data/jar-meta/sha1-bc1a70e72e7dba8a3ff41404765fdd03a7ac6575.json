@@ -1,0 +1,39 @@
+{
+ "size_bytes": 599474,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[1,)",
+  "mods": [
+   {
+    "mod_id": "modernfix",
+    "version": "5.27.20+mc1.21.1",
+    "display_name": "ModernFix",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.0.111-beta,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21, 1.22)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "jei",
+      "type": "optional",
+      "version_range": "[15.8.0.11,)",
+      "side": "CLIENT",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

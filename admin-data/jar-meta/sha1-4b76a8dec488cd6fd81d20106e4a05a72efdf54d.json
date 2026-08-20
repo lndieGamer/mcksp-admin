@@ -1,0 +1,54 @@
+{
+ "size_bytes": 1029344,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[4,)",
+  "mods": [
+   {
+    "mod_id": "create_dragons_plus",
+    "version": "1.11.4",
+    "display_name": "Create: Dragons Plus",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.0,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1, 1.22)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "create",
+      "type": "required",
+      "version_range": "[6.0.10,)",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     }
+    ]
+   },
+   {
+    "mod_id": "conditional_mixin",
+    "version": "0.6.4",
+    "display_name": "conditional mixin",
+    "embedded": true,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[20.5,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

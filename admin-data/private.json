@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-20T10:44:17Z",
+ "generated_at": "2026-08-20T14:09:45Z",
  "updates": [
   {
    "slug": "balm",
@@ -26,6 +26,32 @@
     "url": "https://cdn.modrinth.com/data/aclfPzta/versions/gVPB2Kua/burnt_basic-1.10.4.2-neoforge-1.21.1.jar"
    },
    "published_at": "2026-08-10T09:32:48.220051Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "cbc-enchanced-shells-create-big-cannons",
+   "current_version": "1.2.2",
+   "candidate_version": "1.2.3",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8612686,
+    "project_id": "1489732"
+   },
+   "published_at": "2026-08-09T23:07:57.04Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "coastal-waves",
+   "current_version": "1.6",
+   "candidate_version": "1.6.1",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 7208601,
+    "project_id": "1155936"
+   },
+   "published_at": "2025-11-10T23:44:22.97Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -58,6 +84,58 @@
    "blocked_by": []
   },
   {
+   "slug": "create-dragons-plus",
+   "current_version": "1.11.4",
+   "candidate_version": "1.11.7b",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8633162,
+    "project_id": "1216624"
+   },
+   "published_at": "2026-08-12T14:54:23.99Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "create-enchantment-industry",
+   "current_version": "2.5.1",
+   "candidate_version": "2.5.2",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8678456,
+    "project_id": "688768"
+   },
+   "published_at": "2026-08-18T16:05:17.437Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "createaddition",
+   "current_version": "1.6.0",
+   "candidate_version": "1.7.0",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8664915,
+    "project_id": "439890"
+   },
+   "published_at": "2026-08-16T19:32:13.587Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "creativecore",
+   "current_version": "2.13.42",
+   "candidate_version": "2.13.43",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8647581,
+    "project_id": "257814"
+   },
+   "published_at": "2026-08-14T14:24:56.323Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
    "slug": "fancymenu",
    "current_version": "3.9.9",
    "candidate_version": "3.9.10",
@@ -68,6 +146,71 @@
     "url": "https://cdn.modrinth.com/data/Wq5SjeWM/versions/f8yonbbe/fancymenu_neoforge_3.9.10_MC_1.21.1.jar"
    },
    "published_at": "2026-08-15T05:58:05.308387Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "farmers-delight",
+   "current_version": "1.3.2",
+   "candidate_version": "1.3.3",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8672744,
+    "project_id": "398521"
+   },
+   "published_at": "2026-08-17T21:01:42.17Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "jade-sable-compat",
+   "current_version": "1.2.1",
+   "candidate_version": "1.3.0",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8681404,
+    "project_id": "1530988"
+   },
+   "published_at": "2026-08-19T01:03:19.227Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "jei",
+   "current_version": "19.43.0.393",
+   "candidate_version": "19.44.0.403",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8678372,
+    "project_id": "238222"
+   },
+   "published_at": "2026-08-18T15:54:03.623Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "lithostitched",
+   "current_version": "1.7.13",
+   "candidate_version": "1.8.0+beta4",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8660310,
+    "project_id": "936015"
+   },
+   "published_at": "2026-08-16T06:54:53.237Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "reworked-locator-bar",
+   "current_version": "1.2.1",
+   "candidate_version": "1.2.2",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8602125,
+    "project_id": "1523749"
+   },
+   "published_at": "2026-08-08T14:14:59.28Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -84,6 +227,28 @@
    "published_at": "2026-08-18T01:14:08.046259Z",
    "status": "safe",
    "blocked_by": []
+  },
+  {
+   "slug": "selene",
+   "current_version": "1.21.1-3.3.2",
+   "candidate_version": "1.21.1-3.4.1",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8682854,
+    "project_id": "499980"
+   },
+   "published_at": "2026-08-19T07:14:29.487Z",
+   "status": "blocked",
+   "blocked_by": [
+    {
+     "slug": "amendments",
+     "version_range": "[1.21-2.29.19,)"
+    },
+    {
+     "slug": "mmmmmmmmmmmm",
+     "version_range": "[1.21-3.2.3,)"
+    }
+   ]
   },
   {
    "slug": "serene-seasons-gen-fix",
@@ -126,57 +291,120 @@
    "published_at": "2026-08-19T22:58:26.150339Z",
    "status": "safe",
    "blocked_by": []
+  },
+  {
+   "slug": "supermartijn642s-core-lib",
+   "current_version": "1.1.23+a",
+   "candidate_version": "1.1.24",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8623666,
+    "project_id": "454372"
+   },
+   "published_at": "2026-08-11T12:38:17.973Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "yungs-api-neoforge",
+   "current_version": "1.21.1-NeoForge-5.1.6",
+   "candidate_version": "1.21.1-NeoForge-5.1.7",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8685980,
+    "project_id": "1015100"
+   },
+   "published_at": "2026-08-19T17:33:53.55Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "yungs-better-caves",
+   "current_version": "1.21.1-NeoForge-3.1.4",
+   "candidate_version": "1.21.1-NeoForge-3.1.5",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8686119,
+    "project_id": "340583"
+   },
+   "published_at": "2026-08-19T17:55:53.523Z",
+   "status": "safe",
+   "blocked_by": []
   }
  ],
- "update_sets": [],
+ "update_sets": [
+  {
+   "id": "selene",
+   "members": [
+    "selene"
+   ],
+   "status": "partially_available",
+   "missing": [
+    "amendments",
+    "mmmmmmmmmmmm"
+   ]
+  }
+ ],
  "lint": [
   {
-   "level": "warning",
-   "code": "missing_dependency",
-   "slug": "burnt-basic",
-   "message": "required modId 'cloth_config' is in neither the pack nor any jarjar bundle"
+   "level": "error",
+   "code": "version_range_unsatisfied",
+   "slug": "amendments",
+   "message": "needs moonlight [1.21-2.29.19,), pack has 1.21.1-3.3.2"
   },
   {
-   "level": "warning",
-   "code": "missing_dependency",
-   "slug": "cbc-firepower-components",
-   "message": "required modId 'ritchiesprojectilelib' is in neither the pack nor any jarjar bundle"
-  },
-  {
-   "level": "warning",
-   "code": "missing_dependency",
-   "slug": "cbc-firepower-components",
-   "message": "required modId 'createbigcannons' is in neither the pack nor any jarjar bundle"
-  },
-  {
-   "level": "warning",
-   "code": "missing_dependency",
-   "slug": "cbcenhanced-shell-armor-create-big-cannons",
-   "message": "required modId 'createbigcannons' is in neither the pack nor any jarjar bundle"
-  },
-  {
-   "level": "warning",
-   "code": "missing_dependency",
-   "slug": "ntgl",
-   "message": "required modId 'geckolib' is in neither the pack nor any jarjar bundle"
+   "level": "error",
+   "code": "version_range_unsatisfied",
+   "slug": "mmmmmmmmmmmm",
+   "message": "needs moonlight [1.21-3.2.3,), pack has 1.21.1-3.3.2"
   },
   {
    "level": "error",
    "code": "incompatible_present",
    "slug": "sable",
-   "message": "sable declares 'sablecompanion' incompatible, but 'sable::sablecompanion' provides it"
+   "message": "sable declares 'sablecompanion' incompatible, but 'create-bits-n-bobs::sablecompanion' provides it"
   },
   {
-   "level": "warning",
-   "code": "missing_dependency",
-   "slug": "ssrd",
-   "message": "required modId 'sodium' is in neither the pack nor any jarjar bundle"
+   "level": "error",
+   "code": "incompatible_present",
+   "slug": "sable",
+   "message": "sable declares 'sodium' incompatible, but 'sodium::sodium' provides it"
+  },
+  {
+   "level": "error",
+   "code": "incompatible_present",
+   "slug": "sable::veil",
+   "message": "sable::veil declares 'sodium' incompatible, but 'sodium::sodium' provides it"
+  },
+  {
+   "level": "error",
+   "code": "platform_unsatisfied",
+   "slug": "create-ender-transmission",
+   "message": "needs minecraft [1.21,1.21.1), pack has 1.21.1"
   },
   {
    "level": "error",
    "code": "platform_unsatisfied",
    "slug": "create-sophisticated-backpacks-compat",
    "message": "needs minecraft [1.20.1,1.21.1), pack has 1.21.1"
+  },
+  {
+   "level": "error",
+   "code": "platform_unsatisfied",
+   "slug": "irisshaders",
+   "message": "needs minecraft [1.21,1.21.1), pack has 1.21.1"
+  },
+  {
+   "level": "error",
+   "code": "platform_unsatisfied",
+   "slug": "jei",
+   "message": "needs minecraft [1.21, 1.21.1), pack has 1.21.1"
+  },
+  {
+   "level": "error",
+   "code": "platform_unsatisfied",
+   "slug": "lodestone",
+   "message": "needs minecraft [1.21,1.21.1), pack has 1.21.1"
   },
   {
    "level": "info",
@@ -199,500 +427,8 @@
   {
    "level": "warning",
    "code": "unparsed",
-   "slug": "advancement-plaques",
-   "message": "advancement-plaques: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/499826/files/5905995. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "aeronautics-hot-air-fix",
-   "message": "aeronautics-hot-air-fix: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1633376/files/8654146. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "alexs-caves-unofficial-port",
-   "message": "alexs-caves-unofficial-port: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1420348/files/7981977. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "ambientsounds",
-   "message": "ambientsounds: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/254284/files/8043019. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "amendments",
-   "message": "amendments: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/896746/files/8415430. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "another-furniture",
-   "message": "another-furniture: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/610492/files/7355747. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "appleskin",
-   "message": "appleskin: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/248787/files/7854442. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "architectury-api",
-   "message": "architectury-api: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/419699/files/8492726. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "attributefix",
-   "message": "attributefix: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/280510/files/7115922. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
    "slug": "axiom",
    "message": "Axiom-5.4.2-for-MC1.21.1.jar: no META-INF/neoforge.mods.toml or META-INF/mods.toml"
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "azimuth-api",
-   "message": "azimuth-api: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1466331/files/8661574. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "bellsandwhistles",
-   "message": "bellsandwhistles: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/905040/files/6299879. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "better-advancements",
-   "message": "better-advancements: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/272515/files/5850587. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "better-compatibility-checker",
-   "message": "better-compatibility-checker: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/551894/files/7404415. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "better-ping-display",
-   "message": "better-ping-display: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/292038/files/5936660. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "better-safe-bed",
-   "message": "better-safe-bed: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/484804/files/5504769. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "better-than-mending",
-   "message": "better-than-mending: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/264738/files/5666358. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "bookshelf",
-   "message": "bookshelf: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/228525/files/7606240. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "carbon-config",
-   "message": "carbon-config: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/898104/files/8119979. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "cbc-enchanced-shells-create-big-cannons",
-   "message": "cbc-enchanced-shells-create-big-cannons: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1489732/files/8470471. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "cccbridge",
-   "message": "cccbridge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/656214/files/8232436. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "cgs",
-   "message": "cgs: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1194036/files/8501347. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "chunky-pregenerator-forge",
-   "message": "chunky-pregenerator-forge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/485681/files/6383261. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "citadel-1-21-1-port",
-   "message": "citadel-1-21-1-port: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1415723/files/7982052. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "cloth-config",
-   "message": "cloth-config: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/348521/files/5729127. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "clumps",
-   "message": "clumps: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/256717/files/5623731. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "coastal-waves",
-   "message": "coastal-waves: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1155936/files/7045750. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "copycats",
-   "message": "copycats: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/968398/files/7251823. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "coroutil",
-   "message": "coroutil: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/237749/files/7796187. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "corpse-x-cosmetic-armor-reworked-compat",
-   "message": "corpse-x-cosmetic-armor-reworked-compat: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1208436/files/7891804. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "cosmetic-armor-reworked",
-   "message": "cosmetic-armor-reworked: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/237307/files/5610814. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "crafttweaker",
-   "message": "crafttweaker: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/239197/files/7772819. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "create-aeronautics-compatability",
-   "message": "create-aeronautics-compatability: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1524351/files/8406062. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "create-aeronautics-transmission-linkage",
-   "message": "create-aeronautics-transmission-linkage: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1548056/files/8264158. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "create-better-fps",
-   "message": "create-better-fps: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1217518/files/7951368. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "create-big-cannons",
-   "message": "create-big-cannons: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/646668/files/8303106. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "create-bits-n-bobs",
-   "message": "create-bits-n-bobs: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1398383/files/8660793. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "create-bitterballen",
-   "message": "create-bitterballen: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/918751/files/7952693. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "create-connected",
-   "message": "create-connected: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/947914/files/8299240. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "create-deco",
-   "message": "create-deco: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/509285/files/7943181. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "create-diesel-generators",
-   "message": "create-diesel-generators: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/869316/files/8542167. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "create-dragons-plus",
-   "message": "create-dragons-plus: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1216624/files/8567534. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "create-encased",
-   "message": "create-encased: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/829380/files/8549840. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "create-enchantment-industry",
-   "message": "create-enchantment-industry: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/688768/files/8576462. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "create-ender-transmission",
-   "message": "create-ender-transmission: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/737302/files/7232820. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "create-metallurgy",
-   "message": "create-metallurgy: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1007404/files/8128243. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "create-power-loader",
-   "message": "create-power-loader: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/936020/files/8126570. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "create-propulsion-simulated",
-   "message": "create-propulsion-simulated: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1522736/files/8496246. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "create-radars",
-   "message": "create-radars: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1152836/files/8227753. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "create-sound-of-steam",
-   "message": "create-sound-of-steam: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1196142/files/7315860. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "createaddition",
-   "message": "createaddition: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/439890/files/8188476. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "createnuclear",
-   "message": "createnuclear: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/989797/files/7329038. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "creativecore",
-   "message": "creativecore: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/257814/files/8594642. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "cubes-without-borders",
-   "message": "cubes-without-borders: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/975120/files/5855532. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "curios",
-   "message": "curios: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/309927/files/6529130. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "display-delight",
-   "message": "display-delight: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1144296/files/8242893. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "doggy-talents-next",
-   "message": "doggy-talents-next: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/694492/files/7666746. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "dynamiclights-reforged",
-   "message": "dynamiclights-reforged: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/551736/files/6044477. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "enchantment-descriptions",
-   "message": "enchantment-descriptions: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/250419/files/8240827. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "enders-delight",
-   "message": "enders-delight: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/827163/files/8570814. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "entity-model-features",
-   "message": "entity-model-features: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/844662/files/8063559. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "entity-texture-features-fabric",
-   "message": "entity-texture-features-fabric: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/568563/files/7930620. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "explosion-overhaul-a-new-level-of-destruction",
-   "message": "explosion-overhaul-a-new-level-of-destruction: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1296203/files/8478789. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "farmers-delight",
-   "message": "farmers-delight: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/398521/files/8083481. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "fastsuite",
-   "message": "fastsuite: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/475117/files/7527945. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "ferritecore",
-   "message": "ferritecore: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/429235/files/7524151. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "forgified-fabric-api",
-   "message": "forgified-fabric-api: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/889079/files/8539754. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "framedblocks",
-   "message": "framedblocks: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/441647/files/8349218. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "framework",
-   "message": "framework: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/549225/files/7530361. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "fusion-connected-textures",
-   "message": "fusion-connected-textures: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/854949/files/8536618. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "fzzy-config",
-   "message": "fzzy-config: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1005914/files/7568897. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "geckolib",
-   "message": "geckolib: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/388172/files/8350073. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "iceberg",
-   "message": "iceberg: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/520110/files/6423863. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "immersive-paintings",
-   "message": "immersive-paintings: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/639584/files/8194870. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "interiors",
-   "message": "interiors: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/906239/files/7544005. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "irisshaders",
-   "message": "irisshaders: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/455508/files/8242804. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "jade-addons",
-   "message": "jade-addons: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/583345/files/6315149. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "jade-sable-compat",
-   "message": "jade-sable-compat: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1530988/files/8269260. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "jade",
-   "message": "jade: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/324717/files/8591319. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "jamlib",
-   "message": "jamlib: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/623764/files/7766752. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "jei",
-   "message": "jei: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/238222/files/8569044. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "just-zoom",
-   "message": "just-zoom: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/561885/files/6290230. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "kiwi",
-   "message": "kiwi: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/303657/files/8423062. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
   },
   {
    "level": "warning",
@@ -703,380 +439,14 @@
   {
    "level": "warning",
    "code": "unparsed",
-   "slug": "ksyxis",
-   "message": "ksyxis: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/537533/files/7979747. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "legendary-tooltips",
-   "message": "legendary-tooltips: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/532127/files/6400660. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "lets-do-beachparty",
-   "message": "lets-do-beachparty: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/858691/files/7672876. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "lets-do-brewery-farm-charm-compat",
-   "message": "lets-do-brewery-farm-charm-compat: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1038106/files/7830639. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "lets-do-farm-charm",
-   "message": "lets-do-farm-charm: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1038103/files/8543130. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "lets-do-herbal-brews",
-   "message": "lets-do-herbal-brews: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/951221/files/7657017. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "lets-do-vinery",
-   "message": "lets-do-vinery: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/704465/files/7539914. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "lithium",
-   "message": "lithium: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/360438/files/8330365. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "lithostitched",
-   "message": "lithostitched: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/936015/files/8378498. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "lodestone",
-   "message": "lodestone: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/616457/files/7264731. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "lootr",
-   "message": "lootr: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/361276/files/8580031. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "mmmmmmmmmmmm",
-   "message": "mmmmmmmmmmmm: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/225738/files/8510632. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "modernfix",
-   "message": "modernfix: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/790626/files/8459650. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "mouse-tweaks",
-   "message": "mouse-tweaks: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/60089/files/5637846. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "no-chat-reports",
-   "message": "no-chat-reports: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/634062/files/5885735. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "oceans-delight",
-   "message": "oceans-delight: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/841262/files/7939973. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "particle-rain",
-   "message": "particle-rain: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/421897/files/8055433. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "placebo",
-   "message": "placebo: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/283644/files/8463693. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "polymorph",
-   "message": "polymorph: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/388800/files/6794589. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "power-grid",
-   "message": "power-grid: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1321420/files/8648636. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "prickle",
-   "message": "prickle: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1023259/files/6961457. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "prism-lib",
-   "message": "prism-lib: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/638111/files/6372979. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "quark",
-   "message": "quark: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/243121/files/8420966. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "rechiseled-create",
-   "message": "rechiseled-create: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/888624/files/8302843. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "rechiseled",
-   "message": "rechiseled: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/558998/files/8301793. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "reeses-sodium-options",
-   "message": "reeses-sodium-options: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/511319/files/8410876. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "refurbished-furniture",
-   "message": "refurbished-furniture: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/897116/files/7473565. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "reworked-locator-bar",
-   "message": "reworked-locator-bar: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1523749/files/8405131. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "rightclickharvest",
-   "message": "rightclickharvest: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/452834/files/7508749. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "ritchies-projectile-library",
-   "message": "ritchies-projectile-library: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1279407/files/7587771. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "saturn",
-   "message": "saturn: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/670986/files/6139965. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "selene",
-   "message": "selene: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/499980/files/8578515. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "shulkerboxtooltip",
-   "message": "shulkerboxtooltip: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/315811/files/7768285. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
    "slug": "sinytra-connector",
-   "message": "sinytra-connector: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/890127/files/8546239. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "slice-and-dice",
-   "message": "slice-and-dice: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/659674/files/8547315. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "snow-real-magic",
-   "message": "snow-real-magic: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/308663/files/8321970. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "sodium-extra",
-   "message": "sodium-extra: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/447673/files/8403576. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "sodium",
-   "message": "sodium: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/394468/files/8591792. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "spark",
-   "message": "spark: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/361579/files/6225208. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "steam-n-rails-neoforge",
-   "message": "steam-n-rails-neoforge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1414670/files/8522154. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "steel-armor-blocks",
-   "message": "steel-armor-blocks: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/907369/files/7951468. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "strut-your-stuff",
-   "message": "strut-your-stuff: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1486746/files/8540112. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "supermartijn642s-config-lib",
-   "message": "supermartijn642s-config-lib: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/438332/files/5546996. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "supermartijn642s-core-lib",
-   "message": "supermartijn642s-core-lib: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/454372/files/8601051. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "survival-island",
-   "message": "survival-island: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/364426/files/6983426. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "the-roads-more-travelled",
-   "message": "the-roads-more-travelled: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1512955/files/8174511. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
+   "message": "connector-2.0.0-beta.16+1.21.1-full.jar: no META-INF/neoforge.mods.toml or META-INF/mods.toml"
   },
   {
    "level": "warning",
    "code": "unparsed",
    "slug": "voxy",
    "message": "voxy-0.2.15-NeoForge-1.21.1.jar: no META-INF/neoforge.mods.toml or META-INF/mods.toml"
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "xaeros-minimap",
-   "message": "xaeros-minimap: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/263420/files/8449819. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "xaeros-world-map",
-   "message": "xaeros-world-map: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/317780/files/8449921. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "yungs-api-neoforge",
-   "message": "yungs-api-neoforge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1015100/files/6715463. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "yungs-better-caves",
-   "message": "yungs-better-caves: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/340583/files/6939522. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "yungs-better-desert-temples-neoforge",
-   "message": "yungs-better-desert-temples-neoforge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1015114/files/6276955. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "yungs-better-dungeons-neoforge",
-   "message": "yungs-better-dungeons-neoforge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1015112/files/5954804. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "yungs-better-end-island-neoforge",
-   "message": "yungs-better-end-island-neoforge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1015127/files/6300968. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "yungs-better-jungle-temples-neoforge",
-   "message": "yungs-better-jungle-temples-neoforge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1015123/files/5924482. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "yungs-better-mineshafts-neoforge",
-   "message": "yungs-better-mineshafts-neoforge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1015096/files/5812193. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "yungs-better-nether-fortresses-neoforge",
-   "message": "yungs-better-nether-fortresses-neoforge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1015118/files/6606621. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "yungs-better-ocean-monuments-neoforge",
-   "message": "yungs-better-ocean-monuments-neoforge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1015115/files/5924487. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "yungs-better-strongholds-neoforge",
-   "message": "yungs-better-strongholds-neoforge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1015105/files/6272264. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "yungs-better-witch-huts-neoforge",
-   "message": "yungs-better-witch-huts-neoforge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1015144/files/5812532. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "yungs-bridges-neoforge",
-   "message": "yungs-bridges-neoforge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1015149/files/5812553. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "yungs-extras-neoforge",
-   "message": "yungs-extras-neoforge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1015146/files/5812546. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "level": "warning",
-   "code": "unparsed",
-   "slug": "zeta",
-   "message": "zeta: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/968868/files/7980010. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
   },
   {
    "level": "error",
@@ -1094,249 +464,14 @@
  "history": [],
  "unparsed": [
   {
-   "slug": "advancement-plaques",
-   "level": "failed",
-   "reason": "advancement-plaques: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/499826/files/5905995. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "aeronautics-hot-air-fix",
-   "level": "failed",
-   "reason": "aeronautics-hot-air-fix: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1633376/files/8654146. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "alexs-caves-unofficial-port",
-   "level": "failed",
-   "reason": "alexs-caves-unofficial-port: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1420348/files/7981977. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "ambientsounds",
-   "level": "failed",
-   "reason": "ambientsounds: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/254284/files/8043019. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "amendments",
-   "level": "failed",
-   "reason": "amendments: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/896746/files/8415430. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "another-furniture",
-   "level": "failed",
-   "reason": "another-furniture: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/610492/files/7355747. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "appleskin",
-   "level": "failed",
-   "reason": "appleskin: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/248787/files/7854442. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "architectury-api",
-   "level": "failed",
-   "reason": "architectury-api: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/419699/files/8492726. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "attributefix",
-   "level": "failed",
-   "reason": "attributefix: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/280510/files/7115922. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
    "slug": "axiom",
    "level": "failed",
    "reason": "Axiom-5.4.2-for-MC1.21.1.jar: no META-INF/neoforge.mods.toml or META-INF/mods.toml"
   },
   {
-   "slug": "azimuth-api",
-   "level": "failed",
-   "reason": "azimuth-api: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1466331/files/8661574. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "bellsandwhistles",
-   "level": "failed",
-   "reason": "bellsandwhistles: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/905040/files/6299879. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "better-advancements",
-   "level": "failed",
-   "reason": "better-advancements: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/272515/files/5850587. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "better-compatibility-checker",
-   "level": "failed",
-   "reason": "better-compatibility-checker: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/551894/files/7404415. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "better-ping-display",
-   "level": "failed",
-   "reason": "better-ping-display: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/292038/files/5936660. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "better-safe-bed",
-   "level": "failed",
-   "reason": "better-safe-bed: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/484804/files/5504769. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "better-than-mending",
-   "level": "failed",
-   "reason": "better-than-mending: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/264738/files/5666358. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "bookshelf",
-   "level": "failed",
-   "reason": "bookshelf: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/228525/files/7606240. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
    "slug": "carbon-config",
-   "level": "failed",
-   "reason": "carbon-config: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/898104/files/8119979. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "cbc-enchanced-shells-create-big-cannons",
-   "level": "failed",
-   "reason": "cbc-enchanced-shells-create-big-cannons: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1489732/files/8470471. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "cccbridge",
-   "level": "failed",
-   "reason": "cccbridge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/656214/files/8232436. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "cgs",
-   "level": "failed",
-   "reason": "cgs: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1194036/files/8501347. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "chunky-pregenerator-forge",
-   "level": "failed",
-   "reason": "chunky-pregenerator-forge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/485681/files/6383261. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "citadel-1-21-1-port",
-   "level": "failed",
-   "reason": "citadel-1-21-1-port: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1415723/files/7982052. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "cloth-config",
-   "level": "failed",
-   "reason": "cloth-config: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/348521/files/5729127. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "clumps",
-   "level": "failed",
-   "reason": "clumps: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/256717/files/5623731. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "coastal-waves",
-   "level": "failed",
-   "reason": "coastal-waves: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1155936/files/7045750. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "copycats",
-   "level": "failed",
-   "reason": "copycats: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/968398/files/7251823. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "coroutil",
-   "level": "failed",
-   "reason": "coroutil: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/237749/files/7796187. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "corpse-x-cosmetic-armor-reworked-compat",
-   "level": "failed",
-   "reason": "corpse-x-cosmetic-armor-reworked-compat: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1208436/files/7891804. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "cosmetic-armor-reworked",
-   "level": "failed",
-   "reason": "cosmetic-armor-reworked: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/237307/files/5610814. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "crafttweaker",
-   "level": "failed",
-   "reason": "crafttweaker: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/239197/files/7772819. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "create-aeronautics-compatability",
-   "level": "failed",
-   "reason": "create-aeronautics-compatability: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1524351/files/8406062. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "create-aeronautics-transmission-linkage",
-   "level": "failed",
-   "reason": "create-aeronautics-transmission-linkage: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1548056/files/8264158. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "create-better-fps",
-   "level": "failed",
-   "reason": "create-better-fps: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1217518/files/7951368. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "create-big-cannons",
-   "level": "failed",
-   "reason": "create-big-cannons: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/646668/files/8303106. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "create-bits-n-bobs",
-   "level": "failed",
-   "reason": "create-bits-n-bobs: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1398383/files/8660793. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "create-bitterballen",
-   "level": "failed",
-   "reason": "create-bitterballen: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/918751/files/7952693. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "create-connected",
-   "level": "failed",
-   "reason": "create-connected: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/947914/files/8299240. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "create-deco",
-   "level": "failed",
-   "reason": "create-deco: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/509285/files/7943181. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "create-diesel-generators",
-   "level": "failed",
-   "reason": "create-diesel-generators: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/869316/files/8542167. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "create-dragons-plus",
-   "level": "failed",
-   "reason": "create-dragons-plus: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1216624/files/8567534. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "create-encased",
-   "level": "failed",
-   "reason": "create-encased: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/829380/files/8549840. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "create-enchantment-industry",
-   "level": "failed",
-   "reason": "create-enchantment-industry: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/688768/files/8576462. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "create-ender-transmission",
-   "level": "failed",
-   "reason": "create-ender-transmission: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/737302/files/7232820. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "create-metallurgy",
-   "level": "failed",
-   "reason": "create-metallurgy: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1007404/files/8128243. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "create-power-loader",
-   "level": "failed",
-   "reason": "create-power-loader: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/936020/files/8126570. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "create-propulsion-simulated",
-   "level": "failed",
-   "reason": "create-propulsion-simulated: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1522736/files/8496246. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "create-radars",
-   "level": "failed",
-   "reason": "create-radars: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1152836/files/8227753. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
+   "level": "warning",
+   "reason": "CarbonConfig-Neoforge-1.21.1-2.0.2.1.jar/carbonconfig: version placeholder '${file.jarVersion}' unresolved"
   },
   {
    "slug": "create-sophisticated-backpacks-compat",
@@ -1344,501 +479,50 @@
    "reason": "create_sophback_compat-1.0.jar/create_sophback_compat: version placeholder '${file.jarVersion}' unresolved"
   },
   {
-   "slug": "create-sound-of-steam",
-   "level": "failed",
-   "reason": "create-sound-of-steam: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1196142/files/7315860. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "createaddition",
-   "level": "failed",
-   "reason": "createaddition: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/439890/files/8188476. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "createnuclear",
-   "level": "failed",
-   "reason": "createnuclear: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/989797/files/7329038. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "creativecore",
-   "level": "failed",
-   "reason": "creativecore: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/257814/files/8594642. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "cubes-without-borders",
-   "level": "failed",
-   "reason": "cubes-without-borders: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/975120/files/5855532. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "curios",
-   "level": "failed",
-   "reason": "curios: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/309927/files/6529130. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "display-delight",
-   "level": "failed",
-   "reason": "display-delight: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1144296/files/8242893. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "doggy-talents-next",
-   "level": "failed",
-   "reason": "doggy-talents-next: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/694492/files/7666746. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "dynamiclights-reforged",
-   "level": "failed",
-   "reason": "dynamiclights-reforged: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/551736/files/6044477. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "enchantment-descriptions",
-   "level": "failed",
-   "reason": "enchantment-descriptions: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/250419/files/8240827. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "enders-delight",
-   "level": "failed",
-   "reason": "enders-delight: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/827163/files/8570814. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "entity-model-features",
-   "level": "failed",
-   "reason": "entity-model-features: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/844662/files/8063559. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "entity-texture-features-fabric",
-   "level": "failed",
-   "reason": "entity-texture-features-fabric: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/568563/files/7930620. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "explosion-overhaul-a-new-level-of-destruction",
-   "level": "failed",
-   "reason": "explosion-overhaul-a-new-level-of-destruction: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1296203/files/8478789. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "farmers-delight",
-   "level": "failed",
-   "reason": "farmers-delight: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/398521/files/8083481. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "fastsuite",
-   "level": "failed",
-   "reason": "fastsuite: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/475117/files/7527945. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "ferritecore",
-   "level": "failed",
-   "reason": "ferritecore: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/429235/files/7524151. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "forgified-fabric-api",
-   "level": "failed",
-   "reason": "forgified-fabric-api: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/889079/files/8539754. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "framedblocks",
-   "level": "failed",
-   "reason": "framedblocks: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/441647/files/8349218. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "framework",
-   "level": "failed",
-   "reason": "framework: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/549225/files/7530361. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "fusion-connected-textures",
-   "level": "failed",
-   "reason": "fusion-connected-textures: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/854949/files/8536618. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "fzzy-config",
-   "level": "failed",
-   "reason": "fzzy-config: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1005914/files/7568897. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "geckolib",
-   "level": "failed",
-   "reason": "geckolib: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/388172/files/8350073. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "iceberg",
-   "level": "failed",
-   "reason": "iceberg: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/520110/files/6423863. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "immersive-paintings",
-   "level": "failed",
-   "reason": "immersive-paintings: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/639584/files/8194870. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "interiors",
-   "level": "failed",
-   "reason": "interiors: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/906239/files/7544005. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "irisshaders",
-   "level": "failed",
-   "reason": "irisshaders: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/455508/files/8242804. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "jade",
-   "level": "failed",
-   "reason": "jade: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/324717/files/8591319. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "jade-addons",
-   "level": "failed",
-   "reason": "jade-addons: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/583345/files/6315149. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "jade-sable-compat",
-   "level": "failed",
-   "reason": "jade-sable-compat: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1530988/files/8269260. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "jamlib",
-   "level": "failed",
-   "reason": "jamlib: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/623764/files/7766752. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "jei",
-   "level": "failed",
-   "reason": "jei: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/238222/files/8569044. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "just-zoom",
-   "level": "failed",
-   "reason": "just-zoom: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/561885/files/6290230. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "kiwi",
-   "level": "failed",
-   "reason": "kiwi: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/303657/files/8423062. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
    "slug": "kotlin-for-forge",
    "level": "failed",
    "reason": "kotlinforforge-5.12.0-all.jar: no META-INF/neoforge.mods.toml or META-INF/mods.toml"
   },
   {
-   "slug": "ksyxis",
-   "level": "failed",
-   "reason": "ksyxis: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/537533/files/7979747. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "legendary-tooltips",
-   "level": "failed",
-   "reason": "legendary-tooltips: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/532127/files/6400660. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "lets-do-beachparty",
-   "level": "failed",
-   "reason": "lets-do-beachparty: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/858691/files/7672876. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "lets-do-brewery-farm-charm-compat",
-   "level": "failed",
-   "reason": "lets-do-brewery-farm-charm-compat: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1038106/files/7830639. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "lets-do-farm-charm",
-   "level": "failed",
-   "reason": "lets-do-farm-charm: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1038103/files/8543130. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "lets-do-herbal-brews",
-   "level": "failed",
-   "reason": "lets-do-herbal-brews: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/951221/files/7657017. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "lets-do-vinery",
-   "level": "failed",
-   "reason": "lets-do-vinery: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/704465/files/7539914. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "lithium",
-   "level": "failed",
-   "reason": "lithium: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/360438/files/8330365. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "lithostitched",
-   "level": "failed",
-   "reason": "lithostitched: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/936015/files/8378498. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "lodestone",
-   "level": "failed",
-   "reason": "lodestone: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/616457/files/7264731. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "lootr",
-   "level": "failed",
-   "reason": "lootr: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/361276/files/8580031. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "mmmmmmmmmmmm",
-   "level": "failed",
-   "reason": "mmmmmmmmmmmm: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/225738/files/8510632. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "modernfix",
-   "level": "failed",
-   "reason": "modernfix: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/790626/files/8459650. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "mouse-tweaks",
-   "level": "failed",
-   "reason": "mouse-tweaks: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/60089/files/5637846. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "no-chat-reports",
-   "level": "failed",
-   "reason": "no-chat-reports: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/634062/files/5885735. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "oceans-delight",
-   "level": "failed",
-   "reason": "oceans-delight: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/841262/files/7939973. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "particle-rain",
-   "level": "failed",
-   "reason": "particle-rain: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/421897/files/8055433. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "placebo",
-   "level": "failed",
-   "reason": "placebo: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/283644/files/8463693. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "polymorph",
-   "level": "failed",
-   "reason": "polymorph: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/388800/files/6794589. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "power-grid",
-   "level": "failed",
-   "reason": "power-grid: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1321420/files/8648636. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "prickle",
-   "level": "failed",
-   "reason": "prickle: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1023259/files/6961457. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "prism-lib",
-   "level": "failed",
-   "reason": "prism-lib: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/638111/files/6372979. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "quark",
-   "level": "failed",
-   "reason": "quark: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/243121/files/8420966. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "rechiseled",
-   "level": "failed",
-   "reason": "rechiseled: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/558998/files/8301793. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "rechiseled-create",
-   "level": "failed",
-   "reason": "rechiseled-create: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/888624/files/8302843. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "reeses-sodium-options",
-   "level": "failed",
-   "reason": "reeses-sodium-options: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/511319/files/8410876. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "refurbished-furniture",
-   "level": "failed",
-   "reason": "refurbished-furniture: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/897116/files/7473565. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "reworked-locator-bar",
-   "level": "failed",
-   "reason": "reworked-locator-bar: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1523749/files/8405131. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "rightclickharvest",
-   "level": "failed",
-   "reason": "rightclickharvest: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/452834/files/7508749. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "ritchies-projectile-library",
-   "level": "failed",
-   "reason": "ritchies-projectile-library: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1279407/files/7587771. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "saturn",
-   "level": "failed",
-   "reason": "saturn: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/670986/files/6139965. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "selene",
-   "level": "failed",
-   "reason": "selene: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/499980/files/8578515. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "shulkerboxtooltip",
-   "level": "failed",
-   "reason": "shulkerboxtooltip: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/315811/files/7768285. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
    "slug": "sinytra-connector",
    "level": "failed",
-   "reason": "sinytra-connector: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/890127/files/8546239. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "slice-and-dice",
-   "level": "failed",
-   "reason": "slice-and-dice: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/659674/files/8547315. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "snow-real-magic",
-   "level": "failed",
-   "reason": "snow-real-magic: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/308663/files/8321970. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "sodium",
-   "level": "failed",
-   "reason": "sodium: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/394468/files/8591792. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "sodium-extra",
-   "level": "failed",
-   "reason": "sodium-extra: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/447673/files/8403576. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "spark",
-   "level": "failed",
-   "reason": "spark: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/361579/files/6225208. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "steam-n-rails-neoforge",
-   "level": "failed",
-   "reason": "steam-n-rails-neoforge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1414670/files/8522154. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "steel-armor-blocks",
-   "level": "failed",
-   "reason": "steel-armor-blocks: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/907369/files/7951468. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "strut-your-stuff",
-   "level": "failed",
-   "reason": "strut-your-stuff: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1486746/files/8540112. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "supermartijn642s-config-lib",
-   "level": "failed",
-   "reason": "supermartijn642s-config-lib: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/438332/files/5546996. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "supermartijn642s-core-lib",
-   "level": "failed",
-   "reason": "supermartijn642s-core-lib: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/454372/files/8601051. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "survival-island",
-   "level": "failed",
-   "reason": "survival-island: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/364426/files/6983426. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "the-roads-more-travelled",
-   "level": "failed",
-   "reason": "the-roads-more-travelled: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1512955/files/8174511. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
+   "reason": "connector-2.0.0-beta.16+1.21.1-full.jar: no META-INF/neoforge.mods.toml or META-INF/mods.toml"
   },
   {
    "slug": "voxy",
    "level": "failed",
    "reason": "voxy-0.2.15-NeoForge-1.21.1.jar: no META-INF/neoforge.mods.toml or META-INF/mods.toml"
-  },
-  {
-   "slug": "xaeros-minimap",
-   "level": "failed",
-   "reason": "xaeros-minimap: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/263420/files/8449819. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "xaeros-world-map",
-   "level": "failed",
-   "reason": "xaeros-world-map: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/317780/files/8449921. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "yungs-api-neoforge",
-   "level": "failed",
-   "reason": "yungs-api-neoforge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1015100/files/6715463. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "yungs-better-caves",
-   "level": "failed",
-   "reason": "yungs-better-caves: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/340583/files/6939522. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "yungs-better-desert-temples-neoforge",
-   "level": "failed",
-   "reason": "yungs-better-desert-temples-neoforge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1015114/files/6276955. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "yungs-better-dungeons-neoforge",
-   "level": "failed",
-   "reason": "yungs-better-dungeons-neoforge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1015112/files/5954804. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "yungs-better-end-island-neoforge",
-   "level": "failed",
-   "reason": "yungs-better-end-island-neoforge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1015127/files/6300968. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "yungs-better-jungle-temples-neoforge",
-   "level": "failed",
-   "reason": "yungs-better-jungle-temples-neoforge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1015123/files/5924482. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "yungs-better-mineshafts-neoforge",
-   "level": "failed",
-   "reason": "yungs-better-mineshafts-neoforge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1015096/files/5812193. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "yungs-better-nether-fortresses-neoforge",
-   "level": "failed",
-   "reason": "yungs-better-nether-fortresses-neoforge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1015118/files/6606621. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "yungs-better-ocean-monuments-neoforge",
-   "level": "failed",
-   "reason": "yungs-better-ocean-monuments-neoforge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1015115/files/5924487. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "yungs-better-strongholds-neoforge",
-   "level": "failed",
-   "reason": "yungs-better-strongholds-neoforge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1015105/files/6272264. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "yungs-better-witch-huts-neoforge",
-   "level": "failed",
-   "reason": "yungs-better-witch-huts-neoforge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1015144/files/5812532. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "yungs-bridges-neoforge",
-   "level": "failed",
-   "reason": "yungs-bridges-neoforge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1015149/files/5812553. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "yungs-extras-neoforge",
-   "level": "failed",
-   "reason": "yungs-extras-neoforge: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/1015146/files/5812546. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
-  },
-  {
-   "slug": "zeta",
-   "level": "failed",
-   "reason": "zeta: download failed: CurseForge rejected the request (403) for https://api.curseforge.com/v1/mods/968868/files/7980010. Since 2026-07-16 the CDN needs a valid CF_API_KEY; check the secret."
   }
  ],
  "platform": [
   {
+   "slug": "create-ender-transmission",
+   "mod_id": "minecraft",
+   "version_range": "[1.21,1.21.1)",
+   "satisfied": false
+  },
+  {
    "slug": "create-sophisticated-backpacks-compat",
    "mod_id": "minecraft",
    "version_range": "[1.20.1,1.21.1)",
+   "satisfied": false
+  },
+  {
+   "slug": "irisshaders",
+   "mod_id": "minecraft",
+   "version_range": "[1.21,1.21.1)",
+   "satisfied": false
+  },
+  {
+   "slug": "jei",
+   "mod_id": "minecraft",
+   "version_range": "[1.21, 1.21.1)",
+   "satisfied": false
+  },
+  {
+   "slug": "lodestone",
+   "mod_id": "minecraft",
+   "version_range": "[1.21,1.21.1)",
    "satisfied": false
   }
  ]

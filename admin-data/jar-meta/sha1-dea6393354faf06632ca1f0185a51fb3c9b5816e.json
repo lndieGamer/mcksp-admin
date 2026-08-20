@@ -1,0 +1,133 @@
+{
+ "size_bytes": 1354014,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[5,)",
+  "mods": [
+   {
+    "mod_id": "sliceanddice",
+    "version": "4.3.3",
+    "display_name": "Create Slice & Dice",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "kotlinforforge",
+      "type": "required",
+      "version_range": "[5.8,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "atmosphere",
+      "type": "required",
+      "version_range": "[1.0.7,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "create",
+      "type": "required",
+      "version_range": "[6.0.9,7.0.0)",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "create_enchantment_industry",
+      "type": "optional",
+      "version_range": "[1.3.0,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   },
+   {
+    "mod_id": "atmosphere",
+    "version": "1.0.17",
+    "display_name": "Atmosphere",
+    "embedded": true,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   },
+   {
+    "mod_id": "ponder",
+    "version": "1.0.87+mc1.21.1",
+    "display_name": "Ponder",
+    "embedded": true,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.206,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1]",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "flywheel",
+      "type": "required",
+      "version_range": "[1.0.0,2.0)",
+      "side": "CLIENT",
+      "ordering": "AFTER"
+     }
+    ]
+   },
+   {
+    "mod_id": "sablecompanion",
+    "version": "1.6.0",
+    "display_name": "Sable Companion",
+    "embedded": true,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.80,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

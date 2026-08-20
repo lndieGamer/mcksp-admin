@@ -1,0 +1,67 @@
+{
+ "size_bytes": 213853,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[1,)",
+  "mods": [
+   {
+    "mod_id": "iceberg",
+    "version": "1.3.2",
+    "display_name": "Iceberg",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.54,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1]",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "advancementplaques",
+      "type": "optional",
+      "version_range": "[1.6.3,)",
+      "side": "BOTH",
+      "ordering": "BEFORE"
+     },
+     {
+      "mod_id": "legendarytooltips",
+      "type": "optional",
+      "version_range": "[1.5.2,)",
+      "side": "BOTH",
+      "ordering": "BEFORE"
+     },
+     {
+      "mod_id": "equipmentcompare",
+      "type": "optional",
+      "version_range": "[1.3.13,)",
+      "side": "BOTH",
+      "ordering": "BEFORE"
+     },
+     {
+      "mod_id": "merchantmarkers",
+      "type": "optional",
+      "version_range": "[1.3.4,)",
+      "side": "BOTH",
+      "ordering": "BEFORE"
+     },
+     {
+      "mod_id": "itemborders",
+      "type": "optional",
+      "version_range": "[1.2.4,)",
+      "side": "BOTH",
+      "ordering": "BEFORE"
+     }
+    ]
+   }
+  ]
+ }
+}

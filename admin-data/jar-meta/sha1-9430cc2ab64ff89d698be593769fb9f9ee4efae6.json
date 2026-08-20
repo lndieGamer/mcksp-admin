@@ -1,0 +1,25 @@
+{
+ "size_bytes": 3642581,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[2,)",
+  "mods": [
+   {
+    "mod_id": "spark",
+    "version": "1.10.124",
+    "display_name": "spark",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[20,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

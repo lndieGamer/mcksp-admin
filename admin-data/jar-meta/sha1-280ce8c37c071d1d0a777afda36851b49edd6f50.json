@@ -1,0 +1,32 @@
+{
+ "size_bytes": 111811,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[2,)",
+  "mods": [
+   {
+    "mod_id": "survivalisland",
+    "version": "0.3.1",
+    "display_name": "Survival Island",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21,)",
+      "side": "CLIENT",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1,)",
+      "side": "CLIENT",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

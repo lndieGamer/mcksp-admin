@@ -1,0 +1,34 @@
+{
+ "size_bytes": 4573244,
+ "meta": {
+  "status": "failed",
+  "notes": [
+   "sinytra-connector-candidate: no META-INF/neoforge.mods.toml or META-INF/mods.toml"
+  ],
+  "loader_version": null,
+  "mods": [
+   {
+    "mod_id": "connector",
+    "version": "2.0.0-beta.17+1.21.1",
+    "display_name": "Sinytra Connector",
+    "embedded": true,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.97,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21,1.22)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

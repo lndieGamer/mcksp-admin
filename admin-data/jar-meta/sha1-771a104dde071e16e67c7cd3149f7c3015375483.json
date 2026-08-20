@@ -1,0 +1,17 @@
+{
+ "size_bytes": 852541,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[1,)",
+  "mods": [
+   {
+    "mod_id": "lithostitched",
+    "version": "1.7.13",
+    "display_name": "Lithostitched",
+    "embedded": false,
+    "dependencies": []
+   }
+  ]
+ }
+}

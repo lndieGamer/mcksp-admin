@@ -1,0 +1,25 @@
+{
+ "size_bytes": 752334,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[1,)",
+  "mods": [
+   {
+    "mod_id": "entity_texture_features",
+    "version": "7.1",
+    "display_name": "Entity Texture Features",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1,)",
+      "side": "CLIENT",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

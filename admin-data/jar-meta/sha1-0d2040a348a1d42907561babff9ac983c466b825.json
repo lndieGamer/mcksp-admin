@@ -1,0 +1,17 @@
+{
+ "size_bytes": 1144367,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[4,)",
+  "mods": [
+   {
+    "mod_id": "displaydelight",
+    "version": "1.7.0",
+    "display_name": "Display Delight",
+    "embedded": false,
+    "dependencies": []
+   }
+  ]
+ }
+}

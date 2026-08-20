@@ -1,0 +1,60 @@
+{
+ "size_bytes": 7905734,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[1,)",
+  "mods": [
+   {
+    "mod_id": "powergrid",
+    "version": "0.6.0.1",
+    "display_name": "Create: Power Grid",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "architectury",
+      "type": "required",
+      "version_range": "[13.0.8,)",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "create",
+      "type": "required",
+      "version_range": "[6.0.9,6.1.0)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "tfmg",
+      "type": "optional",
+      "version_range": "[1.2.0,1.3.0)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "sable",
+      "type": "optional",
+      "version_range": "[2.0.3,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

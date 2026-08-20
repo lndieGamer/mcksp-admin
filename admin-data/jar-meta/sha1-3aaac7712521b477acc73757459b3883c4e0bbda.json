@@ -1,0 +1,39 @@
+{
+ "size_bytes": 465013,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "*",
+  "mods": [
+   {
+    "mod_id": "sodium_extra",
+    "version": "0.9.3+mc1.21.1",
+    "display_name": "Sodium Extra",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1,1.21.2)",
+      "side": "CLIENT",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "sodium",
+      "type": "required",
+      "version_range": "[0.8.12+mc1.21.1,)",
+      "side": "CLIENT",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "greenlight",
+      "type": "optional",
+      "version_range": "[0.1.0,)",
+      "side": "CLIENT",
+      "ordering": "AFTER"
+     }
+    ]
+   }
+  ]
+ }
+}

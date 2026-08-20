@@ -1,0 +1,130 @@
+{
+ "size_bytes": 1707765,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[4,)",
+  "mods": [
+   {
+    "mod_id": "createpropulsion",
+    "version": "1.1.5",
+    "display_name": "Create Propulsion: Simulated",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.219,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1]",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "create",
+      "type": "required",
+      "version_range": "[6.0.6,)",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "createdieselgenerators",
+      "type": "optional",
+      "version_range": "[1.2,)",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "createbigcannons",
+      "type": "optional",
+      "version_range": "*",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "tfmg",
+      "type": "optional",
+      "version_range": "*",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "immersiveengineering",
+      "type": "optional",
+      "version_range": "*",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "mekanism",
+      "type": "optional",
+      "version_range": "*",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "mekanismgenerators",
+      "type": "optional",
+      "version_range": "*",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "northstar",
+      "type": "optional",
+      "version_range": "*",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "stellaris",
+      "type": "optional",
+      "version_range": "*",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "computercraft",
+      "type": "optional",
+      "version_range": "*",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "jei",
+      "type": "optional",
+      "version_range": "*",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "sable",
+      "type": "required",
+      "version_range": "[2.0.3,)",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "sablecompanion",
+      "type": "required",
+      "version_range": "*",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "rocketnautics",
+      "type": "optional",
+      "version_range": "*",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     }
+    ]
+   }
+  ]
+ }
+}

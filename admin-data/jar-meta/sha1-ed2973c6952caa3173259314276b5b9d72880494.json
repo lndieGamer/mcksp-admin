@@ -1,0 +1,53 @@
+{
+ "size_bytes": 11498611,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[1,)",
+  "mods": [
+   {
+    "mod_id": "rechiseled",
+    "version": "1.2.5",
+    "display_name": "Rechiseled",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.0.78-beta,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21,1.21.2)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "supermartijn642corelib",
+      "type": "required",
+      "version_range": "[1.1.20,1.2.0)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "supermartijn642configlib",
+      "type": "required",
+      "version_range": "[1.1.6,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "fusion",
+      "type": "required",
+      "version_range": "[1.2.12,)",
+      "side": "CLIENT",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}
