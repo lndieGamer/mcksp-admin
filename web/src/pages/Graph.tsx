@@ -96,7 +96,6 @@ export default function Graph() {
     const instance = cytoscape({
       container: container.current,
       elements,
-      wheelSensitivity: 0.2,
       style: [
         {
           selector: "node",
