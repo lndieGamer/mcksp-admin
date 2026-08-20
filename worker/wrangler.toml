@@ -7,7 +7,7 @@ compatibility_date = "2025-08-01"
 # then paste the id below.
 [[kv_namespaces]]
 binding = "STATE"
-id = "REPLACE_WITH_KV_NAMESPACE_ID"
+id = "42a5e44878714ff39cc64d6bebfe9ff6"
 
 [vars]
 PAGES_URL = "https://lndiegamer.github.io/mcksp-admin/"
@@ -21,7 +21,7 @@ DEV_ORIGIN = "http://localhost:5173"
 
 [[env.dev.kv_namespaces]]
 binding = "STATE"
-id = "REPLACE_WITH_KV_NAMESPACE_ID"
+id = "42a5e44878714ff39cc64d6bebfe9ff6"
 
 # Secrets -- set with `wrangler secret put <NAME>`, never committed:
 #   GH_CLIENT_ID       GitHub OAuth App client id
