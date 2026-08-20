@@ -3,7 +3,11 @@
  *  Узел — обычный HTML, а не фигура на canvas: только так в него помещаются
  *  иконка мода с CDN, бейдж статуса, чип side и подсветка через CSS. Цена —
  *  фиксированный размер коробки, который должен совпадать с тем, что ушло в
- *  ELK (константы живут в lib/graph.ts). */
+ *  ELK (константы живут в lib/graph.ts).
+ *
+ *  Всё в этом файле обёрнуто в memo и не держит в пропсах ничего, что меняется
+ *  на каждый кадр: полотно с двумя сотнями узлов перерисовывается только когда
+ *  меняется раскладка, а не когда ездит мышь. */
 
 import {
   Handle,
@@ -15,9 +19,11 @@ import {
   type NodeProps,
 } from "@xyflow/react";
 import { ChevronDown, ChevronRight, Layers } from "lucide-react";
+import { memo, useMemo } from "react";
 
 import type { Mod, Side } from "../../lib/types";
 import { ModIcon, SIDE_HEX, STATUS_CLASS, STATUS_ICON, STATUS_LABEL } from "../ui";
+import { useLit } from "./highlight";
 
 /** Уровни детализации. Коробка узла не меняется — меняется её содержимое:
  *  вдали имя набирается крупно, чтобы пережить масштабирование полотна, вблизи
@@ -25,11 +31,8 @@ import { ModIcon, SIDE_HEX, STATUS_CLASS, STATUS_ICON, STATUS_LABEL } from "../u
 const LOD_NEAR = 1.05;
 const LOD_MID = 0.55;
 
-export type NodeState = "normal" | "lit" | "dimmed";
-
 export interface ModNodeData extends Record<string, unknown> {
   mod: Mod;
-  state: NodeState;
   degree: number;
   isFocused: boolean;
 }
@@ -38,7 +41,6 @@ export interface GroupNodeData extends Record<string, unknown> {
   label: string;
   members: Mod[];
   expanded: boolean;
-  state: NodeState;
   tone: Side | null;
 }
 
@@ -47,7 +49,6 @@ export interface OrthoEdgeData extends Record<string, unknown> {
   required: boolean;
   satisfied: boolean;
   count: number;
-  state: NodeState;
 }
 
 export type ModNodeType = RFNode<ModNodeData, "mod">;
@@ -56,14 +57,13 @@ export type ClusterNodeType = RFNode<GroupNodeData, "cluster">;
 export type IslandNodeType = RFNode<GroupNodeData, "island">;
 export type OrthoEdgeType = RFEdge<OrthoEdgeData, "ortho">;
 
-const STATE_CLASS: Record<NodeState, string> = {
-  normal: "opacity-100",
-  lit: "opacity-100",
-  dimmed: "opacity-25 saturate-0",
-};
-
-function useLod() {
-  return useStore((state) => state.transform[2]);
+/** Селектор отдаёт номер ступени, а не сам зум: иначе каждый щелчок колеса
+ *  перерисовывал бы все узлы, хотя картинка меняется только на трёх границах. */
+function useLod(): 0 | 1 | 2 {
+  return useStore((state) => {
+    const zoom = state.transform[2];
+    return zoom < LOD_MID ? 0 : zoom < LOD_NEAR ? 1 : 2;
+  });
 }
 
 /** Незримые точки причаливания. Маршрут рисует ELK, но без хендлов React Flow
@@ -77,22 +77,26 @@ function Ports() {
   );
 }
 
-export function ModNode({ data }: NodeProps<ModNodeType>) {
-  const zoom = useLod();
-  const { mod, state, degree, isFocused } = data;
+export const ModNode = memo(function ModNode({ id, data }: NodeProps<ModNodeType>) {
+  const lod = useLod();
+  const lit = useLit(id, "nodes");
+  const { mod, degree, isFocused } = data;
   const StatusIcon = STATUS_ICON[mod.status];
   const accent = SIDE_HEX[mod.side];
+  const raised = lit || isFocused;
 
   return (
     <div
-      className={`group relative h-full w-full rounded-md border bg-gradient-to-b from-surface to-canvas/80 transition-[opacity,filter,box-shadow,border-color] duration-[var(--dur)] ease-quint ${STATE_CLASS[state]} ${
-        isFocused ? "border-accent" : state === "lit" ? "border-edge-strong" : "border-edge"
+      data-lit={lit || undefined}
+      className={`node-card relative h-full w-full rounded-md border bg-gradient-to-b from-surface to-canvas/80 ${
+        isFocused ? "border-accent" : lit ? "border-edge-strong" : "border-edge"
       }`}
       style={{
-        boxShadow:
-          isFocused || state === "lit"
-            ? `0 0 0 1px ${accent}55, 0 8px 28px -10px ${accent}80, var(--shadow-e2)`
-            : "var(--shadow-e2)",
+        // Тень — статичное значение без перехода: анимировать box-shadow на
+        // двух сотнях узлов означает полный repaint слоя каждый кадр.
+        boxShadow: raised
+          ? `0 0 0 1px ${accent}55, 0 8px 28px -10px ${accent}80, var(--shadow-e2)`
+          : "var(--shadow-e2)",
       }}
     >
       {/* Цвет узла несёт side. Планка слева, а не заливка: заливка цветом на
@@ -103,7 +107,7 @@ export function ModNode({ data }: NodeProps<ModNodeType>) {
         style={{ background: accent }}
       />
 
-      {zoom < LOD_MID ? (
+      {lod === 0 ? (
         <div className="flex h-full items-center gap-2 pr-3 pl-4">
           <span className="truncate text-[15px] leading-tight font-semibold text-ink">
             {mod.name}
@@ -114,7 +118,7 @@ export function ModNode({ data }: NodeProps<ModNodeType>) {
           <ModIcon slug={mod.slug} projectId={mod.project_id} source={mod.source} size={30} />
           <div className="flex min-w-0 flex-1 flex-col gap-0.5">
             <span className="truncate text-xs leading-tight font-medium text-ink">{mod.name}</span>
-            {zoom >= LOD_NEAR ? (
+            {lod === 2 ? (
               <span className="flex items-center gap-1.5 font-mono text-[10px] leading-none text-faint">
                 <span className="truncate">{mod.version ?? "—"}</span>
                 {degree > 0 && (
@@ -139,18 +143,20 @@ export function ModNode({ data }: NodeProps<ModNodeType>) {
       <Ports />
     </div>
   );
-}
+});
 
 /** Свёрнутое семейство: одна коробка вместо 43. Раскрытое — рамка-контейнер,
  *  внутри которой ELK разложил детей. */
-export function ClusterNode({ data }: NodeProps<ClusterNodeType>) {
-  const { label, members, expanded, state } = data;
-  const preview = members.slice(0, 5);
+export const ClusterNode = memo(function ClusterNode({ id, data }: NodeProps<ClusterNodeType>) {
+  const lit = useLit(id, "nodes");
+  const { label, members, expanded } = data;
+  const preview = useMemo(() => members.slice(0, 5), [members]);
 
   if (expanded) {
     return (
       <div
-        className={`h-full w-full rounded-lg border border-dashed border-edge-strong bg-raised/15 transition-opacity duration-[var(--dur)] ${STATE_CLASS[state]}`}
+        data-lit={lit || undefined}
+        className="node-card h-full w-full rounded-lg border border-dashed border-edge-strong bg-raised/15"
       >
         <div className="flex items-center gap-2 px-4 pt-3.5">
           <ChevronDown aria-hidden size={14} strokeWidth={2} className="text-accent" />
@@ -166,8 +172,9 @@ export function ClusterNode({ data }: NodeProps<ClusterNodeType>) {
 
   return (
     <div
-      className={`group relative h-full w-full cursor-pointer rounded-lg border bg-gradient-to-b from-raised to-surface transition-[opacity,filter,box-shadow,border-color,transform] duration-[var(--dur)] ease-quint hover:-translate-y-0.5 hover:border-accent-dim ${STATE_CLASS[state]} ${
-        state === "lit" ? "border-edge-strong" : "border-edge"
+      data-lit={lit || undefined}
+      className={`node-card group relative h-full w-full cursor-pointer rounded-lg border bg-gradient-to-b from-raised to-surface hover:border-accent-dim ${
+        lit ? "border-edge-strong" : "border-edge"
       }`}
       style={{ boxShadow: "var(--shadow-e3)" }}
     >
@@ -217,15 +224,15 @@ export function ClusterNode({ data }: NodeProps<ClusterNodeType>) {
       <Ports />
     </div>
   );
-}
+});
 
 /** Остров одиночек: рамка вокруг плитки чипов. */
-export function IslandNode({ data }: NodeProps<IslandNodeType>) {
-  const { label, members, state, tone } = data;
+export const IslandNode = memo(function IslandNode({ data }: NodeProps<IslandNodeType>) {
+  const { label, members, tone } = data;
   const accent = tone ? SIDE_HEX[tone] : "#3a4545";
   return (
     <div
-      className={`h-full w-full rounded-lg border border-dashed bg-canvas/40 transition-opacity duration-[var(--dur)] ${STATE_CLASS[state]}`}
+      className="node-card h-full w-full rounded-lg border border-dashed bg-canvas/40"
       style={{ borderColor: `${accent}44` }}
     >
       <div className="flex items-center gap-2 px-4 pt-3.5">
@@ -236,17 +243,19 @@ export function IslandNode({ data }: NodeProps<IslandNodeType>) {
       <Ports />
     </div>
   );
-}
+});
 
 /** Одиночка внутри острова: связей нет, значит нет и повода тратить место —
  *  имя, точка side и статус, только если он не «актуален». */
-export function ChipNode({ data }: NodeProps<ChipNodeType>) {
-  const { mod, state, isFocused } = data;
+export const ChipNode = memo(function ChipNode({ id, data }: NodeProps<ChipNodeType>) {
+  const lit = useLit(id, "nodes");
+  const { mod, isFocused } = data;
   const accent = SIDE_HEX[mod.side];
   const StatusIcon = STATUS_ICON[mod.status];
   return (
     <div
-      className={`flex h-full w-full cursor-pointer items-center gap-2 rounded-sm border bg-surface/80 px-2.5 transition-[opacity,filter,border-color,transform] duration-[var(--dur)] ease-quint hover:-translate-y-px hover:border-edge-strong ${STATE_CLASS[state]} ${
+      data-lit={lit || undefined}
+      className={`node-card flex h-full w-full cursor-pointer items-center gap-2 rounded-sm border bg-surface/80 px-2.5 hover:border-edge-strong ${
         isFocused ? "border-accent" : "border-edge"
       }`}
     >
@@ -263,7 +272,7 @@ export function ChipNode({ data }: NodeProps<ChipNodeType>) {
       <Ports />
     </div>
   );
-}
+});
 
 /** Ортогональное ребро по маршруту ELK. Углы скругляются радиусом, который
  *  ужимается под короткое колено, иначе дуга съедает сам поворот. */
@@ -291,22 +300,30 @@ export function orthoPath(points: { x: number; y: number }[], radius = 12): stri
   return `${path} L ${last.x} ${last.y}`;
 }
 
-export function OrthoEdge({ id, data, markerEnd }: EdgeProps<OrthoEdgeType>) {
-  if (!data?.points?.length) return null;
-  const { points, required, satisfied, count, state } = data;
-  const path = orthoPath(points);
-  // Линия — это данные, а не разделитель, поэтому она берёт цвет текстового
-  // токена, а не бордюрного: --edge-strong даёт к фону 1.9:1 и на скриншоте
-  // рёбра просто исчезали, --faint даёт 4.4:1.
+export const OrthoEdge = memo(function OrthoEdge({
+  id,
+  data,
+  markerEnd,
+}: EdgeProps<OrthoEdgeType>) {
+  const lit = useLit(id, "edges");
+  const points = data?.points;
+  // Строка пути зависит только от маршрута ELK, а не от подсветки: пересчитывать
+  // её на каждое наведение — сотня проходов по ломаным впустую.
+  const path = useMemo(() => (points?.length ? orthoPath(points) : ""), [points]);
+  if (!path || !data) return null;
+
+  const { required, satisfied, count } = data;
   const color = satisfied
-    ? state === "lit"
+    ? lit
       ? "var(--color-accent)"
-      : "var(--color-faint)"
+      : // Линия — это данные, а не разделитель, поэтому берёт цвет текстового
+        // токена: --edge-strong даёт к фону 1.9:1 и рёбра просто исчезают.
+        "var(--color-faint)"
     : "var(--color-danger)";
-  const middle = points[Math.floor(points.length / 2)];
+  const middle = points![Math.floor(points!.length / 2)];
 
   return (
-    <g className="transition-opacity duration-[var(--dur)]" opacity={state === "dimmed" ? 0.12 : 1}>
+    <g data-lit={lit || undefined}>
       {/* Широкая невидимая дорожка: попасть курсором в линию толщиной 1.25px
           нереально, а наведение на ребро должно работать. */}
       <path d={path} fill="none" stroke="transparent" strokeWidth={14} />
@@ -315,11 +332,10 @@ export function OrthoEdge({ id, data, markerEnd }: EdgeProps<OrthoEdgeType>) {
         d={path}
         fill="none"
         stroke={color}
-        strokeWidth={state === "lit" ? 2 : 1.25}
+        strokeWidth={lit ? 2 : 1.25}
         strokeLinecap="round"
         strokeDasharray={required ? undefined : "5 5"}
         markerEnd={markerEnd}
-        style={{ filter: state === "lit" ? "drop-shadow(0 0 5px var(--color-accent))" : undefined }}
       />
       {/* Слитые связи: одна линия вместо пучка, число — сколько их схлопнулось. */}
       {count > 1 && (
@@ -335,4 +351,4 @@ export function OrthoEdge({ id, data, markerEnd }: EdgeProps<OrthoEdgeType>) {
       )}
     </g>
   );
-}
+});

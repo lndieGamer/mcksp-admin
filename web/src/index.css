@@ -130,28 +130,48 @@ body {
     radial-gradient(42rem 32rem at 12% -6%, oklch(0.72 0.085 180 / 0.19), transparent 66%),
     radial-gradient(36rem 30rem at 97% 6%, oklch(0.84 0.13 330 / 0.09), transparent 62%),
     radial-gradient(52rem 42rem at 72% 108%, oklch(0.66 0.15 252 / 0.1), transparent 68%);
-  animation: drift 38s var(--ease-quint) infinite alternate;
 }
 
-@keyframes drift {
-  from {
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-  to {
-    transform: translate3d(-1.5%, 1.2%, 0) scale(1.06);
-  }
-}
+/* Пятна не дышат. Анимация масштаба на полноэкранном слое из трёх радиальных
+   градиентов заставляет браузер перерастрировать его каждый кадр — на графе
+   это стоило заметной части бюджета. Глубину дают сами градиенты, движение
+   здесь ничего не добавляло. */
 
 /* Зерно. feTurbulence в data-URI: один тайл 160×160, повторяется. Убирает
-   полосы бэндинга на градиентах выше и даёт фактуру плёнки. */
+   полосы бэндинга на градиентах выше и даёт фактуру плёнки.
+   Без mix-blend-mode: режим наложения на весь вьюпорт втягивает всю страницу
+   в отдельный проход композитора при каждой перерисовке. */
 .grain {
   position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.028;
-  mix-blend-mode: overlay;
+  opacity: 0.022;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ── Подсветка цепочки на графе ────────────────────────────────────────────
+   Приглушение делает CSS, а не React. Атрибут `data-focus` ставится один раз
+   на контейнер поля, `data-lit` — только на те несколько узлов и рёбер, что
+   входят в цепочку. Остальные две сотни элементов не перерисовываются вообще:
+   их гасит вот это правило.
+
+   Гасится только opacity — свойство, которое композитор двигает без repaint.
+   Здесь стоял ещё и `saturate(0)`, и фильтр на каждом из 200 узлов рвал кадр
+   в клочья. */
+.graphfield .node-card,
+.graphfield .react-flow__edge > g {
+  transition: opacity var(--dur) var(--ease-quint);
+}
+
+.graphfield[data-focus="on"] .node-card,
+.graphfield[data-focus="on"] .react-flow__edge > g {
+  opacity: 0.18;
+}
+
+.graphfield[data-focus="on"] .node-card[data-lit],
+.graphfield[data-focus="on"] .react-flow__edge > g[data-lit] {
+  opacity: 1;
 }
 
 /* Точечная сетка. Живёт только под полем графа, поэтому это класс, а не

@@ -24,14 +24,8 @@ import {
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
-import {
-  ChipNode,
-  ClusterNode,
-  IslandNode,
-  ModNode,
-  OrthoEdge,
-  type NodeState,
-} from "../components/graph/parts";
+import { setHighlight } from "../components/graph/highlight";
+import { ChipNode, ClusterNode, IslandNode, ModNode, OrthoEdge } from "../components/graph/parts";
 import { useRunner } from "../components/OpRunner";
 import {
   Button,
@@ -161,6 +155,12 @@ function Graph() {
     return reachable(view.edges, anchor, 3);
   }, [view, hovered, focus]);
 
+  // Подсветка уезжает во внешний стор, а не в `data` узлов: иначе каждое
+  // движение мыши пересобирало бы массив из полутора сотен узлов, и React Flow
+  // перерисовывал бы всё поле. Здесь перерисовываются только те элементы, что
+  // сменили состояние, а приглушение остальных делает CSS по data-focus.
+  useEffect(() => setHighlight(lit), [lit]);
+
   const degrees = useMemo(() => {
     const counts = new Map<string, number>();
     for (const edge of view?.edges ?? []) {
@@ -176,7 +176,6 @@ function Graph() {
     return view.nodes.map((node) => {
       const position = placed.data.positions.get(node.id) ?? { x: 0, y: 0 };
       const size = placed.data.sizes.get(node.id) ?? { width: node.width, height: node.height };
-      const state: NodeState = !lit ? "normal" : lit.nodes.has(node.id) ? "lit" : "dimmed";
       const shared = {
         id: node.id,
         position,
@@ -198,7 +197,6 @@ function Graph() {
             label: node.group?.label ?? node.id,
             members: node.group?.members ?? [],
             expanded: node.kind === "cluster" && expanded.has(clusterIdOf(node.id)),
-            state,
             tone: node.kind === "island" ? (node.group?.id as Side) : null,
           },
         } as RFNode;
@@ -209,13 +207,12 @@ function Graph() {
         zIndex: 1,
         data: {
           mod: node.mod as Mod,
-          state,
           degree: degrees.get(node.id) ?? 0,
           isFocused: node.mod?.slug === focus,
         },
       } as RFNode;
     });
-  }, [view, placed, lit, expanded, focus, degrees]);
+  }, [view, placed, expanded, focus, degrees]);
 
   const edges = useMemo<RFEdge[]>(() => {
     if (!view || !placed) return [];
@@ -230,10 +227,9 @@ function Graph() {
         required: edge.required,
         satisfied: edge.satisfied,
         count: edge.count,
-        state: !lit ? "normal" : lit.edges.has(edge.id) ? "lit" : "dimmed",
       },
     }));
-  }, [view, placed, lit]);
+  }, [view, placed]);
 
   const flyTo = useCallback(
     (id: string) => {
@@ -475,10 +471,13 @@ function Graph() {
             )}
           </div>
 
-          <div className="lit relative min-h-[360px] flex-1 overflow-hidden rounded-md border border-edge bg-canvas/60">
+          <div
+            data-focus={lit ? "on" : undefined}
+            className="graphfield lit relative min-h-[360px] flex-1 overflow-hidden rounded-md border border-edge bg-canvas/60"
+          >
             <ArrowDefs />
             {laying && (
-              <span className="fade-in absolute top-3 right-3 z-20 flex items-center gap-2 rounded-sm border border-edge bg-surface/90 px-2.5 py-1.5 font-mono text-[10px] text-faint backdrop-blur">
+              <span className="fade-in absolute top-3 right-3 z-20 flex items-center gap-2 rounded-sm border border-edge bg-surface px-2.5 py-1.5 font-mono text-[10px] text-faint">
                 <span className="pulse-ring size-1.5 rounded-full bg-accent" />
                 раскладка…
               </span>
@@ -498,6 +497,12 @@ function Graph() {
               nodesDraggable={false}
               nodesConnectable={false}
               elementsSelectable
+              // На поле полторы сотни узлов и сотня рёбер; за экраном обычно
+              // больше половины. Рисовать то, чего не видно, — чистый расход
+              // кадра на панораме.
+              onlyRenderVisibleElements
+              elevateNodesOnSelect={false}
+              elevateEdgesOnSelect={false}
               proOptions={{ hideAttribution: false }}
               onNodeMouseEnter={(_, node) => setHovered(node.id)}
               onNodeMouseLeave={() => setHovered(null)}
@@ -585,7 +590,7 @@ function CanvasButton({
     <button
       title={title}
       onClick={onClick}
-      className="grid size-9 cursor-pointer place-items-center rounded-sm border border-edge bg-surface/90 text-muted backdrop-blur transition-[color,border-color,background-color] duration-[var(--dur)] hover:border-edge-strong hover:bg-raised hover:text-ink"
+      className="grid size-9 cursor-pointer place-items-center rounded-sm border border-edge bg-surface text-muted transition-[color,border-color,background-color] duration-[var(--dur)] hover:border-edge-strong hover:bg-raised hover:text-ink"
     >
       {children}
       <span className="sr-only">{title}</span>

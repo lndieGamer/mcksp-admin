@@ -155,7 +155,7 @@ export default function App() {
       <div aria-hidden className="grain" />
 
       <div className="relative z-10 grid h-screen grid-cols-[15rem_minmax(0,1fr)] overflow-hidden">
-        <aside className="flex min-h-0 flex-col border-r border-edge bg-surface/70 backdrop-blur-xl">
+        <aside className="flex min-h-0 flex-col border-r border-edge bg-surface/95">
           <div className="px-5 py-6">
             <p className="font-display text-lg leading-none font-semibold tracking-[-0.02em] text-ink">
               MCKSP

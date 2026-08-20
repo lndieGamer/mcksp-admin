@@ -10,7 +10,7 @@ import {
   Snowflake,
   type LucideIcon,
 } from "lucide-react";
-import { forwardRef, type ReactNode } from "react";
+import { forwardRef, memo, type ReactNode } from "react";
 
 import type { ModStatus, Side } from "../lib/types";
 
@@ -506,7 +506,7 @@ export function ErrorBox({ error }: { error: unknown }) {
 
 /** Иконка мода. Modrinth раздаёт её по project_id; CurseForge через прокси не
  *  ходит, поэтому там сразу детерминированная заглушка из slug. */
-export function ModIcon({
+export const ModIcon = memo(function ModIcon({
   slug,
   projectId,
   source,
@@ -564,7 +564,7 @@ export function ModIcon({
       )}
     </span>
   );
-}
+});
 
 /** Russian counts need three forms, and "4 ошибок" is the tell that a UI was
  *  translated rather than written. */

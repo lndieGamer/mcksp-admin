@@ -29,7 +29,7 @@ export default function History() {
         <div className="min-h-0 flex-1 overflow-auto">
           <table className="w-full min-w-[900px] border-separate border-spacing-0 text-sm">
             <thead>
-              <tr className="[&>th]:sticky [&>th]:top-0 [&>th]:z-10 [&>th]:border-b [&>th]:border-edge-strong [&>th]:bg-canvas/95 [&>th]:pt-2 [&>th]:backdrop-blur">
+              <tr className="[&>th]:sticky [&>th]:top-0 [&>th]:z-10 [&>th]:border-b [&>th]:border-edge-strong [&>th]:bg-canvas [&>th]:pt-2">
                 <Th className="w-[190px]">когда</Th>
                 <Th className="w-[124px]">операция</Th>
                 <Th>что сделано</Th>

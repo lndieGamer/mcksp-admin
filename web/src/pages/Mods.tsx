@@ -279,7 +279,7 @@ export default function Mods() {
             <col className="w-[116px]" />
           </colgroup>
           <thead>
-            <tr className="[&>th]:sticky [&>th]:top-0 [&>th]:z-10 [&>th]:border-b [&>th]:border-edge-strong [&>th]:bg-canvas/95 [&>th]:pt-2 [&>th]:backdrop-blur">
+            <tr className="[&>th]:sticky [&>th]:top-0 [&>th]:z-10 [&>th]:border-b [&>th]:border-edge-strong [&>th]:bg-canvas [&>th]:pt-2">
               {admin && <Th />}
               <Th onClick={sortBy("name")} sorted={dir("name")}>
                 мод
