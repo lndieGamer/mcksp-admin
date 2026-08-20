@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+/* Заголовки — Unbounded: геометричный, широкий, с техно-характером и полной
+   кириллицей. Тело — Onest: спокойный гротеск, читается в 13px. Данные —
+   JetBrains Mono: версии, хеши, slug'и выстраиваются в колонки.
+   Всё self-host: GitHub Pages не должен зависеть от fonts.gstatic.com. */
+@import "@fontsource-variable/unbounded";
+@import "@fontsource-variable/onest";
+@import "@fontsource-variable/jetbrains-mono";
+
 /* Palette anchor: oxidised copper. The base is tinted 0.008-0.012 chroma toward
    the accent hue -- a neutral grey next to patina reads as dirty. Every text
    token below was measured against --color-canvas, not eyeballed. */
@@ -24,31 +32,70 @@
   --color-warn: oklch(0.78 0.13 75); /* brass   */
   --color-warn-dim: oklch(0.45 0.07 75);
 
-  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", monospace;
+  /* Side несёт цвет узла в графе. Тройка проверена валидатором на фоне
+     --color-surface, а не подобрана на глаз: первая версия (патина / лазурь 250°
+     / фиалка 305°) при дейтеранопии давала между client и server ΔE 1.8 —
+     то есть один цвет, — и даже при нормальном зрении 10.8 при пороге 15.
+     Разводить пришлось и по тону, и по светлоте: 178° / 252° / 330° при
+     L 0.74 / 0.66 / 0.84 дают ΔE 10.4 в худшей паре при протанопии и 17.7 при
+     нормальном зрении. Светлота специально неровная — этим и куплено
+     разделение. Ни один тон не садится на rust (25°) и brass (75°) статусов. */
+  --color-side-both: oklch(0.74 0.11 178);
+  --color-side-both-dim: oklch(0.4 0.06 178);
+  --color-side-client: oklch(0.66 0.15 252);
+  --color-side-client-dim: oklch(0.38 0.08 252);
+  --color-side-server: oklch(0.84 0.13 330);
+  --color-side-server-dim: oklch(0.42 0.08 330);
 
-  --text-2xs: 0.6875rem;
-  --text-xs: 0.75rem;
-  --text-sm: 0.8125rem;
-  --text-base: 0.875rem;
-  --text-md: 1rem;
-  --text-lg: 1.125rem;
-  --text-xl: 1.375rem;
-  --text-2xl: 1.75rem;
+  --font-display: "Unbounded Variable", "Unbounded", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Onest Variable", "Onest", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono Variable", "JetBrains Mono", ui-monospace, monospace;
 
-  --radius-xs: 3px;
-  --radius-sm: 4px;
-  --radius-md: 6px;
+  /* Просторная шкала: база 16px. Мелкие ступени остались для данных в моно. */
+  --text-2xs: 0.75rem;
+  --text-xs: 0.8125rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.625rem;
+  --text-2xl: 2.125rem;
+
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
 
   --ease-quint: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.36, 0.64, 1);
+
+  /* Одна лестница высоты на всю систему. Тень тонирована в акцентный тон, а не
+     в чистый чёрный: чёрная тень на почти чёрном фоне не читается вообще. */
+  --shadow-e1: 0 1px 2px oklch(0.08 0.01 195 / 0.5);
+  --shadow-e2:
+    0 4px 12px -4px oklch(0.06 0.01 195 / 0.6), 0 1px 3px oklch(0.06 0.01 195 / 0.4);
+  --shadow-e3:
+    0 12px 32px -8px oklch(0.05 0.01 195 / 0.7), 0 2px 8px oklch(0.05 0.01 195 / 0.5);
+  --shadow-e4: 0 24px 64px -12px oklch(0.04 0.01 195 / 0.8);
+  --shadow-glow: 0 0 0 1px var(--color-accent-dim), 0 0 24px -4px oklch(0.72 0.085 180 / 0.35);
 }
 
-/* Durations live outside @theme: they are referenced by name in component
-   classes rather than generating a utility each. */
+/* Длительности живут вне @theme: на них ссылаются по имени в классах, а не
+   генерируют по утилите на каждую. */
 :root {
   --dur-fast: 120ms;
-  --dur: 160ms;
-  --dur-slow: 240ms;
+  --dur: 180ms;
+  --dur-slow: 280ms;
+  --dur-slower: 420ms;
+
+  /* Шаг ритма. Просторный режим: 8/12/16/24/32/48/64. */
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
 }
 
 html {
@@ -59,11 +106,59 @@ body {
   background: var(--color-canvas);
   color: var(--color-ink);
   font-family: var(--font-sans);
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
+  line-height: 1.55;
   -webkit-font-smoothing: antialiased;
   font-variant-numeric: tabular-nums;
   /* The shell owns the viewport; the content column is the only scroller. */
   overflow: hidden;
+}
+
+/* ── Атмосфера ────────────────────────────────────────────────────────────
+   Три слоя под интерфейсом, все `position: fixed` и `pointer-events: none`,
+   поэтому ни один не участвует в раскладке и не ловит клики. */
+
+/* Амбиентные пятна. Радиальные градиенты, а не отдельные div с blur(120px):
+   блюр такого радиуса заводит композитор на каждый кадр, градиент рисуется
+   один раз и живёт в слое. */
+.ambient {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(42rem 32rem at 12% -6%, oklch(0.72 0.085 180 / 0.19), transparent 66%),
+    radial-gradient(36rem 30rem at 97% 6%, oklch(0.84 0.13 330 / 0.09), transparent 62%),
+    radial-gradient(52rem 42rem at 72% 108%, oklch(0.66 0.15 252 / 0.1), transparent 68%);
+  animation: drift 38s var(--ease-quint) infinite alternate;
+}
+
+@keyframes drift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(-1.5%, 1.2%, 0) scale(1.06);
+  }
+}
+
+/* Зерно. feTurbulence в data-URI: один тайл 160×160, повторяется. Убирает
+   полосы бэндинга на градиентах выше и даёт фактуру плёнки. */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.028;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Точечная сетка. Живёт только под полем графа, поэтому это класс, а не
+   глобальный слой; позицию задаёт background-position от панорамы. */
+.dotfield {
+  background-image: radial-gradient(oklch(0.38 0.014 195 / 0.55) 1px, transparent 1px);
+  background-size: 28px 28px;
 }
 
 /* The chrome we did not draw still belongs to the system: selection, caret and
@@ -103,8 +198,8 @@ body {
    arrive in Windows blue, which is the loudest colour on the screen. */
 input[type="checkbox"] {
   accent-color: var(--color-accent);
-  width: 13px;
-  height: 13px;
+  width: 15px;
+  height: 15px;
 }
 
 a {
@@ -124,6 +219,8 @@ samp,
 h1,
 h2,
 h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.015em;
   text-wrap: balance;
 }
 
@@ -134,7 +231,7 @@ p {
 :focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 /* Table rules are hairlines, not borders: at 1px solid --edge a 200-row table
@@ -143,8 +240,95 @@ p {
   border-bottom: 1px solid color-mix(in oklch, var(--color-edge) 55%, transparent);
 }
 
-/* A row the last operation touched glows once and settles. The only animation
-   in the system longer than 240ms. */
+/* Верхний блик на поверхностях. Один пиксель светлее самой поверхности вдоль
+   верхней кромки — то, что отличает «панель» от «прямоугольника». */
+.lit {
+  box-shadow:
+    inset 0 1px 0 oklch(1 0 0 / 0.045),
+    var(--shadow-e2);
+}
+
+/* ── Движение ──────────────────────────────────────────────────────────── */
+
+/* Вход строк и карточек. Задержку кладёт вызывающая сторона через
+   --stagger-index, чтобы не плодить по классу на каждую позицию. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 6px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.rise {
+  animation: rise var(--dur-slow) var(--ease-quint) backwards;
+  animation-delay: calc(var(--stagger-index, 0) * 26ms);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fade-in var(--dur) var(--ease-quint) backwards;
+}
+
+/* Смена маршрута. Кроссфейд со сдвигом: 180ms, дальше страница живёт сама. */
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 8px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.page-enter {
+  animation: page-enter var(--dur-slow) var(--ease-quint);
+}
+
+/* Модальное окно приезжает из центра, а не появляется. Затемнение и само окно
+   стартуют вместе, но окно чуть дольше — иначе оно опережает фон и выглядит
+   приклеенным поверх. */
+@keyframes scrim-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 8px, 0) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.scrim {
+  animation: scrim-in var(--dur) ease-out;
+}
+
+.modal {
+  animation: modal-in var(--dur-slow) var(--ease-spring);
+}
+
+/* A row the last operation touched glows once and settles. */
 @keyframes settle {
   from {
     background-color: color-mix(in oklch, var(--color-accent) 22%, transparent);
@@ -156,6 +340,44 @@ p {
 
 .settle {
   animation: settle 1.2s var(--ease-quint);
+}
+
+/* Пульс живого: индикатор свежести анализа, счётчик операции в работе. */
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 oklch(0.72 0.085 180 / 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 7px oklch(0.72 0.085 180 / 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 oklch(0.72 0.085 180 / 0);
+  }
+}
+
+.pulse-ring {
+  animation: pulse-ring 2.4s var(--ease-quint) infinite;
+}
+
+/* Бегущий блик по скелетону — вместо мигания opacity. */
+@keyframes shimmer {
+  from {
+    background-position: -150% 0;
+  }
+  to {
+    background-position: 250% 0;
+  }
+}
+
+.shimmer {
+  background-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    oklch(0.38 0.014 195 / 0.35) 45%,
+    transparent 90%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.6s linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {

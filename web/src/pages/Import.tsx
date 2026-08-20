@@ -1,7 +1,22 @@
+import { Download, FileArchive, Link2, Lock, Plus, Search, Upload } from "lucide-react";
 import { useState } from "react";
 
 import { useRunner } from "../components/OpRunner";
-import { Band, Button, Empty, ErrorBox, Input, Page, PageTitle, Tag, day } from "../components/ui";
+import {
+  Band,
+  Button,
+  Card,
+  Empty,
+  ErrorBox,
+  Input,
+  ModIcon,
+  Page,
+  PageTitle,
+  Segmented,
+  Select,
+  Tag,
+  day,
+} from "../components/ui";
 import { api, curseforge, modrinth } from "../lib/api";
 import { usePublic, useSession } from "../lib/data";
 import type { Side } from "../lib/types";
@@ -49,33 +64,23 @@ export default function Import() {
   const session = useSession();
   const [tab, setTab] = useState<Tab>("modrinth");
 
-  if (!session.data) return <Empty>раздел доступен только администратору</Empty>;
+  if (!session.data) return <Empty icon={Lock}>раздел доступен только администратору</Empty>;
 
   return (
     <Page>
       <PageTitle
+        icon={Upload}
         actions={
-          <div role="tablist" className="flex gap-1">
-            {(
-              [
-                ["modrinth", "Modrinth"],
-                ["curseforge", "CurseForge"],
-                ["jar", "Локальный jar"],
-              ] as const
-            ).map(([id, label]) => (
-              <button
-                key={id}
-                role="tab"
-                aria-selected={tab === id}
-                onClick={() => setTab(id)}
-                className={`rounded-sm px-3 py-1.5 text-sm transition-colors duration-[--dur-fast] ${
-                  tab === id ? "bg-raised text-ink" : "text-muted hover:bg-raised/50 hover:text-ink"
-                }`}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
+          <Segmented<Tab>
+            label="откуда добавляем"
+            value={tab}
+            onChange={setTab}
+            options={[
+              { value: "modrinth", label: "Modrinth", icon: Search },
+              { value: "curseforge", label: "CurseForge", icon: Search },
+              { value: "jar", label: "Локальный jar", icon: FileArchive },
+            ]}
+          />
         }
       >
         импорт
@@ -97,6 +102,53 @@ function useInstalled() {
   };
 }
 
+/** Карточка результата поиска. Одна на оба каталога: различаются только
+ *  источник иконки и подпись счётчика загрузок. */
+function Hit({
+  title,
+  description,
+  downloads,
+  projectId,
+  slug,
+  installed,
+  active,
+  onClick,
+  index,
+}: {
+  title: string;
+  description: string;
+  downloads: number;
+  projectId?: string;
+  slug: string;
+  installed: boolean;
+  active: boolean;
+  onClick: () => void;
+  index: number;
+}) {
+  return (
+    <li style={{ "--stagger-index": Math.min(index, 12) } as React.CSSProperties}>
+      <button onClick={onClick} className="rise block w-full text-left">
+        <Card
+          interactive
+          className={`flex items-start gap-3 px-4 py-3 ${active ? "border-accent-dim" : ""}`}
+        >
+          <ModIcon slug={slug} projectId={projectId} source="modrinth" size={34} />
+          <div className="min-w-0 flex-1">
+            <p className="flex items-center gap-2">
+              <span className="min-w-0 truncate text-xs text-ink">{title}</span>
+              {installed && <Tag tone="accent">уже в паке</Tag>}
+              <span className="ml-auto shrink-0 font-mono text-2xs text-faint">
+                {downloads.toLocaleString("ru-RU")} ↓
+              </span>
+            </p>
+            <p className="mt-1 line-clamp-2 text-2xs text-faint">{description}</p>
+          </div>
+        </Card>
+      </button>
+    </li>
+  );
+}
+
 function ModrinthTab() {
   const runner = useRunner();
   const installed = useInstalled();
@@ -112,7 +164,9 @@ function ModrinthTab() {
   const search = () => {
     setError(null);
     setVersions(null);
-    modrinth<{ hits: MrHit[] }>(`/v2/search?query=${encodeURIComponent(query)}&facets=${facets}&limit=20`)
+    modrinth<{ hits: MrHit[] }>(
+      `/v2/search?query=${encodeURIComponent(query)}&facets=${facets}&limit=20`,
+    )
       .then((data) => setHits(data.hits))
       .catch(setError);
   };
@@ -127,7 +181,11 @@ function ModrinthTab() {
   };
 
   const sideFor = (hit: MrHit): Side =>
-    hit.server_side === "unsupported" ? "client" : hit.client_side === "unsupported" ? "server" : "both";
+    hit.server_side === "unsupported"
+      ? "client"
+      : hit.client_side === "unsupported"
+        ? "server"
+        : "both";
 
   return (
     <Band
@@ -139,92 +197,91 @@ function ModrinthTab() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && search()}
-            className="w-64"
+            className="w-72"
           />
-          <Button onClick={search}>искать</Button>
+          <Button icon={Search} onClick={search}>
+            искать
+          </Button>
         </>
       }
     >
       {error != null ? <ErrorBox error={error} /> : null}
       {!hits && (
-        <p className="max-w-[70ch] text-sm text-faint">
+        <p className="max-w-[74ch] text-xs text-faint">
           Введите название и нажмите «искать». Ищутся только моды под{" "}
-          <span className="font-mono text-xs">
+          <span className="font-mono">
             {LOADER} {MC}
           </span>
           , остальное Modrinth не вернёт.
         </p>
       )}
 
-      <div className="grid gap-3 lg:grid-cols-2">
-        <ul className="space-y-1">
-          {(hits ?? []).map((hit) => (
-            <li key={hit.project_id}>
-              <button
-                onClick={() => open(hit)}
-                className="w-full rounded border border-edge px-3 py-2 text-left text-sm transition-colors duration-[--dur-fast] hover:border-accent"
-              >
-                <span className="text-ink">{hit.title}</span>
-                {installed.projects.has(hit.project_id) && (
-                  <span className="ml-2 text-accent">уже в паке</span>
-                )}
-                <span className="ml-2 text-faint">{hit.downloads.toLocaleString("ru-RU")} ↓</span>
-                <p className="mt-0.5 line-clamp-2 text-faint">{hit.description}</p>
-              </button>
-            </li>
+      <div className="grid gap-4 lg:grid-cols-2">
+        <ul className="space-y-2">
+          {(hits ?? []).map((hit, i) => (
+            <Hit
+              key={hit.project_id}
+              index={i}
+              title={hit.title}
+              description={hit.description}
+              downloads={hit.downloads}
+              projectId={hit.project_id}
+              slug={hit.slug}
+              installed={installed.projects.has(hit.project_id)}
+              active={versions?.hit.project_id === hit.project_id}
+              onClick={() => open(hit)}
+            />
           ))}
         </ul>
 
         {versions && (
-          <div className="space-y-1">
-            <p className="text-sm text-muted">
-              версии «{versions.hit.title}» · side по Modrinth: {sideFor(versions.hit)}
+          <div className="fade-in space-y-2">
+            <p className="text-xs text-muted">
+              версии «{versions.hit.title}» · side по Modrinth:{" "}
+              <span className="font-mono">{sideFor(versions.hit)}</span>
             </p>
             {versions.list.slice(0, 15).map((version) => {
               const missing = version.dependencies
                 .filter((d) => d.dependency_type === "required" && d.project_id)
                 .filter((d) => !installed.projects.has(d.project_id as string));
               return (
-                <div
-                  key={version.id}
-                  className="rounded-sm border border-edge px-3 py-2 text-sm"
-                >
-                  <div className="flex items-baseline gap-2">
-                    <span className="font-mono text-ink">{version.version_number}</span>
-                    <span className="text-faint">{day(version.date_published)}</span>
-                    <span className="ml-auto">
-                      <Button
-                        tone="primary"
-                        onClick={() =>
-                          runner.propose(
-                            {
-                              op: "add-modrinth",
-                              version_id: version.id,
-                              slug: versions.hit.slug,
-                              side: sideFor(versions.hit),
-                            },
-                            <p className="text-muted">
-                              Будет добавлен <b>{versions.hit.title}</b> версии{" "}
-                              {version.version_number}, side <code>{sideFor(versions.hit)}</code>,
-                              метафайл <code>mods/{versions.hit.slug}.pw.toml</code>. Точный дифф
-                              покажет коммит.
-                            </p>,
-                          )
-                        }
-                      >
-                        добавить
-                      </Button>
+                <Card key={version.id} className="space-y-2 px-4 py-3">
+                  <div className="flex items-center gap-2.5">
+                    <span className="font-mono text-xs text-ink">{version.version_number}</span>
+                    <span className="font-mono text-2xs text-faint">
+                      {day(version.date_published)}
                     </span>
+                    <Button
+                      className="ml-auto"
+                      tone="primary"
+                      icon={Plus}
+                      onClick={() =>
+                        runner.propose(
+                          {
+                            op: "add-modrinth",
+                            version_id: version.id,
+                            slug: versions.hit.slug,
+                            side: sideFor(versions.hit),
+                          },
+                          <p className="text-muted">
+                            Будет добавлен <b>{versions.hit.title}</b> версии{" "}
+                            {version.version_number}, side <code>{sideFor(versions.hit)}</code>,
+                            метафайл <code>mods/{versions.hit.slug}.pw.toml</code>. Точный дифф
+                            покажет коммит.
+                          </p>,
+                        )
+                      }
+                    >
+                      добавить
+                    </Button>
                   </div>
-                  <p className="mt-1 text-faint">
+                  <p className="text-2xs text-faint">
                     зависимостей: {version.dependencies.length}
                     {missing.length > 0 && (
-                      <span className="ml-2 text-warn">
-                        {missing.length} обязательных нет в паке
-                      </span>
+                      <span className="ml-2 text-warn">{missing.length} обязательных нет в паке</span>
                     )}
                   </p>
-                </div>
+                </Card>
               );
             })}
           </div>
@@ -270,55 +327,62 @@ function CurseForgeTab() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && search()}
-            className="w-64"
+            className="w-72"
           />
-          <Button onClick={search}>искать</Button>
+          <Button icon={Search} onClick={search}>
+            искать
+          </Button>
         </>
       }
     >
       {error != null ? <ErrorBox error={error} /> : null}
-      <div className="grid gap-3 lg:grid-cols-2">
-        <ul className="space-y-1">
-          {(hits ?? []).map((hit) => (
-            <li key={hit.id}>
-              <button
-                onClick={() => open(hit)}
-                className="w-full rounded border border-edge px-3 py-2 text-left text-sm transition-colors duration-[--dur-fast] hover:border-accent"
-              >
-                <span className="text-ink">{hit.name}</span>
-                <span className="ml-2 text-faint">
-                  {hit.downloadCount.toLocaleString("ru-RU")} ↓
-                </span>
-                <p className="mt-0.5 line-clamp-2 text-faint">{hit.summary}</p>
-              </button>
-            </li>
+      <div className="grid gap-4 lg:grid-cols-2">
+        <ul className="space-y-2">
+          {(hits ?? []).map((hit, i) => (
+            <Hit
+              key={hit.id}
+              index={i}
+              title={hit.name}
+              description={hit.summary}
+              downloads={hit.downloadCount}
+              slug={String(hit.name)}
+              installed={false}
+              active={files?.hit.id === hit.id}
+              onClick={() => open(hit)}
+            />
           ))}
         </ul>
 
         {files && (
-          <div className="space-y-1">
-            <p className="text-sm text-muted">файлы «{files.hit.name}»</p>
+          <div className="fade-in space-y-2">
+            <p className="text-xs text-muted">файлы «{files.hit.name}»</p>
             {files.list.slice(0, 15).map((file) => (
-              <div key={file.id} className="flex items-baseline gap-2 rounded-sm border border-edge px-3 py-2 text-sm">
-                <span className="truncate font-mono text-ink">{file.displayName}</span>
-                <span className="text-faint">{day(file.fileDate)}</span>
-                <span className="ml-auto">
-                  <Button
-                    tone="primary"
-                    onClick={() =>
-                      runner.propose(
-                        { op: "add-curseforge", project_id: files.hit.id, file_id: file.id, side: "both" },
-                        <p className="text-muted">
-                          Будет добавлен <b>{files.hit.name}</b>, файл {file.fileName}, side{" "}
-                          <code>both</code>. Точный дифф покажет коммит.
-                        </p>,
-                      )
-                    }
-                  >
-                    добавить
-                  </Button>
+              <Card key={file.id} className="flex items-center gap-2.5 px-4 py-3">
+                <span className="min-w-0 flex-1 truncate font-mono text-xs text-ink">
+                  {file.displayName}
                 </span>
-              </div>
+                <span className="shrink-0 font-mono text-2xs text-faint">{day(file.fileDate)}</span>
+                <Button
+                  tone="primary"
+                  icon={Plus}
+                  onClick={() =>
+                    runner.propose(
+                      {
+                        op: "add-curseforge",
+                        project_id: files.hit.id,
+                        file_id: file.id,
+                        side: "both",
+                      },
+                      <p className="text-muted">
+                        Будет добавлен <b>{files.hit.name}</b>, файл {file.fileName}, side{" "}
+                        <code>both</code>. Точный дифф покажет коммит.
+                      </p>,
+                    )
+                  }
+                >
+                  добавить
+                </Button>
+              </Card>
             ))}
           </div>
         )}
@@ -338,6 +402,7 @@ function JarTab() {
   const installed = useInstalled();
   const [rows, setRows] = useState<Identified[]>([]);
   const [error, setError] = useState<unknown>(null);
+  const [dragging, setDragging] = useState(false);
   const [name, setName] = useState("");
   const [url, setUrl] = useState("");
   const [side, setSide] = useState<Side>("both");
@@ -354,8 +419,8 @@ function JarTab() {
           .join("");
         hashed.push({ file: file.name, sha1 });
       }
-      // One batch request identifies the whole drop; this is identify-jars.ps1,
-      // just interactive.
+      // Один батч-запрос опознаёт всю пачку — это identify-jars.ps1, только
+      // интерактивный.
       const map = await api<Record<string, MrVersion & { project_id: string }>>(
         "/api/mr/v2/version_files",
         {
@@ -371,18 +436,28 @@ function JarTab() {
   };
 
   return (
-    <div className="space-y-7">
+    <div className="space-y-8">
       <Band title="опознание по SHA-1">
         <label
-          className="flex cursor-pointer flex-col items-center gap-1 rounded-md border border-dashed border-edge px-4 py-10 text-sm text-faint transition-colors duration-[--dur-fast] hover:border-accent hover:text-muted"
-          onDragOver={(e) => e.preventDefault()}
+          className={`flex cursor-pointer flex-col items-center gap-2 rounded-lg border border-dashed px-4 py-14 text-center text-xs transition-[border-color,background-color,transform] duration-[var(--dur)] ease-quint ${
+            dragging
+              ? "scale-[1.01] border-accent bg-accent/5 text-ink"
+              : "border-edge text-faint hover:border-accent-dim hover:bg-raised/20 hover:text-muted"
+          }`}
+          onDragOver={(e) => {
+            e.preventDefault();
+            setDragging(true);
+          }}
+          onDragLeave={() => setDragging(false)}
           onDrop={(e) => {
             e.preventDefault();
+            setDragging(false);
             void onFiles(e.dataTransfer.files);
           }}
         >
-          <span>перетащите jar сюда или выберите файлы</span>
-          <span className="text-faint">
+          <FileArchive aria-hidden size={26} strokeWidth={1.5} className="text-faint" />
+          <span className="text-sm">перетащите jar сюда или выберите файлы</span>
+          <span className="text-2xs text-faint">
             хеш считается в браузере через crypto.subtle, сам файл никуда не уходит
           </span>
           <input
@@ -395,36 +470,43 @@ function JarTab() {
         </label>
         {error != null ? <ErrorBox error={error} /> : null}
         {rows.length > 0 && (
-          <ul className="mt-3 space-y-1 text-sm">
-            {rows.map((row) => (
-              <li key={row.sha1} className="flex flex-wrap items-center gap-2">
-                <span className="font-mono text-muted">{row.file}</span>
-                {row.version ? (
-                  <>
-                    <Tag tone="accent">опознан на Modrinth</Tag>
-                    <span className="font-mono text-faint">{row.version.version_number}</span>
-                    {installed.projects.has(row.version.project_id) ? (
-                      <Tag>уже в паке</Tag>
-                    ) : (
-                      <Button
-                        tone="primary"
-                        onClick={() =>
-                          runner.propose(
-                            { op: "add-modrinth", version_id: row.version!.id },
-                            <p className="text-muted">
-                              Будет добавлен мод из {row.file} (версия{" "}
-                              {row.version!.version_number}); side определится по Modrinth.
-                            </p>,
-                          )
-                        }
-                      >
-                        добавить
-                      </Button>
-                    )}
-                  </>
-                ) : (
-                  <Tag tone="warn">не опознан — нужна прямая ссылка</Tag>
-                )}
+          <ul className="space-y-2">
+            {rows.map((row, i) => (
+              <li key={row.sha1} style={{ "--stagger-index": i } as React.CSSProperties}>
+                <Card className="rise flex flex-wrap items-center gap-2.5 px-4 py-3">
+                  <FileArchive aria-hidden size={15} strokeWidth={1.75} className="text-faint" />
+                  <span className="font-mono text-xs text-muted">{row.file}</span>
+                  {row.version ? (
+                    <>
+                      <Tag tone="accent">опознан на Modrinth</Tag>
+                      <span className="font-mono text-2xs text-faint">
+                        {row.version.version_number}
+                      </span>
+                      {installed.projects.has(row.version.project_id) ? (
+                        <Tag>уже в паке</Tag>
+                      ) : (
+                        <Button
+                          className="ml-auto"
+                          tone="primary"
+                          icon={Download}
+                          onClick={() =>
+                            runner.propose(
+                              { op: "add-modrinth", version_id: row.version!.id },
+                              <p className="text-muted">
+                                Будет добавлен мод из {row.file} (версия{" "}
+                                {row.version!.version_number}); side определится по Modrinth.
+                              </p>,
+                            )
+                          }
+                        >
+                          добавить
+                        </Button>
+                      )}
+                    </>
+                  ) : (
+                    <Tag tone="warn">не опознан — нужна прямая ссылка</Tag>
+                  )}
+                </Card>
               </li>
             ))}
           </ul>
@@ -432,43 +514,50 @@ function JarTab() {
       </Band>
 
       <Band title="добавить по прямой ссылке">
-        <p className="max-w-[70ch] text-xs text-faint">
-          Для неопознанных jar: залейте файл в GitHub Release руками и вставьте прямую ссылку —
-          ровно так в паке живут kiriieshki, steampunk-armory и voxy.
-        </p>
-        <div className="flex flex-wrap items-end gap-2">
-          <Input placeholder="имя мода" value={name} onChange={(e) => setName(e.target.value)} className="w-48" />
-          <Input
-            placeholder="https://github.com/.../releases/download/.../mod.jar"
-            value={url}
-            onChange={(e) => setUrl(e.target.value)}
-            className="w-[28rem]"
-          />
-          <select
-            value={side}
-            onChange={(e) => setSide(e.target.value as Side)}
-            className="h-[30px] rounded-sm border border-edge bg-canvas px-2 text-xs text-ink"
-          >
-            <option value="both">both</option>
-            <option value="client">client</option>
-            <option value="server">server</option>
-          </select>
-          <Button
-            tone="primary"
-            disabled={!name || !url.startsWith("https://")}
-            onClick={() =>
-              runner.propose(
-                { op: "add-url", name, url, side },
-                <p className="text-muted">
-                  <code>packwiz url add {name} {url}</code>, затем side <code>{side}</code>. У такого
-                  мода не будет блока <code>[update]</code> — обновлять его придётся вручную.
-                </p>,
-              )
-            }
-          >
-            добавить
-          </Button>
-        </div>
+        <Card className="space-y-4 px-5 py-5">
+          <p className="max-w-[74ch] text-xs text-faint">
+            Для неопознанных jar: залейте файл в GitHub Release руками и вставьте прямую ссылку —
+            ровно так в паке живут kiriieshki, steampunk-armory и voxy.
+          </p>
+          <div className="flex flex-wrap items-end gap-2.5">
+            <Input
+              placeholder="имя мода"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="w-52"
+            />
+            <Input
+              placeholder="https://github.com/.../releases/download/.../mod.jar"
+              value={url}
+              onChange={(e) => setUrl(e.target.value)}
+              className="w-[30rem]"
+            />
+            <Select value={side} onChange={(e) => setSide(e.target.value as Side)}>
+              <option value="both">both</option>
+              <option value="client">client</option>
+              <option value="server">server</option>
+            </Select>
+            <Button
+              tone="primary"
+              icon={Link2}
+              disabled={!name || !url.startsWith("https://")}
+              onClick={() =>
+                runner.propose(
+                  { op: "add-url", name, url, side },
+                  <p className="text-muted">
+                    <code>
+                      packwiz url add {name} {url}
+                    </code>
+                    , затем side <code>{side}</code>. У такого мода не будет блока{" "}
+                    <code>[update]</code> — обновлять его придётся вручную.
+                  </p>,
+                )
+              }
+            >
+              добавить
+            </Button>
+          </div>
+        </Card>
       </Band>
     </div>
   );

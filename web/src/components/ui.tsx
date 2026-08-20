@@ -1,6 +1,18 @@
+import {
+  CircleArrowUp,
+  CircleCheck,
+  CircleHelp,
+  CircleSlash,
+  CircleX,
+  Globe,
+  Monitor,
+  Server,
+  Snowflake,
+  type LucideIcon,
+} from "lucide-react";
 import { forwardRef, type ReactNode } from "react";
 
-import type { ModStatus } from "../lib/types";
+import type { ModStatus, Side } from "../lib/types";
 
 export const STATUS_LABEL: Record<ModStatus, string> = {
   current: "актуален",
@@ -11,16 +23,16 @@ export const STATUS_LABEL: Record<ModStatus, string> = {
   unknown: "не разобран",
 };
 
-/* Status never rides on colour alone: the glyph carries the same information,
+/* Status never rides on colour alone: the icon carries the same information,
    which is what makes the table readable in peripheral vision and to anyone
    who cannot separate rust from patina. */
-export const STATUS_GLYPH: Record<ModStatus, string> = {
-  current: "●",
-  update_safe: "▲",
-  update_blocked: "⊘",
-  broken: "✕",
-  frozen: "◇",
-  unknown: "◻",
+export const STATUS_ICON: Record<ModStatus, LucideIcon> = {
+  current: CircleCheck,
+  update_safe: CircleArrowUp,
+  update_blocked: CircleSlash,
+  broken: CircleX,
+  frozen: Snowflake,
+  unknown: CircleHelp,
 };
 
 export const STATUS_CLASS: Record<ModStatus, string> = {
@@ -35,8 +47,8 @@ export const STATUS_CLASS: Record<ModStatus, string> = {
   unknown: "text-faint",
 };
 
-/** Cytoscape cannot read CSS variables, so /graph needs the resolved values.
- *  Measured from the OKLCH tokens in index.css -- keep the two in step. */
+/** Резолвнутые значения токенов: их читает SVG рёбер графа и inline-стили,
+ *  куда CSS-переменную не подставить. Держать в шаге с index.css. */
 export const STATUS_HEX: Record<ModStatus, string> = {
   current: "#acb3b2",
   update_safe: "#63b6a7",
@@ -46,38 +58,40 @@ export const STATUS_HEX: Record<ModStatus, string> = {
   unknown: "#7b8282",
 };
 
-/** Node fill on /graph: the status hue mixed 16% into the canvas. Cytoscape
- *  compositing a saturated hex at low opacity turns the same colours to mud,
- *  so the blend is resolved here instead. */
-export const STATUS_FILL: Record<ModStatus, string> = {
-  current: "#222827",
-  update_safe: "#172826",
-  update_blocked: "#2c2617",
-  broken: "#291918",
-  frozen: "#1a2020",
-  unknown: "#1a2020",
+export const SIDE_LABEL: Record<Side, string> = {
+  both: "клиент и сервер",
+  client: "только клиент",
+  server: "только сервер",
 };
 
-export const PALETTE_HEX = {
-  canvas: "#080d0d",
-  surface: "#111817",
-  raised: "#1a2222",
-  edge: "#273030",
-  edgeStrong: "#3a4545",
-  ink: "#e8ecec",
-  muted: "#acb3b2",
-  faint: "#7b8282",
-  accent: "#63b6a7",
-  danger: "#d55753",
-  warn: "#e8aa4e",
-} as const;
+export const SIDE_ICON: Record<Side, LucideIcon> = {
+  both: Globe,
+  client: Monitor,
+  server: Server,
+};
 
-export function StatusMark({ status, label = true }: { status: ModStatus; label?: boolean }) {
+/** Цвет узла в графе несёт side. Тройка проверена на различимость при
+ *  протан/дейтеран/тританопии — подробности в комментарии у токенов
+ *  --color-side-* в index.css. Держать в шаге с ними. */
+export const SIDE_HEX: Record<Side, string> = {
+  both: "#4dc1ab",
+  client: "#4495ea",
+  server: "#faabf3",
+};
+
+export function StatusMark({
+  status,
+  label = true,
+  size = 14,
+}: {
+  status: ModStatus;
+  label?: boolean;
+  size?: number;
+}) {
+  const Icon = STATUS_ICON[status];
   return (
     <span className={`inline-flex items-center gap-1.5 ${STATUS_CLASS[status]}`}>
-      <span aria-hidden className="text-2xs leading-none">
-        {STATUS_GLYPH[status]}
-      </span>
+      <Icon aria-hidden size={size} strokeWidth={1.75} className="shrink-0" />
       {label ? <span className="text-xs">{STATUS_LABEL[status]}</span> : null}
       {label ? null : <span className="sr-only">{STATUS_LABEL[status]}</span>}
     </span>
@@ -86,6 +100,25 @@ export function StatusMark({ status, label = true }: { status: ModStatus; label?
 
 /** Kept for call sites that want the status inline in a dense row. */
 export const Pill = StatusMark;
+
+const SIDE_CLASS: Record<Side, string> = {
+  both: "text-side-both ring-side-both-dim",
+  client: "text-side-client ring-side-client-dim",
+  server: "text-side-server ring-side-server-dim",
+};
+
+export function SideMark({ side, label = false }: { side: Side; label?: boolean }) {
+  const Icon = SIDE_ICON[side];
+  return (
+    <span
+      title={SIDE_LABEL[side]}
+      className={`inline-flex items-center gap-1.5 rounded-xs px-1.5 py-0.5 font-mono text-2xs ring-1 ring-inset ${SIDE_CLASS[side]}`}
+    >
+      <Icon aria-hidden size={12} strokeWidth={1.75} />
+      {label ? side : <span className="sr-only">{SIDE_LABEL[side]}</span>}
+    </span>
+  );
+}
 
 // Tailwind scans for literal class names, so tones are spelled out rather than
 // built from a template -- an interpolated `bg-${tone}` would be purged.
@@ -105,7 +138,7 @@ export function Tag({
 }) {
   return (
     <span
-      className={`inline-block rounded-xs px-1.5 py-0.5 text-xs leading-4 ring-1 ring-inset ${TAG_TONES[tone]}`}
+      className={`inline-block rounded-xs px-2 py-0.5 text-2xs leading-5 ring-1 ring-inset ${TAG_TONES[tone]}`}
     >
       {children}
     </span>
@@ -116,18 +149,110 @@ export function Tag({
  *  allowed, because it separates bands of a single scrolling page. */
 export function SectionLabel({ children }: { children: ReactNode }) {
   return (
-    <h2 className="mb-2 text-2xs font-medium tracking-[0.12em] text-faint uppercase">{children}</h2>
+    <h2 className="mb-3 font-mono text-2xs font-medium tracking-[0.14em] text-faint uppercase">
+      {children}
+    </h2>
+  );
+}
+
+/** Поверхность. Одна лестница высоты на всю систему: карточка — e2 с верхним
+ *  бликом, всплывающее — e3, оверлей — e4. */
+export function Card({
+  children,
+  className = "",
+  interactive = false,
+  glow = false,
+}: {
+  children: ReactNode;
+  className?: string;
+  interactive?: boolean;
+  glow?: boolean;
+}) {
+  return (
+    <div
+      className={`lit relative rounded-md border border-edge bg-gradient-to-b from-surface to-canvas/60 ${
+        interactive
+          ? "transition-[border-color,transform,box-shadow] duration-[var(--dur)] ease-quint hover:-translate-y-0.5 hover:border-edge-strong hover:shadow-[var(--shadow-e3)]"
+          : ""
+      } ${glow ? "shadow-[var(--shadow-glow)]" : ""} ${className}`}
+    >
+      {children}
+    </div>
+  );
+}
+
+export interface Segment {
+  key: string;
+  label: string;
+  value: number;
+  color: string;
+  icon?: LucideIcon;
+}
+
+/** Одна полоса состава: 214 модов, разложенные по статусу или по side.
+ *  Сегменты разделены двухпиксельным просветом фона, а не рамкой — иначе на
+ *  доле в 1% сегмент состоит из одной рамки. Значение подписано и в легенде,
+ *  и в подсказке: цвет здесь не единственный носитель. */
+export function DistBar({
+  segments,
+  total,
+  height = 14,
+}: {
+  segments: Segment[];
+  total: number;
+  height?: number;
+}) {
+  const shown = segments.filter((segment) => segment.value > 0);
+  return (
+    <div className="space-y-3">
+      <div
+        role="img"
+        aria-label={shown.map((s) => `${s.label}: ${s.value}`).join(", ")}
+        className="flex w-full gap-[2px] overflow-hidden rounded-full"
+        style={{ height }}
+      >
+        {shown.map((segment) => (
+          <span
+            key={segment.key}
+            title={`${segment.label}: ${segment.value} (${Math.round((segment.value / total) * 100)}%)`}
+            className="h-full min-w-[3px] transition-[flex-grow,opacity] duration-[var(--dur-slow)] ease-quint first:rounded-l-full last:rounded-r-full hover:opacity-80"
+            style={{ flexGrow: segment.value, background: segment.color }}
+          />
+        ))}
+      </div>
+      <ul className="flex flex-wrap gap-x-5 gap-y-1.5">
+        {shown.map((segment) => (
+          <li key={segment.key} className="flex items-center gap-2 text-2xs text-faint">
+            {segment.icon ? (
+              <segment.icon
+                aria-hidden
+                size={12}
+                strokeWidth={1.75}
+                style={{ color: segment.color }}
+              />
+            ) : (
+              <span
+                aria-hidden
+                className="size-2 shrink-0 rounded-full"
+                style={{ background: segment.color }}
+              />
+            )}
+            {segment.label}
+            <span className="font-mono text-muted">{segment.value}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 
 /** Every screen sits inside one of these. `scroll` false hands the page the full
- *  viewport height so it can pin its own toolbar and let only the rows move --
- *  which is what makes a sticky table head work without a hard-coded offset. */
+ *  viewport height so it can pin its own toolbar and let only the rows move. */
 export function Page({ children, scroll = true }: { children: ReactNode; scroll?: boolean }) {
   return (
-    <div className={`h-full ${scroll ? "overflow-y-auto" : "overflow-hidden"}`}>
+    <div className={`page-enter h-full ${scroll ? "overflow-y-auto" : "overflow-hidden"}`}>
       <div
-        className={`mx-auto flex max-w-[1600px] flex-col gap-4 px-6 py-5 ${
+        className={`mx-auto flex max-w-[1720px] flex-col gap-6 px-8 py-7 ${
           scroll ? "" : "h-full min-h-0"
         }`}
       >
@@ -137,21 +262,26 @@ export function Page({ children, scroll = true }: { children: ReactNode; scroll?
   );
 }
 
-/** The heading band of a screen. Tables sit straight on the canvas now, so the
- *  title, the count and the rule under them are what says "this is one block" --
- *  a bordered box around every table was the reason eight screens looked alike. */
+/** The heading band of a screen. */
 export function PageTitle({
   children,
   count,
   actions,
+  icon: Icon,
 }: {
   children: ReactNode;
   count?: ReactNode;
   actions?: ReactNode;
+  icon?: LucideIcon;
 }) {
   return (
-    <div className="flex flex-wrap items-baseline gap-x-3 gap-y-2 border-b border-edge pb-2">
-      <h1 className="text-xl font-medium tracking-[-0.01em] text-ink">{children}</h1>
+    <div className="flex flex-wrap items-center gap-x-4 gap-y-3 border-b border-edge pb-4">
+      {Icon && (
+        <span className="grid size-9 shrink-0 place-items-center rounded-sm bg-raised text-accent ring-1 ring-edge ring-inset">
+          <Icon aria-hidden size={18} strokeWidth={1.75} />
+        </span>
+      )}
+      <h1 className="text-xl font-semibold text-ink">{children}</h1>
       {count != null && <span className="font-mono text-sm text-faint">{count}</span>}
       {actions && <div className="ml-auto flex items-center gap-2">{actions}</div>}
     </div>
@@ -173,9 +303,9 @@ export function Band({
   className?: string;
 }) {
   return (
-    <section className={`space-y-2 ${className}`}>
+    <section className={`space-y-3 ${className}`}>
       <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-        <h2 className="text-md font-medium text-ink">{title}</h2>
+        <h2 className="text-md font-semibold text-ink">{title}</h2>
         {count != null && <span className="font-mono text-sm text-faint">{count}</span>}
         {actions && <div className="ml-auto flex items-center gap-2">{actions}</div>}
       </div>
@@ -205,8 +335,10 @@ export function Th({
       scope="col"
       aria-sort={sorted ? (sorted === "asc" ? "ascending" : "descending") : undefined}
       onClick={onClick}
-      className={`px-2 pb-1.5 text-xs font-medium text-faint ${ALIGN[align]} ${
-        onClick ? "cursor-pointer select-none hover:text-ink" : ""
+      className={`px-3 pb-2.5 text-xs font-medium text-faint ${ALIGN[align]} ${
+        onClick
+          ? "cursor-pointer transition-colors duration-[var(--dur-fast)] select-none hover:text-ink"
+          : ""
       } ${className}`}
     >
       {children}
@@ -216,9 +348,10 @@ export function Th({
 }
 
 const BUTTON_TONES = {
-  ghost: "border-edge bg-transparent text-ink hover:border-edge-strong hover:bg-raised",
+  ghost:
+    "border-edge bg-raised/40 text-ink hover:border-edge-strong hover:bg-raised hover:shadow-[var(--shadow-e2)]",
   primary:
-    "border-accent bg-accent text-on-accent hover:border-accent-strong hover:bg-accent-strong",
+    "border-accent bg-accent text-on-accent hover:border-accent-strong hover:bg-accent-strong hover:shadow-[var(--shadow-glow)]",
   danger: "border-danger-dim bg-transparent text-danger hover:border-danger hover:bg-danger/10",
 } as const;
 
@@ -231,8 +364,9 @@ export function Button({
   type = "button",
   title,
   className = "",
+  icon: Icon,
 }: {
-  children: ReactNode;
+  children?: ReactNode;
   onClick?: () => void;
   disabled?: boolean;
   loading?: boolean;
@@ -240,6 +374,7 @@ export function Button({
   type?: "button" | "submit";
   title?: string;
   className?: string;
+  icon?: LucideIcon;
 }) {
   return (
     <button
@@ -248,18 +383,63 @@ export function Button({
       onClick={onClick}
       disabled={disabled || loading}
       aria-busy={loading || undefined}
-      className={`inline-flex h-[30px] items-center gap-1.5 rounded-sm border px-3 text-xs font-medium transition-colors duration-[--dur-fast] ease-quint active:translate-y-px disabled:cursor-not-allowed disabled:opacity-40 disabled:active:translate-y-0 ${BUTTON_TONES[tone]} ${className}`}
+      className={`inline-flex h-10 cursor-pointer items-center gap-2 rounded-sm border px-4 text-xs font-medium transition-[background-color,border-color,box-shadow,transform] duration-[var(--dur)] ease-quint active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-40 disabled:active:scale-100 ${BUTTON_TONES[tone]} ${className}`}
     >
       {loading ? (
-        <span aria-hidden className="size-1.5 animate-pulse rounded-full bg-current" />
+        <span aria-hidden className="pulse-ring size-1.5 rounded-full bg-current" />
+      ) : Icon ? (
+        <Icon aria-hidden size={15} strokeWidth={1.75} className="shrink-0" />
       ) : null}
       {children}
     </button>
   );
 }
 
+/** Сегментный переключатель: два-четыре взаимоисключающих режима. Подложка
+ *  активного сегмента едет между позициями, а не мигает. */
+export function Segmented<T extends string>({
+  value,
+  onChange,
+  options,
+  label,
+}: {
+  value: T;
+  onChange: (value: T) => void;
+  options: { value: T; label: string; icon?: LucideIcon }[];
+  label?: string;
+}) {
+  return (
+    <div
+      role="radiogroup"
+      aria-label={label}
+      className="inline-flex items-center gap-0.5 rounded-sm border border-edge bg-canvas/60 p-0.5"
+    >
+      {options.map((option) => {
+        const active = option.value === value;
+        const Icon = option.icon;
+        return (
+          <button
+            key={option.value}
+            role="radio"
+            aria-checked={active}
+            onClick={() => onChange(option.value)}
+            className={`inline-flex h-8 cursor-pointer items-center gap-1.5 rounded-xs px-3 text-2xs font-medium transition-colors duration-[var(--dur)] ${
+              active
+                ? "bg-raised text-ink shadow-[var(--shadow-e1)]"
+                : "text-faint hover:bg-raised/50 hover:text-muted"
+            }`}
+          >
+            {Icon && <Icon aria-hidden size={13} strokeWidth={1.75} />}
+            {option.label}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
 const FIELD =
-  "h-[30px] rounded-sm border border-edge bg-canvas px-2 text-xs text-ink transition-colors duration-[--dur-fast] placeholder:text-faint hover:border-edge-strong focus:border-accent focus:outline-none";
+  "h-10 rounded-sm border border-edge bg-canvas/70 px-3 text-xs text-ink transition-[border-color,box-shadow] duration-[var(--dur)] placeholder:text-faint hover:border-edge-strong focus:border-accent focus:shadow-[var(--shadow-glow)] focus:outline-none";
 
 export const Input = forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>(
   function Input(props, ref) {
@@ -268,30 +448,39 @@ export const Input = forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTML
 );
 
 export function Select(props: React.SelectHTMLAttributes<HTMLSelectElement>) {
-  return <select {...props} className={`${FIELD} ${props.className ?? ""}`} />;
+  return <select {...props} className={`${FIELD} cursor-pointer ${props.className ?? ""}`} />;
 }
 
 export function Kbd({ children }: { children: ReactNode }) {
   return (
-    <kbd className="rounded-xs border border-edge bg-raised px-1 py-px text-2xs text-muted">
+    <kbd className="rounded-xs border border-edge bg-raised px-1.5 py-0.5 font-mono text-2xs text-muted">
       {children}
     </kbd>
   );
 }
 
-export function Empty({ children }: { children: ReactNode }) {
-  return <p className="px-4 py-8 text-center text-sm text-faint">{children}</p>;
+export function Empty({ children, icon: Icon }: { children: ReactNode; icon?: LucideIcon }) {
+  return (
+    <div className="fade-in flex flex-col items-center gap-3 px-4 py-14 text-center">
+      {Icon && (
+        <span className="grid size-11 place-items-center rounded-md bg-raised/60 text-faint ring-1 ring-edge ring-inset">
+          <Icon aria-hidden size={20} strokeWidth={1.5} />
+        </span>
+      )}
+      <p className="text-sm text-faint">{children}</p>
+    </div>
+  );
 }
 
 /** Skeletons take the shape of what is coming, so the page does not jump. */
 export function Skeleton({ rows = 5, className = "" }: { rows?: number; className?: string }) {
   return (
-    <div className={`space-y-1.5 p-3 ${className}`} aria-hidden>
+    <div className={`space-y-2 p-4 ${className}`} aria-hidden>
       {Array.from({ length: rows }, (_, i) => (
         <div
           key={i}
-          className="h-6 animate-pulse rounded-xs bg-raised"
-          style={{ animationDelay: `${i * 70}ms`, opacity: 1 - i * 0.08 }}
+          className="shimmer h-9 rounded-sm bg-raised/70"
+          style={{ animationDelay: `${i * 90}ms`, opacity: 1 - i * 0.09 }}
         />
       ))}
     </div>
@@ -309,9 +498,71 @@ export function Loading({ what, rows = 6 }: { what: string; rows?: number }) {
 
 export function ErrorBox({ error }: { error: unknown }) {
   return (
-    <div className="rounded-sm border border-danger-dim bg-danger/10 px-3 py-2 text-xs text-danger">
+    <div className="rounded-sm border border-danger-dim bg-danger/10 px-4 py-3 text-xs text-danger">
       {error instanceof Error ? error.message : String(error)}
     </div>
+  );
+}
+
+/** Иконка мода. Modrinth раздаёт её по project_id; CurseForge через прокси не
+ *  ходит, поэтому там сразу детерминированная заглушка из slug. */
+export function ModIcon({
+  slug,
+  projectId,
+  source,
+  size = 28,
+}: {
+  slug: string;
+  projectId?: string | null;
+  source?: string | null;
+  size?: number;
+}) {
+  const url =
+    source === "modrinth" && projectId
+      ? `https://cdn.modrinth.com/data/${projectId}/icon.png`
+      : null;
+  // Хеш slug'а в оттенок: заглушки различимы между собой и стабильны от сборки
+  // к сборке, в отличие от случайного цвета.
+  let hash = 0;
+  for (let i = 0; i < slug.length; i += 1) hash = (hash * 31 + slug.charCodeAt(i)) % 360;
+  const initials = slug
+    .replace(/[^a-zа-я0-9]+/gi, " ")
+    .trim()
+    .split(" ")
+    .slice(0, 2)
+    .map((word) => word[0])
+    .join("")
+    .toUpperCase();
+
+  return (
+    <span
+      className="relative grid shrink-0 place-items-center overflow-hidden rounded-xs ring-1 ring-edge ring-inset"
+      style={{
+        width: size,
+        height: size,
+        background: `oklch(0.28 0.04 ${hash})`,
+        color: `oklch(0.86 0.06 ${hash})`,
+      }}
+    >
+      <span className="font-mono leading-none" style={{ fontSize: size * 0.36 }}>
+        {initials || "?"}
+      </span>
+      {url && (
+        <img
+          src={url}
+          alt=""
+          loading="lazy"
+          decoding="async"
+          width={size}
+          height={size}
+          className="absolute inset-0 size-full object-cover"
+          // Битая иконка оставляет под собой заглушку вместо сломанной картинки.
+          onError={(event) => {
+            event.currentTarget.style.display = "none";
+          }}
+        />
+      )}
+    </span>
   );
 }
 

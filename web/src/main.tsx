@@ -18,12 +18,19 @@ import "./index.css";
 // Must run before the router reads the hash, or the token would look like a route.
 captureSessionFromHash();
 
-// Cytoscape is two thirds of the bundle and only /graph needs it. Players
-// opening the mod table on a phone should not pay for a layout engine.
+// ELK и React Flow — две трети бандла, и нужны они только на /graph. Тот, кто
+// пришёл посмотреть таблицу модов, за движок раскладки платить не должен.
 const Graph = React.lazy(() => import("./pages/Graph"));
 
 const Lazy = ({ children }: { children: React.ReactNode }) => (
-  <React.Suspense fallback={<p className="p-8 text-center text-xs text-faint">загружаю граф…</p>}>
+  <React.Suspense
+    fallback={
+      <p className="flex h-full items-center justify-center gap-2.5 text-xs text-faint">
+        <span aria-hidden className="pulse-ring size-1.5 rounded-full bg-accent" />
+        загружаю граф…
+      </p>
+    }
+  >
     {children}
   </React.Suspense>
 );

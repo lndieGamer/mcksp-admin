@@ -1,11 +1,14 @@
+import { Check, Pencil, Sparkles, TriangleAlert, X } from "lucide-react";
 import { useMemo, useState } from "react";
 
 import { useRunner } from "../components/OpRunner";
 import {
   Band,
   Button,
+  Card,
   Empty,
   Loading,
+  ModIcon,
   Page,
   PageTitle,
   Tag,
@@ -38,7 +41,8 @@ export default function Flavors() {
     [publicData.data],
   );
 
-  /** A mod escapes its group when a hard dependency lives behind a different checkbox. */
+  /** Мод сбегает из своей группы, когда его жёсткая зависимость живёт за другой
+   *  галочкой. */
   const escapes = useMemo(() => {
     if (!publicData.data || !index) return [];
     const out: { from: Mod; to: Mod }[] = [];
@@ -54,7 +58,7 @@ export default function Flavors() {
   }, [publicData.data, index]);
 
   if (publicData.isLoading) return <Loading what="флейворы" />;
-  if (!publicData.data) return <Empty>данные ещё не опубликованы</Empty>;
+  if (!publicData.data) return <Empty icon={Sparkles}>данные ещё не опубликованы</Empty>;
 
   const ungrouped = mods.filter((m) => m.flavors.length === 0);
   const optional = mods.filter((m) => m.flavors.length > 0);
@@ -86,6 +90,7 @@ export default function Flavors() {
   return (
     <Page>
       <PageTitle
+        icon={Sparkles}
         count={`${publicData.data.flavor_groups.length} ${plural(
           publicData.data.flavor_groups.length,
           "группа",
@@ -97,76 +102,112 @@ export default function Flavors() {
       </PageTitle>
 
       {escapes.length > 0 && (
-        <Band title="зависимости уходят за пределы группы">
-          <p className="max-w-[70ch] text-xs text-faint">
+        <Card className="space-y-3 border-warn-dim px-5 py-4">
+          <h2 className="flex items-center gap-2.5 text-sm font-semibold text-warn">
+            <TriangleAlert aria-hidden size={16} strokeWidth={1.75} />
+            зависимости уходят за пределы группы
+          </h2>
+          <p className="max-w-[74ch] text-xs text-faint">
             У unsup нет зависимостей между группами: библиотека ставится, если включён хотя бы один
             её потребитель (семантика ИЛИ). Здесь потребитель и его обязательная зависимость не
             делят ни одной галочки — при отключении группы пак сломается.
           </p>
-          <ul>
-            {escapes.map(({ from, to }, index) => (
-              <li key={index} className="rule py-1.5 text-sm text-warn">
-                <span className="font-mono text-xs">{from.slug}</span>{" "}
+          <ul className="divide-y divide-edge/60">
+            {escapes.map(({ from, to }, i) => (
+              <li key={i} className="py-2 text-xs text-warn">
+                <span className="font-mono">{from.slug}</span>{" "}
                 <span className="text-faint">[{from.flavors.join(", ")}]</span> требует{" "}
-                <span className="font-mono text-xs">{to.slug}</span>{" "}
+                <span className="font-mono">{to.slug}</span>{" "}
                 <span className="text-faint">[{to.flavors.join(", ")}]</span>
               </li>
             ))}
           </ul>
-        </Band>
+        </Card>
       )}
 
       <Band title="группы">
-        <div className="grid gap-x-8 gap-y-5 md:grid-cols-2 xl:grid-cols-3">
-          {publicData.data.flavor_groups.map((group) => (
-            <section key={group.id} className="border-t border-edge pt-2.5">
-              <h3 className="text-base font-medium text-ink">{group.name}</h3>
-              <p className="mt-0.5 max-w-[52ch] text-xs text-faint">{group.description}</p>
-              <div className="mt-2 flex flex-wrap gap-1.5">
-                {group.choices.map((choice) => (
-                  <Tag key={choice.id} tone={choice.mod_count > 0 ? "accent" : "neutral"}>
-                    {choice.name} · {choice.mod_count}
-                  </Tag>
-                ))}
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {publicData.data.flavor_groups.map((group, i) => {
+            const members = mods.filter((m) =>
+              m.flavors.some((f) => group.choices.some((c) => c.id === f)),
+            );
+            return (
+              <div key={group.id} style={{ "--stagger-index": i } as React.CSSProperties}>
+                <Card interactive className="rise h-full space-y-3 px-5 py-4">
+                  <h3 className="text-sm font-semibold text-ink">{group.name}</h3>
+                  <p className="max-w-[52ch] text-xs text-faint">{group.description}</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {group.choices.map((choice) => (
+                      <Tag key={choice.id} tone={choice.mod_count > 0 ? "accent" : "neutral"}>
+                        {choice.name} · {choice.mod_count}
+                      </Tag>
+                    ))}
+                  </div>
+                  {members.length > 0 && (
+                    <ul className="space-y-1 border-t border-edge/60 pt-3">
+                      {members.map((mod) => (
+                        <li key={mod.slug} className="flex items-center gap-2">
+                          <ModIcon
+                            slug={mod.slug}
+                            projectId={mod.project_id}
+                            source={mod.source}
+                            size={18}
+                          />
+                          <span className="min-w-0 truncate font-mono text-2xs text-faint">
+                            {mod.slug}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </Card>
               </div>
-              <ul className="mt-2 space-y-0.5 font-mono text-xs text-faint">
-                {mods
-                  .filter((m) => m.flavors.some((f) => group.choices.some((c) => c.id === f)))
-                  .map((m) => (
-                    <li key={m.slug}>{m.slug}</li>
-                  ))}
-              </ul>
-            </section>
-          ))}
+            );
+          })}
         </div>
       </Band>
 
       <Band title="матрица «мод × флейвор»" count={optional.length}>
-        <div className="overflow-x-auto">
-          <table className="w-full min-w-[760px] border-separate border-spacing-0 text-sm">
+        <Card className="overflow-x-auto">
+          <table className="w-full min-w-[820px] border-separate border-spacing-0 text-sm">
             <thead>
               <tr className="[&>th]:border-b [&>th]:border-edge-strong">
-                <Th className="w-[280px]">мод</Th>
+                <Th className="w-[300px]">мод</Th>
                 <Th>галочки (ИЛИ)</Th>
-                <Th align="right" className="w-[88px]">
+                <Th align="right" className="w-[96px]">
                   размер
                 </Th>
-                {admin && <Th className="w-[150px]" />}
+                {admin && <Th className="w-[172px]" />}
               </tr>
             </thead>
             <tbody>
               {optional.map((mod) => (
-                <tr key={mod.slug} className="align-top hover:bg-raised/45 [&>td]:rule">
-                  <td className="px-2 py-1.5">
-                    <span className="text-base text-ink">{mod.name}</span>
-                    <br />
-                    <span className="font-mono text-xs text-faint">{mod.slug}</span>
+                <tr
+                  key={mod.slug}
+                  className="align-top transition-colors duration-[var(--dur-fast)] hover:bg-raised/45 [&>td]:rule"
+                >
+                  <td className="px-3 py-2.5">
+                    <div className="flex items-center gap-2.5">
+                      <ModIcon
+                        slug={mod.slug}
+                        projectId={mod.project_id}
+                        source={mod.source}
+                        size={24}
+                      />
+                      <div className="min-w-0">
+                        <p className="truncate text-xs text-ink">{mod.name}</p>
+                        <p className="truncate font-mono text-2xs text-faint">{mod.slug}</p>
+                      </div>
+                    </div>
                   </td>
-                  <td className="px-2 py-1.5">
+                  <td className="px-3 py-2.5">
                     {editing === mod.slug ? (
-                      <div className="flex max-h-40 flex-wrap gap-x-3 gap-y-1 overflow-auto">
+                      <div className="flex max-h-44 flex-wrap gap-x-4 gap-y-1.5 overflow-auto">
                         {allChoices.map((choice) => (
-                          <label key={choice} className="flex items-center gap-1 text-xs">
+                          <label
+                            key={choice}
+                            className="flex cursor-pointer items-center gap-1.5 text-xs"
+                          >
                             <input
                               type="checkbox"
                               checked={draft.includes(choice)}
@@ -186,20 +227,24 @@ export default function Flavors() {
                       <span className="font-mono text-xs text-muted">{mod.flavors.join(", ")}</span>
                     )}
                   </td>
-                  <td className="px-2 py-1.5 text-right font-mono text-faint">
+                  <td className="px-3 py-2.5 text-right font-mono text-xs text-faint">
                     {bytes(mod.size_bytes)}
                   </td>
                   {admin && (
-                    <td className="px-2 py-1.5 text-right whitespace-nowrap">
+                    <td className="px-3 py-2.5 text-right whitespace-nowrap">
                       {editing === mod.slug ? (
-                        <div className="flex justify-end gap-1.5">
-                          <Button tone="primary" onClick={() => save(mod)}>
+                        <div className="flex justify-end gap-2">
+                          <Button tone="primary" icon={Check} onClick={() => save(mod)}>
                             сохранить
                           </Button>
-                          <Button onClick={() => setEditing(null)}>отмена</Button>
+                          <Button icon={X} onClick={() => setEditing(null)}>
+                            отмена
+                          </Button>
                         </div>
                       ) : (
-                        <Button onClick={() => startEdit(mod)}>править</Button>
+                        <Button icon={Pencil} onClick={() => startEdit(mod)}>
+                          править
+                        </Button>
                       )}
                     </td>
                   )}
@@ -207,13 +252,19 @@ export default function Flavors() {
               ))}
             </tbody>
           </table>
-        </div>
+        </Card>
       </Band>
 
       <Band title="вне групп" count={`${ungrouped.length} — ставятся всегда`}>
-        <div className="flex flex-wrap gap-x-3 gap-y-1 font-mono text-xs text-faint">
+        <div className="flex flex-wrap gap-2">
           {ungrouped.map((mod) => (
-            <span key={mod.slug}>{mod.slug}</span>
+            <span
+              key={mod.slug}
+              className="flex items-center gap-2 rounded-sm border border-edge bg-surface/60 px-2.5 py-1.5"
+            >
+              <ModIcon slug={mod.slug} projectId={mod.project_id} source={mod.source} size={18} />
+              <span className="font-mono text-2xs text-faint">{mod.slug}</span>
+            </span>
           ))}
         </div>
       </Band>

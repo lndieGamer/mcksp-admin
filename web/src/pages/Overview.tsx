@@ -1,28 +1,50 @@
+import {
+  ArrowRight,
+  Boxes,
+  CircleCheck,
+  HardDrive,
+  LayoutGrid,
+  Network,
+  Sparkles,
+  type LucideIcon,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 import {
+  Card,
+  DistBar,
   Loading,
   Page,
   PageTitle,
+  SIDE_HEX,
+  SIDE_ICON,
+  SIDE_LABEL,
+  STATUS_HEX,
+  STATUS_ICON,
+  STATUS_LABEL,
   SectionLabel,
   ago,
   bytes,
   plural,
   stamp,
+  type Segment,
 } from "../components/ui";
 import { loginUrl, workerConfigured } from "../lib/api";
 import { usePrivate, usePublic, useSession } from "../lib/data";
+import { isolatedSlugs } from "../lib/graph";
+import type { ModStatus, Side } from "../lib/types";
 
 interface Item {
-  glyph: string;
+  icon: LucideIcon;
   tone: string;
   text: string;
   to: string;
   cta: string;
 }
 
-/** The question this screen answers is "is anything wrong", so it is a queue of
- *  decisions, not a wall of metrics. Nothing to decide is itself an answer. */
+/** Экран отвечает на вопрос «всё ли в порядке», поэтому это очередь решений, а
+ *  не стена метрик. Пустая очередь — тоже ответ, и он должен выглядеть как
+ *  ответ, а не как пустое место. */
 export default function Overview() {
   const publicData = usePublic();
   const privateData = usePrivate();
@@ -45,7 +67,7 @@ export default function Overview() {
 
     if (errors.length)
       items.push({
-        glyph: "✕",
+        icon: STATUS_ICON.broken,
         tone: "text-danger",
         text: `${errors.length} ${plural(errors.length, "ошибка", "ошибки", "ошибок")} линтера`,
         to: "/lint",
@@ -53,7 +75,7 @@ export default function Overview() {
       });
     if (safe.length)
       items.push({
-        glyph: "▲",
+        icon: STATUS_ICON.update_safe,
         tone: "text-accent",
         text: `${safe.length} ${plural(safe.length, "обновление готово", "обновления готовы", "обновлений готовы")} к накату`,
         to: "/updates",
@@ -61,7 +83,7 @@ export default function Overview() {
       });
     if (blocked.length)
       items.push({
-        glyph: "⊘",
+        icon: STATUS_ICON.update_blocked,
         tone: "text-warn",
         text: `${blocked.length} ${plural(blocked.length, "обновление держат", "обновления держат", "обновлений держат")} зависимости`,
         to: "/updates",
@@ -69,7 +91,7 @@ export default function Overview() {
       });
     if (failed.length)
       items.push({
-        glyph: "◻",
+        icon: STATUS_ICON.unknown,
         tone: "text-faint",
         text: `${failed.length} jar не разобраны`,
         to: "/lint",
@@ -77,7 +99,7 @@ export default function Overview() {
       });
     if (warnings.length)
       items.push({
-        glyph: "■",
+        icon: STATUS_ICON.update_blocked,
         tone: "text-warn",
         text: `${warnings.length} ${plural(warnings.length, "предупреждение", "предупреждения", "предупреждений")}`,
         to: "/lint",
@@ -85,7 +107,7 @@ export default function Overview() {
       });
     if (priv.platform.length)
       items.push({
-        glyph: "⊘",
+        icon: STATUS_ICON.broken,
         tone: "text-danger",
         text: `${priv.platform.length} ${plural(priv.platform.length, "требование к платформе не выполнено", "требования к платформе не выполнены", "требований к платформе не выполнено")}`,
         to: "/lint",
@@ -95,50 +117,127 @@ export default function Overview() {
 
   const linked = new Set<string>();
   for (const edge of data.edges) if (edge.to) linked.add(edge.from).add(edge.to);
+  const isolated = isolatedSlugs(data);
+
+  const byStatus = new Map<ModStatus, number>();
+  const bySide = new Map<Side, number>();
+  for (const mod of data.mods) {
+    byStatus.set(mod.status, (byStatus.get(mod.status) ?? 0) + 1);
+    bySide.set(mod.side, (bySide.get(mod.side) ?? 0) + 1);
+  }
+
+  const statusSegments: Segment[] = (
+    ["current", "update_safe", "update_blocked", "broken", "frozen", "unknown"] as ModStatus[]
+  ).map((status) => ({
+    key: status,
+    label: STATUS_LABEL[status],
+    value: byStatus.get(status) ?? 0,
+    color: STATUS_HEX[status],
+    icon: STATUS_ICON[status],
+  }));
+
+  const sideSegments: Segment[] = (["both", "client", "server"] as Side[]).map((side) => ({
+    key: side,
+    label: SIDE_LABEL[side],
+    value: bySide.get(side) ?? 0,
+    color: SIDE_HEX[side],
+    icon: SIDE_ICON[side],
+  }));
+
+  // Экономия минимальной сборки относительно полной — единственное число здесь,
+  // которое приходится считать, а не читать.
+  const saved = data.build_sizes.full - data.build_sizes.minimal;
+  const savedPercent = data.build_sizes.full
+    ? Math.round((saved / data.build_sizes.full) * 100)
+    : 0;
 
   return (
     <Page>
-      <div className="w-full max-w-[900px] space-y-8">
-        <PageTitle count={`анализ ${ago(data.generated_at)}`}>сводка</PageTitle>
+      <PageTitle icon={LayoutGrid} count={`анализ ${ago(data.generated_at)}`}>
+        сводка
+      </PageTitle>
+
+      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        <Stat
+          index={0}
+          icon={Boxes}
+          value={data.mods.length}
+          unit="модов"
+          hint={`${data.pack.loader} ${data.pack.loader_version} · ${data.pack.mc}`}
+          to="/mods"
+        />
+        <Stat
+          index={1}
+          icon={Network}
+          value={data.edges.length}
+          unit="связей"
+          hint={`${linked.size} модов в графе · ${isolated.size} без связей`}
+          to="/graph"
+        />
+        <Stat
+          index={2}
+          icon={Sparkles}
+          value={data.flavor_groups.length}
+          unit="групп флейворов"
+          hint="переключаемых наборов"
+          to="/flavors"
+        />
+        <Stat
+          index={3}
+          icon={HardDrive}
+          value={bytes(data.build_sizes.full)}
+          unit="полная сборка"
+          hint={`минимум ${bytes(data.build_sizes.minimal)} · −${savedPercent}%`}
+        />
+      </div>
+
       <section>
         <SectionLabel>требует внимания</SectionLabel>
         {!admin ? (
-          <p className="text-sm text-muted">
-            {workerConfigured() ? (
-              <>
-                Состояние пака видно после входа.{" "}
-                <a className="text-accent hover:text-accent-strong" href={loginUrl()}>
-                  войти через GitHub
-                </a>
-              </>
-            ) : (
-              "Публичный режим: доступны состав пака, граф и флейворы."
-            )}
-          </p>
+          <Card className="px-5 py-4">
+            <p className="text-sm text-muted">
+              {workerConfigured() ? (
+                <>
+                  Состояние пака видно после входа.{" "}
+                  <a
+                    className="text-accent transition-colors duration-[var(--dur)] hover:text-accent-strong"
+                    href={loginUrl()}
+                  >
+                    войти через GitHub
+                  </a>
+                </>
+              ) : (
+                "Публичный режим: доступны состав пака, граф и флейворы."
+              )}
+            </p>
+          </Card>
         ) : privateData.isLoading ? (
           <Loading what="состояние" rows={3} />
         ) : items.length === 0 ? (
-          <p className="text-sm text-muted">
-            <span aria-hidden className="mr-2 text-accent">
-              ●
-            </span>
-            Всё чисто: обновлений нет, линтер молчит.
-          </p>
+          <Card className="flex items-center gap-3 px-5 py-5" glow>
+            <CircleCheck aria-hidden size={20} strokeWidth={1.75} className="text-accent" />
+            <p className="text-sm text-ink">Всё чисто: обновлений нет, линтер молчит.</p>
+          </Card>
         ) : (
-          <ul className="divide-y divide-edge border-y border-edge">
-            {items.map((item) => (
-              <li key={item.text}>
-                <Link
-                  to={item.to}
-                  className="group flex items-center gap-3 py-2.5 transition-colors duration-[--dur-fast] hover:bg-raised/40"
-                >
-                  <span aria-hidden className={`w-4 text-center text-sm ${item.tone}`}>
-                    {item.glyph}
-                  </span>
-                  <span className="text-base text-ink">{item.text}</span>
-                  <span className="ml-auto pr-2 text-sm text-faint transition-colors duration-[--dur-fast] group-hover:text-accent">
-                    {item.cta} <span aria-hidden>→</span>
-                  </span>
+          <ul className="grid gap-3 lg:grid-cols-2">
+            {items.map((item, i) => (
+              <li key={item.text} style={{ "--stagger-index": i } as React.CSSProperties}>
+                <Link to={item.to} className="rise block">
+                  <Card interactive className="group flex items-center gap-3.5 px-5 py-4">
+                    <span className={`shrink-0 ${item.tone}`}>
+                      <item.icon aria-hidden size={18} strokeWidth={1.75} />
+                    </span>
+                    <span className="min-w-0 flex-1 text-sm text-ink">{item.text}</span>
+                    <span className="flex shrink-0 items-center gap-1.5 text-xs text-faint transition-colors duration-[var(--dur)] group-hover:text-accent">
+                      {item.cta}
+                      <ArrowRight
+                        aria-hidden
+                        size={13}
+                        strokeWidth={2}
+                        className="transition-transform duration-[var(--dur)] group-hover:translate-x-0.5"
+                      />
+                    </span>
+                  </Card>
                 </Link>
               </li>
             ))}
@@ -146,59 +245,109 @@ export default function Overview() {
         )}
       </section>
 
-      <section>
-        <SectionLabel>пак сейчас</SectionLabel>
-        <dl className="flex flex-wrap items-baseline gap-x-6 gap-y-1 text-sm text-muted">
-          <Fact value={data.mods.length} unit="модов" />
-          <Fact value={data.edges.length} unit="связей" hint={`${linked.size} модов в графе`} />
-          <Fact value={data.flavor_groups.length} unit="групп флейворов" />
-          <div>
-            <dt className="sr-only">вес полной сборки</dt>
-            <dd className="font-mono text-ink">{bytes(data.build_sizes.full)}</dd>
-            <span className="text-xs text-faint">минимум {bytes(data.build_sizes.minimal)}</span>
-          </div>
-        </dl>
+      <section className="grid gap-4 lg:grid-cols-2">
+        <Card className="space-y-4 px-5 py-5">
+          <h2 className="text-sm font-semibold text-ink">Состояние модов</h2>
+          <DistBar segments={statusSegments} total={data.mods.length} />
+        </Card>
+        <Card className="space-y-4 px-5 py-5">
+          <h2 className="text-sm font-semibold text-ink">Куда едет мод</h2>
+          <DistBar segments={sideSegments} total={data.mods.length} />
+        </Card>
       </section>
 
       {admin && priv && priv.history.length > 0 && (
         <section>
           <SectionLabel>последнее</SectionLabel>
-          <ul className="divide-y divide-edge border-y border-edge">
-            {priv.history.slice(0, 5).map((entry) => (
-              <li key={entry.sha} className="flex items-baseline gap-3 py-2 text-sm">
-                <span className="font-mono text-xs text-faint">{entry.op}</span>
-                <span className={entry.reverted ? "text-faint line-through" : "text-muted"}>
+          <Card className="divide-y divide-edge/60 overflow-hidden">
+            {priv.history.slice(0, 5).map((entry, i) => (
+              <div
+                key={entry.sha}
+                style={{ "--stagger-index": i } as React.CSSProperties}
+                className="rise flex items-baseline gap-3 px-5 py-3 text-sm"
+              >
+                <span className="shrink-0 rounded-xs bg-raised px-2 py-0.5 font-mono text-2xs text-faint">
+                  {entry.op}
+                </span>
+                <span
+                  className={`min-w-0 flex-1 truncate ${
+                    entry.reverted ? "text-faint line-through" : "text-muted"
+                  }`}
+                >
                   {entry.title}
                 </span>
-                <span className="ml-auto font-mono text-xs whitespace-nowrap text-faint">
+                <span className="shrink-0 font-mono text-2xs whitespace-nowrap text-faint">
                   {stamp(entry.date)}
                 </span>
-              </li>
+              </div>
             ))}
-          </ul>
-          <p className="mt-2 text-xs text-faint">
+          </Card>
+          <p className="mt-3">
             <Link
-              className="underline decoration-edge-strong underline-offset-2 transition-colors duration-[--dur-fast] hover:text-accent"
+              className="inline-flex items-center gap-1.5 text-xs text-faint transition-colors duration-[var(--dur)] hover:text-accent"
               to="/history"
             >
               весь журнал
+              <ArrowRight aria-hidden size={12} strokeWidth={2} />
             </Link>
           </p>
         </section>
       )}
-      </div>
     </Page>
   );
 }
 
-function Fact({ value, unit, hint }: { value: number; unit: string; hint?: string }) {
+/** Плитка показателя. Число набрано дисплейным шрифтом и крупно — это то, за
+ *  чем на экран и приходят; всё остальное вокруг него подпись. */
+function Stat({
+  icon: Icon,
+  value,
+  unit,
+  hint,
+  to,
+  index,
+}: {
+  icon: LucideIcon;
+  value: number | string;
+  unit: string;
+  hint?: string;
+  to?: string;
+  index: number;
+}) {
+  const body = (
+    <Card
+      interactive={Boolean(to)}
+      className="rise group h-full space-y-3 px-5 py-5"
+      // Плитки въезжают по очереди слева направо, а не все разом.
+    >
+      <div className="flex items-center gap-2">
+        <Icon aria-hidden size={15} strokeWidth={1.75} className="text-faint" />
+        <span className="text-2xs text-faint">{unit}</span>
+        {to && (
+          <ArrowRight
+            aria-hidden
+            size={13}
+            strokeWidth={2}
+            className="ml-auto text-faint opacity-0 transition-[opacity,transform] duration-[var(--dur)] group-hover:translate-x-0.5 group-hover:opacity-100"
+          />
+        )}
+      </div>
+      <p className="font-display text-2xl leading-none font-semibold tracking-[-0.03em] text-ink">
+        {value}
+      </p>
+      {hint && <p className="font-mono text-2xs text-faint">{hint}</p>}
+    </Card>
+  );
+
   return (
-    <div>
-      <dt className="sr-only">{unit}</dt>
-      <dd className="font-mono text-ink">
-        {value} <span className="font-sans text-muted">{unit}</span>
-      </dd>
-      {hint && <span className="text-xs text-faint">{hint}</span>}
+    <div style={{ "--stagger-index": index } as React.CSSProperties} className="h-full">
+      {to ? (
+        <Link to={to} className="block h-full">
+          {body}
+        </Link>
+      ) : (
+        body
+      )}
     </div>
   );
 }

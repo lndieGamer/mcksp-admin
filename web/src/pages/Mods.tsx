@@ -1,18 +1,22 @@
+import { Boxes, CircleArrowUp, Filter, Trash2, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { useRunner } from "../components/OpRunner";
 import {
   Button,
+  Card,
   Empty,
   Input,
   Loading,
+  ModIcon,
   Page,
   PageTitle,
-  STATUS_CLASS,
-  STATUS_GLYPH,
   STATUS_LABEL,
   Select,
+  SideMark,
+  StatusMark,
+  Tag,
   Th,
   bytes,
   day,
@@ -36,6 +40,10 @@ const SOURCE_LABEL: Record<Mod["source"], string> = {
   curseforge: "CurseForge",
   url: "URL",
 };
+
+/** Въезд строк ставится только на первый экран: на 214 строках задержка в
+ *  26мс на позицию превратилась бы в семисекундный занавес. */
+const STAGGER_ROWS = 18;
 
 export default function Mods() {
   const publicData = usePublic();
@@ -111,7 +119,8 @@ export default function Mods() {
   const toggle = (slug: string) =>
     setSelected((current) => {
       const next = new Set(current);
-      next.has(slug) ? next.delete(slug) : next.add(slug);
+      if (next.has(slug)) next.delete(slug);
+      else next.add(slug);
       return next;
     });
 
@@ -145,24 +154,27 @@ export default function Mods() {
   };
 
   if (publicData.isLoading) return <Loading what="список модов" />;
-  if (!publicData.data) return <Empty>данные ещё не опубликованы</Empty>;
+  if (!publicData.data) return <Empty icon={Boxes}>данные ещё не опубликованы</Empty>;
 
   const filtered = rows.length !== mods.length;
 
   return (
     <Page scroll={false}>
-      <div className="space-y-3">
-        <PageTitle count={filtered ? `${rows.length} из ${mods.length}` : mods.length}>
+      <div className="space-y-4">
+        <PageTitle
+          icon={Boxes}
+          count={filtered ? `${rows.length} из ${mods.length}` : mods.length}
+        >
           моды
         </PageTitle>
 
-        <div className="flex flex-wrap items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2.5">
           <Input
             ref={search}
-            placeholder="имя, slug, modId"
+            placeholder="имя, slug, modId — или нажмите /"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="w-64"
+            className="w-72"
           />
           <Select value={source} onChange={(e) => setSource(e.target.value)}>
             <option value="">источник: любой</option>
@@ -186,14 +198,13 @@ export default function Mods() {
           </Select>
           <Select value={status} onChange={(e) => setStatus(e.target.value)}>
             <option value="">статус: любой</option>
-            <option value="current">актуален</option>
-            <option value="update_safe">есть обновление</option>
-            <option value="update_blocked">заблокировано</option>
-            <option value="broken">сломан</option>
-            <option value="frozen">без обновлений</option>
-            <option value="unknown">не разобран</option>
+            {(Object.keys(STATUS_LABEL) as (keyof typeof STATUS_LABEL)[]).map((key) => (
+              <option key={key} value={key}>
+                {STATUS_LABEL[key]}
+              </option>
+            ))}
           </Select>
-          <label className="flex items-center gap-1.5 text-xs text-muted">
+          <label className="flex h-10 cursor-pointer items-center gap-2 rounded-sm border border-edge bg-canvas/70 px-3 text-xs text-muted transition-colors duration-[var(--dur)] hover:border-edge-strong hover:text-ink">
             <input
               type="checkbox"
               checked={frozenOnly}
@@ -202,8 +213,8 @@ export default function Mods() {
             без [update]
           </label>
           {filtered && (
-            <button
-              className="text-xs text-faint underline decoration-edge-strong underline-offset-2 transition-colors duration-[--dur-fast] hover:text-ink"
+            <Button
+              icon={X}
               onClick={() => {
                 setQuery("");
                 setSource("");
@@ -214,18 +225,23 @@ export default function Mods() {
               }}
             >
               сбросить
-            </button>
+            </Button>
           )}
         </div>
 
         {admin && selected.size > 0 && (
-          <div className="flex flex-wrap items-center gap-2 rounded-sm border border-accent-dim bg-accent/5 px-3 py-2">
+          <Card
+            glow
+            className="fade-in flex flex-wrap items-center gap-2.5 border-accent-dim px-4 py-3"
+          >
+            <Filter aria-hidden size={15} strokeWidth={1.75} className="text-accent" />
             <span className="text-xs text-muted">выбрано {selected.size}:</span>
             <Button onClick={() => bulkSide("both")}>side → both</Button>
             <Button onClick={() => bulkSide("client")}>side → client</Button>
             <Button onClick={() => bulkSide("server")}>side → server</Button>
             <Button
               tone="danger"
+              icon={Trash2}
               onClick={() =>
                 runner.propose(
                   { op: "remove-mod", targets: [...selected] },
@@ -237,38 +253,34 @@ export default function Mods() {
             >
               удалить
             </Button>
-            <Button className="ml-auto" onClick={() => setSelected(new Set())}>
+            <Button className="ml-auto" icon={X} onClick={() => setSelected(new Set())}>
               снять выделение
             </Button>
-          </div>
+          </Card>
         )}
       </div>
 
-      {/* The table owns the remaining height, so only the rows move and the head
-          pins to the top of this scroller -- there is no offset to keep in step
-          with the chrome above it. */}
+      {/* Таблица забирает остаток высоты: двигаются только строки, а шапка
+          липнет к верху этого же скроллера — offset под хром держать не надо. */}
       <div className="min-h-0 flex-1 overflow-auto">
-        {/* Fixed layout with one flexible column: the name is what the eye scans,
-            so it takes the slack and everything else keeps a stable rhythm. The
-            minimum leaves the name ~300px before the scroller takes over. */}
-        <table className="w-full min-w-[1280px] table-fixed border-separate border-spacing-0 text-sm">
+        {/* Фиксированная раскладка с одной гибкой колонкой: имя — то, что глаз
+            сканирует, оно и забирает люфт, остальные держат ритм. */}
+        <table className="w-full min-w-[1320px] table-fixed border-separate border-spacing-0 text-sm">
           <colgroup>
-            {admin && <col className="w-8" />}
-            <col className="w-7" />
+            {admin && <col className="w-9" />}
             <col />
+            <col className="w-[168px]" />
+            <col className="w-[112px]" />
+            <col className="w-[76px]" />
             <col className="w-[160px]" />
-            <col className="w-[100px]" />
-            <col className="w-[64px]" />
-            <col className="w-[152px]" />
-            <col className="w-[196px]" />
-            <col className="w-[84px]" />
+            <col className="w-[204px]" />
             <col className="w-[92px]" />
-            <col className="w-[92px]" />
+            <col className="w-[116px]" />
+            <col className="w-[116px]" />
           </colgroup>
           <thead>
-            <tr className="[&>th]:sticky [&>th]:top-0 [&>th]:z-10 [&>th]:border-b [&>th]:border-edge-strong [&>th]:bg-canvas [&>th]:pt-1">
+            <tr className="[&>th]:sticky [&>th]:top-0 [&>th]:z-10 [&>th]:border-b [&>th]:border-edge-strong [&>th]:bg-canvas/95 [&>th]:pt-2 [&>th]:backdrop-blur">
               {admin && <Th />}
-              <Th align="center" onClick={sortBy("status")} sorted={dir("status")} />
               <Th onClick={sortBy("name")} sorted={dir("name")}>
                 мод
               </Th>
@@ -297,18 +309,21 @@ export default function Mods() {
             </tr>
           </thead>
           <tbody>
-            {rows.map((mod) => {
+            {rows.map((mod, i) => {
               const update = updates.get(mod.slug);
               const picked = selected.has(mod.slug);
               return (
                 <tr
                   key={mod.slug}
-                  className={`h-8 leading-[1.25] transition-colors duration-[--dur-fast] [&>td]:rule ${
-                    picked ? "bg-raised" : "hover:bg-raised/45"
-                  }`}
+                  style={
+                    i < STAGGER_ROWS ? ({ "--stagger-index": i } as React.CSSProperties) : undefined
+                  }
+                  className={`h-11 transition-colors duration-[var(--dur-fast)] [&>td]:rule ${
+                    i < STAGGER_ROWS ? "rise" : ""
+                  } ${picked ? "bg-raised" : "hover:bg-raised/45"}`}
                 >
                   {admin && (
-                    <td className="px-2">
+                    <td className="px-3">
                       <input
                         type="checkbox"
                         aria-label={`выбрать ${mod.name}`}
@@ -317,56 +332,67 @@ export default function Mods() {
                       />
                     </td>
                   )}
-                  <td
-                    className={`text-center ${STATUS_CLASS[mod.status]}`}
-                    title={STATUS_LABEL[mod.status]}
-                  >
-                    {/* The status marks are not in IBM Plex Sans; without an
-                        explicit line-height the fallback symbol font's metrics
-                        push every row five pixels taller than the 32px grid. */}
-                    <span aria-hidden className="inline-block leading-none">
-                      {STATUS_GLYPH[mod.status]}
-                    </span>
-                    <span className="sr-only">{STATUS_LABEL[mod.status]}</span>
+                  <td className="px-3">
+                    <div className="flex min-w-0 items-center gap-2.5">
+                      <StatusMark status={mod.status} label={false} size={13} />
+                      <ModIcon
+                        slug={mod.slug}
+                        projectId={mod.project_id}
+                        source={mod.source}
+                        size={24}
+                      />
+                      <Link
+                        className="min-w-0 flex-1 truncate text-sm text-ink decoration-accent-dim underline-offset-2 transition-colors duration-[var(--dur-fast)] hover:text-accent hover:underline"
+                        to={`/graph?focus=${mod.slug}`}
+                        title={mod.name}
+                      >
+                        {mod.name}
+                      </Link>
+                    </div>
                   </td>
-                  <td className="truncate px-2">
-                    <Link
-                      className="text-base text-ink decoration-accent-dim underline-offset-2 hover:text-accent hover:underline"
-                      to={`/graph?focus=${mod.slug}`}
-                      title={mod.name}
-                    >
-                      {mod.name}
-                    </Link>
-                  </td>
-                  <td className="truncate px-2 font-mono text-muted" title={mod.slug}>
+                  <td className="truncate px-3 font-mono text-xs text-muted" title={mod.slug}>
                     {mod.slug}
                   </td>
-                  <td className="px-2 text-muted">{SOURCE_LABEL[mod.source]}</td>
-                  <td className="px-2 font-mono text-muted">{mod.side}</td>
-                  <td
-                    className="truncate px-2 text-faint"
-                    title={mod.flavors.join(", ") || undefined}
-                  >
-                    {mod.flavors.join(", ") || "—"}
+                  <td className="px-3 text-xs text-muted">{SOURCE_LABEL[mod.source]}</td>
+                  <td className="px-3">
+                    <SideMark side={mod.side} label />
                   </td>
-                  <td className="truncate px-2 font-mono text-muted">
+                  {/* Плашка внутри ячейки должна усекаться сама: `truncate` на
+                      td режет текст, но не саму плашку, и она вылезала за
+                      колонку в соседнюю. */}
+                  <td className="px-3 text-xs text-faint" title={mod.flavors.join(", ") || undefined}>
+                    {mod.flavors.length ? (
+                      <Tag>
+                        <span className="block max-w-[128px] truncate">
+                          {mod.flavors.join(", ")}
+                        </span>
+                      </Tag>
+                    ) : (
+                      "—"
+                    )}
+                  </td>
+                  <td className="truncate px-3 font-mono text-xs text-muted">
                     {mod.version ?? "—"}
                     {update && (
-                      <span className="ml-2 text-accent">
-                        <span aria-hidden>▲ </span>
+                      <span className="ml-2 inline-flex items-center gap-1 text-accent">
+                        <CircleArrowUp aria-hidden size={11} strokeWidth={2} />
                         {update.candidate_version}
                       </span>
                     )}
                   </td>
-                  <td className="px-2 text-right font-mono text-faint">{bytes(mod.size_bytes)}</td>
-                  <td className="px-2 font-mono text-faint">{day(mod.date_added)}</td>
-                  <td className="px-2 font-mono text-faint">{day(mod.date_updated)}</td>
+                  <td className="px-3 text-right font-mono text-xs text-faint">
+                    {bytes(mod.size_bytes)}
+                  </td>
+                  <td className="px-3 font-mono text-xs text-faint">{day(mod.date_added)}</td>
+                  <td className="px-3 font-mono text-xs text-faint">{day(mod.date_updated)}</td>
                 </tr>
               );
             })}
           </tbody>
         </table>
-        {rows.length === 0 && <Empty>ничего не подошло под фильтры — попробуйте сбросить их</Empty>}
+        {rows.length === 0 && (
+          <Empty icon={Filter}>ничего не подошло под фильтры — попробуйте сбросить их</Empty>
+        )}
       </div>
     </Page>
   );

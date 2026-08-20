@@ -17,11 +17,12 @@
 | `worker/` | Cloudflare Worker: OAuth, сессии, прокси с белым списком |
 | `analyzer/` | разбор jar, граф зависимостей, проверка обновлений → `admin-data/*.json` |
 | `mutate/` | операции над паком: построчное редактирование TOML + вызовы packwiz |
-| `web/` | SPA (Vite + React + Tailwind + Cytoscape) |
+| `web/` | SPA (Vite + React + Tailwind + React Flow + ELK) |
 | `admin-data/` | артефакты анализатора, коммитит бот; `jar-meta/` — кеш разбора jar |
 
 Тесты: `python -m unittest discover -s analyzer/tests`,
-`python -m unittest discover -s mutate/tests`, `npm test --prefix worker`.
+`python -m unittest discover -s mutate/tests`, `npm test --prefix worker`,
+`npm test --prefix web` (модель графа: свёртка семейств, слияние рёбер, обход).
 
 ---
 

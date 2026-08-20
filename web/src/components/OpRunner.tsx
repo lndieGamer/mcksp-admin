@@ -1,4 +1,13 @@
 import {
+  Check,
+  Dot,
+  LoaderCircle,
+  Play,
+  SquareArrowOutUpRight,
+  TriangleAlert,
+  X,
+} from "lucide-react";
+import {
   createContext,
   useCallback,
   useContext,
@@ -87,76 +96,101 @@ export function OpRunnerProvider({ children }: { children: ReactNode }) {
     <RunnerContext.Provider value={{ propose, busy }}>
       {children}
       {pending && (
-        <div className="fixed inset-0 z-40 flex items-center justify-center bg-canvas/80 p-4">
+        <div className="scrim fixed inset-0 z-40 flex items-center justify-center bg-canvas/75 p-4 backdrop-blur-sm">
           <div
             ref={confirmRef}
             role="dialog"
             aria-modal="true"
             aria-label={progress ? "ход операции" : "подтверждение операции"}
-            className="max-h-[85vh] w-full max-w-2xl overflow-auto rounded-md border border-edge-strong bg-surface"
+            className="modal max-h-[85vh] w-full max-w-2xl overflow-auto rounded-lg border border-edge-strong bg-surface shadow-[var(--shadow-e4)]"
           >
-            <header className="flex items-baseline gap-2 border-b border-edge px-4 py-3">
-              <h2 className="text-lg font-medium text-ink">
+            <header className="flex items-center gap-3 border-b border-edge px-5 py-4">
+              <span
+                className={`grid size-8 shrink-0 place-items-center rounded-sm ring-1 ring-inset ${
+                  DESTRUCTIVE.has(pending.operation.op)
+                    ? "bg-danger/10 text-danger ring-danger-dim"
+                    : "bg-raised text-accent ring-edge"
+                }`}
+              >
+                {DESTRUCTIVE.has(pending.operation.op) ? (
+                  <TriangleAlert aria-hidden size={16} strokeWidth={1.75} />
+                ) : (
+                  <Play aria-hidden size={15} strokeWidth={1.75} />
+                )}
+              </span>
+              <h2 className="text-md font-semibold text-ink">
                 {progress ? "Операция" : "Что произойдёт"}
               </h2>
               <code className="text-2xs text-faint">{pending.operation.op}</code>
               {!progress && DESTRUCTIVE.has(pending.operation.op) && (
-                <span className="ml-auto text-2xs text-danger">необратимо</span>
+                <span className="ml-auto rounded-xs bg-danger/10 px-2 py-0.5 text-2xs text-danger">
+                  необратимо
+                </span>
               )}
             </header>
 
-            <div className="space-y-3 px-4 py-3 text-xs">
+            <div className="space-y-4 px-5 py-4 text-xs">
               {!progress && pending.preview}
 
               {progress && (
                 <>
-                  <p className="flex items-center gap-2 text-muted">
+                  <p className="flex items-center gap-2.5 text-muted">
                     {busy && (
-                      <span aria-hidden className="size-1.5 animate-pulse rounded-full bg-accent" />
+                      <span aria-hidden className="pulse-ring size-1.5 rounded-full bg-accent" />
                     )}
                     {PHASE_LABEL[progress.phase]}
                   </p>
                   {progress.steps.length > 0 && (
-                    <ol className="space-y-1">
-                      {progress.steps.map((step, index) => (
-                        <li
-                          key={index}
-                          className={`flex items-center gap-2 transition-colors duration-[--dur] ${
-                            step.status === "in_progress" ? "text-ink" : ""
-                          }`}
-                        >
-                          <span
-                            className={
-                              step.conclusion === "success"
+                    <ol className="space-y-1.5">
+                      {progress.steps.map((step, index) => {
+                        const StepIcon =
+                          step.conclusion === "success"
+                            ? Check
+                            : step.conclusion === "failure"
+                              ? X
+                              : step.status === "in_progress"
+                                ? LoaderCircle
+                                : Dot;
+                        const tone =
+                          step.conclusion === "success"
+                            ? "text-accent"
+                            : step.conclusion === "failure"
+                              ? "text-danger"
+                              : step.status === "in_progress"
                                 ? "text-accent"
-                                : step.conclusion === "failure"
-                                  ? "text-danger"
-                                  : step.status === "in_progress"
-                                    ? "text-accent"
-                                    : "text-faint"
-                            }
+                                : "text-faint";
+                        return (
+                          <li
+                            key={index}
+                            className={`flex items-center gap-2.5 transition-colors duration-[var(--dur)] ${
+                              step.status === "in_progress" ? "text-ink" : ""
+                            }`}
                           >
-                            {step.conclusion === "success"
-                              ? "✓"
-                              : step.conclusion === "failure"
-                                ? "✕"
-                                : step.status === "in_progress"
-                                  ? "•"
-                                  : "·"}
-                          </span>
-                          <span className="text-muted">{step.name}</span>
-                        </li>
-                      ))}
+                            <StepIcon
+                              aria-hidden
+                              size={14}
+                              strokeWidth={2}
+                              className={`shrink-0 ${tone} ${
+                                step.status === "in_progress" && !step.conclusion
+                                  ? "animate-spin"
+                                  : ""
+                              }`}
+                            />
+                            <span className="text-muted">{step.name}</span>
+                          </li>
+                        );
+                      })}
                     </ol>
                   )}
                   {progress.runUrl && (
                     <a
-                      className="inline-block text-accent underline"
+                      className="inline-flex items-center gap-1.5 text-accent transition-colors duration-[var(--dur)] hover:text-accent-strong"
                       href={progress.runUrl}
                       target="_blank"
                       rel="noreferrer"
                     >
                       открыть запуск и его summary на GitHub
+                      <SquareArrowOutUpRight aria-hidden size={12} strokeWidth={2} />
                     </a>
                   )}
                 </>
@@ -166,13 +200,13 @@ export function OpRunnerProvider({ children }: { children: ReactNode }) {
 
               <details className="text-faint">
                 <summary className="cursor-pointer">payload</summary>
-                <pre className="mt-1 overflow-auto rounded bg-canvas p-2 text-2xs">
+                <pre className="mt-2 overflow-auto rounded-sm bg-canvas p-3 text-2xs">
                   {JSON.stringify(pending.operation, null, 2)}
                 </pre>
               </details>
             </div>
 
-            <footer className="flex justify-end gap-2 border-t border-edge px-4 py-3">
+            <footer className="flex justify-end gap-2 border-t border-edge px-5 py-4">
               <Button onClick={close} disabled={busy}>
                 {progress?.phase === "succeeded" || progress?.phase === "failed"
                   ? "закрыть"
@@ -181,6 +215,7 @@ export function OpRunnerProvider({ children }: { children: ReactNode }) {
               {!progress && (
                 <Button
                   tone={DESTRUCTIVE.has(pending.operation.op) ? "danger" : "primary"}
+                  icon={Play}
                   onClick={() => void confirm()}
                 >
                   выполнить

@@ -1,6 +1,17 @@
+import { CircleCheck, CircleHelp, Lock, ShieldAlert, TriangleAlert, XCircle } from "lucide-react";
 import { useMemo, useState } from "react";
 
-import { Band, Empty, Loading, Page, PageTitle, Select, Tag, plural } from "../components/ui";
+import {
+  Band,
+  Card,
+  Empty,
+  Loading,
+  Page,
+  PageTitle,
+  Select,
+  Tag,
+  plural,
+} from "../components/ui";
 import { usePrivate, useSession } from "../lib/data";
 import type { LintFinding } from "../lib/types";
 
@@ -20,9 +31,9 @@ export default function Lint() {
   const codes = useMemo(() => [...new Set(findings.map((f) => f.code))].sort(), [findings]);
   const rows = findings.filter((f) => (!level || f.level === level) && (!code || f.code === code));
 
-  if (!session.data) return <Empty>раздел доступен только администратору</Empty>;
+  if (!session.data) return <Empty icon={Lock}>раздел доступен только администратору</Empty>;
   if (privateData.isLoading) return <Loading what="отчёт линтера" />;
-  if (!privateData.data) return <Empty>private.json недоступен</Empty>;
+  if (!privateData.data) return <Empty icon={ShieldAlert}>private.json недоступен</Empty>;
 
   const counts = {
     error: findings.filter((f) => f.level === "error").length,
@@ -33,6 +44,7 @@ export default function Lint() {
   return (
     <Page>
       <PageTitle
+        icon={ShieldAlert}
         actions={
           <>
             <Select value={level} onChange={(e) => setLevel(e.target.value)}>
@@ -55,31 +67,40 @@ export default function Lint() {
         что не так с паком
       </PageTitle>
 
-      <p className="-mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted">
-        <span className={counts.error ? "text-danger" : "text-faint"}>
-          <span aria-hidden>✕ </span>
-          {counts.error} {plural(counts.error, "ошибка", "ошибки", "ошибок")}
-        </span>
-        <span className={counts.warning ? "text-warn" : "text-faint"}>
-          <span aria-hidden>■ </span>
-          {counts.warning}{" "}
-          {plural(counts.warning, "предупреждение", "предупреждения", "предупреждений")}
-        </span>
-        <span className="text-faint">
-          <span aria-hidden>◇ </span>
-          {counts.info} {plural(counts.info, "заметка", "заметки", "заметок")}
-        </span>
-      </p>
+      <div className="grid gap-4 sm:grid-cols-3">
+        <Count
+          index={0}
+          icon={XCircle}
+          tone={counts.error ? "text-danger" : "text-faint"}
+          value={counts.error}
+          label={plural(counts.error, "ошибка", "ошибки", "ошибок")}
+        />
+        <Count
+          index={1}
+          icon={TriangleAlert}
+          tone={counts.warning ? "text-warn" : "text-faint"}
+          value={counts.warning}
+          label={plural(counts.warning, "предупреждение", "предупреждения", "предупреждений")}
+        />
+        <Count
+          index={2}
+          icon={CircleHelp}
+          tone="text-faint"
+          value={counts.info}
+          label={plural(counts.info, "заметка", "заметки", "заметок")}
+        />
+      </div>
 
       <Band title="находки" count={rows.length}>
         {rows.length === 0 ? (
-          <Empty>чисто — под текущие фильтры ничего не попало</Empty>
+          <Empty icon={CircleCheck}>чисто — под текущие фильтры ничего не попало</Empty>
         ) : (
-          <ul className="max-w-[1180px]">
+          <Card className="divide-y divide-edge/60 overflow-hidden">
             {rows.map((finding, index) => (
-              <li
+              <div
                 key={index}
-                className="rule grid grid-cols-[170px_230px_minmax(0,1fr)] items-baseline gap-x-3 py-1.5 text-sm hover:bg-raised/45"
+                style={{ "--stagger-index": Math.min(index, 18) } as React.CSSProperties}
+                className="rise grid grid-cols-[190px_250px_minmax(0,1fr)] items-baseline gap-x-4 px-4 py-2.5 text-sm transition-colors duration-[var(--dur-fast)] hover:bg-raised/45"
               >
                 <span>
                   <Tag tone={TONE[finding.level]}>{finding.code}</Tag>
@@ -87,27 +108,27 @@ export default function Lint() {
                 <span className="truncate font-mono text-xs text-faint" title={finding.slug}>
                   {finding.slug}
                 </span>
-                <span className="text-muted">{finding.message}</span>
-              </li>
+                <span className="text-xs text-muted">{finding.message}</span>
+              </div>
             ))}
-          </ul>
+          </Card>
         )}
       </Band>
 
       <Band title="не разобрано" count={privateData.data.unparsed.length}>
         {privateData.data.unparsed.length === 0 ? (
-          <Empty>всё разобралось</Empty>
+          <Empty icon={CircleCheck}>всё разобралось</Empty>
         ) : (
           <>
-            <p className="max-w-[70ch] text-xs text-faint">
-              Спорное переносится в <code>analyzer/overrides.toml</code> — оттуда оно подмешивается в
-              граф вручную.
+            <p className="max-w-[74ch] text-xs text-faint">
+              Спорное переносится в <code>analyzer/overrides.toml</code> — оттуда оно подмешивается
+              в граф вручную.
             </p>
-            <ul className="max-w-[1180px]">
+            <Card className="divide-y divide-edge/60 overflow-hidden">
               {privateData.data.unparsed.map((entry) => (
-                <li
+                <div
                   key={entry.slug}
-                  className="rule grid grid-cols-[170px_230px_minmax(0,1fr)] items-baseline gap-x-3 py-1.5 text-sm hover:bg-raised/45"
+                  className="grid grid-cols-[190px_250px_minmax(0,1fr)] items-baseline gap-x-4 px-4 py-2.5 text-sm transition-colors duration-[var(--dur-fast)] hover:bg-raised/45"
                 >
                   <span>
                     <Tag tone={entry.level === "failed" ? "danger" : "warn"}>{entry.level}</Tag>
@@ -115,26 +136,52 @@ export default function Lint() {
                   <span className="truncate font-mono text-xs text-muted" title={entry.slug}>
                     {entry.slug}
                   </span>
-                  <span className="text-faint">{entry.reason}</span>
-                </li>
+                  <span className="text-xs text-faint">{entry.reason}</span>
+                </div>
               ))}
-            </ul>
+            </Card>
           </>
         )}
       </Band>
 
       {privateData.data.platform.length > 0 && (
         <Band title="платформа не устраивает моды">
-          <ul>
+          <Card className="divide-y divide-edge/60 overflow-hidden">
             {privateData.data.platform.map((entry, index) => (
-              <li key={index} className="rule py-1.5 text-sm text-danger">
-                <span className="font-mono text-xs">{entry.slug}</span> требует {entry.mod_id}{" "}
-                <span className="font-mono text-xs">{entry.version_range}</span>
-              </li>
+              <p key={index} className="px-4 py-2.5 text-xs text-danger">
+                <span className="font-mono">{entry.slug}</span> требует {entry.mod_id}{" "}
+                <span className="font-mono">{entry.version_range}</span>
+              </p>
             ))}
-          </ul>
+          </Card>
         </Band>
       )}
     </Page>
+  );
+}
+
+function Count({
+  icon: Icon,
+  tone,
+  value,
+  label,
+  index,
+}: {
+  icon: typeof XCircle;
+  tone: string;
+  value: number;
+  label: string;
+  index: number;
+}) {
+  return (
+    <div style={{ "--stagger-index": index } as React.CSSProperties}>
+      <Card className="rise flex items-center gap-4 px-5 py-4">
+        <Icon aria-hidden size={20} strokeWidth={1.75} className={`shrink-0 ${tone}`} />
+        <p className="flex items-baseline gap-2">
+          <span className={`font-display text-xl leading-none font-semibold ${tone}`}>{value}</span>
+          <span className="text-xs text-faint">{label}</span>
+        </p>
+      </Card>
+    </div>
   );
 }
