@@ -40,7 +40,9 @@ jobs:
 
       # public.json ships with the SPA; private.json deliberately does not --
       # it only ever reaches the browser through the Worker, behind a session.
-      - run: cp admin-data/public.json web/dist/public.json
+      # Tolerated missing so the site can go live before the first analyze run:
+      # the panel renders its shell and says it has no data yet.
+      - run: cp admin-data/public.json web/dist/public.json || echo "no public.json yet"
 
       - uses: actions/upload-pages-artifact@v3
         with:
