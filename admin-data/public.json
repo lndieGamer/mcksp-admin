@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-21T04:42:59Z",
+ "generated_at": "2026-08-21T14:24:28Z",
  "notices": [],
  "pack": {
   "version": "1.0.0",
@@ -1156,7 +1156,7 @@
     "create-better-fps_on"
    ],
    "role": "addon",
-   "cluster": "sodium::sodium",
+   "cluster": "sodium",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
@@ -3470,7 +3470,7 @@
    "size_bytes": 260876,
    "flavors": [],
    "role": "addon",
-   "cluster": "sodium::sodium",
+   "cluster": "sodium",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-08T17:16:30+02:00",
@@ -3999,8 +3999,8 @@
     "sodium-extra_on",
     "ssrd_on"
    ],
-   "role": "standalone",
-   "cluster": null,
+   "role": "core",
+   "cluster": "sodium",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
@@ -4024,37 +4024,11 @@
     "sodium-extra_on"
    ],
    "role": "addon",
-   "cluster": "sodium::sodium",
+   "cluster": "sodium",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T20:44:37+02:00",
-   "parse_status": "ok",
-   "status": "current"
-  },
-  {
-   "slug": "sodium::sodium",
-   "name": "Sodium",
-   "filename": "",
-   "side": "client",
-   "source": "curseforge",
-   "project_id": null,
-   "version": "0.8.13-beta.2+mc1.21.1",
-   "mod_ids": [
-    "sodium"
-   ],
-   "size_bytes": 0,
-   "flavors": [
-    "sodium_on",
-    "sodium-extra_on",
-    "ssrd_on"
-   ],
-   "role": "core",
-   "cluster": "sodium::sodium",
-   "embedded": true,
-   "owner": "sodium",
-   "date_added": null,
-   "date_updated": null,
    "parse_status": "ok",
    "status": "current"
   },
@@ -4482,7 +4456,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T20:44:37+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "yungs-api-neoforge",
@@ -5140,7 +5114,7 @@
   },
   {
    "from": "create-better-fps",
-   "to": "sodium::sodium",
+   "to": "sodium",
    "to_mod_id": "sodium",
    "type": "required",
    "version_range": "[0.6.9,)",
@@ -5580,7 +5554,7 @@
   },
   {
    "from": "create",
-   "to": "sodium::sodium",
+   "to": "sodium",
    "to_mod_id": "sodium",
    "type": "optional",
    "version_range": "[0.6.9,)",
@@ -5604,7 +5578,7 @@
   },
   {
    "from": "create::flywheel",
-   "to": "sodium::sodium",
+   "to": "sodium",
    "to_mod_id": "sodium",
    "type": "optional",
    "version_range": "[0.6.0-beta.2,)",
@@ -6084,7 +6058,7 @@
   },
   {
    "from": "reeses-sodium-options",
-   "to": "sodium::sodium",
+   "to": "sodium",
    "to_mod_id": "sodium",
    "type": "required",
    "version_range": "[0.8.12,)",
@@ -6212,7 +6186,7 @@
   },
   {
    "from": "sodium-extra",
-   "to": "sodium::sodium",
+   "to": "sodium",
    "to_mod_id": "sodium",
    "type": "required",
    "version_range": "[0.8.12+mc1.21.1,)",
@@ -6236,7 +6210,7 @@
   },
   {
    "from": "ssrd",
-   "to": "sodium::sodium",
+   "to": "sodium",
    "to_mod_id": "sodium",
    "type": "required",
    "version_range": "[0,)",

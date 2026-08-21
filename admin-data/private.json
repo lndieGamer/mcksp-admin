@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-21T04:42:59Z",
+ "generated_at": "2026-08-21T14:24:28Z",
  "updates": [
   {
    "slug": "balm",
@@ -349,6 +349,19 @@
    "blocked_by": []
   },
   {
+   "slug": "xaeros-world-map",
+   "current_version": "1.44.2",
+   "candidate_version": "1.45.0",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8698659,
+    "project_id": "317780"
+   },
+   "published_at": "2026-08-21T11:47:20.993Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
    "slug": "yungs-api-neoforge",
    "current_version": "1.21.1-NeoForge-5.1.6",
    "candidate_version": "1.21.1-NeoForge-5.1.7",
@@ -378,52 +391,34 @@
  "update_sets": [],
  "lint": [
   {
-   "level": "error",
-   "code": "incompatible_present",
-   "slug": "sable",
-   "message": "sable declares 'sablecompanion' incompatible, but 'create-bits-n-bobs::sablecompanion' provides it"
-  },
-  {
-   "level": "error",
-   "code": "incompatible_present",
-   "slug": "sable",
-   "message": "sable declares 'sodium' incompatible, but 'sodium::sodium' provides it"
-  },
-  {
-   "level": "error",
-   "code": "incompatible_present",
-   "slug": "sable::veil",
-   "message": "sable::veil declares 'sodium' incompatible, but 'sodium::sodium' provides it"
-  },
-  {
-   "level": "error",
+   "level": "info",
    "code": "platform_unsatisfied",
    "slug": "create-ender-transmission",
-   "message": "needs minecraft [1.21,1.21.1), pack has 1.21.1"
+   "message": "needs minecraft [1.21,1.21.1), pack has 1.21.1 (stale mods.toml metadata, the loader range decides)"
   },
   {
-   "level": "error",
+   "level": "info",
    "code": "platform_unsatisfied",
    "slug": "create-sophisticated-backpacks-compat",
-   "message": "needs minecraft [1.20.1,1.21.1), pack has 1.21.1"
+   "message": "needs minecraft [1.20.1,1.21.1), pack has 1.21.1 (stale mods.toml metadata, the loader range decides)"
   },
   {
-   "level": "error",
+   "level": "info",
    "code": "platform_unsatisfied",
    "slug": "irisshaders",
-   "message": "needs minecraft [1.21,1.21.1), pack has 1.21.1"
+   "message": "needs minecraft [1.21,1.21.1), pack has 1.21.1 (stale mods.toml metadata, the loader range decides)"
   },
   {
-   "level": "error",
+   "level": "info",
    "code": "platform_unsatisfied",
    "slug": "jei",
-   "message": "needs minecraft [1.21, 1.21.1), pack has 1.21.1"
+   "message": "needs minecraft [1.21, 1.21.1), pack has 1.21.1 (stale mods.toml metadata, the loader range decides)"
   },
   {
-   "level": "error",
+   "level": "info",
    "code": "platform_unsatisfied",
    "slug": "lodestone",
-   "message": "needs minecraft [1.21,1.21.1), pack has 1.21.1"
+   "message": "needs minecraft [1.21,1.21.1), pack has 1.21.1 (stale mods.toml metadata, the loader range decides)"
   },
   {
    "level": "info",
@@ -478,6 +473,12 @@
    "code": "side_conflict",
    "slug": "seasonal-lets-do",
    "message": "Modrinth: client_side unsupported, pack has side = 'both'"
+  },
+  {
+   "level": "warning",
+   "code": "flavor_escape",
+   "slug": "create-better-fps",
+   "message": "needs 'sodium', which sits in a different flavor group: turning that group off breaks the pack"
   }
  ],
  "history": [],
