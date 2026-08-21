@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-21T14:24:28Z",
+ "generated_at": "2026-08-21T14:43:18Z",
  "updates": [
   {
    "slug": "balm",
@@ -465,12 +465,6 @@
   {
    "level": "error",
    "code": "side_conflict",
-   "slug": "create_oxidized",
-   "message": "Modrinth: client_side unsupported, pack has side = 'both'"
-  },
-  {
-   "level": "error",
-   "code": "side_conflict",
    "slug": "seasonal-lets-do",
    "message": "Modrinth: client_side unsupported, pack has side = 'both'"
   },
@@ -481,7 +475,16 @@
    "message": "needs 'sodium', which sits in a different flavor group: turning that group off breaks the pack"
   }
  ],
- "history": [],
+ "history": [
+  {
+   "sha": "16812a8cb77ca7eee518e49cd9fd2da23205e766",
+   "op_id": "a91ee478-4424-47e2-86ef-e84b2fb28a82",
+   "op": "set-side",
+   "title": "set-side: create_oxidized -> server",
+   "date": "2026-08-21T14:42:51Z",
+   "reverted": false
+  }
+ ],
  "unparsed": [
   {
    "slug": "axiom",
