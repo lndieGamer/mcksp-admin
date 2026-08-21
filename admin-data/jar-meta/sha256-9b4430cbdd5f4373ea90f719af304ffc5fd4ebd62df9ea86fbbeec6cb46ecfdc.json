@@ -1,0 +1,11 @@
+{
+ "size_bytes": 12558142,
+ "meta": {
+  "status": "failed",
+  "notes": [
+   "voxy-0.2.15-NeoForge-1.21.1.jar: no META-INF/neoforge.mods.toml or META-INF/mods.toml"
+  ],
+  "loader_version": null,
+  "mods": []
+ }
+}

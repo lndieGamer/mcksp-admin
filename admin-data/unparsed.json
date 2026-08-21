@@ -1,0 +1,32 @@
+[
+ {
+  "slug": "axiom",
+  "level": "failed",
+  "reason": "Axiom-5.4.2-for-MC1.21.1.jar: no META-INF/neoforge.mods.toml or META-INF/mods.toml"
+ },
+ {
+  "slug": "carbon-config",
+  "level": "warning",
+  "reason": "CarbonConfig-Neoforge-1.21.1-2.0.2.1.jar/carbonconfig: version placeholder '${file.jarVersion}' unresolved"
+ },
+ {
+  "slug": "create-sophisticated-backpacks-compat",
+  "level": "warning",
+  "reason": "create_sophback_compat-1.0.jar/create_sophback_compat: version placeholder '${file.jarVersion}' unresolved"
+ },
+ {
+  "slug": "kotlin-for-forge",
+  "level": "failed",
+  "reason": "kotlinforforge-5.12.0-all.jar: no META-INF/neoforge.mods.toml or META-INF/mods.toml"
+ },
+ {
+  "slug": "sinytra-connector",
+  "level": "failed",
+  "reason": "connector-2.0.0-beta.16+1.21.1-full.jar: no META-INF/neoforge.mods.toml or META-INF/mods.toml"
+ },
+ {
+  "slug": "voxy",
+  "level": "failed",
+  "reason": "voxy-0.2.15-NeoForge-1.21.1.jar: no META-INF/neoforge.mods.toml or META-INF/mods.toml"
+ }
+]

@@ -1,0 +1,46 @@
+{
+ "size_bytes": 22105215,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[4,)",
+  "mods": [
+   {
+    "mod_id": "burnt",
+    "version": "1.10.3.7",
+    "display_name": "Burnt Basic",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1,1.22)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "cloth_config",
+      "type": "required",
+      "version_range": "*",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "weather2",
+      "type": "optional",
+      "version_range": "*",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

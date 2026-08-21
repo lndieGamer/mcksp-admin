@@ -1,0 +1,32 @@
+{
+ "size_bytes": 19238,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[1,)",
+  "mods": [
+   {
+    "mod_id": "sereneseasonsgenfix",
+    "version": "1.2.4",
+    "display_name": "Serene_Seasons_GenFix",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "sereneseasons",
+      "type": "required",
+      "version_range": "",
+      "side": "SERVER",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21,1.21.11]",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

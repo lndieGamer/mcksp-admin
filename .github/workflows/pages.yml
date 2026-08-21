@@ -1,0 +1,67 @@
+name: pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "web/**"
+      - "admin-data/public.json"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+  # analyze.yml calls this after committing admin-data: a push made with
+  # GITHUB_TOKEN never triggers a workflow, so the paths filter above cannot
+  # see the bot's commit.
+  workflow_call:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # ref: main, not the calling run's sha -- when analyze calls us the
+      # caller's sha predates the admin-data commit we are here to publish.
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - run: npm install
+        working-directory: web
+
+      # VITE_WORKER_URL is a repository variable, not a secret: it is a public
+      # URL and ends up in the bundle either way. Without it the panel still
+      # builds and runs in public mode.
+      - run: npm run build
+        working-directory: web
+        env:
+          VITE_WORKER_URL: ${{ vars.WORKER_URL }}
+
+      # public.json ships with the SPA; private.json deliberately does not --
+      # it only ever reaches the browser through the Worker, behind a session.
+      # Tolerated missing so the site can go live before the first analyze run:
+      # the panel renders its shell and says it has no data yet.
+      - run: cp admin-data/public.json web/dist/public.json || echo "no public.json yet"
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

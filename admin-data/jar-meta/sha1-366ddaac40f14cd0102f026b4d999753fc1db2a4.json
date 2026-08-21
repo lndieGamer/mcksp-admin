@@ -1,0 +1,32 @@
+{
+ "size_bytes": 74900204,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[4,)",
+  "mods": [
+   {
+    "mod_id": "alexscaves",
+    "version": "2.0.10",
+    "display_name": "Alex's Caves",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "citadel",
+      "type": "required",
+      "version_range": "[2.6.0,)",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.0,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

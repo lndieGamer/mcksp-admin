@@ -1,0 +1,68 @@
+{
+ "size_bytes": 2185409,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[4,)",
+  "mods": [
+   {
+    "mod_id": "xaerominimap",
+    "version": "26.4.2",
+    "display_name": "Xaero's Minimap",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.0.110-beta,21.2.0)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "1.21.1",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "openpartiesandclaims",
+      "type": "optional",
+      "version_range": "[0.27.0,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "xaeroworldmap",
+      "type": "optional",
+      "version_range": "[1.44.0,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   },
+   {
+    "mod_id": "xaerolib",
+    "version": "1.7.1",
+    "display_name": "XaeroLib",
+    "embedded": true,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.0.110-beta,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21, 1.21.1]",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

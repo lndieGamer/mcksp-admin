@@ -1,0 +1,48 @@
+{
+ "size_bytes": 679850,
+ "meta": {
+  "status": "warning",
+  "notes": [
+   "create_sophback_compat-1.0.jar/create_sophback_compat: version placeholder '${file.jarVersion}' unresolved"
+  ],
+  "loader_version": "[4,)",
+  "mods": [
+   {
+    "mod_id": "create_sophback_compat",
+    "version": null,
+    "display_name": "Create Oh The Biomes We ve Gone Compat",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.20.1,1.21.1)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "sophisticatedbackpacks",
+      "type": "required",
+      "version_range": "[3.24.1,)",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "create",
+      "type": "required",
+      "version_range": "[0.5.1,)",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     }
+    ]
+   }
+  ]
+ }
+}

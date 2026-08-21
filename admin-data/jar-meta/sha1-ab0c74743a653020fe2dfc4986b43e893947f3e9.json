@@ -1,0 +1,32 @@
+{
+ "size_bytes": 340572,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[3,)",
+  "mods": [
+   {
+    "mod_id": "chunky",
+    "version": "1.4.23",
+    "display_name": "Chunky",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.0-beta,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21,1.22)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

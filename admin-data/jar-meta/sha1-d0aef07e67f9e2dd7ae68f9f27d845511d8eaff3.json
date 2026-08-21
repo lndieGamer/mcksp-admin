@@ -1,0 +1,25 @@
+{
+ "size_bytes": 74419,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "*",
+  "mods": [
+   {
+    "mod_id": "jadeaddons",
+    "version": "6.1.0+neoforge",
+    "display_name": "Jade Addons",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "jade",
+      "type": "required",
+      "version_range": "[15.10, )",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

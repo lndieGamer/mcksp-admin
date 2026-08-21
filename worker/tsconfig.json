@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "es2022",
+    "moduleResolution": "bundler",
+    "lib": ["es2022"],
+    "types": ["@cloudflare/workers-types"],
+    "strict": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true
+  },
+  // Only src: it runs on the Workers runtime, whose globals "types" pins.
+  // test/ is Node-land and would need @types/node, which must never leak
+  // into the worker build -- node --test executes it either way.
+  "include": ["src"]
+}

@@ -1,0 +1,68 @@
+{
+ "size_bytes": 15576704,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[3,)",
+  "mods": [
+   {
+    "mod_id": "quark",
+    "version": "4.1-482",
+    "display_name": "Quark",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.230,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "zeta",
+      "type": "required",
+      "version_range": "[1,1.2)",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "biolith",
+      "type": "required",
+      "version_range": "[3.0.0,3.1.0)",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "lootr",
+      "type": "optional",
+      "version_range": "[1.10.34.86,)",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     }
+    ]
+   },
+   {
+    "mod_id": "biolith",
+    "version": "3.0.10",
+    "display_name": "Biolith",
+    "embedded": true,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.22,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1,1.21.2)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}
