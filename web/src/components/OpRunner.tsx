@@ -140,6 +140,9 @@ export function OpRunnerProvider({ children }: { children: ReactNode }) {
                     )}
                     {PHASE_LABEL[progress.phase]}
                   </p>
+                  {progress.phase === "failed" && progress.message && (
+                    <p className="text-danger">{progress.message}</p>
+                  )}
                   {progress.steps.length > 0 && (
                     <ol className="space-y-1.5">
                       {progress.steps.map((step, index) => {

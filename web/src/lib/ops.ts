@@ -2,7 +2,7 @@ import { github, githubVoid } from "./api";
 import type { Operation } from "./types";
 
 const REPO = "/repos/lndieGamer/mcksp-admin";
-const FIND_TIMEOUT_MS = 30_000;
+const FIND_TIMEOUT_MS = 60_000;
 const POLL_MS = 3_000;
 
 export interface StepState {
@@ -59,7 +59,12 @@ export async function runOperation(
   emit({ phase: "searching" });
   const run = await findRun(requestId);
   if (!run) {
-    emit({ phase: "failed", message: "run did not appear within 30 s" });
+    emit({
+      phase: "failed",
+      message:
+        "запуск не нашёлся за 60 с. Он мог всё равно стартовать — проверьте вкладку Actions, " +
+        "прежде чем повторять операцию",
+    });
     return progress;
   }
 

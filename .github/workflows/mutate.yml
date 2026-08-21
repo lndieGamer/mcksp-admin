@@ -25,6 +25,12 @@ concurrency:
 permissions:
   contents: write # the chained analyze job commits admin-data back
 
+env:
+  # Pinned, not @latest: every op would otherwise rebuild whatever packwiz HEAD
+  # happens to be, and a mid-flight upstream change would rewrite the pack in a
+  # way nobody asked for. Bump by hand after checking the packwiz changelog.
+  PACKWIZ_VERSION: v0.0.0-20260218225342-dfd8b68a4796
+
 jobs:
   mutate:
     runs-on: ubuntu-latest
@@ -41,9 +47,23 @@ jobs:
       - uses: actions/setup-go@v5
         with:
           go-version: stable
+          # No go.mod here, so setup-go cannot build a cache key and logs
+          # "Primary key was not generated" every run. The packwiz cache below
+          # is the one that matters.
+          cache: false
+
+      # setup-go puts GOPATH/bin on PATH, so a restored binary is enough: the
+      # build was ~20 s and 37 module downloads on every single operation.
+      - name: Restore packwiz
+        id: packwiz-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/go/bin/packwiz
+          key: packwiz-${{ runner.os }}-${{ env.PACKWIZ_VERSION }}
 
       - name: Install packwiz
-        run: go install github.com/packwiz/packwiz@latest
+        if: steps.packwiz-cache.outputs.cache-hit != 'true'
+        run: go install github.com/packwiz/packwiz@${{ env.PACKWIZ_VERSION }}
 
       - uses: actions/setup-python@v5
         with:
