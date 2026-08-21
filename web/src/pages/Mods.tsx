@@ -1,11 +1,11 @@
-import { Boxes, CircleArrowUp, Filter, Trash2, X } from "lucide-react";
+import { Boxes, ChevronDown, CircleArrowUp, Filter, Trash2, X } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { Link, useSearchParams } from "react-router-dom";
 
 import { useRunner } from "../components/OpRunner";
 import {
   Button,
-  Card,
   Empty,
   Input,
   Loading,
@@ -62,7 +62,8 @@ export default function Mods() {
   const [frozenOnly, setFrozenOnly] = useState(false);
   const [sort, setSort] = useState<SortKey>("name");
   const [descending, setDescending] = useState(false);
-  const [selected, setSelected] = useState<Set<string>>(new Set());
+  // Меню side висит на координатах ячейки, по которой кликнули.
+  const [menu, setMenu] = useState<{ mod: Mod; x: number; y: number } | null>(null);
   const search = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -118,14 +119,6 @@ export default function Mods() {
     [privateData.data],
   );
 
-  const toggle = (slug: string) =>
-    setSelected((current) => {
-      const next = new Set(current);
-      if (next.has(slug)) next.delete(slug);
-      else next.add(slug);
-      return next;
-    });
-
   const sortBy = (key: SortKey) => () => {
     if (sort === key) setDescending((d) => !d);
     else {
@@ -135,23 +128,25 @@ export default function Mods() {
   };
   const dir = (key: SortKey) => (sort === key ? (descending ? "desc" : "asc") : false);
 
-  const bulkSide = (value: Side) => {
-    const targets = [...selected];
+  const changeSide = (mod: Mod, value: Side) => {
+    setMenu(null);
     runner.propose(
-      { op: "set-side", targets, value },
-      <div className="space-y-2">
-        <p className="text-muted">
-          В {targets.length} метафайл(ах) строка <code>side</code> станет{" "}
-          <code>side = &quot;{value}&quot;</code>:
-        </p>
-        <ul className="max-h-52 space-y-0.5 overflow-auto font-mono text-2xs text-muted">
-          {targets.map((slug) => (
-            <li key={slug}>
-              mods/{slug}.pw.toml — было {mods.find((m) => m.slug === slug)?.side} → {value}
-            </li>
-          ))}
-        </ul>
-      </div>,
+      { op: "set-side", targets: [mod.slug], value },
+      <p className="text-muted">
+        В <code>mods/{mod.slug}.pw.toml</code> строка <code>side</code> станет{" "}
+        <code>side = &quot;{value}&quot;</code> — было <code>{mod.side}</code>.
+      </p>,
+    );
+  };
+
+  const removeMod = (mod: Mod) => {
+    setMenu(null);
+    runner.propose(
+      { op: "remove-mod", targets: [mod.slug] },
+      <p className="text-muted">
+        Будут удалены метафайл <code>mods/{mod.slug}.pw.toml</code> и запись в{" "}
+        <code>unsup.toml</code>.
+      </p>,
     );
   };
 
@@ -230,36 +225,6 @@ export default function Mods() {
             </Button>
           )}
         </div>
-
-        {admin && selected.size > 0 && (
-          <Card
-            glow
-            className="fade-in flex flex-wrap items-center gap-2.5 border-accent-dim px-4 py-3"
-          >
-            <Filter aria-hidden size={15} strokeWidth={1.75} className="text-accent" />
-            <span className="text-xs text-muted">выбрано {selected.size}:</span>
-            <Button onClick={() => bulkSide("both")}>side → both</Button>
-            <Button onClick={() => bulkSide("client")}>side → client</Button>
-            <Button onClick={() => bulkSide("server")}>side → server</Button>
-            <Button
-              tone="danger"
-              icon={Trash2}
-              onClick={() =>
-                runner.propose(
-                  { op: "remove-mod", targets: [...selected] },
-                  <p className="text-muted">
-                    Будут удалены метафайлы и записи в unsup.toml: {[...selected].join(", ")}
-                  </p>,
-                )
-              }
-            >
-              удалить
-            </Button>
-            <Button className="ml-auto" icon={X} onClick={() => setSelected(new Set())}>
-              снять выделение
-            </Button>
-          </Card>
-        )}
       </div>
 
       {/* Таблица забирает остаток высоты: двигаются только строки, а шапка
@@ -269,7 +234,6 @@ export default function Mods() {
             сканирует, оно и забирает люфт, остальные держат ритм. */}
         <table className="w-full min-w-[1320px] table-fixed border-separate border-spacing-0 text-sm">
           <colgroup>
-            {admin && <col className="w-9" />}
             <col />
             <col className="w-[168px]" />
             <col className="w-[112px]" />
@@ -282,7 +246,6 @@ export default function Mods() {
           </colgroup>
           <thead>
             <tr className="[&>th]:sticky [&>th]:top-0 [&>th]:z-10 [&>th]:border-b [&>th]:border-edge-strong [&>th]:bg-canvas [&>th]:pt-2">
-              {admin && <Th />}
               <Th onClick={sortBy("name")} sorted={dir("name")}>
                 мод
               </Th>
@@ -313,7 +276,6 @@ export default function Mods() {
           <tbody>
             {rows.map((mod, i) => {
               const update = updates.get(mod.slug);
-              const picked = selected.has(mod.slug);
               return (
                 <tr
                   key={mod.slug}
@@ -322,18 +284,8 @@ export default function Mods() {
                   }
                   className={`h-11 transition-colors duration-[var(--dur-fast)] [&>td]:rule ${
                     i < STAGGER_ROWS ? "rise" : ""
-                  } ${picked ? "bg-raised" : "hover:bg-raised/45"}`}
+                  } ${menu?.mod.slug === mod.slug ? "bg-raised" : "hover:bg-raised/45"}`}
                 >
-                  {admin && (
-                    <td className="px-3">
-                      <input
-                        type="checkbox"
-                        aria-label={`выбрать ${mod.name}`}
-                        checked={picked}
-                        onChange={() => toggle(mod.slug)}
-                      />
-                    </td>
-                  )}
                   <td className="px-3">
                     <div className="flex min-w-0 items-center gap-2.5">
                       <StatusMark status={mod.status} label={false} size={13} />
@@ -357,7 +309,34 @@ export default function Mods() {
                   </td>
                   <td className="px-3 text-xs text-muted">{SOURCE_LABEL[mod.source]}</td>
                   <td className="px-3">
-                    <SideMark side={mod.side} label />
+                    {admin ? (
+                      <button
+                        type="button"
+                        aria-haspopup="menu"
+                        title="сменить side"
+                        className="group/side -mx-1.5 flex cursor-pointer items-center gap-1 rounded-xs px-1.5 py-1 transition-colors duration-[var(--dur-fast)] hover:bg-raised"
+                        onClick={(event) => {
+                          const box = event.currentTarget.getBoundingClientRect();
+                          setMenu({
+                            mod,
+                            x: box.left,
+                            // Нижние строки таблицы иначе открывали бы меню за
+                            // краем окна.
+                            y: Math.min(box.bottom + 6, window.innerHeight - 190),
+                          });
+                        }}
+                      >
+                        <SideMark side={mod.side} label />
+                        <ChevronDown
+                          aria-hidden
+                          size={12}
+                          strokeWidth={2}
+                          className="shrink-0 text-faint transition-colors duration-[var(--dur-fast)] group-hover/side:text-muted"
+                        />
+                      </button>
+                    ) : (
+                      <SideMark side={mod.side} label />
+                    )}
                   </td>
                   {/* Плашка внутри ячейки должна усекаться сама: `truncate` на
                       td режет текст, но не саму плашку, и она вылезала за
@@ -396,6 +375,78 @@ export default function Mods() {
           <Empty icon={Filter}>ничего не подошло под фильтры — попробуйте сбросить их</Empty>
         )}
       </div>
+
+      {menu && (
+        <SideMenu
+          state={menu}
+          onClose={() => setMenu(null)}
+          onPick={(value) => changeSide(menu.mod, value)}
+          onRemove={() => removeMod(menu.mod)}
+        />
+      )}
     </Page>
+  );
+}
+
+/** Меню side поверх ячейки.
+ *
+ *  Портал в body, а не absolute внутри ячейки: таблица живёт в `overflow-auto`,
+ *  и меню у нижних строк обрезалось бы её краем. */
+function SideMenu({
+  state,
+  onClose,
+  onPick,
+  onRemove,
+}: {
+  state: { mod: Mod; x: number; y: number };
+  onClose: () => void;
+  onPick: (value: Side) => void;
+  onRemove: () => void;
+}) {
+  useEffect(() => {
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [onClose]);
+
+  return createPortal(
+    <div className="fixed inset-0 z-40" onClick={onClose}>
+      <div
+        role="menu"
+        aria-label={`side для ${state.mod.name}`}
+        onClick={(event) => event.stopPropagation()}
+        style={{ left: state.x, top: state.y }}
+        className="fade-in fixed w-56 overflow-hidden rounded-md border border-edge-strong bg-surface py-1 shadow-[var(--shadow-e4)]"
+      >
+        <p className="truncate px-3 py-1.5 font-mono text-2xs text-faint">{state.mod.slug}</p>
+        {(["both", "client", "server"] as const).map((value) => (
+          <button
+            key={value}
+            role="menuitem"
+            type="button"
+            disabled={value === state.mod.side}
+            className="flex w-full cursor-pointer items-center gap-2.5 px-3 py-2 text-left text-xs transition-colors duration-[var(--dur-fast)] hover:bg-raised disabled:cursor-default disabled:bg-transparent"
+            onClick={() => onPick(value)}
+          >
+            <SideMark side={value} label />
+            {value === state.mod.side && (
+              <span className="ml-auto text-2xs text-faint">сейчас</span>
+            )}
+          </button>
+        ))}
+        <button
+          role="menuitem"
+          type="button"
+          className="mt-1 flex w-full cursor-pointer items-center gap-2.5 border-t border-edge px-3 py-2 text-left text-xs text-danger transition-colors duration-[var(--dur-fast)] hover:bg-danger/10"
+          onClick={onRemove}
+        >
+          <Trash2 aria-hidden size={13} strokeWidth={1.75} className="shrink-0" />
+          удалить мод
+        </button>
+      </div>
+    </div>,
+    document.body,
   );
 }

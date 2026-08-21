@@ -227,11 +227,13 @@ export const ClusterNode = memo(function ClusterNode({ id, data }: NodeProps<Clu
 });
 
 /** Остров одиночек: рамка вокруг плитки чипов. */
-export const IslandNode = memo(function IslandNode({ data }: NodeProps<IslandNodeType>) {
+export const IslandNode = memo(function IslandNode({ id, data }: NodeProps<IslandNodeType>) {
+  const lit = useLit(id, "nodes");
   const { label, members, tone } = data;
   const accent = tone ? SIDE_HEX[tone] : "#3a4545";
   return (
     <div
+      data-lit={lit || undefined}
       className="node-card h-full w-full rounded-lg border border-dashed bg-canvas/40"
       style={{ borderColor: `${accent}44` }}
     >

@@ -88,7 +88,6 @@ function Graph() {
   const [filters, setFilters] = useState<GraphFilters>(EMPTY_FILTERS);
   const [expanded, setExpanded] = useState<ReadonlySet<string>>(new Set());
   const [isolate, setIsolate] = useState<{ root: string; depth: number } | null>(null);
-  const [hovered, setHovered] = useState<string | null>(null);
   // Результат раскладки держится вместе с моделью, для которой он посчитан:
   // между сменой модели и приходом новых координат на экране живёт прошлая
   // раскладка, и всё, что зависит от «свежести», обязано это различать.
@@ -142,18 +141,27 @@ function Graph() {
   // считает, показывается предыдущая — целиком и согласованно.
   const view = placed?.forModel ?? null;
 
-  // Подсветка цепочки: наведение важнее выбора, выбор важнее покоя. Три шага
-  // в обе стороны — дальше связь перестаёт что-либо объяснять.
+  // Подсветка цепочки: только по выбору. По наведению её не было смысла
+  // держать — курсор задевает узлы по пути к цели, и поле мигало приглушением
+  // на каждом проносе мыши.
   const lit = useMemo(() => {
-    if (!view) return null;
-    const anchor = hovered ?? (focus ? (view.containerOf.get(focus) ?? focus) : null);
-    if (!anchor) return null;
-    // Раскрытие семейства уносит с поля тот самый узел, на котором стоял
-    // курсор: mouseleave по исчезнувшему узлу не приходит, и без этой проверки
-    // якорем оставался призрак, а весь граф так и висел приглушённым.
+    if (!view || !focus) return null;
+    const anchor = view.containerOf.get(focus) ?? focus;
+    // Свёрнутое семейство уносит узел с поля; якорем остался бы призрак, а всё
+    // поле висело бы приглушённым.
     if (!view.nodes.some((node) => node.id === anchor)) return null;
-    return reachable(view.edges, anchor, 3);
-  }, [view, hovered, focus]);
+    const chain = reachable(view.edges, anchor, 3);
+    // Цепочка из одного узла ничего не объясняет: у одиночек рёбер нет вообще,
+    // и приглушение гасило две сотни узлов ради одного чипа — ровно тот случай,
+    // когда «затемняется весь граф вместе с выбранным модом».
+    if (chain.nodes.size < 2) return null;
+    // Рамки семейств и островов — тоже .node-card. Без этого подсвеченный узел
+    // сидел внутри погашенной рамки и читался как погашенный.
+    for (const node of view.nodes) {
+      if (node.parent && chain.nodes.has(node.id)) chain.nodes.add(node.parent);
+    }
+    return chain;
+  }, [view, focus]);
 
   // Подсветка уезжает во внешний стор, а не в `data` узлов: иначе каждое
   // движение мыши пересобирало бы массив из полутора сотен узлов, и React Flow
@@ -241,7 +249,6 @@ function Graph() {
   );
 
   const toggleCluster = useCallback((id: string) => {
-    setHovered(null);
     // Раскрытие переставляет весь граф: камера, оставшаяся на старых
     // координатах, показывает случайный угол поля. Запоминаем, к чему вернуться
     // после того, как ELK досчитает.
@@ -358,7 +365,6 @@ function Graph() {
             <Button
               icon={expanded.size ? ChevronsDownUp : ChevronsUpDown}
               onClick={() => {
-                setHovered(null);
                 setRefit("*");
                 setExpanded((current) => (current.size ? new Set() : new Set(clusters.keys())));
               }}
@@ -504,8 +510,6 @@ function Graph() {
               elevateNodesOnSelect={false}
               elevateEdgesOnSelect={false}
               proOptions={{ hideAttribution: false }}
-              onNodeMouseEnter={(_, node) => setHovered(node.id)}
-              onNodeMouseLeave={() => setHovered(null)}
               onNodeClick={(_, node) => {
                 // По рамке раскрытого семейства кликают, чтобы свернуть его
                 // обратно: дети лежат поверх рамки и свои клики забирают сами.
