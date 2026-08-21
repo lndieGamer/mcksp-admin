@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-21T14:43:18Z",
+ "generated_at": "2026-08-21T14:59:19Z",
  "notices": [],
  "pack": {
   "version": "1.0.0",
@@ -852,7 +852,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "coroutil",
@@ -3636,7 +3636,7 @@
    "slug": "seasonal-lets-do",
    "name": "Seasonal Let's Do",
    "filename": "seasonal_lets_do-neoforge-1.5.0+1.21.jar",
-   "side": "both",
+   "side": "server",
    "source": "modrinth",
    "project_id": "yFIPn94r",
    "version": "1.5.0+1.21",
@@ -3650,7 +3650,7 @@
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-05T09:52:14+02:00",
+   "date_updated": "2026-08-21T14:58:50Z",
    "parse_status": "ok",
    "status": "current"
   },

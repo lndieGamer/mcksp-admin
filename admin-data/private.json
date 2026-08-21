@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-21T14:43:18Z",
+ "generated_at": "2026-08-21T14:59:19Z",
  "updates": [
   {
    "slug": "balm",
@@ -52,6 +52,19 @@
     "project_id": "1155936"
    },
    "published_at": "2025-11-10T23:44:22.97Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "copycats",
+   "current_version": "3.0.4+mc.1.21.1-neoforge",
+   "candidate_version": "3.0.7+mc.1.21.1-neoforge",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8699629,
+    "project_id": "968398"
+   },
+   "published_at": "2026-08-21T14:24:08.01Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -463,12 +476,6 @@
    "message": "voxy-0.2.15-NeoForge-1.21.1.jar: no META-INF/neoforge.mods.toml or META-INF/mods.toml"
   },
   {
-   "level": "error",
-   "code": "side_conflict",
-   "slug": "seasonal-lets-do",
-   "message": "Modrinth: client_side unsupported, pack has side = 'both'"
-  },
-  {
    "level": "warning",
    "code": "flavor_escape",
    "slug": "create-better-fps",
@@ -476,6 +483,14 @@
   }
  ],
  "history": [
+  {
+   "sha": "dd30a650a549911842cbea7e421dd2694368defa",
+   "op_id": "d0bb2eeb-4a01-4940-85e9-ef9eba9494a2",
+   "op": "set-side",
+   "title": "set-side: seasonal-lets-do -> server",
+   "date": "2026-08-21T14:58:50Z",
+   "reverted": false
+  },
   {
    "sha": "16812a8cb77ca7eee518e49cd9fd2da23205e766",
    "op_id": "a91ee478-4424-47e2-86ef-e84b2fb28a82",
