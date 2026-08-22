@@ -45,7 +45,11 @@ async function request(path: string, init: RequestInit = {}): Promise<Response> 
   const token = readSession();
   const headers = new Headers(init.headers);
   if (token) headers.set("authorization", `Bearer ${token}`);
-  const response = await fetch(`${WORKER}${path}`, { ...init, headers });
+  // no-store, always: GitHub answers /actions/runs with `cache-control: private,
+  // max-age=60` and the Worker forwards it verbatim. Polling the same URL every
+  // 2 s then re-read one frozen response for a full minute, so a run dispatched
+  // just now never appeared and the panel called the operation failed.
+  const response = await fetch(`${WORKER}${path}`, { ...init, headers, cache: "no-store" });
   if (response.status === 401) {
     clearSession();
     throw new ApiError("session expired", 401);

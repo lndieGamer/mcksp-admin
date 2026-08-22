@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
  "generated_at": "2026-08-20T14:09:45Z",
+=======
+ "generated_at": "2026-08-22T04:36:55Z",
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
  "updates": [
   {
    "slug": "balm",
@@ -56,6 +60,22 @@
    "blocked_by": []
   },
   {
+<<<<<<< HEAD
+=======
+   "slug": "copycats",
+   "current_version": "3.0.4+mc.1.21.1-neoforge",
+   "candidate_version": "3.0.7+mc.1.21.1-neoforge",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8699629,
+    "project_id": "968398"
+   },
+   "published_at": "2026-08-21T14:24:08.01Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "slug": "create-aeronautics",
    "current_version": "1.3.0",
    "candidate_version": "1.3.1",
@@ -70,6 +90,35 @@
    "blocked_by": []
   },
   {
+<<<<<<< HEAD
+=======
+   "slug": "create-aeronautics-transmission-linkage",
+   "current_version": "0.2.5",
+   "candidate_version": "0.2.6",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8701382,
+    "project_id": "1548056"
+   },
+   "published_at": "2026-08-21T18:12:26.897Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "create-bits-n-bobs",
+   "current_version": "2.2.5",
+   "candidate_version": "2.2.6",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8693607,
+    "project_id": "1398383"
+   },
+   "published_at": "2026-08-20T18:57:07.277Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "slug": "create-ccbr",
    "current_version": "1.2.0",
    "candidate_version": "1.2.1",
@@ -125,6 +174,7 @@
   {
    "slug": "creativecore",
    "current_version": "2.13.42",
+<<<<<<< HEAD
    "candidate_version": "2.13.43",
    "candidate_ref": {
     "source": "curseforge",
@@ -132,6 +182,28 @@
     "project_id": "257814"
    },
    "published_at": "2026-08-14T14:24:56.323Z",
+=======
+   "candidate_version": "2.13.44",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8699787,
+    "project_id": "257814"
+   },
+   "published_at": "2026-08-21T14:39:50.637Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "enchantment-descriptions",
+   "current_version": "21.1.10",
+   "candidate_version": "21.1.11",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8693034,
+    "project_id": "250419"
+   },
+   "published_at": "2026-08-20T17:25:23.653Z",
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "status": "safe",
    "blocked_by": []
   },
@@ -163,6 +235,22 @@
    "blocked_by": []
   },
   {
+<<<<<<< HEAD
+=======
+   "slug": "fusion-connected-textures",
+   "current_version": "1.3.12",
+   "candidate_version": "1.3.13",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8693837,
+    "project_id": "854949"
+   },
+   "published_at": "2026-08-20T19:30:25.86Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "slug": "jade-sable-compat",
    "current_version": "1.2.1",
    "candidate_version": "1.3.0",
@@ -202,6 +290,22 @@
    "blocked_by": []
   },
   {
+<<<<<<< HEAD
+=======
+   "slug": "lootr",
+   "current_version": "1.21.1-1.11.38.123",
+   "candidate_version": "1.21.1-1.11.38.124",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8695784,
+    "project_id": "361276"
+   },
+   "published_at": "2026-08-21T00:46:05.107Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "slug": "reworked-locator-bar",
    "current_version": "1.2.1",
    "candidate_version": "1.2.2",
@@ -238,6 +342,7 @@
     "project_id": "499980"
    },
    "published_at": "2026-08-19T07:14:29.487Z",
+<<<<<<< HEAD
    "status": "blocked",
    "blocked_by": [
     {
@@ -249,6 +354,10 @@
      "version_range": "[1.21-3.2.3,)"
     }
    ]
+=======
+   "status": "safe",
+   "blocked_by": []
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
   },
   {
    "slug": "serene-seasons-gen-fix",
@@ -306,6 +415,7 @@
    "blocked_by": []
   },
   {
+<<<<<<< HEAD
    "slug": "yungs-api-neoforge",
    "current_version": "1.21.1-NeoForge-5.1.6",
    "candidate_version": "1.21.1-NeoForge-5.1.7",
@@ -315,6 +425,30 @@
     "project_id": "1015100"
    },
    "published_at": "2026-08-19T17:33:53.55Z",
+=======
+   "slug": "xaeros-world-map",
+   "current_version": "1.44.2",
+   "candidate_version": "1.45.0",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8698659,
+    "project_id": "317780"
+   },
+   "published_at": "2026-08-21T11:47:20.993Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "yungs-api-neoforge",
+   "current_version": "1.21.1-NeoForge-5.1.6",
+   "candidate_version": "1.21.1-NeoForge-5.1.8",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8702150,
+    "project_id": "1015100"
+   },
+   "published_at": "2026-08-21T19:59:47.053Z",
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "status": "safe",
    "blocked_by": []
   },
@@ -332,6 +466,7 @@
    "blocked_by": []
   }
  ],
+<<<<<<< HEAD
  "update_sets": [
   {
    "id": "selene",
@@ -405,6 +540,39 @@
    "code": "platform_unsatisfied",
    "slug": "lodestone",
    "message": "needs minecraft [1.21,1.21.1), pack has 1.21.1"
+=======
+ "update_sets": [],
+ "lint": [
+  {
+   "level": "info",
+   "code": "platform_unsatisfied",
+   "slug": "create-ender-transmission",
+   "message": "needs minecraft [1.21,1.21.1), pack has 1.21.1 (stale mods.toml metadata, the loader range decides)"
+  },
+  {
+   "level": "info",
+   "code": "platform_unsatisfied",
+   "slug": "create-sophisticated-backpacks-compat",
+   "message": "needs minecraft [1.20.1,1.21.1), pack has 1.21.1 (stale mods.toml metadata, the loader range decides)"
+  },
+  {
+   "level": "info",
+   "code": "platform_unsatisfied",
+   "slug": "irisshaders",
+   "message": "needs minecraft [1.21,1.21.1), pack has 1.21.1 (stale mods.toml metadata, the loader range decides)"
+  },
+  {
+   "level": "info",
+   "code": "platform_unsatisfied",
+   "slug": "jei",
+   "message": "needs minecraft [1.21, 1.21.1), pack has 1.21.1 (stale mods.toml metadata, the loader range decides)"
+  },
+  {
+   "level": "info",
+   "code": "platform_unsatisfied",
+   "slug": "lodestone",
+   "message": "needs minecraft [1.21,1.21.1), pack has 1.21.1 (stale mods.toml metadata, the loader range decides)"
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
   },
   {
    "level": "info",
@@ -449,6 +617,7 @@
    "message": "voxy-0.2.15-NeoForge-1.21.1.jar: no META-INF/neoforge.mods.toml or META-INF/mods.toml"
   },
   {
+<<<<<<< HEAD
    "level": "error",
    "code": "side_conflict",
    "slug": "create_oxidized",
@@ -462,6 +631,32 @@
   }
  ],
  "history": [],
+=======
+   "level": "warning",
+   "code": "flavor_escape",
+   "slug": "create-better-fps",
+   "message": "needs 'sodium', which sits in a different flavor group: turning that group off breaks the pack"
+  }
+ ],
+ "history": [
+  {
+   "sha": "dd30a650a549911842cbea7e421dd2694368defa",
+   "op_id": "d0bb2eeb-4a01-4940-85e9-ef9eba9494a2",
+   "op": "set-side",
+   "title": "set-side: seasonal-lets-do -> server",
+   "date": "2026-08-21T14:58:50Z",
+   "reverted": false
+  },
+  {
+   "sha": "16812a8cb77ca7eee518e49cd9fd2da23205e766",
+   "op_id": "a91ee478-4424-47e2-86ef-e84b2fb28a82",
+   "op": "set-side",
+   "title": "set-side: create_oxidized -> server",
+   "date": "2026-08-21T14:42:51Z",
+   "reverted": false
+  }
+ ],
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
  "unparsed": [
   {
    "slug": "axiom",

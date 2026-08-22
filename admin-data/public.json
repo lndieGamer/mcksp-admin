@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
  "generated_at": "2026-08-20T14:09:45Z",
+=======
+ "generated_at": "2026-08-22T04:36:55Z",
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
  "notices": [],
  "pack": {
   "version": "1.0.0",
@@ -168,7 +172,11 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
    "parse_status": "ok",
+<<<<<<< HEAD
    "status": "broken"
+=======
+   "status": "current"
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
   },
   {
    "slug": "another-furniture",
@@ -852,7 +860,11 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
    "parse_status": "ok",
+<<<<<<< HEAD
    "status": "current"
+=======
+   "status": "update_safe"
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
   },
   {
    "slug": "coroutil",
@@ -1050,7 +1062,11 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
    "parse_status": "ok",
+<<<<<<< HEAD
    "status": "current"
+=======
+   "status": "update_safe"
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
   },
   {
    "slug": "create-aeronautics::aeronautics",
@@ -1156,7 +1172,11 @@
     "create-better-fps_on"
    ],
    "role": "addon",
+<<<<<<< HEAD
    "cluster": "sodium::sodium",
+=======
+   "cluster": "sodium",
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
@@ -1228,7 +1248,11 @@
    "date_added": "2026-08-19T09:15:56+02:00",
    "date_updated": "2026-08-19T09:15:56+02:00",
    "parse_status": "ok",
+<<<<<<< HEAD
    "status": "current"
+=======
+   "status": "update_safe"
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
   },
   {
    "slug": "create-bits-n-bobs::sablecompanion",
@@ -1718,7 +1742,11 @@
    "slug": "create_oxidized",
    "name": "Create: Oxidized",
    "filename": "create_oxidized-0.1.3.jar",
+<<<<<<< HEAD
    "side": "both",
+=======
+   "side": "server",
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "source": "modrinth",
    "project_id": "X9kjRZeX",
    "version": "0.1.3",
@@ -1732,7 +1760,11 @@
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
+<<<<<<< HEAD
    "date_updated": "2026-08-05T09:52:14+02:00",
+=======
+   "date_updated": "2026-08-21T14:42:51Z",
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "parse_status": "ok",
    "status": "current"
   },
@@ -1938,7 +1970,11 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T20:44:37+02:00",
    "parse_status": "ok",
+<<<<<<< HEAD
    "status": "current"
+=======
+   "status": "update_safe"
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
   },
   {
    "slug": "enders-delight",
@@ -2256,7 +2292,11 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T20:44:37+02:00",
    "parse_status": "ok",
+<<<<<<< HEAD
    "status": "current"
+=======
+   "status": "update_safe"
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
   },
   {
    "slug": "fzzy-config",
@@ -3004,7 +3044,11 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-08T14:19:59+02:00",
    "parse_status": "ok",
+<<<<<<< HEAD
    "status": "current"
+=======
+   "status": "update_safe"
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
   },
   {
    "slug": "melody",
@@ -3050,7 +3094,11 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-08T14:19:59+02:00",
    "parse_status": "ok",
+<<<<<<< HEAD
    "status": "broken"
+=======
+   "status": "current"
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
   },
   {
    "slug": "modernfix",
@@ -3470,7 +3518,11 @@
    "size_bytes": 260876,
    "flavors": [],
    "role": "addon",
+<<<<<<< HEAD
    "cluster": "sodium::sodium",
+=======
+   "cluster": "sodium",
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-08T17:16:30+02:00",
@@ -3636,7 +3688,11 @@
    "slug": "seasonal-lets-do",
    "name": "Seasonal Let's Do",
    "filename": "seasonal_lets_do-neoforge-1.5.0+1.21.jar",
+<<<<<<< HEAD
    "side": "both",
+=======
+   "side": "server",
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "source": "modrinth",
    "project_id": "yFIPn94r",
    "version": "1.5.0+1.21",
@@ -3650,7 +3706,11 @@
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
+<<<<<<< HEAD
    "date_updated": "2026-08-05T09:52:14+02:00",
+=======
+   "date_updated": "2026-08-21T14:58:50Z",
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "parse_status": "ok",
    "status": "current"
   },
@@ -3674,7 +3734,11 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-08T14:19:59+02:00",
    "parse_status": "ok",
+<<<<<<< HEAD
    "status": "update_blocked"
+=======
+   "status": "update_safe"
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
   },
   {
    "slug": "selene::codecui",
@@ -3999,8 +4063,13 @@
     "sodium-extra_on",
     "ssrd_on"
    ],
+<<<<<<< HEAD
    "role": "standalone",
    "cluster": null,
+=======
+   "role": "core",
+   "cluster": "sodium",
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
@@ -4024,7 +4093,11 @@
     "sodium-extra_on"
    ],
    "role": "addon",
+<<<<<<< HEAD
    "cluster": "sodium::sodium",
+=======
+   "cluster": "sodium",
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
@@ -4033,6 +4106,7 @@
    "status": "current"
   },
   {
+<<<<<<< HEAD
    "slug": "sodium::sodium",
    "name": "Sodium",
    "filename": "",
@@ -4059,6 +4133,8 @@
    "status": "current"
   },
   {
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "slug": "sophisticated-backpacks",
    "name": "Sophisticated Backpacks",
    "filename": "sophisticatedbackpacks-1.21.1-3.25.74.2048.jar",
@@ -4482,7 +4558,11 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T20:44:37+02:00",
    "parse_status": "ok",
+<<<<<<< HEAD
    "status": "current"
+=======
+   "status": "update_safe"
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
   },
   {
    "slug": "yungs-api-neoforge",
@@ -4803,6 +4883,7 @@
    "satisfied": true
   },
   {
+<<<<<<< HEAD
    "from": "advancedperipherals",
    "to": null,
    "to_mod_id": "ae2",
@@ -4835,6 +4916,8 @@
    "satisfied": false
   },
   {
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "from": "advancement-plaques",
    "to": "iceberg",
    "to_mod_id": "iceberg",
@@ -4851,6 +4934,7 @@
    "satisfied": true
   },
   {
+<<<<<<< HEAD
    "from": "advancement-plaques",
    "to": null,
    "to_mod_id": "toastcontrol",
@@ -4859,6 +4943,8 @@
    "satisfied": false
   },
   {
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "from": "alexs-caves-unofficial-port",
    "to": "citadel-1-21-1-port",
    "to_mod_id": "citadel",
@@ -4880,7 +4966,11 @@
    "to_mod_id": "moonlight",
    "type": "required",
    "version_range": "[1.21-2.29.19,)",
+<<<<<<< HEAD
    "satisfied": false
+=======
+   "satisfied": true
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
   },
   {
    "from": "attributefix",
@@ -4915,6 +5005,7 @@
    "satisfied": true
   },
   {
+<<<<<<< HEAD
    "from": "burnt-basic",
    "to": null,
    "to_mod_id": "weather2",
@@ -4923,6 +5014,8 @@
    "satisfied": false
   },
   {
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "from": "cbc-enchanced-shells-create-big-cannons",
    "to": "create-big-cannons",
    "to_mod_id": "createbigcannons",
@@ -4931,6 +5024,7 @@
    "satisfied": true
   },
   {
+<<<<<<< HEAD
    "from": "cbc-enchanced-shells-create-big-cannons",
    "to": null,
    "to_mod_id": "ftbchunks",
@@ -4939,6 +5033,8 @@
    "satisfied": false
   },
   {
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "from": "cbc-firepower-components",
    "to": "create",
    "to_mod_id": "create",
@@ -4963,6 +5059,7 @@
    "satisfied": true
   },
   {
+<<<<<<< HEAD
    "from": "cbc-firepower-components",
    "to": null,
    "to_mod_id": "cbcmoreshells",
@@ -4971,6 +5068,8 @@
    "satisfied": false
   },
   {
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "from": "cbcenhanced-shell-armor-create-big-cannons",
    "to": "create-big-cannons",
    "to_mod_id": "createbigcannons",
@@ -4980,6 +5079,7 @@
   },
   {
    "from": "cbcenhanced-shell-armor-create-big-cannons",
+<<<<<<< HEAD
    "to": null,
    "to_mod_id": "allthecompressed",
    "type": "optional",
@@ -4988,6 +5088,8 @@
   },
   {
    "from": "cbcenhanced-shell-armor-create-big-cannons",
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "to": "create",
    "to_mod_id": "create",
    "type": "optional",
@@ -5075,6 +5177,7 @@
    "satisfied": true
   },
   {
+<<<<<<< HEAD
    "from": "corpse",
    "to": null,
    "to_mod_id": "openhud",
@@ -5083,6 +5186,8 @@
    "satisfied": false
   },
   {
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "from": "create-aeronautics-compatability",
    "to": "sable",
    "to_mod_id": "sable",
@@ -5092,6 +5197,7 @@
   },
   {
    "from": "create-aeronautics-compatability",
+<<<<<<< HEAD
    "to": null,
    "to_mod_id": "etched",
    "type": "optional",
@@ -5108,6 +5214,8 @@
   },
   {
    "from": "create-aeronautics-compatability",
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "to": "citadel-1-21-1-port",
    "to_mod_id": "citadel",
    "type": "optional",
@@ -5228,6 +5336,7 @@
   },
   {
    "from": "create-aeroworks",
+<<<<<<< HEAD
    "to": null,
    "to_mod_id": "drivebywire",
    "type": "optional",
@@ -5236,6 +5345,8 @@
   },
   {
    "from": "create-aeroworks",
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "to": "create-aeronautics::simulated",
    "to_mod_id": "simulated",
    "type": "optional",
@@ -5244,7 +5355,11 @@
   },
   {
    "from": "create-better-fps",
+<<<<<<< HEAD
    "to": "sodium::sodium",
+=======
+   "to": "sodium",
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "to_mod_id": "sodium",
    "type": "required",
    "version_range": "[0.6.9,)",
@@ -5492,6 +5607,7 @@
   },
   {
    "from": "create-encased",
+<<<<<<< HEAD
    "to": null,
    "to_mod_id": "kubejs",
    "type": "optional",
@@ -5500,6 +5616,8 @@
   },
   {
    "from": "create-encased",
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "to": "slice-and-dice",
    "to_mod_id": "sliceanddice",
    "type": "optional",
@@ -5524,6 +5642,7 @@
   },
   {
    "from": "create-enchantment-industry",
+<<<<<<< HEAD
    "to": null,
    "to_mod_id": "apothic_enchanting",
    "type": "optional",
@@ -5548,6 +5667,8 @@
   },
   {
    "from": "create-enchantment-industry",
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "to": "sable",
    "to_mod_id": "sable",
    "type": "optional",
@@ -5555,6 +5676,7 @@
    "satisfied": true
   },
   {
+<<<<<<< HEAD
    "from": "create-enchantment-industry",
    "to": null,
    "to_mod_id": "touhou_little_maid",
@@ -5563,6 +5685,8 @@
    "satisfied": false
   },
   {
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "from": "create-ender-transmission",
    "to": "create",
    "to_mod_id": "create",
@@ -5595,6 +5719,7 @@
    "satisfied": true
   },
   {
+<<<<<<< HEAD
    "from": "create-metallurgy",
    "to": null,
    "to_mod_id": "kubejs",
@@ -5611,6 +5736,8 @@
    "satisfied": false
   },
   {
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "from": "create-power-loader",
    "to": "create",
    "to_mod_id": "create",
@@ -5644,6 +5771,7 @@
   },
   {
    "from": "create-propulsion-simulated",
+<<<<<<< HEAD
    "to": null,
    "to_mod_id": "tfmg",
    "type": "optional",
@@ -5692,6 +5820,8 @@
   },
   {
    "from": "create-propulsion-simulated",
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "to": "cc-tweaked",
    "to_mod_id": "computercraft",
    "type": "optional",
@@ -5723,6 +5853,7 @@
    "satisfied": true
   },
   {
+<<<<<<< HEAD
    "from": "create-propulsion-simulated",
    "to": null,
    "to_mod_id": "rocketnautics",
@@ -5731,6 +5862,8 @@
    "satisfied": false
   },
   {
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "from": "create-radars",
    "to": "create",
    "to_mod_id": "create",
@@ -5748,6 +5881,7 @@
   },
   {
    "from": "create-radars",
+<<<<<<< HEAD
    "to": null,
    "to_mod_id": "valkyrienskies",
    "type": "optional",
@@ -5764,6 +5898,8 @@
   },
   {
    "from": "create-radars",
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "to": "cc-tweaked",
    "to_mod_id": "computercraft",
    "type": "optional",
@@ -5812,7 +5948,11 @@
   },
   {
    "from": "create",
+<<<<<<< HEAD
    "to": "sodium::sodium",
+=======
+   "to": "sodium",
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "to_mod_id": "sodium",
    "type": "optional",
    "version_range": "[0.6.9,)",
@@ -5828,6 +5968,7 @@
   },
   {
    "from": "create",
+<<<<<<< HEAD
    "to": null,
    "to_mod_id": "journeymap",
    "type": "optional",
@@ -5836,6 +5977,8 @@
   },
   {
    "from": "create",
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "to": "xaeros-world-map",
    "to_mod_id": "xaeroworldmap",
    "type": "optional",
@@ -5844,6 +5987,7 @@
   },
   {
    "from": "create::flywheel",
+<<<<<<< HEAD
    "to": null,
    "to_mod_id": "embeddium",
    "type": "optional",
@@ -5853,6 +5997,9 @@
   {
    "from": "create::flywheel",
    "to": "sodium::sodium",
+=======
+   "to": "sodium",
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "to_mod_id": "sodium",
    "type": "optional",
    "version_range": "[0.6.0-beta.2,)",
@@ -5979,6 +6126,7 @@
    "satisfied": true
   },
   {
+<<<<<<< HEAD
    "from": "fancymenu",
    "to": null,
    "to_mod_id": "findme",
@@ -6011,6 +6159,8 @@
    "satisfied": false
   },
   {
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "from": "farmers-delight",
    "to": "crafttweaker",
    "to_mod_id": "crafttweaker",
@@ -6036,6 +6186,7 @@
   },
   {
    "from": "framedblocks",
+<<<<<<< HEAD
    "to": null,
    "to_mod_id": "athena",
    "type": "optional",
@@ -6060,6 +6211,8 @@
   },
   {
    "from": "framedblocks",
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "to": "create",
    "to_mod_id": "create",
    "type": "optional",
@@ -6068,6 +6221,7 @@
   },
   {
    "from": "framedblocks",
+<<<<<<< HEAD
    "to": null,
    "to_mod_id": "diagonalblocks",
    "type": "optional",
@@ -6084,6 +6238,8 @@
   },
   {
    "from": "framedblocks",
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "to": "jei",
    "to_mod_id": "jei",
    "type": "optional",
@@ -6092,6 +6248,7 @@
   },
   {
    "from": "framedblocks",
+<<<<<<< HEAD
    "to": null,
    "to_mod_id": "rei",
    "type": "optional",
@@ -6100,6 +6257,8 @@
   },
   {
    "from": "framedblocks",
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "to": "amendments",
    "to_mod_id": "amendments",
    "type": "optional",
@@ -6107,6 +6266,7 @@
    "satisfied": true
   },
   {
+<<<<<<< HEAD
    "from": "framedblocks",
    "to": null,
    "to_mod_id": "ae2",
@@ -6131,6 +6291,8 @@
    "satisfied": false
   },
   {
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "from": "fzzy-config",
    "to": "kotlin-for-forge::kotlinforforge",
    "to_mod_id": "kotlinforforge",
@@ -6155,6 +6317,7 @@
    "satisfied": true
   },
   {
+<<<<<<< HEAD
    "from": "iceberg",
    "to": null,
    "to_mod_id": "equipmentcompare",
@@ -6179,6 +6342,8 @@
    "satisfied": false
   },
   {
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "from": "immersive-paintings",
    "to": "fzzy-config",
    "to_mod_id": "fzzy_config",
@@ -6275,6 +6440,7 @@
    "satisfied": true
   },
   {
+<<<<<<< HEAD
    "from": "legendary-tooltips",
    "to": null,
    "to_mod_id": "equipmentcompare",
@@ -6283,6 +6449,8 @@
    "satisfied": false
   },
   {
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "from": "lets-do-beachparty",
    "to": "architectury-api",
    "to_mod_id": "architectury",
@@ -6336,7 +6504,11 @@
    "to_mod_id": "moonlight",
    "type": "required",
    "version_range": "[1.21-3.2.3,)",
+<<<<<<< HEAD
    "satisfied": false
+=======
+   "satisfied": true
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
   },
   {
    "from": "modernfix",
@@ -6388,6 +6560,7 @@
   },
   {
    "from": "power-grid",
+<<<<<<< HEAD
    "to": null,
    "to_mod_id": "tfmg",
    "type": "optional",
@@ -6396,6 +6569,8 @@
   },
   {
    "from": "power-grid",
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "to": "sable",
    "to_mod_id": "sable",
    "type": "optional",
@@ -6476,13 +6651,18 @@
   },
   {
    "from": "reeses-sodium-options",
+<<<<<<< HEAD
    "to": "sodium::sodium",
+=======
+   "to": "sodium",
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "to_mod_id": "sodium",
    "type": "required",
    "version_range": "[0.8.12,)",
    "satisfied": true
   },
   {
+<<<<<<< HEAD
    "from": "reeses-sodium-options",
    "to": null,
    "to_mod_id": "controlify",
@@ -6491,6 +6671,8 @@
    "satisfied": false
   },
   {
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "from": "refurbished-furniture",
    "to": "framework",
    "to_mod_id": "framework",
@@ -6612,13 +6794,18 @@
   },
   {
    "from": "sodium-extra",
+<<<<<<< HEAD
    "to": "sodium::sodium",
+=======
+   "to": "sodium",
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "to_mod_id": "sodium",
    "type": "required",
    "version_range": "[0.8.12+mc1.21.1,)",
    "satisfied": true
   },
   {
+<<<<<<< HEAD
    "from": "sodium-extra",
    "to": null,
    "to_mod_id": "greenlight",
@@ -6627,6 +6814,8 @@
    "satisfied": false
   },
   {
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "from": "sophisticated-backpacks",
    "to": "sophisticated-core",
    "to_mod_id": "sophisticatedcore",
@@ -6644,7 +6833,11 @@
   },
   {
    "from": "ssrd",
+<<<<<<< HEAD
    "to": "sodium::sodium",
+=======
+   "to": "sodium",
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "to_mod_id": "sodium",
    "type": "required",
    "version_range": "[0,)",
@@ -6652,6 +6845,7 @@
   },
   {
    "from": "ssrd",
+<<<<<<< HEAD
    "to": null,
    "to_mod_id": "distanthorizons",
    "type": "optional",
@@ -6660,6 +6854,8 @@
   },
   {
    "from": "ssrd",
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "to": "sable",
    "to_mod_id": "sable",
    "type": "required",
@@ -6675,6 +6871,7 @@
    "satisfied": true
   },
   {
+<<<<<<< HEAD
    "from": "steam-n-rails-neoforge",
    "to": null,
    "to_mod_id": "hexcasting",
@@ -6691,6 +6888,8 @@
    "satisfied": false
   },
   {
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "from": "steampunk-armory",
    "to": "create",
    "to_mod_id": "create",
@@ -6708,6 +6907,7 @@
   },
   {
    "from": "xaeros-minimap",
+<<<<<<< HEAD
    "to": null,
    "to_mod_id": "openpartiesandclaims",
    "type": "optional",
@@ -6716,6 +6916,8 @@
   },
   {
    "from": "xaeros-minimap",
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "to": "xaeros-world-map",
    "to_mod_id": "xaeroworldmap",
    "type": "optional",
@@ -6724,6 +6926,7 @@
   },
   {
    "from": "xaeros-world-map",
+<<<<<<< HEAD
    "to": null,
    "to_mod_id": "openpartiesandclaims",
    "type": "optional",
@@ -6732,6 +6935,8 @@
   },
   {
    "from": "xaeros-world-map",
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "to": "xaeros-minimap",
    "to_mod_id": "xaerominimap",
    "type": "optional",
@@ -6740,6 +6945,7 @@
   },
   {
    "from": "xaeros-world-map",
+<<<<<<< HEAD
    "to": null,
    "to_mod_id": "xaerobetterpvp",
    "type": "optional",
@@ -6748,6 +6954,8 @@
   },
   {
    "from": "xaeros-world-map",
+=======
+>>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
    "to": "xaeros-minimap::xaerolib",
    "to_mod_id": "xaerolib",
    "type": "required",

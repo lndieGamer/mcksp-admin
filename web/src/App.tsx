@@ -23,7 +23,6 @@ import { usePrivate, usePublic, useSession } from "./lib/data";
 
 type Tab = readonly [path: string, label: string, hotkey: string, icon: LucideIcon];
 
-/** [path, label, hotkey, icon]. `g` then the key jumps there, Linear-style. */
 const PUBLIC_TABS: readonly Tab[] = [
   ["/", "Сводка", "s", LayoutGrid],
   ["/mods", "Моды", "m", Boxes],
