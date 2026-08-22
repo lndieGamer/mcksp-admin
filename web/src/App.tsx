@@ -13,7 +13,7 @@ import {
   Upload,
   type LucideIcon,
 } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 
 import { OpRunnerProvider } from "./components/OpRunner";
@@ -39,10 +39,9 @@ const ADMIN_TABS: readonly Tab[] = [
   ["/settings", "Настройки", "n", SettingsIcon],
 ];
 
-/** `g` arms, the next key navigates. Ignored while typing in a field. */
-function useGotoKeys(map: Record<string, string>) {
+/** Single-key navigation. Ignored while typing in a field. */
+function useHotkeys(map: Record<string, string>) {
   const navigate = useNavigate();
-  const [armed, setArmed] = useState(false);
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
@@ -50,23 +49,15 @@ function useGotoKeys(map: Record<string, string>) {
       if (target && /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName)) return;
       if (event.metaKey || event.ctrlKey || event.altKey) return;
 
-      if (armed) {
-        setArmed(false);
-        const to = map[event.key.toLowerCase()];
-        if (to) {
-          event.preventDefault();
-          navigate(to);
-        }
-        return;
+      const to = map[event.key.toLowerCase()];
+      if (to) {
+        event.preventDefault();
+        navigate(to);
       }
-      if (event.key === "g") setArmed(true);
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [armed, map, navigate]);
-
-  // The armed state is worth showing: an invisible mode is a trap.
-  return armed;
+  }, [map, navigate]);
 }
 
 function Rail({
@@ -75,7 +66,6 @@ function Rail({
   hotkey,
   icon: Icon,
   badge,
-  armed,
   index,
 }: {
   to: string;
@@ -83,7 +73,6 @@ function Rail({
   hotkey: string;
   icon: LucideIcon;
   badge?: number;
-  armed: boolean;
   index: number;
 }) {
   return (
@@ -127,7 +116,7 @@ function Rail({
           <kbd
             aria-hidden
             className={`font-mono text-2xs transition-colors duration-[var(--dur-fast)] ${
-              armed ? "text-accent" : "text-faint/60 group-hover:text-faint"
+              "text-faint/60 group-hover:text-faint"
             }`}
           >
             {hotkey}
@@ -145,7 +134,7 @@ export default function App() {
   const admin = Boolean(session.data);
 
   const tabs = admin ? [...PUBLIC_TABS, ...ADMIN_TABS] : PUBLIC_TABS;
-  const armed = useGotoKeys(Object.fromEntries(tabs.map(([to, , key]) => [key, to])));
+  useHotkeys(Object.fromEntries(tabs.map(([to, , key]) => [key, to])));
   const problems = privateData.data?.lint.filter((f) => f.level === "error").length ?? 0;
   const pack = publicData.data?.pack;
 
@@ -177,7 +166,7 @@ export default function App() {
 
           <nav className="min-h-0 flex-1 space-y-1 overflow-y-auto px-3 pb-4">
             {PUBLIC_TABS.map(([to, label, key, icon], i) => (
-              <Rail key={to} to={to} label={label} hotkey={key} icon={icon} armed={armed} index={i} />
+              <Rail key={to} to={to} label={label} hotkey={key} icon={icon} index={i} />
             ))}
             {admin && (
               <>
@@ -191,7 +180,6 @@ export default function App() {
                     label={label}
                     hotkey={key}
                     icon={icon}
-                    armed={armed}
                     index={PUBLIC_TABS.length + i}
                     badge={to === "/lint" ? problems : undefined}
                   />
@@ -201,12 +189,6 @@ export default function App() {
           </nav>
 
           <div className="space-y-2.5 border-t border-edge px-5 py-4 text-2xs text-faint">
-            {armed && (
-              <p className="fade-in flex items-center gap-2 text-accent">
-                <span className="pulse-ring size-1.5 rounded-full bg-accent" />
-                <span className="font-mono">g</span> — куда?
-              </p>
-            )}
             {publicData.data && (
               <p className="flex items-center gap-2">
                 <span aria-hidden className="size-1.5 rounded-full bg-accent/70" />
