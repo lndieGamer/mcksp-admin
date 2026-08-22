@@ -1,6 +1,419 @@
 {
- "generated_at": "2026-08-22T05:19:27Z",
- "updates": [],
+ "generated_at": "2026-08-22T14:40:29Z",
+ "updates": [
+  {
+   "slug": "balm",
+   "current_version": "21.0.64",
+   "candidate_version": "21.0.65",
+   "candidate_ref": {
+    "source": "modrinth",
+    "version_id": "KgypwTqX",
+    "project_id": "MBAkmtvl",
+    "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/KgypwTqX/balm-neoforge-1.21.1-21.0.65.jar"
+   },
+   "published_at": "2026-08-14T07:50:41.896963Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "burnt-basic",
+   "current_version": "1.10.3.7",
+   "candidate_version": "1.10.4.2",
+   "candidate_ref": {
+    "source": "modrinth",
+    "version_id": "gVPB2Kua",
+    "project_id": "aclfPzta",
+    "url": "https://cdn.modrinth.com/data/aclfPzta/versions/gVPB2Kua/burnt_basic-1.10.4.2-neoforge-1.21.1.jar"
+   },
+   "published_at": "2026-08-10T09:32:48.220051Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "cbc-enchanced-shells-create-big-cannons",
+   "current_version": "1.2.2",
+   "candidate_version": "1.2.3",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8612686,
+    "project_id": "1489732"
+   },
+   "published_at": "2026-08-09T23:07:57.04Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "coastal-waves",
+   "current_version": "1.6",
+   "candidate_version": "1.6.1",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 7208601,
+    "project_id": "1155936"
+   },
+   "published_at": "2025-11-10T23:44:22.97Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "copycats",
+   "current_version": "3.0.4+mc.1.21.1-neoforge",
+   "candidate_version": "3.0.7+mc.1.21.1-neoforge",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8699629,
+    "project_id": "968398"
+   },
+   "published_at": "2026-08-21T14:24:08.01Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "create-aeronautics",
+   "current_version": "1.3.0",
+   "candidate_version": "1.3.1",
+   "candidate_ref": {
+    "source": "modrinth",
+    "version_id": "Vzp221Un",
+    "project_id": "oWaK0Q19",
+    "url": "https://cdn.modrinth.com/data/oWaK0Q19/versions/Vzp221Un/create-aeronautics-bundled-1.21.1-1.3.1.jar"
+   },
+   "published_at": "2026-08-17T01:13:31.645306Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "create-aeronautics-transmission-linkage",
+   "current_version": "0.2.5",
+   "candidate_version": "0.2.6",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8701382,
+    "project_id": "1548056"
+   },
+   "published_at": "2026-08-21T18:12:26.897Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "create-bits-n-bobs",
+   "current_version": "2.2.5",
+   "candidate_version": "2.2.7",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8706168,
+    "project_id": "1398383"
+   },
+   "published_at": "2026-08-22T10:49:08.387Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "create-ccbr",
+   "current_version": "1.2.0",
+   "candidate_version": "1.2.1",
+   "candidate_ref": {
+    "source": "modrinth",
+    "version_id": "zRhaiENu",
+    "project_id": "WZfuGM1m",
+    "url": "https://cdn.modrinth.com/data/WZfuGM1m/versions/zRhaiENu/ccbr-1.2.1-neoforge-1.21.1.jar"
+   },
+   "published_at": "2026-08-18T21:13:59.552267Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "create-dragons-plus",
+   "current_version": "1.11.4",
+   "candidate_version": "1.11.7b",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8633162,
+    "project_id": "1216624"
+   },
+   "published_at": "2026-08-12T14:54:23.99Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "create-enchantment-industry",
+   "current_version": "2.5.1",
+   "candidate_version": "2.5.3",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8706414,
+    "project_id": "688768"
+   },
+   "published_at": "2026-08-22T11:58:25.927Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "createaddition",
+   "current_version": "1.6.0",
+   "candidate_version": "1.7.0",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8664915,
+    "project_id": "439890"
+   },
+   "published_at": "2026-08-16T19:32:13.587Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "creativecore",
+   "current_version": "2.13.42",
+   "candidate_version": "2.13.44",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8699787,
+    "project_id": "257814"
+   },
+   "published_at": "2026-08-21T14:39:50.637Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "enchantment-descriptions",
+   "current_version": "21.1.10",
+   "candidate_version": "21.1.11",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8693034,
+    "project_id": "250419"
+   },
+   "published_at": "2026-08-20T17:25:23.653Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "fancymenu",
+   "current_version": "3.9.9",
+   "candidate_version": "3.9.10",
+   "candidate_ref": {
+    "source": "modrinth",
+    "version_id": "f8yonbbe",
+    "project_id": "Wq5SjeWM",
+    "url": "https://cdn.modrinth.com/data/Wq5SjeWM/versions/f8yonbbe/fancymenu_neoforge_3.9.10_MC_1.21.1.jar"
+   },
+   "published_at": "2026-08-15T05:58:05.308387Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "farmers-delight",
+   "current_version": "1.3.2",
+   "candidate_version": "1.3.3",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8672744,
+    "project_id": "398521"
+   },
+   "published_at": "2026-08-17T21:01:42.17Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "fusion-connected-textures",
+   "current_version": "1.3.12",
+   "candidate_version": "1.3.13",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8693837,
+    "project_id": "854949"
+   },
+   "published_at": "2026-08-20T19:30:25.86Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "jade-sable-compat",
+   "current_version": "1.2.1",
+   "candidate_version": "1.3.0",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8681404,
+    "project_id": "1530988"
+   },
+   "published_at": "2026-08-19T01:03:19.227Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "jei",
+   "current_version": "19.43.0.393",
+   "candidate_version": "19.44.0.403",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8678372,
+    "project_id": "238222"
+   },
+   "published_at": "2026-08-18T15:54:03.623Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "lithostitched",
+   "current_version": "1.7.13",
+   "candidate_version": "1.8.0+beta4",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8660310,
+    "project_id": "936015"
+   },
+   "published_at": "2026-08-16T06:54:53.237Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "lootr",
+   "current_version": "1.21.1-1.11.38.123",
+   "candidate_version": "1.21.1-1.11.38.124",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8695784,
+    "project_id": "361276"
+   },
+   "published_at": "2026-08-21T00:46:05.107Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "reworked-locator-bar",
+   "current_version": "1.2.1",
+   "candidate_version": "1.2.2",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8602125,
+    "project_id": "1523749"
+   },
+   "published_at": "2026-08-08T14:14:59.28Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "sable",
+   "current_version": "2.0.3",
+   "candidate_version": "2.0.5",
+   "candidate_ref": {
+    "source": "modrinth",
+    "version_id": "U678xqle",
+    "project_id": "T9PomCSv",
+    "url": "https://cdn.modrinth.com/data/T9PomCSv/versions/U678xqle/sable-neoforge-1.21.1-2.0.5.jar"
+   },
+   "published_at": "2026-08-18T01:14:08.046259Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "selene",
+   "current_version": "1.21.1-3.3.2",
+   "candidate_version": "1.21.1-3.4.1",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8682854,
+    "project_id": "499980"
+   },
+   "published_at": "2026-08-19T07:14:29.487Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "serene-seasons-gen-fix",
+   "current_version": "1.2.4",
+   "candidate_version": "2.1.2",
+   "candidate_ref": {
+    "source": "modrinth",
+    "version_id": "ODT30is0",
+    "project_id": "26LRjUh8",
+    "url": "https://cdn.modrinth.com/data/26LRjUh8/versions/ODT30is0/seasonsfix-neoforge-1.21.1-2.1.2.jar"
+   },
+   "published_at": "2026-08-16T16:37:21.611281Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "sophisticated-backpacks",
+   "current_version": "3.25.74",
+   "candidate_version": "3.25.78",
+   "candidate_ref": {
+    "source": "modrinth",
+    "version_id": "6apvKKGZ",
+    "project_id": "TyCTlI4b",
+    "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/6apvKKGZ/sophisticatedbackpacks-1.21.1-3.25.78.2107.jar"
+   },
+   "published_at": "2026-08-19T23:08:36.774901Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "sophisticated-core",
+   "current_version": "1.4.82",
+   "candidate_version": "1.4.90",
+   "candidate_ref": {
+    "source": "modrinth",
+    "version_id": "zvRSOlro",
+    "project_id": "nmoqTijg",
+    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/zvRSOlro/sophisticatedcore-1.21.1-1.4.90.2299.jar"
+   },
+   "published_at": "2026-08-22T06:39:02.610406Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "supermartijn642s-core-lib",
+   "current_version": "1.1.23+a",
+   "candidate_version": "1.1.24",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8623666,
+    "project_id": "454372"
+   },
+   "published_at": "2026-08-11T12:38:17.973Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "xaeros-world-map",
+   "current_version": "1.44.2",
+   "candidate_version": "1.45.0",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8698659,
+    "project_id": "317780"
+   },
+   "published_at": "2026-08-21T11:47:20.993Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "yungs-api-neoforge",
+   "current_version": "1.21.1-NeoForge-5.1.6",
+   "candidate_version": "1.21.1-NeoForge-5.1.8",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8702150,
+    "project_id": "1015100"
+   },
+   "published_at": "2026-08-21T19:59:47.053Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "yungs-better-caves",
+   "current_version": "1.21.1-NeoForge-3.1.4",
+   "candidate_version": "1.21.1-NeoForge-3.1.5",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8686119,
+    "project_id": "340583"
+   },
+   "published_at": "2026-08-19T17:55:53.523Z",
+   "status": "safe",
+   "blocked_by": []
+  }
+ ],
  "update_sets": [],
  "lint": [
   {

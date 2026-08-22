@@ -1,0 +1,39 @@
+{
+ "size_bytes": 1687195,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[4,)",
+  "mods": [
+   {
+    "mod_id": "sophisticatedcore",
+    "version": "1.4.90",
+    "display_name": "Sophisticated Core",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "jei",
+      "type": "optional",
+      "version_range": "[19.32.0.359,)",
+      "side": "CLIENT",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.229,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1,1.21.2)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

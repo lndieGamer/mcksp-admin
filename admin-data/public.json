@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-22T05:19:27Z",
+ "generated_at": "2026-08-22T14:40:29Z",
  "notices": [],
  "pack": {
   "version": "1.0.0",
@@ -303,11 +303,11 @@
   {
    "slug": "balm",
    "name": "Balm",
-   "filename": "balm-neoforge-1.21.1-21.0.65.jar",
+   "filename": "balm-neoforge-1.21.1-21.0.64.jar",
    "side": "both",
    "source": "modrinth",
    "project_id": "MBAkmtvl",
-   "version": "21.0.65",
+   "version": "21.0.64",
    "mod_ids": [
     "balm"
    ],
@@ -318,9 +318,9 @@
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "balm::kuma_api",
@@ -505,24 +505,24 @@
   {
    "slug": "burnt-basic",
    "name": "Burnt Basic",
-   "filename": "burnt_basic-1.10.4.2-neoforge-1.21.1.jar",
+   "filename": "burnt_basic-1.10.3.7-neoforge-1.21.1.jar",
    "side": "both",
    "source": "modrinth",
    "project_id": "aclfPzta",
-   "version": "1.10.4.2",
+   "version": "1.10.3.7",
    "mod_ids": [
     "burnt"
    ],
-   "size_bytes": 21291015,
+   "size_bytes": 22105215,
    "flavors": [],
    "role": "mod",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "carbon-config",
@@ -571,24 +571,24 @@
   {
    "slug": "cbc-enchanced-shells-create-big-cannons",
    "name": "CBC Enchanced Shells [Create Big Cannons]",
-   "filename": "CBCmoreshells-1.2.3.jar",
+   "filename": "CBCmoreshells-1.2.2.jar",
    "side": "both",
    "source": "curseforge",
    "project_id": "1489732",
-   "version": "1.2.3",
+   "version": "1.2.2",
    "mod_ids": [
     "cbc_enhanced_shells"
    ],
-   "size_bytes": 2081659,
+   "size_bytes": 2069241,
    "flavors": [],
    "role": "addon",
    "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "cbc-firepower-components",
@@ -768,11 +768,11 @@
   },
   {
    "slug": "cloth-config",
-   "name": "Cloth Config API",
+   "name": "Cloth Config API (Fabric/Forge/NeoForge)",
    "filename": "cloth-config-15.0.140-neoforge.jar",
    "side": "both",
-   "source": "modrinth",
-   "project_id": "9s6osm5g",
+   "source": "curseforge",
+   "project_id": "348521",
    "version": "15.0.140",
    "mod_ids": [
     "cloth_config"
@@ -784,7 +784,7 @@
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
    "status": "current"
   },
@@ -813,46 +813,46 @@
   {
    "slug": "coastal-waves",
    "name": "Coastal Waves",
-   "filename": "Waves-1.21.x-1.6.1.jar",
+   "filename": "Waves-1.21.x-1.6.jar",
    "side": "both",
    "source": "curseforge",
    "project_id": "1155936",
-   "version": "1.6.1",
+   "version": "1.6",
    "mod_ids": [
     "waves"
    ],
-   "size_bytes": 1322447,
+   "size_bytes": 1322569,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "copycats",
    "name": "Create: Copycats+",
-   "filename": "copycats-3.0.7+mc.1.21.1-neoforge.jar",
+   "filename": "copycats-3.0.4+mc.1.21.1-neoforge.jar",
    "side": "both",
    "source": "curseforge",
    "project_id": "968398",
-   "version": "3.0.7+mc.1.21.1-neoforge",
+   "version": "3.0.4+mc.1.21.1-neoforge",
    "mod_ids": [
     "copycats"
    ],
-   "size_bytes": 1799262,
+   "size_bytes": 1791747,
    "flavors": [],
    "role": "addon",
    "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "coroutil",
@@ -969,8 +969,8 @@
    "name": "Create",
    "filename": "create-1.21.1-6.0.10.jar",
    "side": "both",
-   "source": "curseforge",
-   "project_id": "328085",
+   "source": "modrinth",
+   "project_id": "LNytGWDc",
    "version": "6.0.10",
    "mod_ids": [
     "create"
@@ -982,31 +982,31 @@
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
    "status": "current"
   },
   {
    "slug": "create-aeronautics",
    "name": "Create Aeronautics",
-   "filename": "create-aeronautics-bundled-1.21.1-1.3.1.jar",
+   "filename": "create-aeronautics-bundled-1.21.1-1.3.0.jar",
    "side": "both",
    "source": "modrinth",
    "project_id": "oWaK0Q19",
-   "version": "1.3.1",
+   "version": "1.3.0",
    "mod_ids": [
     "aeronautics_bundled"
    ],
-   "size_bytes": 33121810,
+   "size_bytes": 33120013,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "create-aeronautics-compatability",
@@ -1033,24 +1033,24 @@
   {
    "slug": "create-aeronautics-transmission-linkage",
    "name": "Create Aeronautics: Transmission & Linkage",
-   "filename": "create_aeronautics_transmission_linkage-0.2.6.jar",
+   "filename": "create_aeronautics_transmission_linkage-0.2.5.jar",
    "side": "both",
    "source": "curseforge",
    "project_id": "1548056",
-   "version": "0.2.6",
+   "version": "0.2.5",
    "mod_ids": [
     "aeronautics_utility_objects"
    ],
-   "size_bytes": 730086,
+   "size_bytes": 666943,
    "flavors": [],
    "role": "addon",
    "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "create-aeronautics::aeronautics",
@@ -1059,7 +1059,7 @@
    "side": "both",
    "source": "modrinth",
    "project_id": null,
-   "version": "1.3.1",
+   "version": "1.3.0",
    "mod_ids": [
     "aeronautics"
    ],
@@ -1081,7 +1081,7 @@
    "side": "both",
    "source": "modrinth",
    "project_id": null,
-   "version": "1.3.1",
+   "version": "1.3.0",
    "mod_ids": [
     "offroad"
    ],
@@ -1103,7 +1103,7 @@
    "side": "both",
    "source": "modrinth",
    "project_id": null,
-   "version": "1.3.1",
+   "version": "1.3.0",
    "mod_ids": [
     "simulated"
    ],
@@ -1211,24 +1211,24 @@
   {
    "slug": "create-bits-n-bobs",
    "name": "Create: Bits 'n' Bobs",
-   "filename": "bits_n_bobs-2.2.6.jar",
+   "filename": "bits_n_bobs-2.2.5.jar",
    "side": "both",
    "source": "curseforge",
    "project_id": "1398383",
-   "version": "2.2.6",
+   "version": "2.2.5",
    "mod_ids": [
     "bits_n_bobs"
    ],
-   "size_bytes": 2500501,
+   "size_bytes": 2498623,
    "flavors": [],
    "role": "addon",
    "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-19T09:15:56+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "create-bits-n-bobs::sablecompanion",
@@ -1277,24 +1277,24 @@
   {
    "slug": "create-ccbr",
    "name": "Create: CC Better Recipes",
-   "filename": "ccbr-1.2.1-neoforge-1.21.1.jar",
+   "filename": "ccbr-1.2.0-neoforge-1.21.1.jar",
    "side": "both",
    "source": "modrinth",
    "project_id": "WZfuGM1m",
-   "version": "1.2.1",
+   "version": "1.2.0",
    "mod_ids": [
     "ccbr"
    ],
-   "size_bytes": 205407,
+   "size_bytes": 205473,
    "flavors": [],
    "role": "addon",
    "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "create-connected",
@@ -1387,24 +1387,24 @@
   {
    "slug": "create-dragons-plus",
    "name": "Create: Dragons Plus",
-   "filename": "CreateDragonsPlus-1.11.7b.jar",
+   "filename": "CreateDragonsPlus-1.11.4.jar",
    "side": "both",
    "source": "curseforge",
    "project_id": "1216624",
-   "version": "1.11.7b",
+   "version": "1.11.4",
    "mod_ids": [
     "create_dragons_plus"
    ],
-   "size_bytes": 1038830,
+   "size_bytes": 1029344,
    "flavors": [],
    "role": "addon",
    "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "create-dragons-plus::conditional_mixin",
@@ -1475,24 +1475,24 @@
   {
    "slug": "create-enchantment-industry",
    "name": "Create: Enchantment Industry",
-   "filename": "create-enchantment-industry-2.5.2.jar",
+   "filename": "create-enchantment-industry-2.5.1.jar",
    "side": "both",
    "source": "curseforge",
    "project_id": "688768",
-   "version": "2.5.2",
+   "version": "2.5.1",
    "mod_ids": [
     "create_enchantment_industry"
    ],
-   "size_bytes": 1602815,
+   "size_bytes": 1573096,
    "flavors": [],
    "role": "addon",
    "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "create-ender-transmission",
@@ -1675,7 +1675,7 @@
    "name": "Flywheel",
    "filename": "",
    "side": "both",
-   "source": "curseforge",
+   "source": "modrinth",
    "project_id": null,
    "version": "1.0.6",
    "mod_ids": [
@@ -1697,7 +1697,7 @@
    "name": "Ponder",
    "filename": "",
    "side": "both",
-   "source": "curseforge",
+   "source": "modrinth",
    "project_id": null,
    "version": "1.0.82+mc1.21.1",
    "mod_ids": [
@@ -1739,24 +1739,24 @@
   {
    "slug": "createaddition",
    "name": "Create Crafts & Additions",
-   "filename": "createaddition-1.7.0.jar",
+   "filename": "createaddition-1.6.0.jar",
    "side": "both",
    "source": "curseforge",
    "project_id": "439890",
-   "version": "1.7.0",
+   "version": "1.6.0",
    "mod_ids": [
     "createaddition"
    ],
-   "size_bytes": 1705668,
+   "size_bytes": 1661802,
    "flavors": [],
    "role": "addon",
    "cluster": "create",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "createnuclear",
@@ -1783,24 +1783,24 @@
   {
    "slug": "creativecore",
    "name": "CreativeCore",
-   "filename": "CreativeCore_NEOFORGE_v2.13.44_mc1.21.1.jar",
+   "filename": "CreativeCore_NEOFORGE_v2.13.42_mc1.21.1.jar",
    "side": "both",
    "source": "curseforge",
    "project_id": "257814",
-   "version": "2.13.44",
+   "version": "2.13.42",
    "mod_ids": [
     "creativecore"
    ],
-   "size_bytes": 1232783,
+   "size_bytes": 1221603,
    "flavors": [],
    "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "cubes-without-borders",
@@ -1919,15 +1919,15 @@
   {
    "slug": "enchantment-descriptions",
    "name": "Enchantment Descriptions",
-   "filename": "enchdesc-neoforge-1.21.1-21.1.11.jar",
+   "filename": "enchdesc-neoforge-1.21.1-21.1.10.jar",
    "side": "client",
    "source": "curseforge",
    "project_id": "250419",
-   "version": "21.1.11",
+   "version": "21.1.10",
    "mod_ids": [
     "enchdesc"
    ],
-   "size_bytes": 82648,
+   "size_bytes": 82629,
    "flavors": [
     "enchantment-descriptions_on"
    ],
@@ -1936,9 +1936,9 @@
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "enders-delight",
@@ -2060,15 +2060,15 @@
   {
    "slug": "fancymenu",
    "name": "FancyMenu",
-   "filename": "fancymenu_neoforge_3.9.10_MC_1.21.1.jar",
+   "filename": "fancymenu_neoforge_3.9.9_MC_1.21.1.jar",
    "side": "client",
    "source": "modrinth",
    "project_id": "Wq5SjeWM",
-   "version": "3.9.10",
+   "version": "3.9.9",
    "mod_ids": [
     "fancymenu"
    ],
-   "size_bytes": 25905546,
+   "size_bytes": 25905174,
    "flavors": [
     "fancymenu_on"
    ],
@@ -2077,31 +2077,31 @@
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "farmers-delight",
    "name": "Farmer's Delight",
-   "filename": "FarmersDelight-1.21.1-1.3.3.jar",
+   "filename": "FarmersDelight-1.21.1-1.3.2.jar",
    "side": "both",
    "source": "curseforge",
    "project_id": "398521",
-   "version": "1.3.3",
+   "version": "1.3.2",
    "mod_ids": [
     "farmersdelight"
    ],
-   "size_bytes": 3160883,
+   "size_bytes": 3163042,
    "flavors": [],
    "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "fastsuite",
@@ -2239,24 +2239,24 @@
   {
    "slug": "fusion-connected-textures",
    "name": "Fusion (Connected Textures)",
-   "filename": "fusion-1.3.13-neoforge-mc1.21.1.jar",
+   "filename": "fusion-1.3.12-neoforge-mc1.21.1.jar",
    "side": "client",
    "source": "curseforge",
    "project_id": "854949",
-   "version": "1.3.13",
+   "version": "1.3.12",
    "mod_ids": [
     "fusion"
    ],
-   "size_bytes": 938045,
+   "size_bytes": 923270,
    "flavors": [],
    "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "fzzy-config",
@@ -2562,15 +2562,15 @@
   {
    "slug": "jade-sable-compat",
    "name": "Jade Sable Compat",
-   "filename": "sablejade-1.3.0.jar",
+   "filename": "sablejade-1.2.1.jar",
    "side": "client",
    "source": "curseforge",
    "project_id": "1530988",
-   "version": "1.3.0",
+   "version": "1.2.1",
    "mod_ids": [
     "sablejade"
    ],
-   "size_bytes": 301532,
+   "size_bytes": 299390,
    "flavors": [
     "jade-sable-compat_on"
    ],
@@ -2579,9 +2579,9 @@
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "jamlib",
@@ -2608,24 +2608,24 @@
   {
    "slug": "jei",
    "name": "Just Enough Items (JEI)",
-   "filename": "jei-1.21.1-neoforge-19.44.0.403.jar",
+   "filename": "jei-1.21.1-neoforge-19.43.0.393.jar",
    "side": "both",
    "source": "curseforge",
    "project_id": "238222",
-   "version": "19.44.0.403",
+   "version": "19.43.0.393",
    "mod_ids": [
     "jei"
    ],
-   "size_bytes": 1698112,
+   "size_bytes": 1685121,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "just-zoom",
@@ -2943,46 +2943,24 @@
   {
    "slug": "lithostitched",
    "name": "Lithostitched",
-   "filename": "lithostitched-1.8.0+beta4-neoforge-21.1.jar",
+   "filename": "lithostitched-1.7.13-neoforge-21.1.jar",
    "side": "both",
    "source": "curseforge",
    "project_id": "936015",
-   "version": "1.8.0+beta4",
+   "version": "1.7.13",
    "mod_ids": [
     "lithostitched"
    ],
-   "size_bytes": 954028,
+   "size_bytes": 852541,
    "flavors": [],
-   "role": "mod",
+   "role": "standalone",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
-  },
-  {
-   "slug": "lithostitched::apollib",
-   "name": "Apollib",
-   "filename": "",
-   "side": "both",
-   "source": "curseforge",
-   "project_id": null,
-   "version": "1.2.0",
-   "mod_ids": [
-    "apollib"
-   ],
-   "size_bytes": 0,
-   "flavors": [],
-   "role": "library",
-   "cluster": null,
-   "embedded": true,
-   "owner": "lithostitched",
-   "date_added": null,
-   "date_updated": null,
-   "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "lodestone",
@@ -3009,24 +2987,24 @@
   {
    "slug": "lootr",
    "name": "Lootr (Forge & NeoForge)",
-   "filename": "lootr-neoforge-1.21.1-1.11.38.124.jar",
+   "filename": "lootr-neoforge-1.21.1-1.11.38.123.jar",
    "side": "both",
    "source": "curseforge",
    "project_id": "361276",
-   "version": "1.21.1-1.11.38.124",
+   "version": "1.21.1-1.11.38.123",
    "mod_ids": [
     "lootr"
    ],
-   "size_bytes": 994918,
+   "size_bytes": 994419,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "melody",
@@ -3525,24 +3503,24 @@
   {
    "slug": "reworked-locator-bar",
    "name": "Locator Bar",
-   "filename": "LocatorBar-neoforge-1.2.2+1.21.1.jar",
+   "filename": "LocatorBar-neoforge-1.2.1+1.21.1.jar",
    "side": "both",
    "source": "curseforge",
    "project_id": "1523749",
-   "version": "1.2.2",
+   "version": "1.2.1",
    "mod_ids": [
     "locatorbar"
    ],
-   "size_bytes": 168064,
+   "size_bytes": 164009,
    "flavors": [],
    "role": "standalone",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "rightclickharvest",
@@ -3591,24 +3569,24 @@
   {
    "slug": "sable",
    "name": "Sable",
-   "filename": "sable-neoforge-1.21.1-2.0.5.jar",
+   "filename": "sable-neoforge-1.21.1-2.0.3.jar",
    "side": "both",
    "source": "modrinth",
    "project_id": "T9PomCSv",
-   "version": "2.0.5",
+   "version": "2.0.3",
    "mod_ids": [
     "sable"
    ],
-   "size_bytes": 12986136,
+   "size_bytes": 12889000,
    "flavors": [],
    "role": "core",
    "cluster": "sable",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "sable::veil",
@@ -3617,7 +3595,7 @@
    "side": "both",
    "source": "modrinth",
    "project_id": null,
-   "version": "4.3.2",
+   "version": "4.1.4",
    "mod_ids": [
     "veil"
    ],
@@ -3679,24 +3657,24 @@
   {
    "slug": "selene",
    "name": "Moonlight Lib",
-   "filename": "moonlight-1.21.1-3.4.1-neoforge.jar",
+   "filename": "moonlight-1.21.1-3.3.2-neoforge.jar",
    "side": "both",
    "source": "curseforge",
    "project_id": "499980",
-   "version": "1.21.1-3.4.1",
+   "version": "1.21.1-3.3.2",
    "mod_ids": [
     "moonlight"
    ],
-   "size_bytes": 2167608,
+   "size_bytes": 2143736,
    "flavors": [],
    "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "selene::codecui",
@@ -3745,24 +3723,24 @@
   {
    "slug": "serene-seasons-gen-fix",
    "name": "Serene Seasons Gen Fix",
-   "filename": "seasonsfix-neoforge-1.21.1-2.1.2.jar",
+   "filename": "sereneseasonsgenfix-1.2.4.jar",
    "side": "server",
    "source": "modrinth",
    "project_id": "26LRjUh8",
-   "version": "2.1.2",
+   "version": "1.2.4",
    "mod_ids": [
-    "seasonsfix"
+    "sereneseasonsgenfix"
    ],
-   "size_bytes": 28382,
+   "size_bytes": 19238,
    "flavors": [],
    "role": "mod",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "shulkerboxtooltip",
@@ -4057,46 +4035,46 @@
   {
    "slug": "sophisticated-backpacks",
    "name": "Sophisticated Backpacks",
-   "filename": "sophisticatedbackpacks-1.21.1-3.25.78.2107.jar",
+   "filename": "sophisticatedbackpacks-1.21.1-3.25.74.2048.jar",
    "side": "both",
    "source": "modrinth",
    "project_id": "TyCTlI4b",
-   "version": "3.25.78",
+   "version": "3.25.74",
    "mod_ids": [
     "sophisticatedbackpacks"
    ],
-   "size_bytes": 1172245,
+   "size_bytes": 1166538,
    "flavors": [],
    "role": "mod",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "sophisticated-core",
    "name": "Sophisticated Core",
-   "filename": "sophisticatedcore-1.21.1-1.4.89.2291.jar",
+   "filename": "sophisticatedcore-1.21.1-1.4.82.2230.jar",
    "side": "both",
    "source": "modrinth",
    "project_id": "nmoqTijg",
-   "version": "1.4.89",
+   "version": "1.4.82",
    "mod_ids": [
     "sophisticatedcore"
    ],
-   "size_bytes": 1686851,
+   "size_bytes": 1676065,
    "flavors": [],
    "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "spark",
@@ -4279,24 +4257,24 @@
   {
    "slug": "supermartijn642s-core-lib",
    "name": "SuperMartijn642's Core Lib",
-   "filename": "supermartijn642corelib-1.1.24-neoforge-mc1.21.jar",
+   "filename": "supermartijn642corelib-1.1.23a-neoforge-mc1.21.jar",
    "side": "both",
    "source": "curseforge",
    "project_id": "454372",
-   "version": "1.1.24",
+   "version": "1.1.23+a",
    "mod_ids": [
     "supermartijn642corelib"
    ],
-   "size_bytes": 560783,
+   "size_bytes": 559800,
    "flavors": [],
    "role": "library",
    "cluster": null,
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "survival-island",
@@ -4459,15 +4437,15 @@
   {
    "slug": "xaeros-world-map",
    "name": "Xaero's World Map",
-   "filename": "xaeroworldmap-neoforge-1.21.1-1.45.0.jar",
+   "filename": "xaeroworldmap-neoforge-1.21.1-1.44.2.jar",
    "side": "client",
    "source": "curseforge",
    "project_id": "317780",
-   "version": "1.45.0",
+   "version": "1.44.2",
    "mod_ids": [
     "xaeroworldmap"
    ],
-   "size_bytes": 1422531,
+   "size_bytes": 1418918,
    "flavors": [
     "xaeros-world-map_on"
    ],
@@ -4476,53 +4454,53 @@
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "yungs-api-neoforge",
    "name": "YUNG's API (NeoForge) [1.20.4-1.21.1 ONLY]",
-   "filename": "YungsApi-1.21.1-NeoForge-5.1.8.jar",
+   "filename": "YungsApi-1.21.1-NeoForge-5.1.6.jar",
    "side": "both",
    "source": "curseforge",
    "project_id": "1015100",
-   "version": "1.21.1-NeoForge-5.1.8",
+   "version": "1.21.1-NeoForge-5.1.6",
    "mod_ids": [
     "yungsapi"
    ],
-   "size_bytes": 389834,
+   "size_bytes": 388678,
    "flavors": [],
    "role": "core",
    "cluster": "yungs-api-neoforge",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "yungs-better-caves",
    "name": "YUNG's Better Caves (Forge/NeoForge)",
-   "filename": "YungsBetterCaves-1.21.1-NeoForge-3.1.5.jar",
+   "filename": "YungsBetterCaves-1.21.1-NeoForge-3.1.4.jar",
    "side": "server",
    "source": "curseforge",
    "project_id": "340583",
-   "version": "1.21.1-NeoForge-3.1.5",
+   "version": "1.21.1-NeoForge-3.1.4",
    "mod_ids": [
     "bettercaves"
    ],
-   "size_bytes": 399061,
+   "size_bytes": 392794,
    "flavors": [],
    "role": "addon",
    "cluster": "yungs-api-neoforge",
    "embedded": false,
    "owner": null,
    "date_added": "2026-08-05T09:52:14+02:00",
-   "date_updated": "2026-08-22T05:18:56Z",
+   "date_updated": "2026-08-22T07:32:27+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "yungs-better-desert-temples-neoforge",
@@ -4875,7 +4853,7 @@
    "to": "create-big-cannons",
    "to_mod_id": "createbigcannons",
    "type": "required",
-   "version_range": "[5.11.4,)",
+   "version_range": "[5.11,)",
    "satisfied": true
   },
   {
@@ -5027,7 +5005,7 @@
    "to": "sable",
    "to_mod_id": "sable",
    "type": "required",
-   "version_range": "[2.0.0,)",
+   "version_range": "[1.1.3,)",
    "satisfied": true
   },
   {
@@ -5035,34 +5013,34 @@
    "to": "create-aeronautics::simulated",
    "to_mod_id": "simulated",
    "type": "required",
+   "version_range": "[1.1.3,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-aeronautics::aeronautics",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": "[6.0.10,)",
+   "satisfied": true
+  },
+  {
+   "from": "create-aeronautics::aeronautics",
+   "to": "sable",
+   "to_mod_id": "sable",
+   "type": "required",
+   "version_range": "[2.0.0,3.0.0)",
+   "satisfied": true
+  },
+  {
+   "from": "create-aeronautics::aeronautics",
+   "to": "create-aeronautics::simulated",
+   "to_mod_id": "simulated",
+   "type": "required",
    "version_range": "[1.3.0,)",
    "satisfied": true
   },
   {
-   "from": "create-aeronautics::aeronautics",
-   "to": "create",
-   "to_mod_id": "create",
-   "type": "required",
-   "version_range": "[6.0.10,)",
-   "satisfied": true
-  },
-  {
-   "from": "create-aeronautics::aeronautics",
-   "to": "sable",
-   "to_mod_id": "sable",
-   "type": "required",
-   "version_range": "[2.0.0,3.0.0)",
-   "satisfied": true
-  },
-  {
-   "from": "create-aeronautics::aeronautics",
-   "to": "create-aeronautics::simulated",
-   "to_mod_id": "simulated",
-   "type": "required",
-   "version_range": "[1.3.1,)",
-   "satisfied": true
-  },
-  {
    "from": "create-aeronautics::offroad",
    "to": "create",
    "to_mod_id": "create",
@@ -5083,7 +5061,7 @@
    "to": "create-aeronautics::simulated",
    "to_mod_id": "simulated",
    "type": "required",
-   "version_range": "[1.3.1,)",
+   "version_range": "[1.3.0,)",
    "satisfied": true
   },
   {
@@ -5943,14 +5921,6 @@
    "satisfied": true
   },
   {
-   "from": "lithostitched",
-   "to": "lithostitched::apollib",
-   "to_mod_id": "apollib",
-   "type": "required",
-   "version_range": "[1.2.0,)",
-   "satisfied": true
-  },
-  {
    "from": "mmmmmmmmmmmm",
    "to": "selene",
    "to_mod_id": "moonlight",
@@ -6135,19 +6105,11 @@
    "satisfied": true
   },
   {
-   "from": "sable::veil",
-   "to": "sodium",
-   "to_mod_id": "sodium",
-   "type": "optional",
-   "version_range": "[0.8.12-alpha.2+mc1.21.1,)",
-   "satisfied": true
-  },
-  {
    "from": "serene-seasons-gen-fix",
    "to": "serene-seasons",
    "to_mod_id": "sereneseasons",
    "type": "required",
-   "version_range": "[10.0,)",
+   "version_range": "",
    "satisfied": true
   },
   {
@@ -6235,7 +6197,7 @@
    "to": "sophisticated-core",
    "to_mod_id": "sophisticatedcore",
    "type": "required",
-   "version_range": "[1.4.87,)",
+   "version_range": "[1.4.81,)",
    "satisfied": true
   },
   {
@@ -6914,37 +6876,37 @@
   }
  ],
  "build_sizes": {
-  "full": 701589103,
-  "minimal": 562085635,
+  "full": 701929644,
+  "minimal": 562432322,
   "without": {
-   "3dskinlayers": 699610076,
-   "advancement-plaques": 701179520,
-   "aeronautics-hot-air-fix": 701246341,
-   "ambientsounds": 616777471,
-   "better-advancements": 701490462,
-   "better-ping-display": 701575232,
-   "create-better-fps": 701562556,
-   "cubes-without-borders": 701507260,
-   "dynamiclights-reforged": 701289750,
-   "enchantment-descriptions": 701506455,
-   "entity-model-features": 700268942,
-   "entity-texture-features-fabric": 700836769,
-   "entityculling": 700003816,
-   "fancymenu": 675028619,
-   "irisshaders": 699048380,
-   "jade-addons": 701514684,
-   "jade-sable-compat": 701287571,
-   "just-zoom": 700926463,
-   "legendary-tooltips": 701231411,
-   "more-overlays-updated": 701476119,
-   "mouse-tweaks": 701515165,
-   "particle-rain": 700983645,
-   "sodium": 700296216,
-   "sodium-extra": 699831203,
-   "ssrd": 700225260,
-   "voxy": 689030961,
-   "xaeros-minimap": 699403694,
-   "xaeros-world-map": 700166572
+   "3dskinlayers": 699950617,
+   "advancement-plaques": 701520061,
+   "aeronautics-hot-air-fix": 701586882,
+   "ambientsounds": 617118012,
+   "better-advancements": 701831003,
+   "better-ping-display": 701915773,
+   "create-better-fps": 701903097,
+   "cubes-without-borders": 701847801,
+   "dynamiclights-reforged": 701630291,
+   "enchantment-descriptions": 701847015,
+   "entity-model-features": 700609483,
+   "entity-texture-features-fabric": 701177310,
+   "entityculling": 700344357,
+   "fancymenu": 675369532,
+   "irisshaders": 699388921,
+   "jade-addons": 701855225,
+   "jade-sable-compat": 701630254,
+   "just-zoom": 701267004,
+   "legendary-tooltips": 701571952,
+   "more-overlays-updated": 701816660,
+   "mouse-tweaks": 701855706,
+   "particle-rain": 701324186,
+   "sodium": 700636757,
+   "sodium-extra": 700171744,
+   "ssrd": 700565801,
+   "voxy": 689371502,
+   "xaeros-minimap": 699744235,
+   "xaeros-world-map": 700510726
   }
  }
 }
