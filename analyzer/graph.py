@@ -175,22 +175,16 @@ def _add_embedded_nodes(g: Graph, metas: dict[str, JarMeta]) -> None:
         owner = g.nodes.get(slug)
         if owner is None:
             continue
-<<<<<<< HEAD
-=======
         own_ids = {m.mod_id.lower() for m in meta.mods if not m.embedded}
->>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
         for mod in meta.mods:
             if not mod.embedded or mod.platform:
                 continue
             key = mod.mod_id.lower()
-<<<<<<< HEAD
-=======
             if key in own_ids:
                 # Sodium ships a jarjar copy of itself. Same mod, so it must not
                 # become a `sodium::sodium` node that then hijacks provider_map
                 # and makes every reference to Sodium point at a phantom.
                 continue
->>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
             if g.provider_map.get(key) != slug:
                 continue  # a real metafile provides it; the bundled copy is redundant
             node_slug = f"{slug}::{mod.mod_id}"
@@ -235,30 +229,20 @@ def _add_edges(g: Graph, metas: dict[str, JarMeta]) -> None:
                 target = g.provider_map.get(dep.mod_id.lower())
                 if target == from_slug:
                     continue  # a jar depending on a modId it provides itself
-<<<<<<< HEAD
-                if dep.type == "incompatible":
-                    if target:
-=======
                 target_version = g.nodes[target].version if target else None
                 if dep.type == "incompatible":
                     # The range says *which* versions clash. Dropping it turned
                     # "incompatible with sodium below 0.8.12" into a conflict in a
                     # pack that ships 0.8.13 -- the usual shape of these declarations.
                     if target and parse_range(dep.version_range).contains(target_version):
->>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
                         g.warnings.append(
                             {
                                 "level": "error",
                                 "code": "incompatible_present",
                                 "slug": from_slug,
-<<<<<<< HEAD
-                                "message": f"{from_slug} declares {dep.mod_id!r} incompatible, "
-                                f"but {target!r} provides it",
-=======
                                 "message": f"{from_slug} refuses {dep.mod_id} "
                                 f"{dep.version_range or '(any version)'}, and the pack has "
                                 f"{target!r} at {target_version or 'an unknown version'}",
->>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
                             }
                         )
                     continue
@@ -268,10 +252,6 @@ def _add_edges(g: Graph, metas: dict[str, JarMeta]) -> None:
                     # dependency panel with modIds nobody intends to add. Optional
                     # deps that ARE in the pack stay, version range and all.
                     continue
-<<<<<<< HEAD
-                target_version = g.nodes[target].version if target else None
-=======
->>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
                 satisfied = bool(target) and parse_range(dep.version_range).contains(target_version)
                 g.edges.append(
                     Edge(
@@ -312,9 +292,6 @@ def _record_platform(g: Graph, slug: str, dep: Dependency) -> None:
 
 
 def check_platform(g: Graph, versions: dict[str, str]) -> None:
-<<<<<<< HEAD
-    """Resolve the platform layer against the pack's own minecraft/neoforge versions."""
-=======
     """Resolve the platform layer against the pack's own minecraft/neoforge versions.
 
     The `minecraft` range is not evidence of anything. JEI, Iris, Lodestone and
@@ -323,19 +300,10 @@ def check_platform(g: Graph, versions: dict[str, str]) -> None:
     the loader range -- `neoforge [21.1.238,)` exists only for 1.21.1 -- so a loader
     mismatch stays an error and a bare minecraft mismatch is downgraded to a note.
     """
->>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
     for req in g.platform:
         have = versions.get(req.mod_id.lower())
         req.satisfied = parse_range(req.version_range).contains(have) if have else True
         if not req.satisfied:
-<<<<<<< HEAD
-            g.warnings.append(
-                {
-                    "level": "error",
-                    "code": "platform_unsatisfied",
-                    "slug": req.slug,
-                    "message": f"needs {req.mod_id} {req.version_range}, pack has {have}",
-=======
             stale = req.mod_id.lower() == "minecraft"
             g.warnings.append(
                 {
@@ -344,7 +312,6 @@ def check_platform(g: Graph, versions: dict[str, str]) -> None:
                     "slug": req.slug,
                     "message": f"needs {req.mod_id} {req.version_range}, pack has {have}"
                     + (" (stale mods.toml metadata, the loader range decides)" if stale else ""),
->>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
                 }
             )
 

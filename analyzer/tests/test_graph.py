@@ -44,8 +44,6 @@ class TestOptionalEdges(unittest.TestCase):
         self.assertEqual([w["code"] for w in g.warnings], ["missing_dependency"])
 
 
-<<<<<<< HEAD
-=======
 class TestIncompatible(unittest.TestCase):
     """`type = "incompatible"` carries a range, and it is the whole point."""
 
@@ -107,8 +105,5 @@ class TestPlatform(unittest.TestCase):
     def test_loader_mismatch_stays_an_error(self):
         warnings = self.check("neoforge", "[21.1.238,)", {"neoforge": "21.1.100"})
         self.assertEqual([w["level"] for w in warnings], ["error"])
-
-
->>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
 if __name__ == "__main__":
     unittest.main()
