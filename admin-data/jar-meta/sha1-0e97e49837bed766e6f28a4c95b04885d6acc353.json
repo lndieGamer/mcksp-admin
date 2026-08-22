@@ -1,0 +1,153 @@
+{
+ "size_bytes": 19123767,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[0,)",
+  "mods": [
+   {
+    "mod_id": "create",
+    "version": "6.0.10",
+    "display_name": "Create",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.219,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1]",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "flywheel",
+      "type": "required",
+      "version_range": "[1.0.0,2.0)",
+      "side": "CLIENT",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "ponder",
+      "type": "required",
+      "version_range": "[1.0.82,)",
+      "side": "BOTH",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "sodium",
+      "type": "optional",
+      "version_range": "[0.6.9,)",
+      "side": "CLIENT",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "lithium",
+      "type": "optional",
+      "version_range": "[0.14.7,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "journeymap",
+      "type": "optional",
+      "version_range": "[1.21.1-6.0.0-beta.46,)",
+      "side": "CLIENT",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "xaeroworldmap",
+      "type": "optional",
+      "version_range": "[1.40.2,)",
+      "side": "CLIENT",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "radium",
+      "type": "incompatible",
+      "version_range": "",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "palladium",
+      "type": "incompatible",
+      "version_range": "",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   },
+   {
+    "mod_id": "flywheel",
+    "version": "1.0.6",
+    "display_name": "Flywheel",
+    "embedded": true,
+    "dependencies": [
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1,1.21.2)",
+      "side": "CLIENT",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.66,)",
+      "side": "CLIENT",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "embeddium",
+      "type": "optional",
+      "version_range": "[0.3.25,)",
+      "side": "CLIENT",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "sodium",
+      "type": "optional",
+      "version_range": "[0.6.0-beta.2,)",
+      "side": "CLIENT",
+      "ordering": "NONE"
+     }
+    ]
+   },
+   {
+    "mod_id": "ponder",
+    "version": "1.0.82+mc1.21.1",
+    "display_name": "Ponder",
+    "embedded": true,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.206,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1]",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "flywheel",
+      "type": "required",
+      "version_range": "[1.0.0,2.0)",
+      "side": "CLIENT",
+      "ordering": "AFTER"
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,146 @@
+{
+ "size_bytes": 12986136,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[4,)",
+  "mods": [
+   {
+    "mod_id": "sable",
+    "version": "2.0.5",
+    "display_name": "Sable",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.228,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1]",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "flywheel",
+      "type": "optional",
+      "version_range": "[1.0.6,)",
+      "side": "CLIENT",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "create",
+      "type": "optional",
+      "version_range": "[6.0.10,6.1.0)",
+      "side": "CLIENT",
+      "ordering": "AFTER"
+     },
+     {
+      "mod_id": "sablecompanion",
+      "type": "incompatible",
+      "version_range": "(1.6.0,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "sodium",
+      "type": "incompatible",
+      "version_range": "(,0.8.12-alpha.2+mc1.21.1)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "scalablelux",
+      "type": "incompatible",
+      "version_range": "",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   },
+   {
+    "mod_id": "sablecompanion",
+    "version": "1.6.0",
+    "display_name": "Sable Companion",
+    "embedded": true,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.80,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   },
+   {
+    "mod_id": "veil",
+    "version": "4.3.2",
+    "display_name": "Veil",
+    "embedded": true,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.1,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1,1.21.3]",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "rubidium",
+      "type": "incompatible",
+      "version_range": "",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "embeddium",
+      "type": "incompatible",
+      "version_range": "",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "celeritas",
+      "type": "incompatible",
+      "version_range": "",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "sodium",
+      "type": "optional",
+      "version_range": "[0.8.12-alpha.2+mc1.21.1,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "imguimc",
+      "type": "optional",
+      "version_range": "[1.1.0,2.0.0)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,39 @@
+{
+ "size_bytes": 1172245,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "[4,)",
+  "mods": [
+   {
+    "mod_id": "sophisticatedbackpacks",
+    "version": "3.25.78",
+    "display_name": "Sophisticated Backpacks",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "sophisticatedcore",
+      "type": "required",
+      "version_range": "[1.4.87,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.1.229,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21.1,1.21.2)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}
