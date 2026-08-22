@@ -46,21 +46,14 @@ jobs:
 
       - name: Commit admin-data
         run: |
-<<<<<<< HEAD
-=======
           # Without errexit a failing fetch or reset below falls through to the
           # "nothing to commit" branch and the step goes green having pushed nothing.
           set -euo pipefail
->>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add admin-data
           # generated_at always moves, so this commits once per run by design:
           # the commit history doubles as the "last analyzed" audit trail.
-<<<<<<< HEAD
-          git diff --cached --quiet || git commit -m "analyze: refresh admin-data"
-          git push
-=======
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "analyze: refresh admin-data"
           # Two ops dispatched seconds apart produce two analyze runs whose
@@ -82,7 +75,6 @@ jobs:
           done
           echo "::error::admin-data could not be pushed after 5 attempts"
           exit 1
->>>>>>> 65ccf21ecb11dae523decff4402d6b18d97d375d
 
       - name: Summary
         run: |
