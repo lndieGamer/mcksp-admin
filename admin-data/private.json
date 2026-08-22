@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-21T14:59:19Z",
+ "generated_at": "2026-08-22T04:36:55Z",
  "updates": [
   {
    "slug": "balm",
@@ -83,6 +83,19 @@
    "blocked_by": []
   },
   {
+   "slug": "create-aeronautics-transmission-linkage",
+   "current_version": "0.2.5",
+   "candidate_version": "0.2.6",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8701382,
+    "project_id": "1548056"
+   },
+   "published_at": "2026-08-21T18:12:26.897Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
    "slug": "create-bits-n-bobs",
    "current_version": "2.2.5",
    "candidate_version": "2.2.6",
@@ -151,13 +164,13 @@
   {
    "slug": "creativecore",
    "current_version": "2.13.42",
-   "candidate_version": "2.13.43",
+   "candidate_version": "2.13.44",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8647581,
+    "file_id": 8699787,
     "project_id": "257814"
    },
-   "published_at": "2026-08-14T14:24:56.323Z",
+   "published_at": "2026-08-21T14:39:50.637Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -377,13 +390,13 @@
   {
    "slug": "yungs-api-neoforge",
    "current_version": "1.21.1-NeoForge-5.1.6",
-   "candidate_version": "1.21.1-NeoForge-5.1.7",
+   "candidate_version": "1.21.1-NeoForge-5.1.8",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8685980,
+    "file_id": 8702150,
     "project_id": "1015100"
    },
-   "published_at": "2026-08-19T17:33:53.55Z",
+   "published_at": "2026-08-21T19:59:47.053Z",
    "status": "safe",
    "blocked_by": []
   },
