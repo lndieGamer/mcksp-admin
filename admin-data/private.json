@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-23T04:25:49Z",
+ "generated_at": "2026-08-24T04:34:09Z",
  "updates": [
   {
    "slug": "balm",
@@ -58,13 +58,13 @@
   {
    "slug": "copycats",
    "current_version": "3.0.4+mc.1.21.1-neoforge",
-   "candidate_version": "3.0.7+mc.1.21.1-neoforge",
+   "candidate_version": "3.0.8+mc.1.21.1-neoforge",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8699629,
+    "file_id": 8714287,
     "project_id": "968398"
    },
-   "published_at": "2026-08-21T14:24:08.01Z",
+   "published_at": "2026-08-23T11:57:55.277Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -217,13 +217,13 @@
   {
    "slug": "fusion-connected-textures",
    "current_version": "1.3.12",
-   "candidate_version": "1.3.13",
+   "candidate_version": "1.3.14",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8693837,
+    "file_id": 8716430,
     "project_id": "854949"
    },
-   "published_at": "2026-08-20T19:30:25.86Z",
+   "published_at": "2026-08-23T17:34:23.817Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -280,6 +280,19 @@
    "blocked_by": []
   },
   {
+   "slug": "particle-rain",
+   "current_version": "4.0.0-beta.10",
+   "candidate_version": "4.0.0-beta.11",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8720770,
+    "project_id": "421897"
+   },
+   "published_at": "2026-08-24T00:23:43.047Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
    "slug": "reworked-locator-bar",
    "current_version": "1.2.1",
    "candidate_version": "1.2.2",
@@ -309,13 +322,13 @@
   {
    "slug": "selene",
    "current_version": "1.21.1-3.3.2",
-   "candidate_version": "1.21.1-3.4.1",
+   "candidate_version": "1.21.1-3.5.0",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8682854,
+    "file_id": 8717661,
     "project_id": "499980"
    },
-   "published_at": "2026-08-19T07:14:29.487Z",
+   "published_at": "2026-08-23T18:34:13.73Z",
    "status": "safe",
    "blocked_by": []
   },
