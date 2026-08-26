@@ -1,16 +1,16 @@
 {
- "generated_at": "2026-08-25T04:27:51Z",
+ "generated_at": "2026-08-26T04:28:55Z",
  "updates": [
   {
    "slug": "amendments",
    "current_version": "1.21-2.1.7",
-   "candidate_version": "1.21-2.1.8",
+   "candidate_version": "1.21-2.1.9",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8725092,
+    "file_id": 8732859,
     "project_id": "896746"
    },
-   "published_at": "2026-08-24T15:42:30.717Z",
+   "published_at": "2026-08-25T16:58:38.977Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -269,13 +269,13 @@
   {
    "slug": "jei",
    "current_version": "19.43.0.393",
-   "candidate_version": "19.44.0.403",
+   "candidate_version": "19.44.0.405",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8678372,
+    "file_id": 8732390,
     "project_id": "238222"
    },
-   "published_at": "2026-08-18T15:54:03.623Z",
+   "published_at": "2026-08-25T16:03:46.043Z",
    "status": "safe",
    "blocked_by": []
   },
