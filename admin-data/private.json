@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-26T04:28:55Z",
+ "generated_at": "2026-08-27T14:50:32Z",
  "updates": [
   {
    "slug": "amendments",
@@ -105,6 +105,20 @@
     "project_id": "1548056"
    },
    "published_at": "2026-08-24T09:44:09.487Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "create-aeroworks",
+   "current_version": "1.4.2",
+   "candidate_version": "1.5.0",
+   "candidate_ref": {
+    "source": "modrinth",
+    "version_id": "6kk7ruR3",
+    "project_id": "P26k79kP",
+    "url": "https://cdn.modrinth.com/data/P26k79kP/versions/6kk7ruR3/aeroworks-1.5.0.jar"
+   },
+   "published_at": "2026-08-27T00:05:18.607121Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -216,14 +230,14 @@
   {
    "slug": "fancymenu",
    "current_version": "3.9.9",
-   "candidate_version": "3.9.10",
+   "candidate_version": "3.9.11",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "f8yonbbe",
+    "version_id": "sJIzHvg4",
     "project_id": "Wq5SjeWM",
-    "url": "https://cdn.modrinth.com/data/Wq5SjeWM/versions/f8yonbbe/fancymenu_neoforge_3.9.10_MC_1.21.1.jar"
+    "url": "https://cdn.modrinth.com/data/Wq5SjeWM/versions/sJIzHvg4/fancymenu_neoforge_3.9.11_MC_1.21.1.jar"
    },
-   "published_at": "2026-08-15T05:58:05.308387Z",
+   "published_at": "2026-08-27T13:46:34.800298Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -269,13 +283,13 @@
   {
    "slug": "jei",
    "current_version": "19.43.0.393",
-   "candidate_version": "19.44.0.405",
+   "candidate_version": "19.44.0.406",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8732390,
+    "file_id": 8746155,
     "project_id": "238222"
    },
-   "published_at": "2026-08-25T16:03:46.043Z",
+   "published_at": "2026-08-27T12:21:48.64Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -315,6 +329,19 @@
     "project_id": "421897"
    },
    "published_at": "2026-08-24T00:23:43.047Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "power-grid",
+   "current_version": "0.6.0.1",
+   "candidate_version": "0.6.1",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8738576,
+    "project_id": "1321420"
+   },
+   "published_at": "2026-08-26T11:49:51.583Z",
    "status": "safe",
    "blocked_by": []
   },
