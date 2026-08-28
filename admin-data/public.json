@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-27T14:50:32Z",
+ "generated_at": "2026-08-28T15:45:02Z",
  "notices": [],
  "pack": {
   "version": "1.0.0",
@@ -100,7 +100,7 @@
    "date_added": "2026-08-15T22:43:15+02:00",
    "date_updated": "2026-08-19T20:44:37+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "alexs-caves-unofficial-port",
@@ -610,7 +610,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "cbcenhanced-shell-armor-create-big-cannons",

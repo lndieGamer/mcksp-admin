@@ -1,6 +1,19 @@
 {
- "generated_at": "2026-08-27T14:50:32Z",
+ "generated_at": "2026-08-28T15:45:02Z",
  "updates": [
+  {
+   "slug": "aeronautics-hot-air-fix",
+   "current_version": "1.1.0",
+   "candidate_version": "1.1.1",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8747268,
+    "project_id": "1633376"
+   },
+   "published_at": "2026-08-27T15:02:12.567Z",
+   "status": "safe",
+   "blocked_by": []
+  },
   {
    "slug": "amendments",
    "current_version": "1.21-2.1.7",
@@ -52,6 +65,20 @@
     "project_id": "1489732"
    },
    "published_at": "2026-08-09T23:07:57.04Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "cbc-firepower-components",
+   "current_version": "0.3.2",
+   "candidate_version": "0.4.0",
+   "candidate_ref": {
+    "source": "modrinth",
+    "version_id": "8G09rkh2",
+    "project_id": "fRWr6eJq",
+    "url": "https://cdn.modrinth.com/data/fRWr6eJq/versions/8G09rkh2/cbc_firepower_components-neoforge-1.21.1-0.4.0%2Bmc.1.21.1-neoforge.jar"
+   },
+   "published_at": "2026-08-27T17:22:28.905763Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -230,14 +257,14 @@
   {
    "slug": "fancymenu",
    "current_version": "3.9.9",
-   "candidate_version": "3.9.11",
+   "candidate_version": "3.9.12",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "sJIzHvg4",
+    "version_id": "Jjr0fpDH",
     "project_id": "Wq5SjeWM",
-    "url": "https://cdn.modrinth.com/data/Wq5SjeWM/versions/sJIzHvg4/fancymenu_neoforge_3.9.11_MC_1.21.1.jar"
+    "url": "https://cdn.modrinth.com/data/Wq5SjeWM/versions/Jjr0fpDH/fancymenu_neoforge_3.9.12_MC_1.21.1.jar"
    },
-   "published_at": "2026-08-27T13:46:34.800298Z",
+   "published_at": "2026-08-28T07:16:43.205045Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -375,13 +402,13 @@
   {
    "slug": "selene",
    "current_version": "1.21.1-3.3.2",
-   "candidate_version": "1.21.1-3.5.0",
+   "candidate_version": "1.21.1-3.5.2",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8717661,
+    "file_id": 8749776,
     "project_id": "499980"
    },
-   "published_at": "2026-08-23T18:34:13.73Z",
+   "published_at": "2026-08-27T21:30:21.783Z",
    "status": "safe",
    "blocked_by": []
   },
