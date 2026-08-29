@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-28T15:45:02Z",
+ "generated_at": "2026-08-29T10:32:19Z",
  "updates": [
   {
    "slug": "aeronautics-hot-air-fix",
@@ -310,13 +310,13 @@
   {
    "slug": "jei",
    "current_version": "19.43.0.393",
-   "candidate_version": "19.44.0.406",
+   "candidate_version": "19.50.0.414",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8746155,
+    "file_id": 8759217,
     "project_id": "238222"
    },
-   "published_at": "2026-08-27T12:21:48.64Z",
+   "published_at": "2026-08-29T07:57:43.73Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -423,6 +423,19 @@
     "url": "https://cdn.modrinth.com/data/26LRjUh8/versions/ODT30is0/seasonsfix-neoforge-1.21.1-2.1.2.jar"
    },
    "published_at": "2026-08-16T16:37:21.611281Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "sodium",
+   "current_version": "0.8.13-beta.2+mc1.21.1",
+   "candidate_version": "0.8.13+mc1.21.1",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8756580,
+    "project_id": "394468"
+   },
+   "published_at": "2026-08-28T20:54:55.687Z",
    "status": "safe",
    "blocked_by": []
   },
