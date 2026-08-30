@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-29T10:32:19Z",
+ "generated_at": "2026-08-30T09:32:12Z",
  "updates": [
   {
    "slug": "aeronautics-hot-air-fix",
@@ -111,14 +111,14 @@
   {
    "slug": "create-aeronautics",
    "current_version": "1.3.0",
-   "candidate_version": "1.3.1",
+   "candidate_version": "1.3.2",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "Vzp221Un",
+    "version_id": "44pLdPGg",
     "project_id": "oWaK0Q19",
-    "url": "https://cdn.modrinth.com/data/oWaK0Q19/versions/Vzp221Un/create-aeronautics-bundled-1.21.1-1.3.1.jar"
+    "url": "https://cdn.modrinth.com/data/oWaK0Q19/versions/44pLdPGg/create-aeronautics-bundled-1.21.1-1.3.2.jar"
    },
-   "published_at": "2026-08-17T01:13:31.645306Z",
+   "published_at": "2026-08-29T18:45:12.190765Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -192,13 +192,13 @@
   {
    "slug": "create-enchantment-industry",
    "current_version": "2.5.1",
-   "candidate_version": "2.5.3",
+   "candidate_version": "2.5.3b",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8706414,
+    "file_id": 8762719,
     "project_id": "688768"
    },
-   "published_at": "2026-08-22T11:58:25.927Z",
+   "published_at": "2026-08-29T16:49:51.443Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -271,13 +271,13 @@
   {
    "slug": "farmers-delight",
    "current_version": "1.3.2",
-   "candidate_version": "1.3.3",
+   "candidate_version": "1.3.4",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8672744,
+    "file_id": 8765184,
     "project_id": "398521"
    },
-   "published_at": "2026-08-17T21:01:42.17Z",
+   "published_at": "2026-08-29T23:17:30.443Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -343,6 +343,19 @@
     "project_id": "361276"
    },
    "published_at": "2026-08-21T00:46:05.107Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "modernfix",
+   "current_version": "5.27.20+mc1.21.1",
+   "candidate_version": "5.27.23+mc1.21.1",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8765667,
+    "project_id": "790626"
+   },
+   "published_at": "2026-08-30T00:49:43.463Z",
    "status": "safe",
    "blocked_by": []
   },

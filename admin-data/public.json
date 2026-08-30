@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-29T10:32:19Z",
+ "generated_at": "2026-08-30T09:32:12Z",
  "notices": [],
  "pack": {
   "version": "1.0.0",
@@ -3072,7 +3072,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "more-density-functions",
