@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-31T10:12:09Z",
+ "generated_at": "2026-09-01T08:58:05Z",
  "notices": [],
  "pack": {
   "version": "1.0.0",
@@ -298,7 +298,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T09:15:56+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "balm",
@@ -1316,7 +1316,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "create-deco",
@@ -1984,7 +1984,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T20:44:37+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "entity-texture-features-fabric",
@@ -2009,7 +2009,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "entityculling",
@@ -2212,7 +2212,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "framework",
@@ -2557,7 +2557,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "jade-sable-compat",
@@ -3718,7 +3718,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "serene-seasons-gen-fix",
