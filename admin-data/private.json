@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-01T08:58:05Z",
+ "generated_at": "2026-09-02T08:12:00Z",
  "updates": [
   {
    "slug": "aeronautics-hot-air-fix",
@@ -138,13 +138,13 @@
   {
    "slug": "create-aeronautics-transmission-linkage",
    "current_version": "0.2.5",
-   "candidate_version": "0.2.7",
+   "candidate_version": "0.2.8",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8722967,
+    "file_id": 8790451,
     "project_id": "1548056"
    },
-   "published_at": "2026-08-24T09:44:09.487Z",
+   "published_at": "2026-09-02T06:15:13.983Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -165,13 +165,13 @@
   {
    "slug": "create-bits-n-bobs",
    "current_version": "2.2.5",
-   "candidate_version": "2.2.8",
+   "candidate_version": "2.2.9",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8780183,
+    "file_id": 8783775,
     "project_id": "1398383"
    },
-   "published_at": "2026-08-31T19:19:47.663Z",
+   "published_at": "2026-09-01T08:59:58.23Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -283,26 +283,26 @@
   {
    "slug": "entity-model-features",
    "current_version": "3.2.4",
-   "candidate_version": "3.3",
+   "candidate_version": "3.3.2",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8782768,
+    "file_id": 8789172,
     "project_id": "844662"
    },
-   "published_at": "2026-09-01T04:44:40.42Z",
+   "published_at": "2026-09-02T00:50:00.47Z",
    "status": "safe",
    "blocked_by": []
   },
   {
    "slug": "entity-texture-features-fabric",
    "current_version": "7.1",
-   "candidate_version": "7.2",
+   "candidate_version": "7.2.1",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8782694,
+    "file_id": 8789239,
     "project_id": "568563"
    },
-   "published_at": "2026-09-01T04:23:18.75Z",
+   "published_at": "2026-09-02T01:00:01.25Z",
    "status": "safe",
    "blocked_by": []
   },
