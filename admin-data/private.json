@@ -1,6 +1,20 @@
 {
- "generated_at": "2026-09-04T08:17:13Z",
+ "generated_at": "2026-09-04T11:05:48Z",
  "updates": [
+  {
+   "slug": "advancedperipherals",
+   "current_version": "0.8.0a",
+   "candidate_version": "1.21.1-0.8.1a",
+   "candidate_ref": {
+    "source": "modrinth",
+    "version_id": "1rbqTjbS",
+    "project_id": "SOw6jD6x",
+    "url": "https://cdn.modrinth.com/data/SOw6jD6x/versions/1rbqTjbS/AdvancedPeripherals-1.21.1-0.8.1a.jar"
+   },
+   "published_at": "2026-09-04T09:16:27.701957Z",
+   "status": "safe",
+   "blocked_by": []
+  },
   {
    "slug": "aeronautics-hot-air-fix",
    "current_version": "1.1.0",
@@ -628,13 +642,13 @@
   {
    "slug": "yungs-better-caves",
    "current_version": "1.21.1-NeoForge-3.1.4",
-   "candidate_version": "1.21.1-NeoForge-3.1.5",
+   "candidate_version": "1.21.1-NeoForge-3.1.6",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8686119,
+    "file_id": 8806071,
     "project_id": "340583"
    },
-   "published_at": "2026-08-19T17:55:53.523Z",
+   "published_at": "2026-09-04T10:46:24.167Z",
    "status": "safe",
    "blocked_by": []
   }
@@ -721,6 +735,14 @@
   }
  ],
  "history": [
+  {
+   "sha": "1f06172455f40a460632befc2f97217e136957ed",
+   "op_id": "c8c073da-c25a-4c10-9b8b-a579329d123c",
+   "op": "add-modrinth",
+   "title": "add-modrinth: create-aeronautics-toolgun (both)",
+   "date": "2026-09-04T11:05:22Z",
+   "reverted": false
+  },
   {
    "sha": "e32e90166b4e36a69c706b05f6a5104d0220dd5d",
    "op_id": "52025a49-785a-447d-84f8-b55c2f434a68",

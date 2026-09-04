@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-04T08:17:13Z",
+ "generated_at": "2026-09-04T11:05:48Z",
  "notices": [],
  "pack": {
   "version": "1.0.0",
@@ -52,7 +52,7 @@
    "date_added": "2026-08-19T20:25:53+02:00",
    "date_updated": "2026-08-19T20:25:53+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "advancement-plaques",
@@ -1027,6 +1027,28 @@
    "owner": null,
    "date_added": "2026-08-11T18:32:31+02:00",
    "date_updated": "2026-08-11T18:32:31+02:00",
+   "parse_status": "ok",
+   "status": "current"
+  },
+  {
+   "slug": "create-aeronautics-toolgun",
+   "name": "Create Aeronautics: Toolgun",
+   "filename": "create_aeronautics_toolgun-0.3.6.jar",
+   "side": "both",
+   "source": "modrinth",
+   "project_id": "5fUBLqeW",
+   "version": "0.3.6",
+   "mod_ids": [
+    "create_aeronautics_toolgun"
+   ],
+   "size_bytes": 1353291,
+   "flavors": [],
+   "role": "addon",
+   "cluster": "create",
+   "embedded": false,
+   "owner": null,
+   "date_added": "2026-09-04T11:05:22Z",
+   "date_updated": "2026-09-04T11:05:22Z",
    "parse_status": "ok",
    "status": "current"
   },
@@ -4993,6 +5015,30 @@
    "satisfied": true
   },
   {
+   "from": "create-aeronautics-toolgun",
+   "to": "create",
+   "to_mod_id": "create",
+   "type": "required",
+   "version_range": "[6.0.10,6.1.0)",
+   "satisfied": true
+  },
+  {
+   "from": "create-aeronautics-toolgun",
+   "to": "sable",
+   "to_mod_id": "sable",
+   "type": "required",
+   "version_range": "[1.1.3,3.0.0)",
+   "satisfied": true
+  },
+  {
+   "from": "create-aeronautics-toolgun",
+   "to": "create-aeronautics::simulated",
+   "to_mod_id": "simulated",
+   "type": "required",
+   "version_range": "[1.1.3,2.0.0)",
+   "satisfied": true
+  },
+  {
    "from": "create-aeronautics-transmission-linkage",
    "to": "create",
    "to_mod_id": "create",
@@ -6876,37 +6922,37 @@
   }
  ],
  "build_sizes": {
-  "full": 701929644,
-  "minimal": 562432322,
+  "full": 703282935,
+  "minimal": 563785613,
   "without": {
-   "3dskinlayers": 699950617,
-   "advancement-plaques": 701520061,
-   "aeronautics-hot-air-fix": 701586882,
-   "ambientsounds": 617118012,
-   "better-advancements": 701831003,
-   "better-ping-display": 701915773,
-   "create-better-fps": 701903097,
-   "cubes-without-borders": 701847801,
-   "dynamiclights-reforged": 701630291,
-   "enchantment-descriptions": 701847015,
-   "entity-model-features": 700609483,
-   "entity-texture-features-fabric": 701177310,
-   "entityculling": 700344357,
-   "fancymenu": 675369532,
-   "irisshaders": 699388921,
-   "jade-addons": 701855225,
-   "jade-sable-compat": 701630254,
-   "just-zoom": 701267004,
-   "legendary-tooltips": 701571952,
-   "more-overlays-updated": 701816660,
-   "mouse-tweaks": 701855706,
-   "particle-rain": 701324186,
-   "sodium": 700636757,
-   "sodium-extra": 700171744,
-   "ssrd": 700565801,
-   "voxy": 689371502,
-   "xaeros-minimap": 699744235,
-   "xaeros-world-map": 700510726
+   "3dskinlayers": 701303908,
+   "advancement-plaques": 702873352,
+   "aeronautics-hot-air-fix": 702940173,
+   "ambientsounds": 618471303,
+   "better-advancements": 703184294,
+   "better-ping-display": 703269064,
+   "create-better-fps": 703256388,
+   "cubes-without-borders": 703201092,
+   "dynamiclights-reforged": 702983582,
+   "enchantment-descriptions": 703200306,
+   "entity-model-features": 701962774,
+   "entity-texture-features-fabric": 702530601,
+   "entityculling": 701697648,
+   "fancymenu": 676722823,
+   "irisshaders": 700742212,
+   "jade-addons": 703208516,
+   "jade-sable-compat": 702983545,
+   "just-zoom": 702620295,
+   "legendary-tooltips": 702925243,
+   "more-overlays-updated": 703169951,
+   "mouse-tweaks": 703208997,
+   "particle-rain": 702677477,
+   "sodium": 701990048,
+   "sodium-extra": 701525035,
+   "ssrd": 701919092,
+   "voxy": 690724793,
+   "xaeros-minimap": 701097526,
+   "xaeros-world-map": 701864017
   }
  }
 }
