@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-03T08:21:26Z",
+ "generated_at": "2026-09-04T08:17:13Z",
  "updates": [
   {
    "slug": "aeronautics-hot-air-fix",
@@ -84,14 +84,14 @@
   {
    "slug": "cbc-firepower-components",
    "current_version": "0.3.2",
-   "candidate_version": "0.4.0",
+   "candidate_version": "0.4.2",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "8G09rkh2",
+    "version_id": "MIIQsPeB",
     "project_id": "fRWr6eJq",
-    "url": "https://cdn.modrinth.com/data/fRWr6eJq/versions/8G09rkh2/cbc_firepower_components-neoforge-1.21.1-0.4.0%2Bmc.1.21.1-neoforge.jar"
+    "url": "https://cdn.modrinth.com/data/fRWr6eJq/versions/MIIQsPeB/cbc_firepower_components-neoforge-1.21.1-0.4.2%2Bmc.1.21.1-neoforge.jar"
    },
-   "published_at": "2026-08-27T17:22:28.905763Z",
+   "published_at": "2026-09-03T17:30:22.828611Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -205,13 +205,13 @@
   {
    "slug": "create-dragons-plus",
    "current_version": "1.11.4",
-   "candidate_version": "1.11.7b",
+   "candidate_version": "1.11.8",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8633162,
+    "file_id": 8798914,
     "project_id": "1216624"
    },
-   "published_at": "2026-08-12T14:54:23.99Z",
+   "published_at": "2026-09-03T10:57:57.723Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -283,13 +283,13 @@
   {
    "slug": "entity-model-features",
    "current_version": "3.2.4",
-   "candidate_version": "3.3.4",
+   "candidate_version": "3.3.5",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8797092,
+    "file_id": 8799082,
     "project_id": "844662"
    },
-   "published_at": "2026-09-03T03:03:55.547Z",
+   "published_at": "2026-09-03T11:31:27.96Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -388,13 +388,13 @@
   {
    "slug": "jei",
    "current_version": "19.43.0.393",
-   "candidate_version": "19.51.0.418",
+   "candidate_version": "19.52.0.422",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8792638,
+    "file_id": 8801091,
     "project_id": "238222"
    },
-   "published_at": "2026-09-02T13:30:05.447Z",
+   "published_at": "2026-09-03T16:58:38.12Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -493,13 +493,13 @@
   {
    "slug": "selene",
    "current_version": "1.21.1-3.3.2",
-   "candidate_version": "1.21.1-3.6.0",
+   "candidate_version": "1.21.1-3.6.1",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8792054,
+    "file_id": 8802498,
     "project_id": "499980"
    },
-   "published_at": "2026-09-02T11:47:30.953Z",
+   "published_at": "2026-09-03T20:29:21.043Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -569,6 +569,20 @@
     "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/zvRSOlro/sophisticatedcore-1.21.1-1.4.90.2299.jar"
    },
    "published_at": "2026-08-22T06:39:02.610406Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "ssrd",
+   "current_version": "1.8.5",
+   "candidate_version": "1.8.6",
+   "candidate_ref": {
+    "source": "modrinth",
+    "version_id": "hZfIK5Wl",
+    "project_id": "fJ183v3D",
+    "url": "https://cdn.modrinth.com/data/fJ183v3D/versions/hZfIK5Wl/SSRD-1.8.6-1.21.1.jar"
+   },
+   "published_at": "2026-09-04T00:25:34.449680Z",
    "status": "safe",
    "blocked_by": []
   },
