@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-04T11:05:48Z",
+ "generated_at": "2026-09-05T07:54:09Z",
  "updates": [
   {
    "slug": "advancedperipherals",
@@ -219,13 +219,13 @@
   {
    "slug": "create-dragons-plus",
    "current_version": "1.11.4",
-   "candidate_version": "1.11.8",
+   "candidate_version": "1.11.8b",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8798914,
+    "file_id": 8811294,
     "project_id": "1216624"
    },
-   "published_at": "2026-09-03T10:57:57.723Z",
+   "published_at": "2026-09-05T03:32:32.447Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -402,13 +402,13 @@
   {
    "slug": "jei",
    "current_version": "19.43.0.393",
-   "candidate_version": "19.52.0.422",
+   "candidate_version": "19.52.0.424",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8801091,
+    "file_id": 8811159,
     "project_id": "238222"
    },
-   "published_at": "2026-09-03T16:58:38.12Z",
+   "published_at": "2026-09-05T02:53:15.44Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -428,13 +428,13 @@
   {
    "slug": "lootr",
    "current_version": "1.21.1-1.11.38.123",
-   "candidate_version": "1.21.1-1.11.38.124",
+   "candidate_version": "1.21.1-1.11.38.125",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8695784,
+    "file_id": 8811105,
     "project_id": "361276"
    },
-   "published_at": "2026-08-21T00:46:05.107Z",
+   "published_at": "2026-09-05T02:38:33.647Z",
    "status": "safe",
    "blocked_by": []
   },
