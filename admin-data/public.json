@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-05T07:54:09Z",
+ "generated_at": "2026-09-06T08:11:09Z",
  "notices": [],
  "pack": {
   "version": "1.0.0",
@@ -4252,7 +4252,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-08T14:19:59+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "supermartijn642s-config-lib",

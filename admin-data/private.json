@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-05T07:54:09Z",
+ "generated_at": "2026-09-06T08:11:09Z",
  "updates": [
   {
    "slug": "advancedperipherals",
@@ -179,13 +179,13 @@
   {
    "slug": "create-bits-n-bobs",
    "current_version": "2.2.5",
-   "candidate_version": "2.2.9",
+   "candidate_version": "2.3.0",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8783775,
+    "file_id": 8813239,
     "project_id": "1398383"
    },
-   "published_at": "2026-09-01T08:59:58.23Z",
+   "published_at": "2026-09-05T10:25:53.29Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -402,26 +402,26 @@
   {
    "slug": "jei",
    "current_version": "19.43.0.393",
-   "candidate_version": "19.52.0.424",
+   "candidate_version": "19.53.0.425",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8811159,
+    "file_id": 8815666,
     "project_id": "238222"
    },
-   "published_at": "2026-09-05T02:53:15.44Z",
+   "published_at": "2026-09-05T16:11:48.077Z",
    "status": "safe",
    "blocked_by": []
   },
   {
    "slug": "lithostitched",
    "current_version": "1.7.13",
-   "candidate_version": "1.8.0+beta4",
+   "candidate_version": "1.8.0+beta6",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8660310,
+    "file_id": 8819894,
     "project_id": "936015"
    },
-   "published_at": "2026-08-16T06:54:53.237Z",
+   "published_at": "2026-09-06T06:19:10.55Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -520,14 +520,14 @@
   {
    "slug": "serene-seasons",
    "current_version": "10.1.0.3",
-   "candidate_version": "10.1.0.8",
+   "candidate_version": "10.1.0.9",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "B6nTjh4b",
+    "version_id": "pHEgQQUE",
     "project_id": "e0bNACJD",
-    "url": "https://cdn.modrinth.com/data/e0bNACJD/versions/B6nTjh4b/SereneSeasons-neoforge-1.21.1-10.1.0.8.jar"
+    "url": "https://cdn.modrinth.com/data/e0bNACJD/versions/pHEgQQUE/SereneSeasons-neoforge-1.21.1-10.1.0.9.jar"
    },
-   "published_at": "2026-08-31T12:39:42.058496Z",
+   "published_at": "2026-09-05T11:46:04.208678Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -561,28 +561,28 @@
   {
    "slug": "sophisticated-backpacks",
    "current_version": "3.25.74",
-   "candidate_version": "3.25.78",
+   "candidate_version": "3.26.1",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "6apvKKGZ",
+    "version_id": "TCUy8VcN",
     "project_id": "TyCTlI4b",
-    "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/6apvKKGZ/sophisticatedbackpacks-1.21.1-3.25.78.2107.jar"
+    "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/TCUy8VcN/sophisticatedbackpacks-1.21.1-3.26.1.2124.jar"
    },
-   "published_at": "2026-08-19T23:08:36.774901Z",
+   "published_at": "2026-09-05T23:35:23.618828Z",
    "status": "safe",
    "blocked_by": []
   },
   {
    "slug": "sophisticated-core",
    "current_version": "1.4.82",
-   "candidate_version": "1.4.90",
+   "candidate_version": "1.5.0",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "zvRSOlro",
+    "version_id": "VDVSYWDB",
     "project_id": "nmoqTijg",
-    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/zvRSOlro/sophisticatedcore-1.21.1-1.4.90.2299.jar"
+    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/VDVSYWDB/sophisticatedcore-1.21.1-1.5.0.2322.jar"
    },
-   "published_at": "2026-08-22T06:39:02.610406Z",
+   "published_at": "2026-09-05T16:22:43.107668Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -597,6 +597,19 @@
     "url": "https://cdn.modrinth.com/data/fJ183v3D/versions/hZfIK5Wl/SSRD-1.8.6-1.21.1.jar"
    },
    "published_at": "2026-09-04T00:25:34.449680Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "strut-your-stuff",
+   "current_version": "1.3.0",
+   "candidate_version": "1.3.1",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8812965,
+    "project_id": "1486746"
+   },
+   "published_at": "2026-09-05T09:16:14.7Z",
    "status": "safe",
    "blocked_by": []
   },
