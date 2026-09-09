@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-08T08:23:39Z",
+ "generated_at": "2026-09-09T08:26:15Z",
  "notices": [],
  "pack": {
   "version": "1.0.0",
@@ -3410,7 +3410,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "quark::biolith",
@@ -3870,7 +3870,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "slice-and-dice",
