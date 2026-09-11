@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-10T08:28:20Z",
+ "generated_at": "2026-09-11T08:22:33Z",
  "notices": [],
  "pack": {
   "version": "1.0.0",
@@ -1294,7 +1294,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "create-ccbr",
@@ -3072,7 +3072,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-08T14:19:59+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "modernfix",
@@ -3320,7 +3320,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "power-grid",
@@ -4430,7 +4430,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T20:44:37+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "xaeros-minimap::xaerolib",

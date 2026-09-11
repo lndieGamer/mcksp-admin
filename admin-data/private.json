@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-10T08:28:20Z",
+ "generated_at": "2026-09-11T08:22:33Z",
  "updates": [
   {
    "slug": "advancedperipherals",
@@ -85,13 +85,13 @@
   {
    "slug": "cbc-enchanced-shells-create-big-cannons",
    "current_version": "1.2.2",
-   "candidate_version": "1.2.5",
+   "candidate_version": "1.4.0",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8838000,
+    "file_id": 8853805,
     "project_id": "1489732"
    },
-   "published_at": "2026-09-08T14:56:46.173Z",
+   "published_at": "2026-09-10T22:22:54.67Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -190,6 +190,19 @@
    "blocked_by": []
   },
   {
+   "slug": "create-bitterballen",
+   "current_version": "1.0.2C",
+   "candidate_version": "1.0.4",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8853472,
+    "project_id": "918751"
+   },
+   "published_at": "2026-09-10T21:17:39.66Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
    "slug": "create-ccbr",
    "current_version": "1.2.0",
    "candidate_version": "1.2.1",
@@ -258,13 +271,13 @@
   {
    "slug": "creativecore",
    "current_version": "2.13.42",
-   "candidate_version": "2.13.44",
+   "candidate_version": "2.13.45",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8699787,
+    "file_id": 8851702,
     "project_id": "257814"
    },
-   "published_at": "2026-08-21T14:39:50.637Z",
+   "published_at": "2026-09-10T16:30:47.867Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -402,13 +415,13 @@
   {
    "slug": "jei",
    "current_version": "19.43.0.393",
-   "candidate_version": "19.53.0.426",
+   "candidate_version": "19.54.0.427",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8829744,
+    "file_id": 8850347,
     "project_id": "238222"
    },
-   "published_at": "2026-09-07T12:41:35.827Z",
+   "published_at": "2026-09-10T12:05:13.693Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -439,6 +452,19 @@
    "blocked_by": []
   },
   {
+   "slug": "mmmmmmmmmmmm",
+   "current_version": "1.21-2.1.0",
+   "candidate_version": "1.21-2.1.1",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8852689,
+    "project_id": "225738"
+   },
+   "published_at": "2026-09-10T19:08:21.783Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
    "slug": "modernfix",
    "current_version": "5.27.20+mc1.21.1",
    "candidate_version": "5.27.24+mc1.21.1",
@@ -461,6 +487,19 @@
     "project_id": "421897"
    },
    "published_at": "2026-08-24T00:23:43.047Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "polymorph",
+   "current_version": "1.1.0+1.21.1",
+   "candidate_version": "1.2.0+1.21.1",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8849478,
+    "project_id": "388800"
+   },
+   "published_at": "2026-09-10T09:27:46.713Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -520,13 +559,13 @@
   {
    "slug": "selene",
    "current_version": "1.21.1-3.3.2",
-   "candidate_version": "1.21.1-3.6.3",
+   "candidate_version": "1.21.1-3.6.4",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8821083,
+    "file_id": 8850087,
     "project_id": "499980"
    },
-   "published_at": "2026-09-06T10:20:51.527Z",
+   "published_at": "2026-09-10T11:30:19.747Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -654,15 +693,28 @@
    "blocked_by": []
   },
   {
-   "slug": "xaeros-world-map",
-   "current_version": "1.44.2",
-   "candidate_version": "1.45.0",
+   "slug": "xaeros-minimap",
+   "current_version": "26.4.2",
+   "candidate_version": "26.5.0",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8698659,
+    "file_id": 8849842,
+    "project_id": "263420"
+   },
+   "published_at": "2026-09-10T10:52:08.423Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "xaeros-world-map",
+   "current_version": "1.44.2",
+   "candidate_version": "1.46.0",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8849973,
     "project_id": "317780"
    },
-   "published_at": "2026-08-21T11:47:20.993Z",
+   "published_at": "2026-09-10T11:11:31.753Z",
    "status": "safe",
    "blocked_by": []
   },
