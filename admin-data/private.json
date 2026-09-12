@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-11T08:22:33Z",
+ "generated_at": "2026-09-12T08:11:21Z",
  "updates": [
   {
    "slug": "advancedperipherals",
@@ -271,13 +271,13 @@
   {
    "slug": "creativecore",
    "current_version": "2.13.42",
-   "candidate_version": "2.13.45",
+   "candidate_version": "2.13.46",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8851702,
+    "file_id": 8857710,
     "project_id": "257814"
    },
-   "published_at": "2026-09-10T16:30:47.867Z",
+   "published_at": "2026-09-11T13:41:59.367Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -415,13 +415,13 @@
   {
    "slug": "jei",
    "current_version": "19.43.0.393",
-   "candidate_version": "19.54.0.427",
+   "candidate_version": "19.54.0.429",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8850347,
+    "file_id": 8857687,
     "project_id": "238222"
    },
-   "published_at": "2026-09-10T12:05:13.693Z",
+   "published_at": "2026-09-11T13:39:37.303Z",
    "status": "safe",
    "blocked_by": []
   },
