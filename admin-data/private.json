@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-12T08:11:21Z",
+ "generated_at": "2026-09-13T08:35:44Z",
  "updates": [
   {
    "slug": "advancedperipherals",
@@ -179,13 +179,13 @@
   {
    "slug": "create-bits-n-bobs",
    "current_version": "2.2.5",
-   "candidate_version": "2.3.2",
+   "candidate_version": "2.3.4",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8829057,
+    "file_id": 8863252,
     "project_id": "1398383"
    },
-   "published_at": "2026-09-07T10:18:36.707Z",
+   "published_at": "2026-09-12T09:15:50.317Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -415,13 +415,13 @@
   {
    "slug": "jei",
    "current_version": "19.43.0.393",
-   "candidate_version": "19.54.0.429",
+   "candidate_version": "19.56.0.438",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8857687,
+    "file_id": 8870333,
     "project_id": "238222"
    },
-   "published_at": "2026-09-11T13:39:37.303Z",
+   "published_at": "2026-09-13T06:43:36.407Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -594,6 +594,20 @@
     "url": "https://cdn.modrinth.com/data/26LRjUh8/versions/ODT30is0/seasonsfix-neoforge-1.21.1-2.1.2.jar"
    },
    "published_at": "2026-08-16T16:37:21.611281Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "sit-and-lay",
+   "current_version": "1.4",
+   "candidate_version": "1.5",
+   "candidate_ref": {
+    "source": "modrinth",
+    "version_id": "2HVCM9Ub",
+    "project_id": "nvUQKhK3",
+    "url": "https://cdn.modrinth.com/data/nvUQKhK3/versions/2HVCM9Ub/sitandlay-1.5.jar"
+   },
+   "published_at": "2026-09-12T21:45:13.539717Z",
    "status": "safe",
    "blocked_by": []
   },
