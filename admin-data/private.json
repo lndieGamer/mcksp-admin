@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-13T08:35:44Z",
+ "generated_at": "2026-09-14T09:20:10Z",
  "updates": [
   {
    "slug": "advancedperipherals",
@@ -387,6 +387,19 @@
    "blocked_by": []
   },
   {
+   "slug": "immersive-paintings",
+   "current_version": "0.7.8",
+   "candidate_version": "0.7.9",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8871485,
+    "project_id": "639584"
+   },
+   "published_at": "2026-09-13T10:52:58.663Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
    "slug": "jade-addons",
    "current_version": "6.1.0+neoforge",
    "candidate_version": "6.1.1+neoforge",
@@ -530,6 +543,19 @@
    "blocked_by": []
   },
   {
+   "slug": "rechiseled",
+   "current_version": "1.2.5",
+   "candidate_version": "1.2.6",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8875899,
+    "project_id": "558998"
+   },
+   "published_at": "2026-09-13T23:26:12.557Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
    "slug": "reworked-locator-bar",
    "current_version": "1.2.1",
    "candidate_version": "1.2.2",
@@ -600,14 +626,14 @@
   {
    "slug": "sit-and-lay",
    "current_version": "1.4",
-   "candidate_version": "1.5",
+   "candidate_version": "1.6",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "2HVCM9Ub",
+    "version_id": "hspZyTrN",
     "project_id": "nvUQKhK3",
-    "url": "https://cdn.modrinth.com/data/nvUQKhK3/versions/2HVCM9Ub/sitandlay-1.5.jar"
+    "url": "https://cdn.modrinth.com/data/nvUQKhK3/versions/hspZyTrN/sitandlay-1.6.jar"
    },
-   "published_at": "2026-09-12T21:45:13.539717Z",
+   "published_at": "2026-09-13T14:26:09.905363Z",
    "status": "safe",
    "blocked_by": []
   },
