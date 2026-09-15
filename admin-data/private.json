@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-14T09:20:10Z",
+ "generated_at": "2026-09-15T09:01:55Z",
  "updates": [
   {
    "slug": "advancedperipherals",
@@ -387,6 +387,19 @@
    "blocked_by": []
   },
   {
+   "slug": "fzzy-config",
+   "current_version": "0.7.6+1.21+neoforge",
+   "candidate_version": "0.7.7+1.21+neoforge",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8883390,
+    "project_id": "1005914"
+   },
+   "published_at": "2026-09-15T00:36:36.463Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
    "slug": "immersive-paintings",
    "current_version": "0.7.8",
    "candidate_version": "0.7.9",
@@ -428,13 +441,13 @@
   {
    "slug": "jei",
    "current_version": "19.43.0.393",
-   "candidate_version": "19.56.0.438",
+   "candidate_version": "19.56.0.439",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8870333,
+    "file_id": 8879617,
     "project_id": "238222"
    },
-   "published_at": "2026-09-13T06:43:36.407Z",
+   "published_at": "2026-09-14T13:42:38.05Z",
    "status": "safe",
    "blocked_by": []
   },
