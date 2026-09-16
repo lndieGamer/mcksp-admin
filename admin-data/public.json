@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-15T09:01:55Z",
+ "generated_at": "2026-09-16T08:54:10Z",
  "notices": [],
  "pack": {
   "version": "1.0.0",
@@ -2322,7 +2322,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "glitchcore",
@@ -2804,7 +2804,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T13:24:08+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "legendary-tooltips",
@@ -3498,7 +3498,7 @@
    "date_added": "2026-08-08T17:16:30+02:00",
    "date_updated": "2026-08-19T13:24:08+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "refurbished-furniture",
@@ -4052,7 +4052,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T20:44:37+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "sophisticated-backpacks",

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-15T09:01:55Z",
+ "generated_at": "2026-09-16T08:54:10Z",
  "updates": [
   {
    "slug": "advancedperipherals",
@@ -47,10 +47,10 @@
    "candidate_version": "1.4.8",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8780182,
+    "file_id": 8886535,
     "project_id": "1466331"
    },
-   "published_at": "2026-08-31T19:19:35.397Z",
+   "published_at": "2026-09-15T13:44:06.89Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -179,13 +179,13 @@
   {
    "slug": "create-bits-n-bobs",
    "current_version": "2.2.5",
-   "candidate_version": "2.3.4",
+   "candidate_version": "2.3.5",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8863252,
+    "file_id": 8886545,
     "project_id": "1398383"
    },
-   "published_at": "2026-09-12T09:15:50.317Z",
+   "published_at": "2026-09-15T13:45:36.043Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -258,13 +258,13 @@
   {
    "slug": "createaddition",
    "current_version": "1.6.0",
-   "candidate_version": "1.7.0",
+   "candidate_version": "1.7.1",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8664915,
+    "file_id": 8887653,
     "project_id": "439890"
    },
-   "published_at": "2026-08-16T19:32:13.587Z",
+   "published_at": "2026-09-15T17:06:12.663Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -310,26 +310,26 @@
   {
    "slug": "entity-model-features",
    "current_version": "3.2.4",
-   "candidate_version": "3.3.5",
+   "candidate_version": "3.3.6",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8799082,
+    "file_id": 8892054,
     "project_id": "844662"
    },
-   "published_at": "2026-09-03T11:31:27.96Z",
+   "published_at": "2026-09-16T01:31:24.263Z",
    "status": "safe",
    "blocked_by": []
   },
   {
    "slug": "entity-texture-features-fabric",
    "current_version": "7.1",
-   "candidate_version": "7.2.1",
+   "candidate_version": "7.2.2",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8789239,
+    "file_id": 8891810,
     "project_id": "568563"
    },
-   "published_at": "2026-09-02T01:00:01.25Z",
+   "published_at": "2026-09-16T00:49:49.763Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -400,6 +400,19 @@
    "blocked_by": []
   },
   {
+   "slug": "geckolib",
+   "current_version": "4.9.2",
+   "candidate_version": "4.9.3",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8893490,
+    "project_id": "388172"
+   },
+   "published_at": "2026-09-16T07:34:13.327Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
    "slug": "immersive-paintings",
    "current_version": "0.7.8",
    "candidate_version": "0.7.9",
@@ -441,13 +454,26 @@
   {
    "slug": "jei",
    "current_version": "19.43.0.393",
-   "candidate_version": "19.56.0.439",
+   "candidate_version": "19.56.0.440",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8879617,
+    "file_id": 8886909,
     "project_id": "238222"
    },
-   "published_at": "2026-09-14T13:42:38.05Z",
+   "published_at": "2026-09-15T14:54:16.517Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "ksyxis",
+   "current_version": "1.4.3",
+   "candidate_version": "1.4.4",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8891330,
+    "project_id": "537533"
+   },
+   "published_at": "2026-09-15T23:23:34.61Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -569,6 +595,19 @@
    "blocked_by": []
   },
   {
+   "slug": "reeses-sodium-options",
+   "current_version": "2.2.3+mc1.21.1",
+   "candidate_version": "2.2.4+mc1.21.1",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8891797,
+    "project_id": "511319"
+   },
+   "published_at": "2026-09-16T00:49:14.663Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
    "slug": "reworked-locator-bar",
    "current_version": "1.2.1",
    "candidate_version": "1.2.2",
@@ -674,6 +713,19 @@
     "project_id": "394468"
    },
    "published_at": "2026-08-28T20:54:55.687Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "sodium-extra",
+   "current_version": "0.9.3+mc1.21.1",
+   "candidate_version": "0.9.4+mc1.21.1",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8892306,
+    "project_id": "447673"
+   },
+   "published_at": "2026-09-16T02:17:20.107Z",
    "status": "safe",
    "blocked_by": []
   },
