@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-16T08:54:10Z",
+ "generated_at": "2026-09-17T08:58:47Z",
  "updates": [
   {
    "slug": "advancedperipherals",
@@ -71,14 +71,14 @@
   {
    "slug": "burnt-basic",
    "current_version": "1.10.3.7",
-   "candidate_version": "1.10.4.2",
+   "candidate_version": "1.10.5",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "gVPB2Kua",
+    "version_id": "k6uRUh5V",
     "project_id": "aclfPzta",
-    "url": "https://cdn.modrinth.com/data/aclfPzta/versions/gVPB2Kua/burnt_basic-1.10.4.2-neoforge-1.21.1.jar"
+    "url": "https://cdn.modrinth.com/data/aclfPzta/versions/k6uRUh5V/burnt_basic-1.10.5-neoforge-1.21.1.jar"
    },
-   "published_at": "2026-08-10T09:32:48.220051Z",
+   "published_at": "2026-09-16T18:41:12.323245Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -232,26 +232,26 @@
   {
    "slug": "create-dragons-plus",
    "current_version": "1.11.4",
-   "candidate_version": "1.11.8b",
+   "candidate_version": "1.11.9",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8811294,
+    "file_id": 8900055,
     "project_id": "1216624"
    },
-   "published_at": "2026-09-05T03:32:32.447Z",
+   "published_at": "2026-09-17T01:16:14.733Z",
    "status": "safe",
    "blocked_by": []
   },
   {
    "slug": "create-enchantment-industry",
    "current_version": "2.5.1",
-   "candidate_version": "2.5.3b",
+   "candidate_version": "2.5.4",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8762719,
+    "file_id": 8900719,
     "project_id": "688768"
    },
-   "published_at": "2026-08-29T16:49:51.443Z",
+   "published_at": "2026-09-17T03:23:26.277Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -310,26 +310,26 @@
   {
    "slug": "entity-model-features",
    "current_version": "3.2.4",
-   "candidate_version": "3.3.6",
+   "candidate_version": "3.3.7",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8892054,
+    "file_id": 8900925,
     "project_id": "844662"
    },
-   "published_at": "2026-09-16T01:31:24.263Z",
+   "published_at": "2026-09-17T04:15:44.12Z",
    "status": "safe",
    "blocked_by": []
   },
   {
    "slug": "entity-texture-features-fabric",
    "current_version": "7.1",
-   "candidate_version": "7.2.2",
+   "candidate_version": "7.2.3",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8891810,
+    "file_id": 8900956,
     "project_id": "568563"
    },
-   "published_at": "2026-09-16T00:49:49.763Z",
+   "published_at": "2026-09-17T04:17:16.167Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -454,13 +454,13 @@
   {
    "slug": "jei",
    "current_version": "19.43.0.393",
-   "candidate_version": "19.56.0.440",
+   "candidate_version": "19.56.0.441",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8886909,
+    "file_id": 8895652,
     "project_id": "238222"
    },
-   "published_at": "2026-09-15T14:54:16.517Z",
+   "published_at": "2026-09-16T13:59:14.56Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -571,13 +571,13 @@
   {
    "slug": "quark",
    "current_version": "4.1-482",
-   "candidate_version": "4.1-484",
+   "candidate_version": "4.1-485",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8847564,
+    "file_id": 8895753,
     "project_id": "243121"
    },
-   "published_at": "2026-09-10T01:22:04.09Z",
+   "published_at": "2026-09-16T14:10:56.003Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -826,13 +826,13 @@
   {
    "slug": "yungs-api-neoforge",
    "current_version": "1.21.1-NeoForge-5.1.6",
-   "candidate_version": "1.21.1-NeoForge-5.1.8",
+   "candidate_version": "1.21.1-NeoForge-5.1.9",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8702150,
+    "file_id": 8894736,
     "project_id": "1015100"
    },
-   "published_at": "2026-08-21T19:59:47.053Z",
+   "published_at": "2026-09-16T11:24:30.02Z",
    "status": "safe",
    "blocked_by": []
   },
