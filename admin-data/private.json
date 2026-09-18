@@ -1,6 +1,20 @@
 {
- "generated_at": "2026-09-17T08:58:47Z",
+ "generated_at": "2026-09-18T08:33:47Z",
  "updates": [
+  {
+   "slug": "3dskinlayers",
+   "current_version": "1.11.2",
+   "candidate_version": "1.11.3",
+   "candidate_ref": {
+    "source": "modrinth",
+    "version_id": "5s6lxsQW",
+    "project_id": "zV5r3pPn",
+    "url": "https://cdn.modrinth.com/data/zV5r3pPn/versions/5s6lxsQW/skinlayers3d-neoforge-1.11.3-mc1.21.1.jar"
+   },
+   "published_at": "2026-09-17T20:05:30.316991Z",
+   "status": "safe",
+   "blocked_by": []
+  },
   {
    "slug": "advancedperipherals",
    "current_version": "0.8.0a",
@@ -177,6 +191,19 @@
    "blocked_by": []
   },
   {
+   "slug": "create-better-fps",
+   "current_version": "1.1.4",
+   "candidate_version": "1.1.5",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8908301,
+    "project_id": "1217518"
+   },
+   "published_at": "2026-09-18T01:30:13.587Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
    "slug": "create-bits-n-bobs",
    "current_version": "2.2.5",
    "candidate_version": "2.3.5",
@@ -310,26 +337,26 @@
   {
    "slug": "entity-model-features",
    "current_version": "3.2.4",
-   "candidate_version": "3.3.7",
+   "candidate_version": "3.3.9",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8900925,
+    "file_id": 8909425,
     "project_id": "844662"
    },
-   "published_at": "2026-09-17T04:15:44.12Z",
+   "published_at": "2026-09-18T05:57:10.897Z",
    "status": "safe",
    "blocked_by": []
   },
   {
    "slug": "entity-texture-features-fabric",
    "current_version": "7.1",
-   "candidate_version": "7.2.3",
+   "candidate_version": "7.2.4",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8900956,
+    "file_id": 8908931,
     "project_id": "568563"
    },
-   "published_at": "2026-09-17T04:17:16.167Z",
+   "published_at": "2026-09-18T03:48:46.983Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -506,13 +533,13 @@
   {
    "slug": "mmmmmmmmmmmm",
    "current_version": "1.21-2.1.0",
-   "candidate_version": "1.21-2.1.1",
+   "candidate_version": "1.21-2.1.2",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8852689,
+    "file_id": 8903254,
     "project_id": "225738"
    },
-   "published_at": "2026-09-10T19:08:21.783Z",
+   "published_at": "2026-09-17T12:05:49.663Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -637,13 +664,13 @@
   {
    "slug": "selene",
    "current_version": "1.21.1-3.3.2",
-   "candidate_version": "1.21.1-3.6.4",
+   "candidate_version": "1.21.1-3.6.5",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8850087,
+    "file_id": 8905916,
     "project_id": "499980"
    },
-   "published_at": "2026-09-10T11:30:19.747Z",
+   "published_at": "2026-09-17T18:51:56.987Z",
    "status": "safe",
    "blocked_by": []
   },

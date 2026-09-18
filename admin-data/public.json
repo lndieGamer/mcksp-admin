@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-17T08:58:47Z",
+ "generated_at": "2026-09-18T08:33:47Z",
  "notices": [],
  "pack": {
   "version": "1.0.0",
@@ -30,7 +30,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T13:24:08+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "advancedperipherals",
@@ -1184,7 +1184,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "create-better-frequency",
