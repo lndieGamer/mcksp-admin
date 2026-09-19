@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-18T08:33:47Z",
+ "generated_at": "2026-09-19T08:20:58Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -58,13 +58,13 @@
   {
    "slug": "azimuth-api",
    "current_version": "1.4.7",
-   "candidate_version": "1.4.8",
+   "candidate_version": "1.4.9",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8886535,
+    "file_id": 8911024,
     "project_id": "1466331"
    },
-   "published_at": "2026-09-15T13:44:06.89Z",
+   "published_at": "2026-09-18T11:27:20.403Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -501,6 +501,58 @@
     "project_id": "537533"
    },
    "published_at": "2026-09-15T23:23:34.61Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "lets-do-beachparty",
+   "current_version": "2.1.4",
+   "candidate_version": "2.1.5",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8917680,
+    "project_id": "858691"
+   },
+   "published_at": "2026-09-19T04:54:57.223Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "lets-do-farm-charm",
+   "current_version": "1.1.23",
+   "candidate_version": "1.1.24",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8912377,
+    "project_id": "1038103"
+   },
+   "published_at": "2026-09-18T14:56:13.013Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "lets-do-herbal-brews",
+   "current_version": "1.1.3",
+   "candidate_version": "1.1.4",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8918021,
+    "project_id": "951221"
+   },
+   "published_at": "2026-09-19T05:44:58.01Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "lets-do-vinery",
+   "current_version": "1.5.3",
+   "candidate_version": "1.5.4",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8918247,
+    "project_id": "704465"
+   },
+   "published_at": "2026-09-19T06:36:23.327Z",
    "status": "safe",
    "blocked_by": []
   },

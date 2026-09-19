@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-18T08:33:47Z",
+ "generated_at": "2026-09-19T08:20:58Z",
  "notices": [],
  "pack": {
   "version": "1.0.0",
@@ -2850,7 +2850,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "lets-do-brewery-farm-charm-compat",
@@ -2894,7 +2894,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-08T14:19:59+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "lets-do-herbal-brews",
@@ -2916,7 +2916,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "lets-do-vinery",
@@ -2938,7 +2938,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "lithium",
