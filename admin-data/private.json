@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-19T08:20:58Z",
+ "generated_at": "2026-09-20T08:52:25Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -361,6 +361,20 @@
    "blocked_by": []
   },
   {
+   "slug": "entityculling",
+   "current_version": "1.10.5",
+   "candidate_version": "1.11.0",
+   "candidate_ref": {
+    "source": "modrinth",
+    "version_id": "IDtHA7MV",
+    "project_id": "NNAgCjsB",
+    "url": "https://cdn.modrinth.com/data/NNAgCjsB/versions/IDtHA7MV/entityculling-neoforge-1.11.0-mc1.21.1.jar"
+   },
+   "published_at": "2026-09-19T19:55:07.184945Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
    "slug": "fancymenu",
    "current_version": "3.9.9",
    "candidate_version": "3.9.12",
@@ -518,15 +532,28 @@
    "blocked_by": []
   },
   {
-   "slug": "lets-do-farm-charm",
-   "current_version": "1.1.23",
-   "candidate_version": "1.1.24",
+   "slug": "lets-do-brewery-farm-charm-compat",
+   "current_version": "2.1.9",
+   "candidate_version": "2.1.10",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8912377,
+    "file_id": 8920759,
+    "project_id": "1038106"
+   },
+   "published_at": "2026-09-19T13:04:47.843Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "lets-do-farm-charm",
+   "current_version": "1.1.23",
+   "candidate_version": "1.1.25",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8928129,
     "project_id": "1038103"
    },
-   "published_at": "2026-09-18T14:56:13.013Z",
+   "published_at": "2026-09-20T06:06:38.1Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -572,13 +599,13 @@
   {
    "slug": "lootr",
    "current_version": "1.21.1-1.11.38.123",
-   "candidate_version": "1.21.1-1.11.38.125",
+   "candidate_version": "1.21.1-1.11.38.126",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8811105,
+    "file_id": 8927571,
     "project_id": "361276"
    },
-   "published_at": "2026-09-05T02:38:33.647Z",
+   "published_at": "2026-09-20T03:52:56.46Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -637,13 +664,13 @@
   {
    "slug": "power-grid",
    "current_version": "0.6.0.1",
-   "candidate_version": "0.6.1",
+   "candidate_version": "0.6.2",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8738576,
+    "file_id": 8880715,
     "project_id": "1321420"
    },
-   "published_at": "2026-08-26T11:49:51.583Z",
+   "published_at": "2026-09-14T16:06:36.37Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -873,6 +900,20 @@
     "project_id": "454372"
    },
    "published_at": "2026-08-11T12:38:17.973Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "trade-cycling",
+   "current_version": "1.21.1-1.0.18",
+   "candidate_version": "1.21.1-1.0.22",
+   "candidate_ref": {
+    "source": "modrinth",
+    "version_id": "wHjZ0TaF",
+    "project_id": "qpPoAL6m",
+    "url": "https://cdn.modrinth.com/data/qpPoAL6m/versions/wHjZ0TaF/trade-cycling-neoforge-1.21.1-1.0.22.jar"
+   },
+   "published_at": "2026-09-19T15:19:40.921834Z",
    "status": "safe",
    "blocked_by": []
   },
