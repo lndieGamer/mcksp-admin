@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-20T08:52:25Z",
+ "generated_at": "2026-09-21T09:22:25Z",
  "notices": [],
  "pack": {
   "version": "1.0.0",
@@ -3892,7 +3892,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-08T14:19:59+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "slice-and-dice::atmosphere",
