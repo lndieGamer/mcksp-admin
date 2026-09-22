@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-21T09:22:25Z",
+ "generated_at": "2026-09-22T08:52:33Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -363,14 +363,14 @@
   {
    "slug": "entityculling",
    "current_version": "1.10.5",
-   "candidate_version": "1.11.1",
+   "candidate_version": "1.11.2",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "RMi7ywBj",
+    "version_id": "8w8FfUPs",
     "project_id": "NNAgCjsB",
-    "url": "https://cdn.modrinth.com/data/NNAgCjsB/versions/RMi7ywBj/entityculling-neoforge-1.11.1-mc1.21.1.jar"
+    "url": "https://cdn.modrinth.com/data/NNAgCjsB/versions/8w8FfUPs/entityculling-neoforge-1.11.2-mc1.21.1.jar"
    },
-   "published_at": "2026-09-20T09:37:15.079505Z",
+   "published_at": "2026-09-21T19:46:52.810258Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -417,13 +417,13 @@
   {
    "slug": "fusion-connected-textures",
    "current_version": "1.3.12",
-   "candidate_version": "1.3.15+a",
+   "candidate_version": "1.3.15+b",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8822088,
+    "file_id": 8942891,
     "project_id": "854949"
    },
-   "published_at": "2026-09-06T13:00:43.42Z",
+   "published_at": "2026-09-21T21:11:27.92Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -495,13 +495,13 @@
   {
    "slug": "jei",
    "current_version": "19.43.0.393",
-   "candidate_version": "19.57.0.445",
+   "candidate_version": "19.57.0.446",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8932766,
+    "file_id": 8941263,
     "project_id": "238222"
    },
-   "published_at": "2026-09-20T17:00:10.3Z",
+   "published_at": "2026-09-21T16:44:00.397Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -586,13 +586,13 @@
   {
    "slug": "lithostitched",
    "current_version": "1.7.13",
-   "candidate_version": "1.8.0+beta6",
+   "candidate_version": "1.8.0",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8819894,
+    "file_id": 8944659,
     "project_id": "936015"
    },
-   "published_at": "2026-09-06T06:19:10.55Z",
+   "published_at": "2026-09-22T03:18:50.19Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -743,13 +743,13 @@
   {
    "slug": "selene",
    "current_version": "1.21.1-3.3.2",
-   "candidate_version": "1.21.1-3.6.6",
+   "candidate_version": "1.21.1-3.6.8",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8929425,
+    "file_id": 8941470,
     "project_id": "499980"
    },
-   "published_at": "2026-09-20T10:03:48.503Z",
+   "published_at": "2026-09-21T17:15:03.58Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -879,14 +879,14 @@
   {
    "slug": "ssrd",
    "current_version": "1.8.5",
-   "candidate_version": "1.8.6",
+   "candidate_version": "1.8.7",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "hZfIK5Wl",
+    "version_id": "iZflRKdV",
     "project_id": "fJ183v3D",
-    "url": "https://cdn.modrinth.com/data/fJ183v3D/versions/hZfIK5Wl/SSRD-1.8.6-1.21.1.jar"
+    "url": "https://cdn.modrinth.com/data/fJ183v3D/versions/iZflRKdV/SSRD-1.8.7-1.21.1.jar"
    },
-   "published_at": "2026-09-04T00:25:34.449680Z",
+   "published_at": "2026-09-21T21:19:26.302831Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -906,13 +906,13 @@
   {
    "slug": "supermartijn642s-core-lib",
    "current_version": "1.1.23+a",
-   "candidate_version": "1.1.24",
+   "candidate_version": "1.1.24+a",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8623666,
+    "file_id": 8943316,
     "project_id": "454372"
    },
-   "published_at": "2026-08-11T12:38:17.973Z",
+   "published_at": "2026-09-21T22:15:16.84Z",
    "status": "safe",
    "blocked_by": []
   },
