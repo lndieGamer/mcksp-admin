@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-23T08:53:43Z",
+ "generated_at": "2026-09-24T08:49:22Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -52,6 +52,19 @@
     "project_id": "896746"
    },
    "published_at": "2026-09-06T21:11:30.2Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "another-furniture",
+   "current_version": "4.0.2",
+   "candidate_version": "4.0.3",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8955672,
+    "project_id": "610492"
+   },
+   "published_at": "2026-09-23T13:57:44.163Z",
    "status": "safe",
    "blocked_by": []
   },
