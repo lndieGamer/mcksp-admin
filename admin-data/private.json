@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-25T09:09:49Z",
+ "generated_at": "2026-09-26T08:53:11Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -311,13 +311,13 @@
   {
    "slug": "creativecore",
    "current_version": "2.13.42",
-   "candidate_version": "2.13.48",
+   "candidate_version": "2.13.49",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8947159,
+    "file_id": 8975261,
     "project_id": "257814"
    },
-   "published_at": "2026-09-22T14:01:21.607Z",
+   "published_at": "2026-09-25T21:16:17.897Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -521,13 +521,13 @@
   {
    "slug": "ksyxis",
    "current_version": "1.4.3",
-   "candidate_version": "1.4.4",
+   "candidate_version": "1.4.5",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8891330,
+    "file_id": 8971236,
     "project_id": "537533"
    },
-   "published_at": "2026-09-15T23:23:34.61Z",
+   "published_at": "2026-09-25T11:07:24.123Z",
    "status": "safe",
    "blocked_by": []
   },
