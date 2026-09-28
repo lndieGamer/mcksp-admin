@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-27T09:37:25Z",
+ "generated_at": "2026-09-28T10:15:30Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -836,6 +836,19 @@
    "blocked_by": []
   },
   {
+   "slug": "snow-real-magic",
+   "current_version": "12.2.2+neoforge",
+   "candidate_version": "12.2.3+neoforge",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 8988910,
+    "project_id": "308663"
+   },
+   "published_at": "2026-09-27T09:53:45.387Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
    "slug": "sodium",
    "current_version": "0.8.13-beta.2+mc1.21.1",
    "candidate_version": "0.8.13+mc1.21.1",
@@ -864,14 +877,14 @@
   {
    "slug": "sophisticated-backpacks",
    "current_version": "3.25.74",
-   "candidate_version": "3.26.4",
+   "candidate_version": "3.26.5",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "rtpYiLmj",
+    "version_id": "tDbXyZq4",
     "project_id": "TyCTlI4b",
-    "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/rtpYiLmj/sophisticatedbackpacks-1.21.1-3.26.4.2162.jar"
+    "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/tDbXyZq4/sophisticatedbackpacks-1.21.1-3.26.5.2171.jar"
    },
-   "published_at": "2026-09-27T00:26:28.013815Z",
+   "published_at": "2026-09-27T18:22:37.009381Z",
    "status": "safe",
    "blocked_by": []
   },
