@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-28T10:15:30Z",
+ "generated_at": "2026-09-29T10:11:57Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -390,14 +390,14 @@
   {
    "slug": "fancymenu",
    "current_version": "3.9.9",
-   "candidate_version": "3.9.12",
+   "candidate_version": "3.9.14",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "Jjr0fpDH",
+    "version_id": "P9dDosz2",
     "project_id": "Wq5SjeWM",
-    "url": "https://cdn.modrinth.com/data/Wq5SjeWM/versions/Jjr0fpDH/fancymenu_neoforge_3.9.12_MC_1.21.1.jar"
+    "url": "https://cdn.modrinth.com/data/Wq5SjeWM/versions/P9dDosz2/fancymenu_neoforge_3.9.14_MC_1.21.1.jar"
    },
-   "published_at": "2026-08-28T07:16:43.205045Z",
+   "published_at": "2026-09-28T19:48:07.442956Z",
    "status": "safe",
    "blocked_by": []
   },
