@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-30T10:03:57Z",
+ "generated_at": "2026-10-01T10:31:50Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -98,14 +98,14 @@
   {
    "slug": "burnt-basic",
    "current_version": "1.10.3.7",
-   "candidate_version": "1.10.5",
+   "candidate_version": "1.10.5.2",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "k6uRUh5V",
+    "version_id": "dQToTBAx",
     "project_id": "aclfPzta",
-    "url": "https://cdn.modrinth.com/data/aclfPzta/versions/k6uRUh5V/burnt_basic-1.10.5-neoforge-1.21.1.jar"
+    "url": "https://cdn.modrinth.com/data/aclfPzta/versions/dQToTBAx/burnt_basic-1.10.5.2-neoforge-1.21.1.jar"
    },
-   "published_at": "2026-09-16T18:41:12.323245Z",
+   "published_at": "2026-09-30T11:42:38.219541Z",
    "status": "safe",
    "blocked_by": []
   },
