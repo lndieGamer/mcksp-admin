@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-01T10:31:50Z",
+ "generated_at": "2026-10-02T10:06:55Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -298,13 +298,13 @@
   {
    "slug": "createaddition",
    "current_version": "1.6.0",
-   "candidate_version": "1.7.1",
+   "candidate_version": "1.7.2",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8887653,
+    "file_id": 9029800,
     "project_id": "439890"
    },
-   "published_at": "2026-09-15T17:06:12.663Z",
+   "published_at": "2026-10-01T17:48:51.27Z",
    "status": "safe",
    "blocked_by": []
   },
