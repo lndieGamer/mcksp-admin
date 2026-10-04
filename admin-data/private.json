@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-03T09:29:30Z",
+ "generated_at": "2026-10-04T10:16:33Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -363,26 +363,26 @@
   {
    "slug": "entity-model-features",
    "current_version": "3.2.4",
-   "candidate_version": "3.3.9",
+   "candidate_version": "3.3.10",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8909425,
+    "file_id": 9055325,
     "project_id": "844662"
    },
-   "published_at": "2026-09-18T05:57:10.897Z",
+   "published_at": "2026-10-04T06:55:57.877Z",
    "status": "safe",
    "blocked_by": []
   },
   {
    "slug": "entity-texture-features-fabric",
    "current_version": "7.1",
-   "candidate_version": "7.2.4",
+   "candidate_version": "7.2.5",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8908931,
+    "file_id": 9055219,
     "project_id": "568563"
    },
-   "published_at": "2026-09-18T03:48:46.983Z",
+   "published_at": "2026-10-04T06:44:16.803Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -495,13 +495,13 @@
   {
    "slug": "jade-addons",
    "current_version": "6.1.0+neoforge",
-   "candidate_version": "6.1.1+neoforge",
+   "candidate_version": "6.1.2+neoforge",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8777229,
+    "file_id": 9056575,
     "project_id": "583345"
    },
-   "published_at": "2026-08-31T11:54:55.643Z",
+   "published_at": "2026-10-04T09:57:48.66Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -528,6 +528,19 @@
     "project_id": "238222"
    },
    "published_at": "2026-09-29T13:58:05Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "just-zoom",
+   "current_version": "2.1.0",
+   "candidate_version": "3.0.0",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 9052206,
+    "project_id": "561885"
+   },
+   "published_at": "2026-10-03T22:09:06.017Z",
    "status": "safe",
    "blocked_by": []
   },

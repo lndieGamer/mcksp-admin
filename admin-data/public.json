@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-03T09:29:30Z",
+ "generated_at": "2026-10-04T10:16:33Z",
  "notices": [],
  "pack": {
   "version": "1.0.0",
@@ -2671,7 +2671,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-19T20:44:37+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "kiriieshki",
