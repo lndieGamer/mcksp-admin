@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-04T10:16:33Z",
+ "generated_at": "2026-10-05T10:56:25Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -18,14 +18,14 @@
   {
    "slug": "advancedperipherals",
    "current_version": "0.8.0a",
-   "candidate_version": "1.21.1-0.8.1a",
+   "candidate_version": "1.21.1-0.8.2a",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "1rbqTjbS",
+    "version_id": "fxjzpAbL",
     "project_id": "SOw6jD6x",
-    "url": "https://cdn.modrinth.com/data/SOw6jD6x/versions/1rbqTjbS/AdvancedPeripherals-1.21.1-0.8.1a.jar"
+    "url": "https://cdn.modrinth.com/data/SOw6jD6x/versions/fxjzpAbL/AdvancedPeripherals-1.21.1-0.8.2a.jar"
    },
-   "published_at": "2026-09-04T09:16:27.701957Z",
+   "published_at": "2026-10-04T18:16:03.766608Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -84,13 +84,13 @@
   {
    "slug": "azimuth-api",
    "current_version": "1.4.7",
-   "candidate_version": "1.4.9",
+   "candidate_version": "1.4.10",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8911024,
+    "file_id": 9058513,
     "project_id": "1466331"
    },
-   "published_at": "2026-09-18T11:27:20.403Z",
+   "published_at": "2026-10-04T13:34:03.257Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -322,6 +322,19 @@
    "blocked_by": []
   },
   {
+   "slug": "createnuclear",
+   "current_version": "1.3.2-beta.3",
+   "candidate_version": "2.0.0",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 9056910,
+    "project_id": "989797"
+   },
+   "published_at": "2026-10-04T10:32:49.673Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
    "slug": "creativecore",
    "current_version": "2.13.42",
    "candidate_version": "2.13.50",
@@ -363,13 +376,13 @@
   {
    "slug": "entity-model-features",
    "current_version": "3.2.4",
-   "candidate_version": "3.3.10",
+   "candidate_version": "3.3.11",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9055325,
+    "file_id": 9064942,
     "project_id": "844662"
    },
-   "published_at": "2026-10-04T06:55:57.877Z",
+   "published_at": "2026-10-05T00:51:06.047Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -521,26 +534,26 @@
   {
    "slug": "jei",
    "current_version": "19.43.0.393",
-   "candidate_version": "19.57.0.450",
+   "candidate_version": "19.57.0.451",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9009406,
+    "file_id": 9068136,
     "project_id": "238222"
    },
-   "published_at": "2026-09-29T13:58:05Z",
+   "published_at": "2026-10-05T09:36:49.37Z",
    "status": "safe",
    "blocked_by": []
   },
   {
    "slug": "just-zoom",
    "current_version": "2.1.0",
-   "candidate_version": "3.0.0",
+   "candidate_version": "3.0.1",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9052206,
+    "file_id": 9062488,
     "project_id": "561885"
    },
-   "published_at": "2026-10-03T22:09:06.017Z",
+   "published_at": "2026-10-04T19:51:38.5Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -782,13 +795,13 @@
   {
    "slug": "selene",
    "current_version": "1.21.1-3.3.2",
-   "candidate_version": "1.21.1-3.7.0",
+   "candidate_version": "1.21.1-3.7.1",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8981395,
+    "file_id": 9066398,
     "project_id": "499980"
    },
-   "published_at": "2026-09-26T14:11:15.887Z",
+   "published_at": "2026-10-05T05:33:44.353Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -958,13 +971,13 @@
   {
    "slug": "supermartijn642s-core-lib",
    "current_version": "1.1.23+a",
-   "candidate_version": "1.1.24+a",
+   "candidate_version": "1.1.24+b",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8943316,
+    "file_id": 9063664,
     "project_id": "454372"
    },
-   "published_at": "2026-09-21T22:15:16.84Z",
+   "published_at": "2026-10-04T22:07:48.32Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -985,26 +998,26 @@
   {
    "slug": "xaeros-minimap",
    "current_version": "26.4.2",
-   "candidate_version": "26.5.0",
+   "candidate_version": "26.6.0",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8849842,
+    "file_id": 9067173,
     "project_id": "263420"
    },
-   "published_at": "2026-09-10T10:52:08.423Z",
+   "published_at": "2026-10-05T06:54:48.163Z",
    "status": "safe",
    "blocked_by": []
   },
   {
    "slug": "xaeros-world-map",
    "current_version": "1.44.2",
-   "candidate_version": "1.46.0",
+   "candidate_version": "1.47.0",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8849973,
+    "file_id": 9067277,
     "project_id": "317780"
    },
-   "published_at": "2026-09-10T11:11:31.753Z",
+   "published_at": "2026-10-05T07:09:27.77Z",
    "status": "safe",
    "blocked_by": []
   },
