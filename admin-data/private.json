@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-07T10:39:08Z",
+ "generated_at": "2026-10-08T10:59:59Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -625,13 +625,13 @@
   {
    "slug": "lets-do-vinery",
    "current_version": "1.5.3",
-   "candidate_version": "1.5.4",
+   "candidate_version": "1.5.5",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8918247,
+    "file_id": 9089612,
     "project_id": "704465"
    },
-   "published_at": "2026-09-19T06:36:23.327Z",
+   "published_at": "2026-10-07T14:33:41.343Z",
    "status": "safe",
    "blocked_by": []
   },
