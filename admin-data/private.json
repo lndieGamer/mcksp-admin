@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-08T10:59:59Z",
+ "generated_at": "2026-10-09T10:58:57Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -45,13 +45,13 @@
   {
    "slug": "ambientsounds",
    "current_version": "6.3.8",
-   "candidate_version": "6.3.9",
+   "candidate_version": "6.3.10",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9037168,
+    "file_id": 9099001,
     "project_id": "254284"
    },
-   "published_at": "2026-10-02T12:16:40.72Z",
+   "published_at": "2026-10-08T14:28:50Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -298,13 +298,13 @@
   {
    "slug": "create-enchantment-industry",
    "current_version": "2.5.1",
-   "candidate_version": "2.5.4",
+   "candidate_version": "2.5.4b",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8900719,
+    "file_id": 9104664,
     "project_id": "688768"
    },
-   "published_at": "2026-09-17T03:23:26.277Z",
+   "published_at": "2026-10-09T04:17:39.92Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -402,14 +402,14 @@
   {
    "slug": "entityculling",
    "current_version": "1.10.5",
-   "candidate_version": "1.11.2",
+   "candidate_version": "1.11.3",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "8w8FfUPs",
+    "version_id": "eieYbWYb",
     "project_id": "NNAgCjsB",
-    "url": "https://cdn.modrinth.com/data/NNAgCjsB/versions/8w8FfUPs/entityculling-neoforge-1.11.2-mc1.21.1.jar"
+    "url": "https://cdn.modrinth.com/data/NNAgCjsB/versions/eieYbWYb/entityculling-neoforge-1.11.3-mc1.21.1.jar"
    },
-   "published_at": "2026-09-21T19:46:52.810258Z",
+   "published_at": "2026-10-08T16:52:03.416509Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -560,13 +560,13 @@
   {
    "slug": "ksyxis",
    "current_version": "1.4.3",
-   "candidate_version": "1.4.5",
+   "candidate_version": "1.4.6",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8971236,
+    "file_id": 9102078,
     "project_id": "537533"
    },
-   "published_at": "2026-09-25T11:07:24.123Z",
+   "published_at": "2026-10-08T21:00:54.103Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -586,26 +586,26 @@
   {
    "slug": "lets-do-brewery-farm-charm-compat",
    "current_version": "2.1.9",
-   "candidate_version": "2.1.11",
+   "candidate_version": "2.1.12",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8932247,
+    "file_id": 9098092,
     "project_id": "1038106"
    },
-   "published_at": "2026-09-20T15:52:36.777Z",
+   "published_at": "2026-10-08T12:17:31.01Z",
    "status": "safe",
    "blocked_by": []
   },
   {
    "slug": "lets-do-farm-charm",
    "current_version": "1.1.23",
-   "candidate_version": "1.1.26",
+   "candidate_version": "1.1.27",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8967051,
+    "file_id": 9098052,
     "project_id": "1038103"
    },
-   "published_at": "2026-09-24T20:31:36.397Z",
+   "published_at": "2026-10-08T12:13:03.34Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -677,13 +677,13 @@
   {
    "slug": "modernfix",
    "current_version": "5.27.20+mc1.21.1",
-   "candidate_version": "5.27.24+mc1.21.1",
+   "candidate_version": "5.27.26+mc1.21.1",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8774737,
+    "file_id": 9101836,
     "project_id": "790626"
    },
-   "published_at": "2026-08-31T02:33:39.177Z",
+   "published_at": "2026-10-08T20:28:02.443Z",
    "status": "safe",
    "blocked_by": []
   },

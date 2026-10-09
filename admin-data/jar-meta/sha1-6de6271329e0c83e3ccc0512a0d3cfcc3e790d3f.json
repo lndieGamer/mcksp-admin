@@ -1,0 +1,17 @@
+{
+ "size_bytes": 23873,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "*",
+  "mods": [
+   {
+    "mod_id": "ksyxis",
+    "version": "1.4.6",
+    "display_name": "Ksyxis",
+    "embedded": false,
+    "dependencies": []
+   }
+  ]
+ }
+}
