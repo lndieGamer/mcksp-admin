@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-09T10:58:57Z",
+ "generated_at": "2026-10-10T10:11:27Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -337,13 +337,13 @@
   {
    "slug": "creativecore",
    "current_version": "2.13.42",
-   "candidate_version": "2.13.50",
+   "candidate_version": "2.13.51",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9009568,
+    "file_id": 9108041,
     "project_id": "257814"
    },
-   "published_at": "2026-09-29T14:11:35.297Z",
+   "published_at": "2026-10-09T13:48:29.103Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -690,13 +690,13 @@
   {
    "slug": "particle-rain",
    "current_version": "4.0.0-beta.10",
-   "candidate_version": "4.0.1",
+   "candidate_version": "4.0.2",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9085994,
+    "file_id": 9113934,
     "project_id": "421897"
    },
-   "published_at": "2026-10-07T03:30:35.953Z",
+   "published_at": "2026-10-10T01:09:51.733Z",
    "status": "safe",
    "blocked_by": []
   },
