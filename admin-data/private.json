@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-10T10:11:27Z",
+ "generated_at": "2026-10-11T10:23:33Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -58,13 +58,13 @@
   {
    "slug": "amendments",
    "current_version": "1.21-2.1.7",
-   "candidate_version": "1.21-2.1.10",
+   "candidate_version": "1.21-2.1.11",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8825641,
+    "file_id": 9122440,
     "project_id": "896746"
    },
-   "published_at": "2026-09-06T21:11:30.2Z",
+   "published_at": "2026-10-10T21:10:14.053Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -808,13 +808,13 @@
   {
    "slug": "selene",
    "current_version": "1.21.1-3.3.2",
-   "candidate_version": "1.21.1-3.7.1",
+   "candidate_version": "1.21.1-3.7.2",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9066398,
+    "file_id": 9122548,
     "project_id": "499980"
    },
-   "published_at": "2026-10-05T05:33:44.353Z",
+   "published_at": "2026-10-10T21:22:22.043Z",
    "status": "safe",
    "blocked_by": []
   },
