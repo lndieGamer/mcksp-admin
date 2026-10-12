@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-11T10:23:33Z",
+ "generated_at": "2026-10-12T11:24:52Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -443,13 +443,13 @@
   {
    "slug": "framedblocks",
    "current_version": "10.6.1",
-   "candidate_version": "10.6.2",
+   "candidate_version": "10.6.3",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8780141,
+    "file_id": 9137677,
     "project_id": "441647"
    },
-   "published_at": "2026-08-31T19:11:09.297Z",
+   "published_at": "2026-10-11T20:32:33.793Z",
    "status": "safe",
    "blocked_by": []
   },
