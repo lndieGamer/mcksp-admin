@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-12T11:24:52Z",
+ "generated_at": "2026-10-13T11:15:02Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -534,13 +534,13 @@
   {
    "slug": "jei",
    "current_version": "19.43.0.393",
-   "candidate_version": "19.57.0.451",
+   "candidate_version": "19.64.0.453",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9068136,
+    "file_id": 9146042,
     "project_id": "238222"
    },
-   "published_at": "2026-10-05T09:36:49.37Z",
+   "published_at": "2026-10-12T13:42:16.867Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -586,26 +586,26 @@
   {
    "slug": "lets-do-brewery-farm-charm-compat",
    "current_version": "2.1.9",
-   "candidate_version": "2.1.12",
+   "candidate_version": "2.1.13",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9098092,
+    "file_id": 9150302,
     "project_id": "1038106"
    },
-   "published_at": "2026-10-08T12:17:31.01Z",
+   "published_at": "2026-10-12T20:23:43.047Z",
    "status": "safe",
    "blocked_by": []
   },
   {
    "slug": "lets-do-farm-charm",
    "current_version": "1.1.23",
-   "candidate_version": "1.1.27",
+   "candidate_version": "1.1.28",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9098052,
+    "file_id": 9149909,
     "project_id": "1038103"
    },
-   "published_at": "2026-10-08T12:13:03.34Z",
+   "published_at": "2026-10-12T19:44:11.03Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -703,13 +703,13 @@
   {
    "slug": "placebo",
    "current_version": "9.9.2",
-   "candidate_version": "9.9.3",
+   "candidate_version": "9.9.4",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9077763,
+    "file_id": 9153039,
     "project_id": "283644"
    },
-   "published_at": "2026-10-06T07:37:28.647Z",
+   "published_at": "2026-10-13T02:09:51.347Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -929,28 +929,28 @@
   {
    "slug": "sophisticated-backpacks",
    "current_version": "3.25.74",
-   "candidate_version": "3.26.9",
+   "candidate_version": "3.26.12",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "1pYxRkKq",
+    "version_id": "QkVLEgt1",
     "project_id": "TyCTlI4b",
-    "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/1pYxRkKq/sophisticatedbackpacks-1.21.1-3.26.9.2195.jar"
+    "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/QkVLEgt1/sophisticatedbackpacks-1.21.1-3.26.12.2208.jar"
    },
-   "published_at": "2026-10-06T21:02:12.613871Z",
+   "published_at": "2026-10-13T08:02:45.241721Z",
    "status": "safe",
    "blocked_by": []
   },
   {
    "slug": "sophisticated-core",
    "current_version": "1.4.82",
-   "candidate_version": "1.5.7",
+   "candidate_version": "1.5.11",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "p09oohxN",
+    "version_id": "bOAgLHgG",
     "project_id": "nmoqTijg",
-    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/p09oohxN/sophisticatedcore-1.21.1-1.5.7.2381.jar"
+    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/bOAgLHgG/sophisticatedcore-1.21.1-1.5.11.2394.jar"
    },
-   "published_at": "2026-10-06T20:52:17.675876Z",
+   "published_at": "2026-10-12T22:16:28.347977Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -997,14 +997,14 @@
   {
    "slug": "trade-cycling",
    "current_version": "1.21.1-1.0.18",
-   "candidate_version": "1.21.1-1.0.22",
+   "candidate_version": "1.21.1-1.0.23",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "wHjZ0TaF",
+    "version_id": "9dxmi65z",
     "project_id": "qpPoAL6m",
-    "url": "https://cdn.modrinth.com/data/qpPoAL6m/versions/wHjZ0TaF/trade-cycling-neoforge-1.21.1-1.0.22.jar"
+    "url": "https://cdn.modrinth.com/data/qpPoAL6m/versions/9dxmi65z/trade-cycling-neoforge-1.21.1-1.0.23.jar"
    },
-   "published_at": "2026-09-19T15:19:40.921834Z",
+   "published_at": "2026-10-13T09:44:01.197664Z",
    "status": "safe",
    "blocked_by": []
   },
