@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-13T11:15:02Z",
+ "generated_at": "2026-10-14T09:05:58Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -943,14 +943,14 @@
   {
    "slug": "sophisticated-core",
    "current_version": "1.4.82",
-   "candidate_version": "1.5.11",
+   "candidate_version": "1.5.12",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "bOAgLHgG",
+    "version_id": "tLoR0vCd",
     "project_id": "nmoqTijg",
-    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/bOAgLHgG/sophisticatedcore-1.21.1-1.5.11.2394.jar"
+    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/tLoR0vCd/sophisticatedcore-1.21.1-1.5.12.2400.jar"
    },
-   "published_at": "2026-10-12T22:16:28.347977Z",
+   "published_at": "2026-10-13T20:57:22.757222Z",
    "status": "safe",
    "blocked_by": []
   },
