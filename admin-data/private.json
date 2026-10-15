@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-14T09:05:58Z",
+ "generated_at": "2026-10-15T08:39:24Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -172,6 +172,20 @@
     "project_id": "968398"
    },
    "published_at": "2026-09-06T13:38:10.13Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "corpse",
+   "current_version": "1.21.1-1.1.13",
+   "candidate_version": "1.21.1-1.1.21",
+   "candidate_ref": {
+    "source": "modrinth",
+    "version_id": "peeqqFlX",
+    "project_id": "WrpuIfhw",
+    "url": "https://cdn.modrinth.com/data/WrpuIfhw/versions/peeqqFlX/corpse-neoforge-1.21.1-1.1.21.jar"
+   },
+   "published_at": "2026-10-15T06:47:39.106938Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -376,26 +390,26 @@
   {
    "slug": "entity-model-features",
    "current_version": "3.2.4",
-   "candidate_version": "3.3.11",
+   "candidate_version": "3.3.12",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9064942,
+    "file_id": 9188526,
     "project_id": "844662"
    },
-   "published_at": "2026-10-05T00:51:06.047Z",
+   "published_at": "2026-10-15T07:13:05.607Z",
    "status": "safe",
    "blocked_by": []
   },
   {
    "slug": "entity-texture-features-fabric",
    "current_version": "7.1",
-   "candidate_version": "7.2.5",
+   "candidate_version": "7.2.6",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9055219,
+    "file_id": 9188408,
     "project_id": "568563"
    },
-   "published_at": "2026-10-04T06:44:16.803Z",
+   "published_at": "2026-10-15T06:55:42.06Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -534,13 +548,13 @@
   {
    "slug": "jei",
    "current_version": "19.43.0.393",
-   "candidate_version": "19.64.0.453",
+   "candidate_version": "19.64.0.454",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9146042,
+    "file_id": 9173201,
     "project_id": "238222"
    },
-   "published_at": "2026-10-12T13:42:16.867Z",
+   "published_at": "2026-10-14T13:38:40.707Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -638,13 +652,13 @@
   {
    "slug": "lithostitched",
    "current_version": "1.7.13",
-   "candidate_version": "1.8.0",
+   "candidate_version": "1.8.1",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8944659,
+    "file_id": 9170709,
     "project_id": "936015"
    },
-   "published_at": "2026-09-22T03:18:50.19Z",
+   "published_at": "2026-10-14T08:23:50.537Z",
    "status": "safe",
    "blocked_by": []
   },
