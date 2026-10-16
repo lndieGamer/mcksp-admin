@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-15T08:39:24Z",
+ "generated_at": "2026-10-16T08:34:12Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -613,13 +613,13 @@
   {
    "slug": "lets-do-farm-charm",
    "current_version": "1.1.23",
-   "candidate_version": "1.1.28",
+   "candidate_version": "1.1.29",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9149909,
+    "file_id": 9203717,
     "project_id": "1038103"
    },
-   "published_at": "2026-10-12T19:44:11.03Z",
+   "published_at": "2026-10-16T04:20:04.13Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -639,13 +639,13 @@
   {
    "slug": "lets-do-vinery",
    "current_version": "1.5.3",
-   "candidate_version": "1.5.5",
+   "candidate_version": "1.5.6",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9089612,
+    "file_id": 9203990,
     "project_id": "704465"
    },
-   "published_at": "2026-10-07T14:33:41.343Z",
+   "published_at": "2026-10-16T05:09:07.09Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -957,14 +957,14 @@
   {
    "slug": "sophisticated-core",
    "current_version": "1.4.82",
-   "candidate_version": "1.5.12",
+   "candidate_version": "1.5.13",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "tLoR0vCd",
+    "version_id": "DAcZAWzl",
     "project_id": "nmoqTijg",
-    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/tLoR0vCd/sophisticatedcore-1.21.1-1.5.12.2400.jar"
+    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/DAcZAWzl/sophisticatedcore-1.21.1-1.5.13.2404.jar"
    },
-   "published_at": "2026-10-13T20:57:22.757222Z",
+   "published_at": "2026-10-15T22:06:36.320165Z",
    "status": "safe",
    "blocked_by": []
   },
