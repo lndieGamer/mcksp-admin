@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-16T08:34:12Z",
+ "generated_at": "2026-10-17T08:06:33Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -138,14 +138,14 @@
   {
    "slug": "cbc-firepower-components",
    "current_version": "0.3.2",
-   "candidate_version": "0.4.2",
+   "candidate_version": "0.4.4",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "MIIQsPeB",
+    "version_id": "ib0YOkuc",
     "project_id": "fRWr6eJq",
-    "url": "https://cdn.modrinth.com/data/fRWr6eJq/versions/MIIQsPeB/cbc_firepower_components-neoforge-1.21.1-0.4.2%2Bmc.1.21.1-neoforge.jar"
+    "url": "https://cdn.modrinth.com/data/fRWr6eJq/versions/ib0YOkuc/cbc_firepower_components-neoforge-1.21.1-0.4.4%2Bmc.1.21.1-neoforge.jar"
    },
-   "published_at": "2026-09-03T17:30:22.828611Z",
+   "published_at": "2026-10-16T22:42:32.711935Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -548,13 +548,13 @@
   {
    "slug": "jei",
    "current_version": "19.43.0.393",
-   "candidate_version": "19.64.0.454",
+   "candidate_version": "19.64.0.455",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9173201,
+    "file_id": 9205121,
     "project_id": "238222"
    },
-   "published_at": "2026-10-14T13:38:40.707Z",
+   "published_at": "2026-10-16T08:32:27.66Z",
    "status": "safe",
    "blocked_by": []
   },
