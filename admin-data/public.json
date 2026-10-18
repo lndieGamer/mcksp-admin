@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-17T08:06:33Z",
+ "generated_at": "2026-10-18T08:23:16Z",
  "notices": [],
  "pack": {
   "version": "1.0.0",
@@ -2212,7 +2212,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "framedblocks",

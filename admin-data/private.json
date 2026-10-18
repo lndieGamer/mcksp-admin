@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-17T08:06:33Z",
+ "generated_at": "2026-10-18T08:23:16Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -451,6 +451,20 @@
     "project_id": "398521"
    },
    "published_at": "2026-08-29T23:17:30.443Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "formicapi",
+   "current_version": "2.4.2",
+   "candidate_version": "2.5.1",
+   "candidate_ref": {
+    "source": "modrinth",
+    "version_id": "9uQCmlUA",
+    "project_id": "Wun33LcK",
+    "url": "https://cdn.modrinth.com/data/Wun33LcK/versions/9uQCmlUA/formicapi-1.21.1-2.5.1.jar"
+   },
+   "published_at": "2026-10-17T21:13:08.898704Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -957,14 +971,14 @@
   {
    "slug": "sophisticated-core",
    "current_version": "1.4.82",
-   "candidate_version": "1.5.13",
+   "candidate_version": "1.5.14",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "DAcZAWzl",
+    "version_id": "oTvXRMtK",
     "project_id": "nmoqTijg",
-    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/DAcZAWzl/sophisticatedcore-1.21.1-1.5.13.2404.jar"
+    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/oTvXRMtK/sophisticatedcore-1.21.1-1.5.14.2413.jar"
    },
-   "published_at": "2026-10-15T22:06:36.320165Z",
+   "published_at": "2026-10-17T19:17:44.429934Z",
    "status": "safe",
    "blocked_by": []
   },
