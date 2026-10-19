@@ -1,17 +1,17 @@
 {
- "generated_at": "2026-10-18T08:23:16Z",
+ "generated_at": "2026-10-19T09:23:06Z",
  "updates": [
   {
    "slug": "3dskinlayers",
    "current_version": "1.11.2",
-   "candidate_version": "1.11.3",
+   "candidate_version": "1.11.4",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "5s6lxsQW",
+    "version_id": "GJTnQGfe",
     "project_id": "zV5r3pPn",
-    "url": "https://cdn.modrinth.com/data/zV5r3pPn/versions/5s6lxsQW/skinlayers3d-neoforge-1.11.3-mc1.21.1.jar"
+    "url": "https://cdn.modrinth.com/data/zV5r3pPn/versions/GJTnQGfe/skinlayers3d-neoforge-1.11.4-mc1.21.1.jar"
    },
-   "published_at": "2026-09-17T20:05:30.316991Z",
+   "published_at": "2026-10-18T17:14:50.228403Z",
    "status": "safe",
    "blocked_by": []
   },
