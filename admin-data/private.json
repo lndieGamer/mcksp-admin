@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-20T08:58:20Z",
+ "generated_at": "2026-10-21T08:56:50Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -58,13 +58,13 @@
   {
    "slug": "amendments",
    "current_version": "1.21-2.1.7",
-   "candidate_version": "1.21-2.1.11",
+   "candidate_version": "1.21-2.2.0",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9122440,
+    "file_id": 9272216,
     "project_id": "896746"
    },
-   "published_at": "2026-10-10T21:10:14.053Z",
+   "published_at": "2026-10-20T23:03:03.217Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -575,13 +575,13 @@
   {
    "slug": "jei",
    "current_version": "19.43.0.393",
-   "candidate_version": "19.69.0.456",
+   "candidate_version": "19.69.0.457",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9254760,
+    "file_id": 9267535,
     "project_id": "238222"
    },
-   "published_at": "2026-10-19T11:36:07.237Z",
+   "published_at": "2026-10-20T14:43:41.307Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -970,14 +970,14 @@
   {
    "slug": "sophisticated-backpacks",
    "current_version": "3.25.74",
-   "candidate_version": "3.26.13",
+   "candidate_version": "3.26.14",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "AW1Jh0G5",
+    "version_id": "eg9lPtG4",
     "project_id": "TyCTlI4b",
-    "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/AW1Jh0G5/sophisticatedbackpacks-1.21.1-3.26.13.2214.jar"
+    "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/eg9lPtG4/sophisticatedbackpacks-1.21.1-3.26.14.2222.jar"
    },
-   "published_at": "2026-10-19T18:39:57.705256Z",
+   "published_at": "2026-10-20T20:41:20.695955Z",
    "status": "safe",
    "blocked_by": []
   },
