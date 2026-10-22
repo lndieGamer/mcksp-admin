@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-21T08:56:50Z",
+ "generated_at": "2026-10-22T08:59:33Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -310,6 +310,19 @@
    "blocked_by": []
   },
   {
+   "slug": "create-encased",
+   "current_version": "1.9.0-ht3",
+   "candidate_version": "1.10.0",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 9281402,
+    "project_id": "829380"
+   },
+   "published_at": "2026-10-21T20:45:34.083Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
    "slug": "create-enchantment-industry",
    "current_version": "2.5.1",
    "candidate_version": "2.5.4b",
@@ -325,13 +338,13 @@
   {
    "slug": "create-sound-of-steam",
    "current_version": "0.8.2+1.21.1",
-   "candidate_version": "0.9.2+1.21.1",
+   "candidate_version": "0.9.2.1+1.21.1",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9263580,
+    "file_id": 9277058,
     "project_id": "1196142"
    },
-   "published_at": "2026-10-20T04:01:48.35Z",
+   "published_at": "2026-10-21T13:10:57.983Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -984,14 +997,14 @@
   {
    "slug": "sophisticated-core",
    "current_version": "1.4.82",
-   "candidate_version": "1.5.16",
+   "candidate_version": "1.5.17",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "n2ZY9dML",
+    "version_id": "gtPF4VTh",
     "project_id": "nmoqTijg",
-    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/n2ZY9dML/sophisticatedcore-1.21.1-1.5.16.2422.jar"
+    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/gtPF4VTh/sophisticatedcore-1.21.1-1.5.17.2426.jar"
    },
-   "published_at": "2026-10-19T21:56:17.793412Z",
+   "published_at": "2026-10-21T17:06:30.465834Z",
    "status": "safe",
    "blocked_by": []
   },
