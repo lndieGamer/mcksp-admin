@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-22T08:59:33Z",
+ "generated_at": "2026-10-23T08:54:17Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -125,13 +125,13 @@
   {
    "slug": "cbc-enchanced-shells-create-big-cannons",
    "current_version": "1.2.2",
-   "candidate_version": "1.4.0",
+   "candidate_version": "1.5.0",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8853805,
+    "file_id": 9288552,
     "project_id": "1489732"
    },
-   "published_at": "2026-09-10T22:22:54.67Z",
+   "published_at": "2026-10-22T15:08:26.117Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -178,14 +178,14 @@
   {
    "slug": "corpse",
    "current_version": "1.21.1-1.1.13",
-   "candidate_version": "1.21.1-1.1.21",
+   "candidate_version": "1.21.1-1.1.22",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "peeqqFlX",
+    "version_id": "SElnDbg1",
     "project_id": "WrpuIfhw",
-    "url": "https://cdn.modrinth.com/data/WrpuIfhw/versions/peeqqFlX/corpse-neoforge-1.21.1-1.1.21.jar"
+    "url": "https://cdn.modrinth.com/data/WrpuIfhw/versions/SElnDbg1/corpse-neoforge-1.21.1-1.1.22.jar"
    },
-   "published_at": "2026-10-15T06:47:39.106938Z",
+   "published_at": "2026-10-22T16:07:53.919037Z",
    "status": "safe",
    "blocked_by": []
   },
