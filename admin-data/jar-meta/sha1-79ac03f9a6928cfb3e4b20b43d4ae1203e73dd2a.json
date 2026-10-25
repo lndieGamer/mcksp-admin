@@ -1,0 +1,67 @@
+{
+ "size_bytes": 88984,
+ "meta": {
+  "status": "ok",
+  "notes": [],
+  "loader_version": "*",
+  "mods": [
+   {
+    "mod_id": "cwb",
+    "version": "5.0.0+1.21.0.neoforge",
+    "display_name": "Cubes Without Borders",
+    "embedded": false,
+    "dependencies": [
+     {
+      "mod_id": "neoforge",
+      "type": "required",
+      "version_range": "[21.0.143,)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.21,1.21.2)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "cloth_config",
+      "type": "optional",
+      "version_range": "",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "yet_another_config_lib_v3",
+      "type": "optional",
+      "version_range": "",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "borderlessmining",
+      "type": "incompatible",
+      "version_range": "",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "borderlesswindow",
+      "type": "incompatible",
+      "version_range": "",
+      "side": "BOTH",
+      "ordering": "NONE"
+     },
+     {
+      "mod_id": "concentration",
+      "type": "incompatible",
+      "version_range": "",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

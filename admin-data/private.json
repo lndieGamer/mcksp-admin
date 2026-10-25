@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-24T08:28:03Z",
+ "generated_at": "2026-10-25T08:47:03Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -111,14 +111,14 @@
   {
    "slug": "burnt-basic",
    "current_version": "1.10.3.7",
-   "candidate_version": "1.10.5.2",
+   "candidate_version": "1.10.5.3",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "dQToTBAx",
+    "version_id": "oWQQludc",
     "project_id": "aclfPzta",
-    "url": "https://cdn.modrinth.com/data/aclfPzta/versions/dQToTBAx/burnt_basic-1.10.5.2-neoforge-1.21.1.jar"
+    "url": "https://cdn.modrinth.com/data/aclfPzta/versions/oWQQludc/burnt_basic-1.10.5.3-neoforge-1.21.1.jar"
    },
-   "published_at": "2026-09-30T11:42:38.219541Z",
+   "published_at": "2026-10-24T22:01:17.732589Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -336,6 +336,19 @@
    "blocked_by": []
   },
   {
+   "slug": "create-radars",
+   "current_version": "0.4.9.4-1.21.1",
+   "candidate_version": "5.0-1.21.1",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 9318048,
+    "project_id": "1152836"
+   },
+   "published_at": "2026-10-25T06:02:17.407Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
    "slug": "create-sound-of-steam",
    "current_version": "0.8.2+1.21.1",
    "candidate_version": "0.9.2.1+1.21.1",
@@ -384,6 +397,19 @@
     "project_id": "257814"
    },
    "published_at": "2026-10-09T13:48:29.103Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "cubes-without-borders",
+   "current_version": "3.0.0+mc1.21",
+   "candidate_version": "5.0.0+1.21.0.neoforge",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 9309036,
+    "project_id": "975120"
+   },
+   "published_at": "2026-10-24T12:32:05.383Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -549,13 +575,13 @@
   {
    "slug": "immersive-paintings",
    "current_version": "0.7.8",
-   "candidate_version": "0.7.9",
+   "candidate_version": "0.8.0",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8871485,
+    "file_id": 9314314,
     "project_id": "639584"
    },
-   "published_at": "2026-09-13T10:52:58.663Z",
+   "published_at": "2026-10-24T21:18:11.457Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -588,13 +614,13 @@
   {
    "slug": "jei",
    "current_version": "19.43.0.393",
-   "candidate_version": "19.69.0.457",
+   "candidate_version": "19.70.0.458",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9267535,
+    "file_id": 9318777,
     "project_id": "238222"
    },
-   "published_at": "2026-10-20T14:43:41.307Z",
+   "published_at": "2026-10-25T08:05:04.193Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -731,13 +757,13 @@
   {
    "slug": "modernfix",
    "current_version": "5.27.20+mc1.21.1",
-   "candidate_version": "5.27.26+mc1.21.1",
+   "candidate_version": "5.27.27+mc1.21.1",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9101836,
+    "file_id": 9309399,
     "project_id": "790626"
    },
-   "published_at": "2026-10-08T20:28:02.443Z",
+   "published_at": "2026-10-24T13:23:07.663Z",
    "status": "safe",
    "blocked_by": []
   },
