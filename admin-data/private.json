@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-26T09:27:03Z",
+ "generated_at": "2026-10-27T09:24:40Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -125,13 +125,13 @@
   {
    "slug": "cbc-enchanced-shells-create-big-cannons",
    "current_version": "1.2.2",
-   "candidate_version": "1.5.0",
+   "candidate_version": "1.5.1",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9288552,
+    "file_id": 9336668,
     "project_id": "1489732"
    },
-   "published_at": "2026-10-22T15:08:26.117Z",
+   "published_at": "2026-10-26T19:50:32.507Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -312,13 +312,13 @@
   {
    "slug": "create-encased",
    "current_version": "1.9.0-ht3",
-   "candidate_version": "1.10.0",
+   "candidate_version": "1.10.0-fix1",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9281402,
+    "file_id": 9332388,
     "project_id": "829380"
    },
-   "published_at": "2026-10-21T20:45:34.083Z",
+   "published_at": "2026-10-26T11:34:20.507Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -338,13 +338,13 @@
   {
    "slug": "create-radars",
    "current_version": "0.4.9.4-1.21.1",
-   "candidate_version": "5.0.1-1.21.1",
+   "candidate_version": "5.0.2-1.21.1",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9326137,
+    "file_id": 9339115,
     "project_id": "1152836"
    },
-   "published_at": "2026-10-25T19:49:13.693Z",
+   "published_at": "2026-10-27T00:12:15.083Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -822,13 +822,13 @@
   {
    "slug": "quark",
    "current_version": "4.1-482",
-   "candidate_version": "4.1-487",
+   "candidate_version": "4.1-488",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9074160,
+    "file_id": 9335735,
     "project_id": "243121"
    },
-   "published_at": "2026-10-05T22:50:52.193Z",
+   "published_at": "2026-10-26T17:50:26.807Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -1009,28 +1009,28 @@
   {
    "slug": "sophisticated-backpacks",
    "current_version": "3.25.74",
-   "candidate_version": "3.26.15",
+   "candidate_version": "3.26.17",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "3SXYeyvp",
+    "version_id": "7V3OGECb",
     "project_id": "TyCTlI4b",
-    "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/3SXYeyvp/sophisticatedbackpacks-1.21.1-3.26.15.2227.jar"
+    "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/7V3OGECb/sophisticatedbackpacks-1.21.1-3.26.17.2232.jar"
    },
-   "published_at": "2026-10-25T15:06:17.382256Z",
+   "published_at": "2026-10-27T08:54:02.217010Z",
    "status": "safe",
    "blocked_by": []
   },
   {
    "slug": "sophisticated-core",
    "current_version": "1.4.82",
-   "candidate_version": "1.5.18",
+   "candidate_version": "1.5.19",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "DqcfpFN9",
+    "version_id": "p1iOw2RH",
     "project_id": "nmoqTijg",
-    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/DqcfpFN9/sophisticatedcore-1.21.1-1.5.18.2431.jar"
+    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/p1iOw2RH/sophisticatedcore-1.21.1-1.5.19.2434.jar"
    },
-   "published_at": "2026-10-25T14:58:46.003308Z",
+   "published_at": "2026-10-27T08:46:15.566986Z",
    "status": "safe",
    "blocked_by": []
   },
