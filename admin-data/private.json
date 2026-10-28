@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-27T09:24:40Z",
+ "generated_at": "2026-10-28T10:06:28Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -58,13 +58,13 @@
   {
    "slug": "amendments",
    "current_version": "1.21-2.1.7",
-   "candidate_version": "1.21-2.2.2",
+   "candidate_version": "1.21-2.2.3",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9324746,
+    "file_id": 9346724,
     "project_id": "896746"
    },
-   "published_at": "2026-10-25T17:42:04.853Z",
+   "published_at": "2026-10-27T20:42:12.323Z",
    "status": "safe",
    "blocked_by": []
   },
