@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-28T10:06:28Z",
+ "generated_at": "2026-10-29T10:30:48Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -58,13 +58,13 @@
   {
    "slug": "amendments",
    "current_version": "1.21-2.1.7",
-   "candidate_version": "1.21-2.2.3",
+   "candidate_version": "1.21-2.2.4",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9346724,
+    "file_id": 9357939,
     "project_id": "896746"
    },
-   "published_at": "2026-10-27T20:42:12.323Z",
+   "published_at": "2026-10-29T00:16:00.713Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -338,13 +338,13 @@
   {
    "slug": "create-radars",
    "current_version": "0.4.9.4-1.21.1",
-   "candidate_version": "5.0.2-1.21.1",
+   "candidate_version": "5.0.3-1.21.1",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9339115,
+    "file_id": 9359310,
     "project_id": "1152836"
    },
-   "published_at": "2026-10-27T00:12:15.083Z",
+   "published_at": "2026-10-29T05:38:49.027Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -614,13 +614,13 @@
   {
    "slug": "jei",
    "current_version": "19.43.0.393",
-   "candidate_version": "19.70.0.460",
+   "candidate_version": "19.70.0.464",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9322591,
+    "file_id": 9353559,
     "project_id": "238222"
    },
-   "published_at": "2026-10-25T14:13:32.66Z",
+   "published_at": "2026-10-28T15:26:50.87Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -970,13 +970,13 @@
   {
    "slug": "snow-real-magic",
    "current_version": "12.2.2+neoforge",
-   "candidate_version": "12.2.3+neoforge",
+   "candidate_version": "12.2.4+neoforge",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8988910,
+    "file_id": 9357109,
     "project_id": "308663"
    },
-   "published_at": "2026-09-27T09:53:45.387Z",
+   "published_at": "2026-10-28T21:53:34.217Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -1064,13 +1064,13 @@
   {
    "slug": "supermartijn642s-core-lib",
    "current_version": "1.1.23+a",
-   "candidate_version": "1.1.25",
+   "candidate_version": "1.1.26",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9083552,
+    "file_id": 9352716,
     "project_id": "454372"
    },
-   "published_at": "2026-10-06T20:02:44.72Z",
+   "published_at": "2026-10-28T14:01:26.643Z",
    "status": "safe",
    "blocked_by": []
   },
