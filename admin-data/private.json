@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-29T10:30:48Z",
+ "generated_at": "2026-10-30T10:31:27Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -58,13 +58,13 @@
   {
    "slug": "amendments",
    "current_version": "1.21-2.1.7",
-   "candidate_version": "1.21-2.2.4",
+   "candidate_version": "1.21-2.2.5",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9357939,
+    "file_id": 9365471,
     "project_id": "896746"
    },
-   "published_at": "2026-10-29T00:16:00.713Z",
+   "published_at": "2026-10-29T20:39:57.617Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -390,13 +390,13 @@
   {
    "slug": "creativecore",
    "current_version": "2.13.42",
-   "candidate_version": "2.13.51",
+   "candidate_version": "2.13.52",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9108041,
+    "file_id": 9371518,
     "project_id": "257814"
    },
-   "published_at": "2026-10-09T13:48:29.103Z",
+   "published_at": "2026-10-30T09:29:30.91Z",
    "status": "safe",
    "blocked_by": []
   },
