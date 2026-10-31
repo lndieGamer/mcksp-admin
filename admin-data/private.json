@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-30T10:31:27Z",
+ "generated_at": "2026-10-31T10:00:17Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -1009,28 +1009,28 @@
   {
    "slug": "sophisticated-backpacks",
    "current_version": "3.25.74",
-   "candidate_version": "3.26.17",
+   "candidate_version": "3.26.18",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "7V3OGECb",
+    "version_id": "bobu0WI6",
     "project_id": "TyCTlI4b",
-    "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/7V3OGECb/sophisticatedbackpacks-1.21.1-3.26.17.2232.jar"
+    "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/bobu0WI6/sophisticatedbackpacks-1.21.1-3.26.18.2235.jar"
    },
-   "published_at": "2026-10-27T08:54:02.217010Z",
+   "published_at": "2026-10-30T14:07:43.685925Z",
    "status": "safe",
    "blocked_by": []
   },
   {
    "slug": "sophisticated-core",
    "current_version": "1.4.82",
-   "candidate_version": "1.5.19",
+   "candidate_version": "1.5.21",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "p1iOw2RH",
+    "version_id": "1UA34a8p",
     "project_id": "nmoqTijg",
-    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/p1iOw2RH/sophisticatedcore-1.21.1-1.5.19.2434.jar"
+    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/1UA34a8p/sophisticatedcore-1.21.1-1.5.21.2439.jar"
    },
-   "published_at": "2026-10-27T08:46:15.566986Z",
+   "published_at": "2026-10-30T13:58:41.880616Z",
    "status": "safe",
    "blocked_by": []
   },
