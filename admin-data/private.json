@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-31T10:00:17Z",
+ "generated_at": "2026-11-01T10:52:27Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -58,13 +58,13 @@
   {
    "slug": "amendments",
    "current_version": "1.21-2.1.7",
-   "candidate_version": "1.21-2.2.5",
+   "candidate_version": "1.21-2.2.7",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9365471,
+    "file_id": 9388448,
     "project_id": "896746"
    },
-   "published_at": "2026-10-29T20:39:57.617Z",
+   "published_at": "2026-10-31T20:31:19.033Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -204,15 +204,29 @@
    "blocked_by": []
   },
   {
+   "slug": "create-aeronautics-toolgun",
+   "current_version": "0.3.6",
+   "candidate_version": "0.3.7",
+   "candidate_ref": {
+    "source": "modrinth",
+    "version_id": "LOmp6ckQ",
+    "project_id": "5fUBLqeW",
+    "url": "https://cdn.modrinth.com/data/5fUBLqeW/versions/LOmp6ckQ/create_aeronautics_toolgun-0.3.7.jar"
+   },
+   "published_at": "2026-10-31T15:45:34.270046Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
    "slug": "create-aeronautics-transmission-linkage",
    "current_version": "0.2.5",
-   "candidate_version": "0.2.8",
+   "candidate_version": "0.2.9",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8790451,
+    "file_id": 9392020,
     "project_id": "1548056"
    },
-   "published_at": "2026-09-02T06:15:13.983Z",
+   "published_at": "2026-11-01T05:44:58.03Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -614,13 +628,13 @@
   {
    "slug": "jei",
    "current_version": "19.43.0.393",
-   "candidate_version": "19.70.0.464",
+   "candidate_version": "19.70.0.469",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9353559,
+    "file_id": 9393327,
     "project_id": "238222"
    },
-   "published_at": "2026-10-28T15:26:50.87Z",
+   "published_at": "2026-11-01T09:41:11.813Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -970,13 +984,13 @@
   {
    "slug": "snow-real-magic",
    "current_version": "12.2.2+neoforge",
-   "candidate_version": "12.2.4+neoforge",
+   "candidate_version": "12.2.5+neoforge",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9357109,
+    "file_id": 9389751,
     "project_id": "308663"
    },
-   "published_at": "2026-10-28T21:53:34.217Z",
+   "published_at": "2026-10-31T23:15:44.12Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -1009,28 +1023,28 @@
   {
    "slug": "sophisticated-backpacks",
    "current_version": "3.25.74",
-   "candidate_version": "3.26.18",
+   "candidate_version": "3.26.19",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "bobu0WI6",
+    "version_id": "4JH1U61x",
     "project_id": "TyCTlI4b",
-    "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/bobu0WI6/sophisticatedbackpacks-1.21.1-3.26.18.2235.jar"
+    "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/4JH1U61x/sophisticatedbackpacks-1.21.1-3.26.19.2243.jar"
    },
-   "published_at": "2026-10-30T14:07:43.685925Z",
+   "published_at": "2026-10-31T15:59:10.262949Z",
    "status": "safe",
    "blocked_by": []
   },
   {
    "slug": "sophisticated-core",
    "current_version": "1.4.82",
-   "candidate_version": "1.5.21",
+   "candidate_version": "1.5.23",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "1UA34a8p",
+    "version_id": "yIF7JvxG",
     "project_id": "nmoqTijg",
-    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/1UA34a8p/sophisticatedcore-1.21.1-1.5.21.2439.jar"
+    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/yIF7JvxG/sophisticatedcore-1.21.1-1.5.23.2446.jar"
    },
-   "published_at": "2026-10-30T13:58:41.880616Z",
+   "published_at": "2026-10-31T15:50:05.200574Z",
    "status": "safe",
    "blocked_by": []
   },
