@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-02T11:45:36Z",
+ "generated_at": "2026-11-03T11:26:45Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -97,14 +97,14 @@
   {
    "slug": "balm",
    "current_version": "21.0.64",
-   "candidate_version": "21.0.66",
+   "candidate_version": "21.0.67",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "CquiaiDj",
+    "version_id": "gMedgtzL",
     "project_id": "MBAkmtvl",
-    "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/CquiaiDj/balm-neoforge-1.21.1-21.0.66.jar"
+    "url": "https://cdn.modrinth.com/data/MBAkmtvl/versions/gMedgtzL/balm-neoforge-1.21.1-21.0.67.jar"
    },
-   "published_at": "2026-09-25T05:58:07.044187Z",
+   "published_at": "2026-11-02T12:16:22.811323Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -469,13 +469,13 @@
   {
    "slug": "entity-texture-features-fabric",
    "current_version": "7.1",
-   "candidate_version": "7.2.6",
+   "candidate_version": "7.2.7",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9188408,
+    "file_id": 9420332,
     "project_id": "568563"
    },
-   "published_at": "2026-10-15T06:55:42.06Z",
+   "published_at": "2026-11-03T10:30:13.453Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -1037,14 +1037,14 @@
   {
    "slug": "sophisticated-core",
    "current_version": "1.4.82",
-   "candidate_version": "1.5.23",
+   "candidate_version": "1.5.25",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "yIF7JvxG",
+    "version_id": "nMrwTiyz",
     "project_id": "nmoqTijg",
-    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/yIF7JvxG/sophisticatedcore-1.21.1-1.5.23.2446.jar"
+    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/nMrwTiyz/sophisticatedcore-1.21.1-1.5.25.2451.jar"
    },
-   "published_at": "2026-10-31T15:50:05.200574Z",
+   "published_at": "2026-11-02T18:04:12.075943Z",
    "status": "safe",
    "blocked_by": []
   },
