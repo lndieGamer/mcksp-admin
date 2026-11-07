@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-06T11:40:09Z",
+ "generated_at": "2026-11-07T10:45:23Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -418,13 +418,13 @@
   {
    "slug": "creativecore",
    "current_version": "2.13.42",
-   "candidate_version": "2.13.52",
+   "candidate_version": "2.13.53",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9371518,
+    "file_id": 9474088,
     "project_id": "257814"
    },
-   "published_at": "2026-10-30T09:29:30.91Z",
+   "published_at": "2026-11-06T13:41:45.913Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -1051,14 +1051,14 @@
   {
    "slug": "sophisticated-core",
    "current_version": "1.4.82",
-   "candidate_version": "1.5.28",
+   "candidate_version": "1.5.31",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "fp75rxsS",
+    "version_id": "jo2tOOfF",
     "project_id": "nmoqTijg",
-    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/fp75rxsS/sophisticatedcore-1.21.1-1.5.28.2458.jar"
+    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/jo2tOOfF/sophisticatedcore-1.21.1-1.5.31.2460.jar"
    },
-   "published_at": "2026-11-04T08:39:59.235414Z",
+   "published_at": "2026-11-06T16:57:53.005745Z",
    "status": "safe",
    "blocked_by": []
   },
