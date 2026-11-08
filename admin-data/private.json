@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-07T10:45:23Z",
+ "generated_at": "2026-11-08T10:50:06Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -179,13 +179,13 @@
   {
    "slug": "copycats",
    "current_version": "3.0.4+mc.1.21.1-neoforge",
-   "candidate_version": "3.0.9+mc.1.21.1-neoforge",
+   "candidate_version": "3.0.11+mc.1.21.1-neoforge",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8822348,
+    "file_id": 9504789,
     "project_id": "968398"
    },
-   "published_at": "2026-09-06T13:38:10.13Z",
+   "published_at": "2026-11-08T04:06:32.15Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -405,13 +405,13 @@
   {
    "slug": "createnuclear",
    "current_version": "1.3.2-beta.3",
-   "candidate_version": "2.0.0",
+   "candidate_version": "2.0.1",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9056910,
+    "file_id": 9492137,
     "project_id": "989797"
    },
-   "published_at": "2026-10-04T10:32:49.673Z",
+   "published_at": "2026-11-07T12:38:23.927Z",
    "status": "safe",
    "blocked_by": []
   },
