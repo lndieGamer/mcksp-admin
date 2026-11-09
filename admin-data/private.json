@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-08T10:50:06Z",
+ "generated_at": "2026-11-09T12:16:34Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -916,13 +916,13 @@
   {
    "slug": "selene",
    "current_version": "1.21.1-3.3.2",
-   "candidate_version": "1.21.1-3.8.2",
+   "candidate_version": "1.21.1-3.8.3",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9458248,
+    "file_id": 9519534,
     "project_id": "499980"
    },
-   "published_at": "2026-11-05T20:11:23.097Z",
+   "published_at": "2026-11-09T00:29:26.39Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -1037,28 +1037,28 @@
   {
    "slug": "sophisticated-backpacks",
    "current_version": "3.25.74",
-   "candidate_version": "3.26.20",
+   "candidate_version": "3.26.21",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "DY0e8WVr",
+    "version_id": "tJnK2DE1",
     "project_id": "TyCTlI4b",
-    "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/DY0e8WVr/sophisticatedbackpacks-1.21.1-3.26.20.2244.jar"
+    "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/tJnK2DE1/sophisticatedbackpacks-1.21.1-3.26.21.2249.jar"
    },
-   "published_at": "2026-11-04T08:48:34.783025Z",
+   "published_at": "2026-11-09T10:53:17.831369Z",
    "status": "safe",
    "blocked_by": []
   },
   {
    "slug": "sophisticated-core",
    "current_version": "1.4.82",
-   "candidate_version": "1.5.31",
+   "candidate_version": "1.5.32",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "jo2tOOfF",
+    "version_id": "ceT6tucA",
     "project_id": "nmoqTijg",
-    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/jo2tOOfF/sophisticatedcore-1.21.1-1.5.31.2460.jar"
+    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/ceT6tucA/sophisticatedcore-1.21.1-1.5.32.2464.jar"
    },
-   "published_at": "2026-11-06T16:57:53.005745Z",
+   "published_at": "2026-11-09T10:45:44.752064Z",
    "status": "safe",
    "blocked_by": []
   },
