@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-10T11:54:56Z",
+ "generated_at": "2026-11-11T11:31:34Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -340,13 +340,13 @@
   {
    "slug": "create-encased",
    "current_version": "1.9.0-ht3",
-   "candidate_version": "1.10.0-fix1",
+   "candidate_version": "1.10.1",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9332388,
+    "file_id": 9545555,
     "project_id": "829380"
    },
-   "published_at": "2026-10-26T11:34:20.507Z",
+   "published_at": "2026-11-10T18:07:17.823Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -418,13 +418,13 @@
   {
    "slug": "creativecore",
    "current_version": "2.13.42",
-   "candidate_version": "2.13.53",
+   "candidate_version": "2.13.54",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9474088,
+    "file_id": 9542277,
     "project_id": "257814"
    },
-   "published_at": "2026-11-06T13:41:45.913Z",
+   "published_at": "2026-11-10T14:29:09.92Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -1051,14 +1051,14 @@
   {
    "slug": "sophisticated-core",
    "current_version": "1.4.82",
-   "candidate_version": "1.5.32",
+   "candidate_version": "1.5.33",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "ceT6tucA",
+    "version_id": "9DxpMDZv",
     "project_id": "nmoqTijg",
-    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/ceT6tucA/sophisticatedcore-1.21.1-1.5.32.2464.jar"
+    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/9DxpMDZv/sophisticatedcore-1.21.1-1.5.33.2470.jar"
    },
-   "published_at": "2026-11-09T10:45:44.752064Z",
+   "published_at": "2026-11-11T09:12:01.345192Z",
    "status": "safe",
    "blocked_by": []
   },
