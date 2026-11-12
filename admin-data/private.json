@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-11T11:31:34Z",
+ "generated_at": "2026-11-12T11:57:22Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -366,13 +366,13 @@
   {
    "slug": "create-radars",
    "current_version": "0.4.9.4-1.21.1",
-   "candidate_version": "5.0.3-1.21.1",
+   "candidate_version": "5.1.0-1.21.1",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9359310,
+    "file_id": 9566545,
     "project_id": "1152836"
    },
-   "published_at": "2026-10-29T05:38:49.027Z",
+   "published_at": "2026-11-11T23:26:13.823Z",
    "status": "safe",
    "blocked_by": []
   },
