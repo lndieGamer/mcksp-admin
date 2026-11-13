@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-12T11:57:22Z",
+ "generated_at": "2026-11-13T11:40:44Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -496,14 +496,14 @@
   {
    "slug": "entityculling",
    "current_version": "1.10.5",
-   "candidate_version": "1.11.3",
+   "candidate_version": "1.12.0",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "eieYbWYb",
+    "version_id": "NQY3eIQQ",
     "project_id": "NNAgCjsB",
-    "url": "https://cdn.modrinth.com/data/NNAgCjsB/versions/eieYbWYb/entityculling-neoforge-1.11.3-mc1.21.1.jar"
+    "url": "https://cdn.modrinth.com/data/NNAgCjsB/versions/NQY3eIQQ/entityculling-neoforge-1.12.0-mc1.21.1.jar"
    },
-   "published_at": "2026-10-08T16:52:03.416509Z",
+   "published_at": "2026-11-12T15:59:57.046889Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -900,6 +900,19 @@
    "blocked_by": []
   },
   {
+   "slug": "rightclickharvest",
+   "current_version": "4.6.1+1.21.1",
+   "candidate_version": "4.7.0+1.21.1",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 9581730,
+    "project_id": "452834"
+   },
+   "published_at": "2026-11-12T21:27:41.893Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
    "slug": "sable",
    "current_version": "2.0.3",
    "candidate_version": "2.0.6",
@@ -1051,14 +1064,14 @@
   {
    "slug": "sophisticated-core",
    "current_version": "1.4.82",
-   "candidate_version": "1.5.33",
+   "candidate_version": "1.5.35",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "9DxpMDZv",
+    "version_id": "FilyXPLY",
     "project_id": "nmoqTijg",
-    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/9DxpMDZv/sophisticatedcore-1.21.1-1.5.33.2470.jar"
+    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/FilyXPLY/sophisticatedcore-1.21.1-1.5.35.2473.jar"
    },
-   "published_at": "2026-11-11T09:12:01.345192Z",
+   "published_at": "2026-11-12T17:48:19.239878Z",
    "status": "safe",
    "blocked_by": []
   },
