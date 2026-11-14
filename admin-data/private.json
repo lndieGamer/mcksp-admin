@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-13T11:40:44Z",
+ "generated_at": "2026-11-14T11:02:52Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -496,14 +496,14 @@
   {
    "slug": "entityculling",
    "current_version": "1.10.5",
-   "candidate_version": "1.12.0",
+   "candidate_version": "1.12.1",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "NQY3eIQQ",
+    "version_id": "DDaDZQ47",
     "project_id": "NNAgCjsB",
-    "url": "https://cdn.modrinth.com/data/NNAgCjsB/versions/NQY3eIQQ/entityculling-neoforge-1.12.0-mc1.21.1.jar"
+    "url": "https://cdn.modrinth.com/data/NNAgCjsB/versions/DDaDZQ47/entityculling-neoforge-1.12.1-mc1.21.1.jar"
    },
-   "published_at": "2026-11-12T15:59:57.046889Z",
+   "published_at": "2026-11-13T16:11:43.966329Z",
    "status": "safe",
    "blocked_by": []
   },
