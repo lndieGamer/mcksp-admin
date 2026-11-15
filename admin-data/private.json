@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-14T11:02:52Z",
+ "generated_at": "2026-11-15T11:36:28Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -78,6 +78,19 @@
     "project_id": "610492"
    },
    "published_at": "2026-09-23T13:57:44.163Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "architectury-api",
+   "current_version": "13.0.11",
+   "candidate_version": "13.0.12",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 9608861,
+    "project_id": "419699"
+   },
+   "published_at": "2026-11-14T11:30:39.443Z",
    "status": "safe",
    "blocked_by": []
   },
