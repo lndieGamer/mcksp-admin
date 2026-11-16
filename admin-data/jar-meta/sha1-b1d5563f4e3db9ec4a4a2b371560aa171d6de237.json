@@ -1,0 +1,27 @@
+{
+ "size_bytes": 7364729,
+ "meta": {
+  "status": "failed",
+  "notes": [
+   "kotlin-for-forge-candidate: no META-INF/neoforge.mods.toml or META-INF/mods.toml"
+  ],
+  "loader_version": null,
+  "mods": [
+   {
+    "mod_id": "kotlinforforge",
+    "version": "5.13.0",
+    "display_name": "Kotlin For Forge",
+    "embedded": true,
+    "dependencies": [
+     {
+      "mod_id": "minecraft",
+      "type": "required",
+      "version_range": "[1.20.6,1.21.9)",
+      "side": "BOTH",
+      "ordering": "NONE"
+     }
+    ]
+   }
+  ]
+ }
+}

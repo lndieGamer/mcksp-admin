@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-15T11:36:28Z",
+ "generated_at": "2026-11-16T12:11:00Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -379,13 +379,13 @@
   {
    "slug": "create-radars",
    "current_version": "0.4.9.4-1.21.1",
-   "candidate_version": "5.1.0-1.21.1",
+   "candidate_version": "5.1.1-1.21.1",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9566545,
+    "file_id": 9632878,
     "project_id": "1152836"
    },
-   "published_at": "2026-11-11T23:26:13.823Z",
+   "published_at": "2026-11-15T16:40:21.767Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -915,13 +915,13 @@
   {
    "slug": "rightclickharvest",
    "current_version": "4.6.1+1.21.1",
-   "candidate_version": "4.7.0+1.21.1",
+   "candidate_version": "4.7.1+1.21.1",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9581730,
+    "file_id": 9633746,
     "project_id": "452834"
    },
-   "published_at": "2026-11-12T21:27:41.893Z",
+   "published_at": "2026-11-15T17:28:55.607Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -1077,14 +1077,14 @@
   {
    "slug": "sophisticated-core",
    "current_version": "1.4.82",
-   "candidate_version": "1.5.35",
+   "candidate_version": "1.5.37",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "FilyXPLY",
+    "version_id": "lOcWBcOc",
     "project_id": "nmoqTijg",
-    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/FilyXPLY/sophisticatedcore-1.21.1-1.5.35.2473.jar"
+    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/lOcWBcOc/sophisticatedcore-1.21.1-1.5.37.2482.jar"
    },
-   "published_at": "2026-11-12T17:48:19.239878Z",
+   "published_at": "2026-11-15T14:32:38.440456Z",
    "status": "safe",
    "blocked_by": []
   },
