@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-17T12:35:12Z",
+ "generated_at": "2026-11-18T12:23:54Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -353,13 +353,13 @@
   {
    "slug": "create-encased",
    "current_version": "1.9.0-ht3",
-   "candidate_version": "1.10.1",
+   "candidate_version": "1.10.1-fix1",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9545555,
+    "file_id": 9673130,
     "project_id": "829380"
    },
-   "published_at": "2026-11-10T18:07:17.823Z",
+   "published_at": "2026-11-17T21:14:11.29Z",
    "status": "safe",
    "blocked_by": []
   },
