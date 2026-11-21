@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-20T12:18:23Z",
+ "generated_at": "2026-11-21T11:53:04Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -431,13 +431,13 @@
   {
    "slug": "creativecore",
    "current_version": "2.13.42",
-   "candidate_version": "2.13.54",
+   "candidate_version": "2.13.55",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9542277,
+    "file_id": 9720383,
     "project_id": "257814"
    },
-   "published_at": "2026-11-10T14:29:09.92Z",
+   "published_at": "2026-11-20T18:28:55.463Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -668,13 +668,13 @@
   {
    "slug": "jei",
    "current_version": "19.43.0.393",
-   "candidate_version": "19.71.0.470",
+   "candidate_version": "19.71.0.475",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9701110,
+    "file_id": 9717805,
     "project_id": "238222"
    },
-   "published_at": "2026-11-19T14:51:55.2Z",
+   "published_at": "2026-11-20T15:41:47.247Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -1037,13 +1037,13 @@
   {
    "slug": "snow-real-magic",
    "current_version": "12.2.2+neoforge",
-   "candidate_version": "12.2.5+neoforge",
+   "candidate_version": "12.2.7+neoforge",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9389751,
+    "file_id": 9730215,
     "project_id": "308663"
    },
-   "published_at": "2026-10-31T23:15:44.12Z",
+   "published_at": "2026-11-21T09:37:13.687Z",
    "status": "safe",
    "blocked_by": []
   },
