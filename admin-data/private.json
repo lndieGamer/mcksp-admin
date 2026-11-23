@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-22T12:05:54Z",
+ "generated_at": "2026-11-23T13:47:12Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -58,13 +58,13 @@
   {
    "slug": "amendments",
    "current_version": "1.21-2.1.7",
-   "candidate_version": "1.21-2.2.7",
+   "candidate_version": "1.21-2.3.0",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9388448,
+    "file_id": 9751471,
     "project_id": "896746"
    },
-   "published_at": "2026-10-31T20:31:19.033Z",
+   "published_at": "2026-11-22T13:53:20.167Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -392,13 +392,13 @@
   {
    "slug": "create-radars",
    "current_version": "0.4.9.4-1.21.1",
-   "candidate_version": "5.1.1-1.21.1",
+   "candidate_version": "5.1.2-1.21.1",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9632878,
+    "file_id": 9758334,
     "project_id": "1152836"
    },
-   "published_at": "2026-11-15T16:40:21.767Z",
+   "published_at": "2026-11-22T19:03:56.84Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -431,13 +431,13 @@
   {
    "slug": "createnuclear",
    "current_version": "1.3.2-beta.3",
-   "candidate_version": "2.0.1",
+   "candidate_version": "2.0.2",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9492137,
+    "file_id": 9750470,
     "project_id": "989797"
    },
-   "published_at": "2026-11-07T12:38:23.927Z",
+   "published_at": "2026-11-22T12:34:22.177Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -535,28 +535,28 @@
   {
    "slug": "entityculling",
    "current_version": "1.10.5",
-   "candidate_version": "1.12.1",
+   "candidate_version": "1.12.2",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "DDaDZQ47",
+    "version_id": "8uamSG2K",
     "project_id": "NNAgCjsB",
-    "url": "https://cdn.modrinth.com/data/NNAgCjsB/versions/DDaDZQ47/entityculling-neoforge-1.12.1-mc1.21.1.jar"
+    "url": "https://cdn.modrinth.com/data/NNAgCjsB/versions/8uamSG2K/entityculling-neoforge-1.12.2-mc1.21.1.jar"
    },
-   "published_at": "2026-11-13T16:11:43.966329Z",
+   "published_at": "2026-11-22T14:39:57.714814Z",
    "status": "safe",
    "blocked_by": []
   },
   {
    "slug": "fancymenu",
    "current_version": "3.9.9",
-   "candidate_version": "3.10.0",
+   "candidate_version": "3.11.0",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "W8E2q1iT",
+    "version_id": "gooTwZ0B",
     "project_id": "Wq5SjeWM",
-    "url": "https://cdn.modrinth.com/data/Wq5SjeWM/versions/W8E2q1iT/fancymenu_neoforge_3.10.0_MC_1.21.1.jar"
+    "url": "https://cdn.modrinth.com/data/Wq5SjeWM/versions/gooTwZ0B/fancymenu_neoforge_3.11.0_MC_1.21.1.jar"
    },
-   "published_at": "2026-11-10T05:22:34.709242Z",
+   "published_at": "2026-11-23T01:35:48.573329Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -681,13 +681,13 @@
   {
    "slug": "jei",
    "current_version": "19.43.0.393",
-   "candidate_version": "19.76.1.478",
+   "candidate_version": "19.76.1.480",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9747737,
+    "file_id": 9772337,
     "project_id": "238222"
    },
-   "published_at": "2026-11-22T08:40:14.453Z",
+   "published_at": "2026-11-23T12:13:28.583Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -941,13 +941,13 @@
   {
    "slug": "rightclickharvest",
    "current_version": "4.6.1+1.21.1",
-   "candidate_version": "4.7.1+1.21.1",
+   "candidate_version": "4.7.2+1.21.1",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9633746,
+    "file_id": 9750983,
     "project_id": "452834"
    },
-   "published_at": "2026-11-15T17:28:55.607Z",
+   "published_at": "2026-11-22T13:16:36.927Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -1089,28 +1089,28 @@
   {
    "slug": "sophisticated-backpacks",
    "current_version": "3.25.74",
-   "candidate_version": "3.26.22",
+   "candidate_version": "3.26.23",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "CbYrTzNh",
+    "version_id": "8YikAvYD",
     "project_id": "TyCTlI4b",
-    "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/CbYrTzNh/sophisticatedbackpacks-1.21.1-3.26.22.2257.jar"
+    "url": "https://cdn.modrinth.com/data/TyCTlI4b/versions/8YikAvYD/sophisticatedbackpacks-1.21.1-3.26.23.2263.jar"
    },
-   "published_at": "2026-11-18T23:01:26.137390Z",
+   "published_at": "2026-11-22T19:30:24.626905Z",
    "status": "safe",
    "blocked_by": []
   },
   {
    "slug": "sophisticated-core",
    "current_version": "1.4.82",
-   "candidate_version": "1.5.39",
+   "candidate_version": "1.5.42",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "9e7VbbdS",
+    "version_id": "URsV4WGl",
     "project_id": "nmoqTijg",
-    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/9e7VbbdS/sophisticatedcore-1.21.1-1.5.39.2489.jar"
+    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/URsV4WGl/sophisticatedcore-1.21.1-1.5.42.2496.jar"
    },
-   "published_at": "2026-11-18T22:59:39.373286Z",
+   "published_at": "2026-11-22T19:22:58.089364Z",
    "status": "safe",
    "blocked_by": []
   },
