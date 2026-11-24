@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-23T13:47:12Z",
+ "generated_at": "2026-11-24T14:22:48Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -124,14 +124,14 @@
   {
    "slug": "burnt-basic",
    "current_version": "1.10.3.7",
-   "candidate_version": "1.10.5.3",
+   "candidate_version": "1.10.5.4",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "oWQQludc",
+    "version_id": "triKzMKG",
     "project_id": "aclfPzta",
-    "url": "https://cdn.modrinth.com/data/aclfPzta/versions/oWQQludc/burnt_basic-1.10.5.3-neoforge-1.21.1.jar"
+    "url": "https://cdn.modrinth.com/data/aclfPzta/versions/triKzMKG/burnt_basic-1.10.5.4-neoforge-1.21.1.jar"
    },
-   "published_at": "2026-10-24T22:01:17.732589Z",
+   "published_at": "2026-11-23T16:05:28.559604Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -392,13 +392,13 @@
   {
    "slug": "create-radars",
    "current_version": "0.4.9.4-1.21.1",
-   "candidate_version": "5.1.2-1.21.1",
+   "candidate_version": "5.1.3-1.21.1",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9758334,
+    "file_id": 9785701,
     "project_id": "1152836"
    },
-   "published_at": "2026-11-22T19:03:56.84Z",
+   "published_at": "2026-11-24T04:58:19.95Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -444,13 +444,13 @@
   {
    "slug": "creativecore",
    "current_version": "2.13.42",
-   "candidate_version": "2.13.55",
+   "candidate_version": "2.13.56",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9720383,
+    "file_id": 9788664,
     "project_id": "257814"
    },
-   "published_at": "2026-11-20T18:28:55.463Z",
+   "published_at": "2026-11-24T09:43:48.133Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -483,13 +483,13 @@
   {
    "slug": "doggy-talents-next",
    "current_version": "1.19.0",
-   "candidate_version": "1.19.1",
+   "candidate_version": "1.19.2",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8726874,
+    "file_id": 9781013,
     "project_id": "694492"
    },
-   "published_at": "2026-08-24T20:25:47.31Z",
+   "published_at": "2026-11-23T21:24:56.36Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -642,13 +642,13 @@
   {
    "slug": "immersive-paintings",
    "current_version": "0.7.8",
-   "candidate_version": "0.8.0",
+   "candidate_version": "0.8.1",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9314314,
+    "file_id": 9778247,
     "project_id": "639584"
    },
-   "published_at": "2026-10-24T21:18:11.457Z",
+   "published_at": "2026-11-23T18:57:19.78Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -681,13 +681,13 @@
   {
    "slug": "jei",
    "current_version": "19.43.0.393",
-   "candidate_version": "19.76.1.480",
+   "candidate_version": "19.76.1.481",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9772337,
+    "file_id": 9773637,
     "project_id": "238222"
    },
-   "published_at": "2026-11-23T12:13:28.583Z",
+   "published_at": "2026-11-23T14:01:58.287Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -968,13 +968,13 @@
   {
    "slug": "selene",
    "current_version": "1.21.1-3.3.2",
-   "candidate_version": "1.21.1-3.8.3",
+   "candidate_version": "1.21.1-3.8.5",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9519534,
+    "file_id": 9780727,
     "project_id": "499980"
    },
-   "published_at": "2026-11-09T00:29:26.39Z",
+   "published_at": "2026-11-23T21:11:15.743Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -1151,6 +1151,19 @@
     "project_id": "454372"
    },
    "published_at": "2026-11-18T19:29:56.007Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "the-roads-more-travelled",
+   "current_version": "0.5.1-1.21.1-neoforge",
+   "candidate_version": "0.6-1.21.1-neoforge",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 9781562,
+    "project_id": "1512955"
+   },
+   "published_at": "2026-11-23T21:58:15Z",
    "status": "safe",
    "blocked_by": []
   },

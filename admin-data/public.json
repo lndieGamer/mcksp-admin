@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-23T13:47:12Z",
+ "generated_at": "2026-11-24T14:22:48Z",
  "notices": [],
  "pack": {
   "version": "1.0.0",
@@ -4340,7 +4340,7 @@
    "date_added": "2026-08-05T09:52:14+02:00",
    "date_updated": "2026-08-05T09:52:14+02:00",
    "parse_status": "ok",
-   "status": "current"
+   "status": "update_safe"
   },
   {
    "slug": "trade-cycling",
