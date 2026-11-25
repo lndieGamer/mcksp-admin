@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24T14:22:48Z",
+ "generated_at": "2026-11-25T13:41:00Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -470,13 +470,13 @@
   {
    "slug": "curios",
    "current_version": "9.5.1+1.21.1",
-   "candidate_version": "9.6.0+1.21.1",
+   "candidate_version": "9.6.1+1.21.1",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9694505,
+    "file_id": 9806453,
     "project_id": "309927"
    },
-   "published_at": "2026-11-19T02:19:08.003Z",
+   "published_at": "2026-11-25T07:28:01.967Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -889,13 +889,13 @@
   {
    "slug": "quark",
    "current_version": "4.1-482",
-   "candidate_version": "4.1-488",
+   "candidate_version": "4.1-489",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9335735,
+    "file_id": 9804438,
     "project_id": "243121"
    },
-   "published_at": "2026-10-26T17:50:26.807Z",
+   "published_at": "2026-11-25T03:05:14.977Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -915,13 +915,13 @@
   {
    "slug": "reeses-sodium-options",
    "current_version": "2.2.3+mc1.21.1",
-   "candidate_version": "2.2.6+mc1.21.1",
+   "candidate_version": "2.2.7-beta.1+mc1.21.1",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9739754,
+    "file_id": 9804580,
     "project_id": "511319"
    },
-   "published_at": "2026-11-21T20:41:52.247Z",
+   "published_at": "2026-11-25T03:22:25.867Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -1063,26 +1063,26 @@
   {
    "slug": "sodium",
    "current_version": "0.8.13-beta.2+mc1.21.1",
-   "candidate_version": "0.8.13+mc1.21.1",
+   "candidate_version": "0.8.14-beta.2+mc1.21.1",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 8756580,
+    "file_id": 9804257,
     "project_id": "394468"
    },
-   "published_at": "2026-08-28T20:54:55.687Z",
+   "published_at": "2026-11-25T02:40:48.857Z",
    "status": "safe",
    "blocked_by": []
   },
   {
    "slug": "sodium-extra",
    "current_version": "0.9.3+mc1.21.1",
-   "candidate_version": "0.9.5+mc1.21.1",
+   "candidate_version": "0.9.6-beta.1+mc1.21.1",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9324102,
+    "file_id": 9804503,
     "project_id": "447673"
    },
-   "published_at": "2026-10-25T16:34:07.593Z",
+   "published_at": "2026-11-25T03:14:11.037Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -1103,14 +1103,14 @@
   {
    "slug": "sophisticated-core",
    "current_version": "1.4.82",
-   "candidate_version": "1.5.42",
+   "candidate_version": "1.5.43",
    "candidate_ref": {
     "source": "modrinth",
-    "version_id": "URsV4WGl",
+    "version_id": "h272jVeM",
     "project_id": "nmoqTijg",
-    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/URsV4WGl/sophisticatedcore-1.21.1-1.5.42.2496.jar"
+    "url": "https://cdn.modrinth.com/data/nmoqTijg/versions/h272jVeM/sophisticatedcore-1.21.1-1.5.43.2504.jar"
    },
-   "published_at": "2026-11-22T19:22:58.089364Z",
+   "published_at": "2026-11-25T08:20:55.270132Z",
    "status": "safe",
    "blocked_by": []
   },
@@ -1230,6 +1230,19 @@
     "project_id": "340583"
    },
    "published_at": "2026-09-04T10:46:24.167Z",
+   "status": "safe",
+   "blocked_by": []
+  },
+  {
+   "slug": "zeta",
+   "current_version": "1.1-40",
+   "candidate_version": "1.1-41",
+   "candidate_ref": {
+    "source": "curseforge",
+    "file_id": 9804404,
+    "project_id": "968868"
+   },
+   "published_at": "2026-11-25T03:01:53.297Z",
    "status": "safe",
    "blocked_by": []
   }
