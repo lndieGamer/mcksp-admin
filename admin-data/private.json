@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-25T13:41:00Z",
+ "generated_at": "2026-11-26T13:19:33Z",
  "updates": [
   {
    "slug": "3dskinlayers",
@@ -681,13 +681,13 @@
   {
    "slug": "jei",
    "current_version": "19.43.0.393",
-   "candidate_version": "19.76.1.481",
+   "candidate_version": "19.76.1.482",
    "candidate_ref": {
     "source": "curseforge",
-    "file_id": 9773637,
+    "file_id": 9826995,
     "project_id": "238222"
    },
-   "published_at": "2026-11-23T14:01:58.287Z",
+   "published_at": "2026-11-26T13:07:54.85Z",
    "status": "safe",
    "blocked_by": []
   },
